@@ -63,7 +63,7 @@ Obtained by downloading from ftp://ftp.uniprot.org/pub/databases/uniprot/current
 
 	`cat enzyme.ttl | grep \<http\:\/\/www.w3.org\/2000\/01\/rdf-schema\#subClassOf\> | sed 's/^[<\>\:\/.a-z0-9-]* [#<\>\:\/.Aa-Zz0-9-]* //' |    sort | uniq > super_full.tmp`
 
-	`while read -r super ; do super_start=``echo $super | sed 's/[.-]*> .//'`` ; cat all.tmp | grep "$super_start"  |sed "s,[[:print:]]*,& <http://www.w3.org/2000/01/rdf-schema#subClassOf> $super," | sed 's,\(^[[:print:]]*\) <http://www.w3.org/2000/01/rdf-schema#subClassOf> \1,,';  done < super_full.tmp  | grep http > inference.ttl`
+	`while read -r super ; do super_start=\`echo $super | sed 's/[.-]*> .//'\` ; cat all.tmp | grep "$super_start"  |sed "s,[[:print:]]*,& <http://www.w3.org/2000/01/rdf-schema#subClassOf> $super," | sed 's,\(^[[:print:]]*\) <http://www.w3.org/2000/01/rdf-schema#subClassOf> \1,,';  done < super_full.tmp  | grep http > inference.ttl`
 
 	`cat all.tmp | grep "[0-9]>" | sed 's,[[:print:]]*,& <http://www.w3.org/2000/01/rdf-schema#subClassOf> & .,' >> inference.ttl`
 
