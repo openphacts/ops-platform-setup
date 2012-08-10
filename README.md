@@ -157,4 +157,5 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
     [OPS@ops2 scripts]$ source ExportOPSVariables.sh
     [OPS@ops2 scripts]$ source RunLarKC.sh &> ~/log/production.log
     Detach from screen with Ctrl+A+D
+    [OPS@ops2 scripts]$ source ExportOPSVariables.sh
     [OPS@ops2 scripts]$ source Launch_LDA_Workflow.sh
