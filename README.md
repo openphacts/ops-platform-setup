@@ -102,15 +102,15 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
 ### Platform set-up on ops2, 10 Aug 2012
     
     [antonis@ops2 ~]$ ls /media/SSD/current_data/
-    23 items:
-    activities.nt          		drug_type_labels.ttl		PROPERTIES_ChEMBL20120731.ttl
-    activities_qudt.nt		chemspider_match.nt		cw_url_preflabels_20120620_validTurtle.ttl
-    enzyme_names_comments.ttl		swissprot.rdf		assays.nt
-    compounds_chebi.nt		direct.ttl			inference.ttl
-    SYNONYMS_ChEMBL20120731.ttl	chebi_class_labels.nt  	compounds.nt
-    docs.nt			targets.nt			chebi_direct.nt
-    compounds_props.nt		drugbank_dump.nt		chebi_inference.ttl
-    cw-cs_linkset.ttl		drug_category_labels.ttl
+
+	    activities.nt          			drug_type_labels.ttl		PROPERTIES_ChEMBL20120731.ttl
+	    activities_qudt.nt				chemspider_match.nt			cw_url_preflabels_20120620_validTurtle.ttl
+	    enzyme_names_comments.ttl		swissprot.rdf				assays.nt
+	    compounds_chebi.nt				direct.ttl					inference.ttl
+	    SYNONYMS_ChEMBL20120731.ttl		chebi_class_labels.nt  		compounds.nt
+	    docs.nt							targets.nt					chebi_direct.nt
+	    compounds_props.nt				drugbank_dump.nt			chebi_inference.ttl
+	    cw-cs_linkset.ttl				drug_category_labels.ttl
 
     [antonis@ops2 ~]$ cd /media/SSD/openrdf-sesame/
     [antonis@ops2 openrdf-sesame]$ bin/console.sh < load_sesame
