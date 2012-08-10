@@ -53,12 +53,10 @@ Directory setup
     ~/coreGUI/                # contains core GUI code for running the explorer
 
 - One RDF store (sesame) running on 9090
--- http://ops.few.vu.nl:9090/openrdf-workbench/
+    - http://ops.few.vu.nl:9090/openrdf-workbench/
 - data is located at ~/develop/openphacts/datasets
     - <https://github.com/openphacts/ops-platform-setup/tree/master/data-sources>
 - We are currently running all data off one endpoint
-
-
 
 #### Building Base Platform
     OPS@ops:~/production/openphacts/ops-platform/scripts$ source  ExportOPSVariables.sh
@@ -101,4 +99,36 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
      OPS@ops:~/coreGUI$ screen 
      rails s -e production  &> ~/log/gui.log
 
+### Platform set-up on ops2, 10 Aug 2012
+    
+    [antonis@ops2 ~]$ ls /media/SSD/current_data/
+    23 items:
+    activities.nt          		drug_type_labels.ttl		PROPERTIES_ChEMBL20120731.ttl
+    activities_qudt.nt		chemspider_match.nt		cw_url_preflabels_20120620_validTurtle.ttl
+    enzyme_names_comments.ttl		swissprot.rdf		assays.nt
+    compounds_chebi.nt		direct.ttl			inference.ttl
+    SYNONYMS_ChEMBL20120731.ttl	chebi_class_labels.nt  	compounds.nt
+    docs.nt			targets.nt			chebi_direct.nt
+    compounds_props.nt		drugbank_dump.nt		chebi_inference.ttl
+    cw-cs_linkset.ttl		drug_category_labels.ttl
 
+    [antonis@ops2 ~]$ cd /media/SSD/openrdf-sesame/
+    [antonis@ops2 openrdf-sesame]$ bin/console.sh < load_sesame
+
+    [OPS@ops2 ~]$ mkdir production
+    [OPS@ops2 ~]$ cd production/
+    [OPS@ops2 ~]$ svn co https://larkc.svn.sourceforge.net/svnroot/larkc/trunk larkc
+    [OPS@ops2 production]$ git clone https://antonisloizou@github.com/openphacts/OpsPlatform.git openphacts
+    [OPS@ops2 production]$ cd openphacts/
+    [OPS@ops2 openphacts]$ git checkout Antonis_Develop_LDA
+    [OPS@ops2 openphacts]$ cd ops-platform/scripts/
+    [OPS@ops2 scripts]$ source ExportOPSVariables.sh
+    Edit: Larkc_fix/DataFactoryImpl.java
+    Line 147:    
+    .getSesameHttpRepository("http://localhost:8080/openrdf-sesame","OPS")
+    [OPS@ops2 scripts]$ source BuildLarKC.sh 
+    [OPS@ops2 scripts]$ screen
+    [OPS@ops2 scripts]$ source ExportOPSVariables.sh
+    [OPS@ops2 scripts]$ source RunLarKC.sh &> ~/log/production.log
+    Detach from screen with Ctrl+A+D
+    [OPS@ops2 scripts]$ source Launch_LDA_Workflow.sh
