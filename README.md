@@ -11,6 +11,7 @@ Code
 
 Source code needed
 
+- <https://larkc.svn.sourceforge.net/svnroot/larkc/trunk>
 - <https://github.com/openphacts/OpsPlatform>
 - <https://github.com/openphacts/coreGUI>
 - <https://github.com/openphacts/OPS_LinkedDataApi>
@@ -27,13 +28,14 @@ Data
 - Data loading script is in scripts/seasame-load-list.txt
 - Run using console.sh < sesame-load-list.txt
 - Each dataset is loaded into a separate named graph
+- 
 
 #### Hierarchies
-For each hierarchy we have two named graphs
+For each hierarchy we have three named graphs
 
 1. the direct hierarchy - the named graph is denoted by /direct
 2. the full closure - the named graph is denoted by /inference
-
+3. other info (e.g. rdfs:label) - the named graph without a suffix
 
 Environment Setup (Current)
 -----------------
@@ -53,15 +55,20 @@ Directory setup
 - One RDF store (sesame) running on 9090
 -- http://ops.few.vu.nl:9090/openrdf-workbench/
 - data is located at ~/develop/openphacts/datasets
+    - <https://github.com/openphacts/ops-platform-setup/tree/master/data-sources>
 - We are currently running all data off one endpoint
 
+
+
 #### Building Base Platform
+    OPS@ops:~/production/openphacts/ops-platform/scripts$ source  ExportOPSVariables.sh
     OPS@ops:~/production/openphacts/ops-platform/scripts$ source BuildLarKC.sh 
+    OPS@ops:~/develop/openphacts/ops-platform/scripts$ source  ExportOPSVariables.sh
     OPS@ops:~/develop/openphacts/ops-platform/scripts$ source BuildLarKC.sh 
 
 #### Core API LarKC instance
      
-     OPS@ops:~$ screen -x 4444
+     OPS@ops:~$ screen
      OPS@ops:~/production/openphacts/ops-platform/scripts$ source RunLarKC.sh &> ~/log/production.log
      # exit out of screen
      # and launch the workflow
@@ -73,7 +80,7 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
 
 #### Linked Data API LarKC instance
 
-    OPS@ops:~$ screen -x 6858
+    OPS@ops:~$ screen
     OPS@ops:~/develop/openphacts/ops-platform/scripts$ source RunLarKC.sh &> ~/log/develop.log
     # exit out of screen
     # and launch the workflow
@@ -91,7 +98,7 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
 
 #### Launch GUI
   
-     OPS@ops:~/coreGUI$ screen -x 21619
-     rails s -e production  &> ~/log/gui2.log
+     OPS@ops:~/coreGUI$ screen 
+     rails s -e production  &> ~/log/gui.log
 
 

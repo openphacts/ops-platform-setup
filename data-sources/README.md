@@ -5,7 +5,7 @@ This directory should eventually contain void descriptions of each data source u
 
 ##ConceptWiki
 
-Obtained from https://trac.nbic.nl/openphacts/browser/linksets/conceptwiki/  on 07 Aug 2012 17:00 EST
+Obtained from <https://trac.nbic.nl/openphacts/browser/linksets/conceptwiki/>  on 07 Aug 2012 17:00 EST
 
 Graph URI: <http://www.conceptwiki.org>
 
@@ -13,11 +13,9 @@ Graph URI: <http://www.conceptwiki.org>
 
 - cw_url_preflabels_20120620_validTurtle.ttl
 
-	BUG: http://staging.conceptwiki.org/wiki prefix is used
-
-	TEMP FIX:
-
-	`cat cw_url_preflabels_20120620.ttl | sed 's,http://staging.conceptwiki.org/wiki,http://www.conceptwiki.org,' > cw_url_preflabels_20120620_fix.ttl`
+    BUG: http://staging.conceptwiki.org/wiki prefix is used
+    TEMP FIX:
+    cat cw_url_preflabels_20120620.ttl | sed 's,http://staging.conceptwiki.org/wiki,http://www.conceptwiki.org,' > cw_url_preflabels_20120620_fix.ttl`
 
 	BUG: Invalid characters '\n' , '"' , '\T' Appear inside literals.
 
@@ -37,7 +35,7 @@ Graph URI: <http://www.conceptwiki.org>
 
 ## Swissprot on 07 Aug 2012 17:00 EST
 
-Obtained from http://www.uniprot.org on 07 Aug 2012 by running:
+Obtained from <http://www.uniprot.org> on 07 Aug 2012 by running:
 
 `curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot.rdf`
 
@@ -47,7 +45,7 @@ Graph URI: <http://purl.uniprot.org>
 
 ##Enzyme
 
-Obtained by downloading from ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/enzyme.rdf.gz on 07 Aug 2012 17:00 EST
+Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/enzyme.rdf.gz> on 07 Aug 2012 17:00 EST
 
 - inference.ttl 
 
@@ -65,7 +63,7 @@ Obtained by downloading from ftp://ftp.uniprot.org/pub/databases/uniprot/current
 
 	while read -r super ; do super_start=`echo $super | sed 's/[.-]*> .//'` ; cat all.tmp | grep "$super_start"  |sed "s,[[:print:]]*,& <http://www.w3.org/2000/01/rdf-schema#subClassOf> $super," | sed 's,\(^[[:print:]]*\) <http://www.w3.org/2000/01/rdf-schema#subClassOf> \1,,';  done < super_full.tmp  | grep http > inference.ttl
 
-	(Get the "raw" version for the above to work as '`' are markup in .md)
+	(Get the "raw" version for the above to work as '`' (backticks) are markup in .md)
 
 	`cat all.tmp | grep "[0-9]>" | sed 's,[[:print:]]*,& <http://www.w3.org/2000/01/rdf-schema#subClassOf> & .,' >> inference.ttl`
 
@@ -89,7 +87,7 @@ Obtained by downloading from ftp://ftp.uniprot.org/pub/databases/uniprot/current
 
 ##Drugbank
 
-Obtained by downloading from http://www4.wiwiss.fu-berlin.de/drugbank/drugbank_dump.nt on 08 Aug 2012 10:23 EST
+Obtained by downloading from <http://www4.wiwiss.fu-berlin.de/drugbank/drugbank_dump.nt> on 08 Aug 2012 10:23 EST
 
 Graph URI: <http://linkedlifedata.com/resource/drugbank>
 
@@ -105,7 +103,7 @@ Graph URI: <http://linkedlifedata.com/resource/drugbank>
 
 ##Chembl 13
 
-CHEMBL loaded from http://semantics.bigcat.unimaas.nl/chembl/v13_ops/ on 08 Aug 2012 08:41 EST 
+Obtained by downloading from <http://semantics.bigcat.unimaas.nl/chembl/v13_ops/> on 08 Aug 2012 08:41 EST 
 
 Graph URI <http://data.kasabi.com/dataset/chembl-rdf>
 
@@ -121,7 +119,7 @@ Graph URI <http://data.kasabi.com/dataset/chembl-rdf>
 
 ## Chebi
 
-Obtained from ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl on 08 Aug 2012 09:24 EST (CHEBI Release 94)
+Obtained from <ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl> on 08 Aug 2012 09:24 EST (CHEBI Release 94)
 
 - chebi_direct.nt
 

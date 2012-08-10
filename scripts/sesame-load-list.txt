@@ -1,24 +1,26 @@
-connect http://localhost:9090/openrdf-sesame .
-open OPS_Sep_Cand .
-load /home/OPS/develop/openphacts/datasets/conceptwiki/cw_url_preflabels_20120615_validTurtle.ttl into http://www.conceptwiki.org .
-load /home/OPS/develop/openphacts/datasets/linksets/cw-cs_linkset.ttl into http://www.conceptwiki.org .
-load /home/OPS/develop/openphacts/datasets/uniprotrdf/inference.ttl into http://purl.uniprot.org/enzyme/inference .
-load /home/OPS/develop/openphacts/datasets/uniprotrdf/direct.ttl into http://purl.uniprot.org/enzyme/direct .
-load /home/OPS/develop/openphacts/datasets/uniprotrdf/enzyme_names_comments.ttl into http://purl.uniprot.org/enzyme .
-load /home/OPS/develop/openphacts/datasets/lodd/drugbank_dump.nt into http://linkedlifedata.com/resource/drugbank .
-load /home/OPS/develop/openphacts/datasets/lodd/drug_type_labels.ttl into http://linkedlifedata.com/resource/drugbank .
-load /home/OPS/develop/openphacts/datasets/lodd/drug_category_labels.ttl into http://linkedlifedata.com/resource/drugbank .
-load /home/OPS/develop/openphacts/datasets/uniprotrdf/swissprot.rdf into http://purl.uniprot.org .
-load /home/OPS/develop/openphacts/datasets/chebi/chebi_subclasses_direct_withLabels.nt into http://www.ebi.ac.uk/chebi .
-load /home/OPS/develop/openphacts/datasets/chebi/chebi_inference.nt into http://www.ebi.ac.uk/chebi/inference .
-load /home/OPS/develop/openphacts/datasets/ACD_Labs/UPDATED_ChEMBL20120601.ttl into http://www.chemspider.com .
-load /home/OPS/develop/openphacts/datasets/OPS-DS-TTL/chemspider.ttl into http://www.chemspider.com .
-load /home/OPS/develop/openphacts/datasets/chembl13/activities.nt into http://data.kasabi.com/dataset/chembl-rdf .
-load /home/OPS/develop/openphacts/datasets/chembl13/activities_qudt.nt into http://data.kasabi.com/dataset/chembl-rdf .
-load /home/OPS/develop/openphacts/datasets/chembl13/assays.nt into http://data.kasabi.com/dataset/chembl-rdf .
-load /home/OPS/develop/openphacts/datasets/chembl13/compounds.nt into http://data.kasabi.com/dataset/chembl-rdf .
-load /home/OPS/develop/openphacts/datasets/chembl13/docs.nt into http://data.kasabi.com/dataset/chembl-rdf .
-load /home/OPS/develop/openphacts/datasets/chembl13/targets.nt into http://data.kasabi.com/dataset/chembl-rdf .
-load /home/OPS/develop/openphacts/datasets/chembl13/chemspider_match.nt into http://data.kasabi.com/dataset/chembl-rdf .
-load /home/OPS/develop/openphacts/datasets/chembl13/compounds_props.nt into http://data.kasabi.com/dataset/chembl-rdf .
+connect http://localhost:8080/openrdf-sesame .
+open OPS .
+load /media/SSD/current_data/drug_type_labels.ttl into http://linkedlifedata.com/resource/drugbank .
+load /media/SSD/current_data/drug_category_labels.ttl into http://linkedlifedata.com/resource/drugbank .
+load /media/SSD/current_data/direct.ttl into http://purl.uniprot.org/enzyme/direct .
+load /media/SSD/current_data/compounds_chebi.nt into http://data.kasabi.com/dataset/chembl-rdf .
+load /media/SSD/current_data/inference.ttl into http://purl.uniprot.org/enzyme/inference .
+load /media/SSD/current_data/chebi_class_labels.nt into http://www.ebi.ac.uk/chebi .
+load /media/SSD/current_data/chebi_direct.nt into http://www.ebi.ac.uk/chebi/direct .
+load /media/SSD/current_data/enzyme_names_comments.ttl into http://purl.uniprot.org/enzyme .
+load /media/SSD/current_data/targets.nt into http://data.kasabi.com/dataset/chembl-rdf .
+load /media/SSD/current_data/docs.nt into http://data.kasabi.com/dataset/chembl-rdf .
+load /media/SSD/current_data/chebi_inference.ttl into http://www.ebi.ac.uk/chebi/inference .
+load /media/SSD/current_data/cw-cs_linkset.ttl into http://www.conceptwiki.org .
+load /media/SSD/current_data/drugbank_dump.nt into http://linkedlifedata.com/resource/drugbank .
+load /media/SSD/current_data/chemspider_match.nt into http://data.kasabi.com/dataset/chembl-rdf .
+load /media/SSD/current_data/cw_url_preflabels_20120620_validTurtle.ttl into http://www.conceptwiki.org .
+load /media/SSD/current_data/SYNONYMS_ChEMBL20120731.ttl into http://www.chemspider.com .
+load /media/SSD/current_data/assays.nt into http://data.kasabi.com/dataset/chembl-rdf .
+load /media/SSD/current_data/activities_qudt.nt into http://data.kasabi.com/dataset/chembl-rdf .
+load /media/SSD/current_data/compounds.nt into http://data.kasabi.com/dataset/chembl-rdf .
+load /media/SSD/current_data/compounds_props.nt into http://data.kasabi.com/dataset/chembl-rdf .
+load /media/SSD/current_data/activities.nt into http://data.kasabi.com/dataset/chembl-rdf .
+load /media/SSD/current_data/PROPERTIES_ChEMBL20120731.ttl into http://www.chemspider.com .
+load /media/SSD/current_data/swissprot.rdf into http://purl.uniprot.org .
 close.
