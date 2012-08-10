@@ -34,7 +34,7 @@ TEMP FIX:
 
 Obtained from <http://www.uniprot.org> on 07 Aug 2012 by running:
 
-    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot.rdf`
+    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot.rdf
 
 Graph URI: <http://purl.uniprot.org>
 
@@ -152,6 +152,6 @@ Graph URI: <http://www.chemspider.com>
 
 		TEMP FIX:
 
-		    cat /media/SSD/current_data/PROPERTIES_ChEMBL20120731.ttl | sed 's,IAO:0000136,IAO_0000136,g' > PROPERTIES_ChEMBL20120731_fix.ttl`  	
+		    cat /media/SSD/current_data/PROPERTIES_ChEMBL20120731.ttl | sed 's,IAO:0000136,IAO_0000136,g' > PROPERTIES_ChEMBL20120731_fix.ttl	
 
 	- SYNONYMS_ChEMBL20120731.ttl
