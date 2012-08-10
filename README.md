@@ -100,6 +100,8 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
      rails s -e production  &> ~/log/gui.log
 
 ### Platform set-up on ops2, 10 Aug 2012
+
+#### Load data into Sesame
     
     [antonis@ops2 ~]$ ls /media/SSD/current_data/
 
@@ -114,6 +116,31 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
 
     [antonis@ops2 ~]$ cd /media/SSD/openrdf-sesame/
     [antonis@ops2 openrdf-sesame]$ bin/console.sh < load_sesame
+
+#### Set up LDA
+
+    [antonis@ops2 ~]$ sudo yum install php
+    [antonis@ops2 ~]$ sudo yum install php-xml
+    [antonis@ops2 ~]$ sudo chmod -R go+rw /var/www
+    [antonis@ops2 ~]$ cd /var/www/
+    [antonis@ops2 www]$ rmdir html
+    [antonis@ops2 www]$ git clone https://github.com/openphacts/OPS_LinkedDataApi.git html
+
+    Edit: /etc/httpd/conf/httpd.conf
+    You need .htaccess files enabled and allowed on DOCUMENTROOT
+
+    AccessFileName .htaccess
+
+    <Directory "/var/www/html">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    [antonis@ops2 ~]$ service httod start
+
+#### Set up LarKC and launch workflow
 
     [OPS@ops2 ~]$ mkdir production
     [OPS@ops2 ~]$ cd production/
