@@ -27,8 +27,7 @@ Data
 ---------------
 - Data loading script is in scripts/seasame-load-list.txt
 - Run using console.sh < sesame-load-list.txt
-- Each dataset is loaded into a separate named graph
-- 
+- Each dataset is loaded into a separate named graph 
 
 #### Hierarchies
 For each hierarchy we have three named graphs
@@ -37,7 +36,7 @@ For each hierarchy we have three named graphs
 2. the full closure - the named graph is denoted by /inference
 3. other info (e.g. rdfs:label) - the named graph without a suffix
 
-Environment Setup (Current)
+Environment Setup on ops.few.vu.nl (Debian 6.0)
 -----------------
 
 We use screen
@@ -99,7 +98,7 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
      OPS@ops:~/coreGUI$ screen 
      rails s -e production  &> ~/log/gui.log
 
-### Platform set-up on ops2, 10 Aug 2012
+### Platform set-up on ops2 (CentOS 6.2), 10 Aug 2012
 
 #### Load data into Sesame
     
@@ -138,7 +137,7 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
         Allow from all
     </Directory>
 
-    [antonis@ops2 ~]$ service httod start
+    [antonis@ops2 ~]$ service httpd start
 
 #### Set up LarKC and launch workflow
 
