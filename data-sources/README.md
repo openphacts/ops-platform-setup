@@ -144,6 +144,8 @@ Graph URI: <http://www.chemspider.com>
 	
 	- PROPERTIES_ChEMBL20120731.ttl
 
+		BUG: rdf:label used instead of rdfs:label
+
 		BUG: Erroneous prefix qud:standardUncertainty
 
 		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
