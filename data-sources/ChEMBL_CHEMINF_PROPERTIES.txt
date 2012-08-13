@@ -1,0 +1,17 @@
+cheminf:CHEMINF_000042	chembl:molform	OPTIONAL
+cheminf:CHEMINF_000018	chembl:smiles
+cheminf:CHEMINF_000113	chembl:inchi
+cheminf:CHEMINF_000059	chembl:inchikey
+cheminf:CHEMINF_000305	chembl:alogp
+cheminf:CHEMINF_000309	chembl:hba
+cheminf:CHEMINF_000310	chembl:hbd
+cheminf:CHEMINF_000308	chembl:psa
+cheminf:CHEMINF_000311	chembl:rtb	OPTIONAL
+cheminf:CHEMINF_000324	chembl:acd_most_apka
+cheminf:CHEMINF_000325	chembl:acd_most_bpka
+cheminf:CHEMINF_000321	chembl:acd_logp
+cheminf:CHEMINF_000323	chembl:acd_logd
+cheminf:CHEMINF_000317	chembl:ro3_pass
+cheminf:CHEMINF_000319	chembl:med_chem_friendly
+cheminf:CHEMINF_000198	chembl:full_mwt OPTIONAL 
+cheminf:CHEMINF_000350	chembl:mw_freebase	OPTIONAL

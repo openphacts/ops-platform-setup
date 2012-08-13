@@ -1,0 +1,22 @@
+cheminf:CHEMINF_000321	"Compound 187440 property LogP in qudt:DimensionlessUnit"@en	OPTIONAL
+cheminf:CHEMINF_000367	"Compound 187440 property RuleOf5 in qudt:DimensionlessUnit"@en	OPTIONAL
+cheminf:CHEMINF_000344	"Compound 187440 property LogD_1 in qudt:DimensionlessUnit"@en
+cheminf:CHEMINF_000323	"Compound 187440 property LogD_2 in qudt:DimensionlessUnit"@en
+cheminf:CHEMINF_000348	"Compound 187440 property RuleOf5_FRB in qudt:DimensionlessUnit"@en
+cheminf:CHEMINF_000345	"Compound 187440 property RuleOf5_HAcceptors in qudt:DimensionlessUnit"@en OPTIONAL
+cheminf:CHEMINF_000346	"Compound 187440 property RuleOf5_HDonors in qudt:DimensionlessUnit"@en OPTIONAL
+cheminf:CHEMINF_000365	"Compound 187440 property BCF_1 in qudt:DimensionlessUnit"@en
+cheminf:CHEMINF_000366	"Compound 187440 property BCF_2 in qudt:DimensionlessUnit"@en
+cheminf:CHEMINF_000363	"Compound 187440 property KOC_1 in qudt:DimensionlessUnit"@en
+cheminf:CHEMINF_000364	"Compound 187440 property KOC_2 in qudt:DimensionlessUnit"@en
+cheminf:CHEMINF_000349	"Compound 187440 property RuleOf5_PSA in qudt:SquareMeter"@en OPTIONAL
+cheminf:CHEMINF_000352	"Compound 187440 property Index_Of_Refraction in qudt:DimensionlessUnit"@en
+cheminf:CHEMINF_000351	"Compound 187440 property Molar_Refractivity in qudt:CubicMeter"@en
+cheminf:CHEMINF_000358	"Compound 187440 property Molar_Volume in qudt:CubicMeter"@en
+cheminf:CHEMINF_000353	"Compound 187440 property Polarizability in qudt:CubicMeter"@en
+cheminf:CHEMINF_000368	"Compound 187440 property Surface_Tension in qudt:NewtonPerMeter"@en
+cheminf:CHEMINF_000359	"Compound 187440 property Density in qudt:KilogramPerCubicMeter"@en
+cheminf:CHEMINF_000360	"Compound 187440 property FP in qudt:DegreeCelsius"@en
+cheminf:CHEMINF_000361	"Compound 187440 property Enthalpy in qudt:JoulePerMole"@en
+cheminf:CHEMINF_000362	"Compound 187440 property VP in qudt:MillimeterOfMercury"@en
+cheminf:CHEMINF_000347	"Compound 187440 property BP in qudt:DegreeCelsius"@en
