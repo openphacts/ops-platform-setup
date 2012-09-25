@@ -82,6 +82,10 @@ Graph URI: <http://linkedlifedata.com/resource/drugbank>
 
 - drugbank_dump.nt 
 
+        Fixed invalid URL :
+
+            sed -i 's,<www,<http://www,' drugbank_dump.nt
+
 - drug_type_labels.ttl
 
 	Generated manually, 8 elements (The suffix of all drug type URLs)
