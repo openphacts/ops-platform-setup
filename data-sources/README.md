@@ -178,6 +178,7 @@ Graph URI: <http://www.chemspider.com>
 		
 		    mv PROPERTIES_DrugBank20120731.ttl PROPERTIES_DrugBank20120731_orig.tll
 		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_DrugBank20120731.ttl
+		    echo '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .' >> PROPERTIES_DrugBank20120731.ttl
 		    cat PROPERTIES_DrugBank20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_DrugBank20120731.ttl
 
 	- PROPERTIES_MeSH20120731.tll
@@ -194,6 +195,7 @@ Graph URI: <http://www.chemspider.com>
 		
 		    mv PROPERTIES_MeSH20120731.ttl PROPERTIES_MeSH20120731_orig.tll
 		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_MeSH20120731.ttl
+		    echo '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .' >> PROPERTIES_MeSH20120731.ttl
 		    cat PROPERTIES_MeSH20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_MeSH20120731.ttl
 
 	- PROPERTIES_ChEBI20120731.tll
@@ -210,6 +212,7 @@ Graph URI: <http://www.chemspider.com>
 		
 		    mv PROPERTIES_ChEBI20120731.ttl PROPERTIES_ChEBI20120731_orig.tll
 		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_ChEBI20120731.ttl
+		    echo '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .' >> PROPERTIES_ChEBI20120731.ttl
 		    cat PROPERTIES_ChEBI20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_ChEBI20120731.ttl
 
 	- PROPERTIES_PDB20120731.tll
@@ -226,4 +229,11 @@ Graph URI: <http://www.chemspider.com>
 		
 		    mv PROPERTIES_PDB20120731.ttl PROPERTIES_PDB20120731_orig.tll
 		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_PDB20120731.ttl
+		    echo '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .' >> PROPERTIES_PDB20120731.ttl
 		    cat PROPERTIES_PDB20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_PDB20120731.ttl
+
+	- SYNONYMS_MeSH20120731.ttl
+
+	- SYNONYMS_ChEBI20120731.ttl
+
+	- SYNONYMS_PDB20120731.ttl
