@@ -161,3 +161,65 @@ Graph URI: <http://www.chemspider.com>
 		    cat /media/SSD/current_data/PROPERTIES_ChEMBL20120731.ttl | sed 's,IAO:0000136,IAO_0000136,g' > PROPERTIES_ChEMBL20120731_fix.ttl	
 
 	- SYNONYMS_ChEMBL20120731.ttl
+
+	- LINKSET_EXACTMATCH_DrugBank20120731.ttl
+
+	- PROPERTIES_DrugBank20120731.tll
+		BUG: rdf:label used instead of rdfs:label
+
+		BUG: Erroneous prefix qud:standardUncertainty
+
+		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
+
+		BUG: obo:IAO:0000136 used instead of obo:IAO_0000136
+
+		TEMP FIX:
+		
+		    mv PROPERTIES_DrugBank20120731.ttl PROPERTIES_DrugBank20120731_orig.tll
+		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_DrugBank20120731.ttl
+		    cat PROPERTIES_DrugBank20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_DrugBank20120731.ttl
+
+	- PROPERTIES_MeSH20120731.tll
+		BUG: rdf:label used instead of rdfs:label
+
+		BUG: Erroneous prefix qud:standardUncertainty
+
+		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
+
+		BUG: obo:IAO:0000136 used instead of obo:IAO_0000136
+
+		TEMP FIX:
+		
+		    mv PROPERTIES_MeSH20120731.ttl PROPERTIES_MeSH20120731_orig.tll
+		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_MeSH20120731.ttl
+		    cat PROPERTIES_MeSH20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_MeSH20120731.ttl
+
+	- PROPERTIES_ChEBI20120731.tll
+		BUG: rdf:label used instead of rdfs:label
+
+		BUG: Erroneous prefix qud:standardUncertainty
+
+		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
+
+		BUG: obo:IAO:0000136 used instead of obo:IAO_0000136
+
+		TEMP FIX:
+		
+		    mv PROPERTIES_ChEBI20120731.ttl PROPERTIES_ChEBI20120731_orig.tll
+		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_ChEBI20120731.ttl
+		    cat PROPERTIES_ChEBI20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_ChEBI20120731.ttl
+
+	- PROPERTIES_PDB20120731.tll
+		BUG: rdf:label used instead of rdfs:label
+
+		BUG: Erroneous prefix qud:standardUncertainty
+
+		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
+
+		BUG: obo:IAO:0000136 used instead of obo:IAO_0000136
+
+		TEMP FIX:
+		
+		    mv PROPERTIES_PDB20120731.ttl PROPERTIES_PDB20120731_orig.tll
+		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_PDB20120731.ttl
+		    cat PROPERTIES_PDB20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_PDB20120731.ttl
