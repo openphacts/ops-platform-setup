@@ -27,3 +27,6 @@ ld_dir('/media/SSD/current_data/' , 'PROPERTIES_DrugBank20120731.ttl' , 'http://
 ld_dir('/media/SSD/current_data/' , 'PROPERTIES_MeSH20120731.ttl' , 'http://www.chemspider.com' );
 ld_dir('/media/SSD/current_data/' , 'PROPERTIES_ChEBI20120731.ttl' , 'http://www.chemspider.com' );
 ld_dir('/media/SSD/current_data/' , 'PROPERTIES_PDB20120731.ttl' , 'http://www.chemspider.com' );
+ld_dir('/media/SSD/current_data/' , 'SYNONYMS_MeSH20120731.ttl' , 'http://www.chemspider.com' );
+ld_dir('/media/SSD/current_data/' , 'SYNONYMS_ChEBI20120731.ttl' , 'http://www.chemspider.com' );
+ld_dir('/media/SSD/current_data/' , 'SYNONYMS_PDB20120731.ttl' , 'http://www.chemspider.com' );
