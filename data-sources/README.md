@@ -165,6 +165,7 @@ Graph URI: <http://www.chemspider.com>
 	- LINKSET_EXACTMATCH_DrugBank20120731.ttl
 
 	- PROPERTIES_DrugBank20120731.tll
+
 		BUG: rdf:label used instead of rdfs:label
 
 		BUG: Erroneous prefix qud:standardUncertainty
@@ -180,6 +181,7 @@ Graph URI: <http://www.chemspider.com>
 		    cat PROPERTIES_DrugBank20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_DrugBank20120731.ttl
 
 	- PROPERTIES_MeSH20120731.tll
+
 		BUG: rdf:label used instead of rdfs:label
 
 		BUG: Erroneous prefix qud:standardUncertainty
@@ -195,6 +197,7 @@ Graph URI: <http://www.chemspider.com>
 		    cat PROPERTIES_MeSH20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_MeSH20120731.ttl
 
 	- PROPERTIES_ChEBI20120731.tll
+
 		BUG: rdf:label used instead of rdfs:label
 
 		BUG: Erroneous prefix qud:standardUncertainty
@@ -210,6 +213,7 @@ Graph URI: <http://www.chemspider.com>
 		    cat PROPERTIES_ChEBI20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_ChEBI20120731.ttl
 
 	- PROPERTIES_PDB20120731.tll
+
 		BUG: rdf:label used instead of rdfs:label
 
 		BUG: Erroneous prefix qud:standardUncertainty
