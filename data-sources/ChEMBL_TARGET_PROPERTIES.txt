@@ -1,0 +1,13 @@
+http://www.w3.org/2000/01/rdf-schema#label
+http://www.w3.org/2000/01/rdf-schema#subClassOf
+http://www.w3.org/2002/07/owl#equivalentClass
+http://www.w3.org/2002/07/owl#sameAs
+http://www.w3.org/2004/02/skos/core#exactMatch
+http://rdf.farmbio.uu.se/chembl/onto/#hasDescription
+http://rdf.farmbio.uu.se/chembl/onto/#hasTaxonomy
+http://rdf.farmbio.uu.se/chembl/onto/#organism
+http://purl.org/dc/elements/1.1/title
+http://purl.org/dc/elements/1.1/identifier
+http://rdf.farmbio.uu.se/chembl/onto/#hasKeyword
+http://rdf.farmbio.uu.se/chembl/onto/#sequence
+http://rdf.farmbio.uu.se/chembl/onto/#targetClass
