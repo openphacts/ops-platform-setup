@@ -15,6 +15,11 @@ ld_dir('/media/SSD/current_data/' , 'targets.nt' , 'http://data.kasabi.com/datas
 ld_dir('/media/SSD/current_data/' , 'chemspider_match.nt' , 'http://data.kasabi.com/dataset/chembl-rdf' );
 ld_dir('/media/SSD/current_data/' , 'compounds_props.nt' , 'http://data.kasabi.com/dataset/chembl-rdf' );
 ld_dir('/media/SSD/current_data/' , 'compounds_chebi.nt' , 'http://data.kasabi.com/dataset/chembl-rdf' );
+ld_dir('/media/SSD/current_data/' , 'act_qudt_act.nt' , 'http://data.kasabi.com/dataset/chembl-rdf' );
+ld_dir('/media/SSD/current_data/' , 'act_qudt_ic50.nt' , 'http://data.kasabi.com/dataset/chembl-rdf' );
+ld_dir('/media/SSD/current_data/' , 'act_qudt_inhib.nt' , 'http://data.kasabi.com/dataset/chembl-rdf' );
+ld_dir('/media/SSD/current_data/' , 'act_qudt_pot.nt' , 'http://data.kasabi.com/dataset/chembl-rdf' );
+ld_dir('/media/SSD/current_data/' , 'act_qudt_types.nt' , 'http://data.kasabi.com/dataset/chembl-rdf' );
 ld_dir('/media/SSD/current_data/' , 'swissprot.rdf' , 'http://purl.uniprot.org' );
 ld_dir('/media/SSD/current_data/' , 'chebi_direct.nt' , 'http://www.ebi.ac.uk/chebi/direct' );
 ld_dir('/media/SSD/current_data/' , 'chebi_inference.ttl' , 'http://www.ebi.ac.uk/chebi/inference' );
