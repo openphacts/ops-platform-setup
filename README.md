@@ -100,22 +100,8 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
 
 ### Platform set-up on ops2 (CentOS 6.2), 10 Aug 2012
 
-#### Load data into Sesame
+#### Load data into Virtuoso
     
-    [antonis@ops2 ~]$ ls /media/SSD/current_data/
-
-	    activities.nt          			drug_type_labels.ttl		PROPERTIES_ChEMBL20120731.ttl
-	    activities_qudt.nt				chemspider_match.nt			cw_url_preflabels_20120620_validTurtle.ttl
-	    enzyme_names_comments.ttl		swissprot.rdf				assays.nt
-	    compounds_chebi.nt				direct.ttl					inference.ttl
-	    SYNONYMS_ChEMBL20120731.ttl		chebi_class_labels.nt  		compounds.nt
-	    docs.nt							targets.nt					chebi_direct.nt
-	    compounds_props.nt				drugbank_dump.nt			chebi_inference.ttl
-	    cw-cs_linkset.ttl				drug_category_labels.ttl
-
-    [antonis@ops2 ~]$ cd /media/SSD/openrdf-sesame/
-    [antonis@ops2 openrdf-sesame]$ bin/console.sh < load_sesame
-
 #### Set up LDA
 
     [antonis@ops2 ~]$ sudo yum install php
@@ -139,23 +125,36 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
 
     [antonis@ops2 ~]$ service httpd start
 
-#### Set up LarKC and launch workflow
+#### Steps to enable caching from RAM instead of disk
+1. Edit deployment.settings.php from the root of LDA and change:
 
-    [OPS@ops2 ~]$ mkdir production
-    [OPS@ops2 ~]$ cd production/
-    [OPS@ops2 ~]$ svn co https://larkc.svn.sourceforge.net/svnroot/larkc/trunk larkc
-    [OPS@ops2 production]$ git clone https://antonisloizou@github.com/openphacts/OpsPlatform.git openphacts
-    [OPS@ops2 production]$ cd openphacts/
-    [OPS@ops2 openphacts]$ git checkout Antonis_Develop_LDA
-    [OPS@ops2 openphacts]$ cd ops-platform/scripts/
-    [OPS@ops2 scripts]$ source ExportOPSVariables.sh
-    Edit: Larkc_fix/DataFactoryImpl.java
-    Line 147:    
-    .getSesameHttpRepository("http://localhost:8080/openrdf-sesame","OPS")
-    [OPS@ops2 scripts]$ source BuildLarKC.sh 
-    [OPS@ops2 scripts]$ screen
-    [OPS@ops2 scripts]$ source ExportOPSVariables.sh
-    [OPS@ops2 scripts]$ source RunLarKC.sh &> ~/log/production.log
-    Detach from screen with Ctrl+A+D
-    [OPS@ops2 scripts]$ source ExportOPSVariables.sh
-    [OPS@ops2 scripts]$ source Launch_LDA_Workflow.sh
+  define('PUELIA_SERVE_FROM_CACHE', true);
+
+to
+
+  define('PUELIA_SERVE_FROM_CACHE', true);
+
+2. yum install php-pecl-memcache
+
+3. yum install memcached
+
+4. Add to php.ini:
+
+  extension=memcache.so
+
+5. Add to/Create /etc/httpd/conf.d/memcached.conf 
+
+  <IfModule mod_memcached_cache.c>
+        CacheEnable memcached /
+        MemcachedCacheServer localhost:11211
+        MemcachedMaxServers 50
+        MemcachedMinConnections 10
+        MemcachedSMaxConnections 100
+        MemcachedMaxConnections 100
+        MemcachedConnectionTTL 10
+        MemcachedCacheMinFileSize 1
+        MemcachedCacheMaxFileSize 20971520
+        CacheDisable /admin/
+  </IfModule>
+
+6. Make sure the request Header does not contain the option 'cache-control=no-cache'
