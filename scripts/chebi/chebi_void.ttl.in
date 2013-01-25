@@ -1,0 +1,47 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix freq: <http://purl.org/cld/freq/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <#> .
+
+# VoID Header for the ChEBI RDF dataset
+<>
+	rdf:type void:DatasetDescription ;
+	dcterms:title "ChEBI %%CHEBI_VERSION%% VoID Description"@en ;
+	dcterms:description "The VoID description for the ChEBI %%CHEBI_VERSION%% Ontology."@en ;
+	pav:authoredBy <https://orcid.org/0000-0002-5711-4872> ;
+	pav:authoredOn "2013-01-25T16:40:12Z"^^xsd:datetime ;
+	pav:createdBy <%%SCRIPT_RUNNER%%> ;
+	pav:createdOn "%%SCRIPT_RUNTIME%%"^^xsd:dateTime ;
+	pav:lastUpdateOn "%%SCRIPT_RUNTIME%%"^^xsd:dateTime ;
+	foaf:primaryTopic :chebi .
+
+# Information about the ChEBI Dataset
+:chebi 
+	rdf:type void:Dataset ;
+	dcterms:title "Chemical Entities of Biological Interest (ChEBI)
+"@en ;
+	dcterms:description "Chemical Entities of Biological Interest (ChEBI) is a freely available dictionary of molecular entities focused on &#39;small&#39; chemical compounds."@en;
+	foaf:homepage <http://www.ebi.ac.uk/chebi/>;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:uriSpace "http://purl.obolibrary.org/obo/"^^xsd:string;
+	pav:version "%%CHEBI_VERSION%%"^^xsd:string;
+	dcterms:publisher <http://www.ebi.ac.uk/chebi/>;
+	dcterms:created "%%CHEBI_DATETIME%%"^^xsd:dateTime;
+	dcterms:modified "%%CHEBI_DATETIME%%"^^xsd:dateTime;
+	void:vocabulary 
+		<http://purl.obolibrary.org/obo/>,
+		<http://www.w3.org/2001/XMLSchema#>,
+		<http://purl.obolibrary.org/obo#>,
+		<http://purl.org/dc/elements/1.1/>,
+		<http://www.w3.org/2000/01/rdf-schema#>,
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#>,
+		<http://www.w3.org/2002/07/owl#>;
+	void:exampleResource <http://purl.obolibrary.org/obo/CHEBI_100> ;       	void:dataDump <%%CHEBI_DATADUMP%%>;
+	voag:frequencyOfChange freq:monthly.
