@@ -1,0 +1,4 @@
+CONSTRUCT { <http://purl.obolibrary.org/obo> <http://www.w3.org/2002/07/owl#versionIRI> ?version } 
+WHERE { 
+      <http://purl.obolibrary.org/obo> <http://www.w3.org/2002/07/owl#versionIRI> ?version 
+}
