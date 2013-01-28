@@ -19,14 +19,14 @@
 	pav:authoredOn "2013-01-25T16:40:12Z"^^xsd:datetime ;
 	pav:createdBy <%%SCRIPT_RUNNER%%> ;
 	pav:createdOn "%%SCRIPT_RUNTIME%%"^^xsd:dateTime ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/generateVoID.sh> ;
 	pav:lastUpdateOn "%%SCRIPT_RUNTIME%%"^^xsd:dateTime ;
 	foaf:primaryTopic :chebi .
 
 # Information about the ChEBI Dataset
 :chebi 
 	rdf:type void:Dataset ;
-	dcterms:title "Chemical Entities of Biological Interest (ChEBI)
-"@en ;
+	dcterms:title "Chemical Entities of Biological Interest (ChEBI)"@en ;
 	dcterms:description "Chemical Entities of Biological Interest (ChEBI) is a freely available dictionary of molecular entities focused on &#39;small&#39; chemical compounds."@en;
 	foaf:homepage <http://www.ebi.ac.uk/chebi/>;
 	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
@@ -35,6 +35,7 @@
 	dcterms:publisher <http://www.ebi.ac.uk/chebi/>;
 	dcterms:created "%%CHEBI_DATETIME%%"^^xsd:dateTime;
 	dcterms:modified "%%CHEBI_DATETIME%%"^^xsd:dateTime;
+	dcterms:subject <http://dbpedia.org/resource/Molecule>, <http://purl.obolibrary.org/obo/CHEBI_25367>;
 	void:vocabulary 
 		<http://purl.obolibrary.org/obo/>,
 		<http://www.w3.org/2001/XMLSchema#>,
