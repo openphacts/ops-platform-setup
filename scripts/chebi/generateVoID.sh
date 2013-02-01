@@ -51,15 +51,20 @@ function extract_CHEBI_Version()
 {
     query="SELECT ?version WHERE { <http://purl.obolibrary.org/obo> <http://www.w3.org/2002/07/owl#versionIRI> ?version }"
     run_query $CHEBI_VERSION_QUERY "version.out"
-    CHEBI_VERSION=`awk -F"[,:]" '{for(i=1;i<=NF;i++){if($i~/value\042/){print $(i+1)}}}' "version.out" | tr -d ' ' | tr -d '"'`
+    #CHEBI_VERSION=`awk -F"[,:]" '{for(i=1;i<=NF;i++){if($i~/value\042/){print $(i+1)}}}' "version.out" | tr -d ' ' | tr -d '"'`
+    CHEBI_VERSION=`awk '/<owl:versionIRI/''{print $0}' $RETRIEVED_FILE | sed -e 's/>/ /' -e 's/</ /g' | awk '{print $3}'`
     rm "version.out"
+}
+
+function extract_CHEBI_Datetime()
+{
+    CHEBI_DATETIME=
 }
 
 function extract_parameters()
 {
     extract_CHEBI_Version
-    #CHEBI_VERSION=1
-    CHEBI_DATETIME="2013-01-25T00:00:00Z"
+    extract_CHEBI_Datetime
     CHEBI_DATADUMP=$1 
 }
 
