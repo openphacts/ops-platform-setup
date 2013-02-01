@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.openphacts.data</groupId>
+	<artifactId>chebi</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ChEBI Pipeline</name>
+	<description>
+		Pipeline for retrieving ChEBI file from external URL, generating the VoID 
+		description for it and extracting linksets.
+	</description>
+
+	<properties>
+		<sesame.version>2.7.0-beta1</sesame.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.openrdf.sesame</groupId>
+			<artifactId>sesame-rio-api</artifactId>
+			<version>${sesame.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openrdf.sesame</groupId>
+			<artifactId>sesame-repository-sail</artifactId>
+			<version>${sesame.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openrdf.sesame</groupId>
+			<artifactId>sesame-sail-memory</artifactId>
+			<version>${sesame.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+			<type>bundle</type>
+		</dependency>
+	</dependencies>
+</project>
