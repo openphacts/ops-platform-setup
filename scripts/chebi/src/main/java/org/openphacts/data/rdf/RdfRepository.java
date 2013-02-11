@@ -5,9 +5,7 @@ import java.net.URL;
 
 import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
-import org.openrdf.model.Value;
 import org.openrdf.model.impl.URIImpl;
-import org.openrdf.query.BindingSet;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.QueryLanguage;
@@ -22,23 +20,20 @@ import org.openrdf.sail.nativerdf.NativeStore;
 import org.openrdf.rio.RDFFormat;
 import org.openrdf.rio.RDFParseException;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class RdfRepository {
 
-	private Logger logger;
-	
+	private final Logger logger = LoggerFactory.getLogger(RdfRepository.class);	
 	private Repository repository  =
 			new SailRepository(new NativeStore(new File("rdf")));
 //			new SailRepository(new MemoryStore());
-
-//	private RepositoryConnection connection;
 
 	private static final String BASEURI = "http://www.openphacts.org/";
 	
 	public RdfRepository() {		
 		try {
 			repository.initialize();
-//			connection = repository.getConnection();
 		} catch (RepositoryException ex) {
 			logger.error("Error initializing Repository. ", ex);
 		}
@@ -59,7 +54,7 @@ public class RdfRepository {
 			RepositoryConnection connection = getConnection();
 			Resource context = getNewContext();
 			connection.add(file, baseURI, format, context);
-			System.out.println("empty after data load: " + connection.isEmpty());
+			logger.debug("empty after data load: " + connection.isEmpty());
 			connection.close();
 			return context.stringValue();
 		} catch (RDFParseException e) {
@@ -83,10 +78,9 @@ public class RdfRepository {
 	public TupleQueryResult query(String queryString, String dataContext) throws RdfException {
 		try {
 			RepositoryConnection connection = getConnection();
-			System.out.println("Empty before query: " + connection.isEmpty());
+			logger.debug("Empty before query: " + connection.isEmpty());
 			TupleQuery tupleQuery = connection.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
 			TupleQueryResult result = tupleQuery.evaluate();
-//			connection.close();
 			return result;
 		} catch (QueryEvaluationException e) {
 			logger.warn("Problem evaluating query " + queryString);

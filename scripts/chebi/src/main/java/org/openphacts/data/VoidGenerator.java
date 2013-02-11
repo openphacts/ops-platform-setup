@@ -1,12 +1,6 @@
 package org.openphacts.data;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.net.URL;
-import java.nio.MappedByteBuffer;
-import java.nio.channels.FileChannel;
-import java.nio.charset.Charset;
 
 import org.openphacts.data.rdf.RdfException;
 import org.openphacts.data.rdf.RdfRepository;
@@ -16,6 +10,7 @@ import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.TupleQueryResult;
 import org.openrdf.rio.RDFFormat;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class VoidGenerator {
 
@@ -42,8 +37,7 @@ public class VoidGenerator {
 //	void:dataDump <%%CHEBI_DATADUMP%%>;
 
 	
-	private Logger logger;
-	
+	private final Logger logger = LoggerFactory.getLogger(VoidGenerator.class);	
 	private RdfRepository repository;
 
 	public VoidGenerator(RdfRepository repository) {
@@ -76,7 +70,6 @@ public class VoidGenerator {
 		try {
 		TupleQueryResult queryResult = repository.query(query, dataContext);
 		while (queryResult.hasNext()) {
-			System.out.println("here!");
 			   BindingSet bindingSet = queryResult.next();
 //			   System.out.println(bindingSet.getValue("s"));
 			   version = bindingSet.getValue("version");
