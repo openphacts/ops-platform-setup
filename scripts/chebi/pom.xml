@@ -12,6 +12,7 @@
 
 	<properties>
 		<sesame.version>2.7.0-beta1</sesame.version>
+		<slf4j.version>1.7.2</slf4j.version>
 	</properties>
 
 	<dependencies>
@@ -23,9 +24,14 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.6.6</version>
+			<version>${slf4j.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+<!-- 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.6.6</version>
@@ -35,7 +41,7 @@
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>1.6.6</version>
 		</dependency>
-		<dependency>
+ -->		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>

@@ -56,7 +56,7 @@ public class VoidGenerator {
 
 	private void addMetadataToContext(String voidContext, String dataContext) throws RdfException {
 		String chebiVersion = getChebiVersion(dataContext);
-		System.out.println("ChEBI Version: " + chebiVersion);
+		logger.debug("ChEBI Version: {}", chebiVersion);
 	}
 
 	private String getChebiVersion(String dataContext) throws RdfException {
@@ -71,9 +71,7 @@ public class VoidGenerator {
 		TupleQueryResult queryResult = repository.query(query, dataContext);
 		while (queryResult.hasNext()) {
 			   BindingSet bindingSet = queryResult.next();
-//			   System.out.println(bindingSet.getValue("s"));
 			   version = bindingSet.getValue("version");
-//			   System.out.println(version);
 			   break;
 			}
 		if (version == null) {

@@ -6,11 +6,15 @@ import java.net.URL;
 import org.openphacts.data.rdf.RdfException;
 import org.openphacts.data.rdf.RdfRepository;
 import org.openrdf.rio.RDFFormat;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ChebiPipeline {
 
 	private static final String CHEBI_BASE = "http://purl.obolibrary.org/obo/";
-
+	
+	private final Logger logger = LoggerFactory.getLogger(ChebiPipeline.class);
+	
 	public static void usage() {
 		System.out.println("Please specify the location of the ChEBI OWL file.");
 	}
@@ -38,10 +42,13 @@ public class ChebiPipeline {
 	
 	public void run(String urlString) throws MalformedURLException, RdfException, VoIDException {
 		URL url = new URL(urlString);
+		logger.info("Downloading file from {}", urlString);
 		String context = repository.loadRdf(url, CHEBI_BASE, RDFFormat.RDFXML);
-		System.out.println("Data successfully loaded into " + context);
+		logger.info("Data successfully loaded into {}", context);
+		logger.info("Generating VoID descriptor for ChEBI.");
 		VoidGenerator generator = new VoidGenerator(repository);
 		generator.generateVoid(context);
+		logger.info("VoID descriptor successfully generated.");
 	}
 	
 }
