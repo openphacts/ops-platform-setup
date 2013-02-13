@@ -35,7 +35,6 @@ public class VoidGenerator {
 //  :chebi
 //	dcterms:created "%%CHEBI_DATETIME%%"^^xsd:dateTime;
 //	dcterms:modified "%%CHEBI_DATETIME%%"^^xsd:dateTime;
-//	void:dataDump <%%CHEBI_DATADUMP%%>;
 
 	
 	private final Logger logger = LoggerFactory.getLogger(VoidGenerator.class);	
@@ -70,19 +69,13 @@ public class VoidGenerator {
 
 	private void addMetadataToContext(String voidContext, String dataContext, String chebiURL) 
 			throws RdfException {
-		addStatement(chebi_void_baseuri, DctermsConstants.TITLE, 
+		repository.addTripleWithValue(chebi_void_baseuri, DctermsConstants.TITLE, 
 				CHEBI_VOID_TITLE_START + chebiVersion + CHEBI_VOID_TITLE_END, voidContext);
-		addStatement(chebi_void_baseuri, DctermsConstants.DESCRIPTION, 
+		repository.addTripleWithValue(chebi_void_baseuri, DctermsConstants.DESCRIPTION, 
 				CHEBI_VOID_DESC_START + chebiVersion + CHEBI_VOID_DESC_END, voidContext);
-		addStatement(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
-		addStatement(chebiVoidUri, VoidConstants.DATA_DUMP, chebiURL, voidContext);
+		repository.addTripleWithValue(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
+		repository.addTripleWithURI(chebiVoidUri, VoidConstants.DATA_DUMP, chebiURL, voidContext);
 		logger.debug("ChEBI Version: {}", chebiVersion);
-	}
-
-	private void addStatement(String subject, String predicate, String object, String context) 
-			throws RdfException {
-		logger.debug("Adding triple to context: <{}, {}, {}>, {}", subject, predicate, object, context);
-		repository.addTriple(subject, predicate, object, context);
 	}
 
 	private void getChebiVersion(String dataContext) throws RdfException {

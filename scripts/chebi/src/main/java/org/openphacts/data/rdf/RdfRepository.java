@@ -134,13 +134,25 @@ public class RdfRepository {
 		}
 	}
 
-	public void addTriple(String subject, String predicate, String object,
-			String context) throws RdfException {
+	public void addTripleWithValue(String subject, String predicate, String object, String context) 
+			throws RdfException {
 		try {
 			RepositoryConnection connection = getConnection();			
 			ValueFactory myFactory = connection.getValueFactory();
 			Literal obValue = myFactory.createLiteral(object);
 			connection.add(new URIImpl(subject), new URIImpl(predicate), obValue, new URIImpl(context));
+		} catch (RepositoryException e) {
+			logger.warn("Failed to add quad: {}, {}, {}, {}", subject, predicate, object, context);
+			throw new RdfException("Failed to load quad. ", e);
+		}
+	}
+
+	public void addTripleWithURI(String subject, String predicate, String object, String context) 
+			throws RdfException {
+		try {
+			RepositoryConnection connection = getConnection();			
+			connection.add(new URIImpl(subject), new URIImpl(predicate), new URIImpl(object), 
+					new URIImpl(context));
 		} catch (RepositoryException e) {
 			logger.warn("Failed to add quad: {}, {}, {}, {}", subject, predicate, object, context);
 			throw new RdfException("Failed to load quad. ", e);
