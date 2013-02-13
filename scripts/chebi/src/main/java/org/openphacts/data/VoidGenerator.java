@@ -7,6 +7,7 @@ import org.openphacts.data.rdf.RdfException;
 import org.openphacts.data.rdf.RdfRepository;
 import org.openphacts.data.rdf.constants.DctermsConstants;
 import org.openphacts.data.rdf.constants.PavConstants;
+import org.openphacts.data.rdf.constants.VoidConstants;
 import org.openrdf.model.Value;
 import org.openrdf.query.BindingSet;
 import org.openrdf.query.QueryEvaluationException;
@@ -28,12 +29,10 @@ public class VoidGenerator {
 	private static final String CHEBI_BASEURI = "http://purl.obolibrary.org/obo/";
 
 //	<>
-//	dcterms:description
 //	pav:createdBy <%%SCRIPT_RUNNER%%> ;
 //	pav:createdOn "%%SCRIPT_RUNTIME%%"^^xsd:dateTime ;
 //	pav:lastUpdateOn "%%SCRIPT_RUNTIME%%"^^xsd:dateTime ;
 //  :chebi
-//	pav:version "%%CHEBI_VERSION%%"^^xsd:string;
 //	dcterms:created "%%CHEBI_DATETIME%%"^^xsd:dateTime;
 //	dcterms:modified "%%CHEBI_DATETIME%%"^^xsd:dateTime;
 //	void:dataDump <%%CHEBI_DATADUMP%%>;
@@ -49,7 +48,7 @@ public class VoidGenerator {
 		this.repository = repository;
 	}
 
-	public String generateVoid(String dataContext) throws VoIDException, RdfException {
+	public String generateVoid(String dataContext, String chebiURL) throws VoIDException, RdfException {
 		try {
 			logger.info("Retrieving ChEBI version number");
 			getChebiVersion(dataContext);
@@ -57,7 +56,7 @@ public class VoidGenerator {
 			logger.info("Loading in base void file");
 			String voidContext = importBaseVoidFile(chebi_void_baseuri);
 			logger.info("Adding additional metadata using values from downloaded file");
-			addMetadataToContext(voidContext, dataContext);
+			addMetadataToContext(voidContext, dataContext, chebiURL);
 			logger.info("Writing VoID descriptor to file");
 			String file = writeVoidFile(voidContext);
 			logger.info("Removing temporary data");
@@ -69,12 +68,14 @@ public class VoidGenerator {
 		}
 	}
 
-	private void addMetadataToContext(String voidContext, String dataContext) throws RdfException {
+	private void addMetadataToContext(String voidContext, String dataContext, String chebiURL) 
+			throws RdfException {
 		addStatement(chebi_void_baseuri, DctermsConstants.TITLE, 
 				CHEBI_VOID_TITLE_START + chebiVersion + CHEBI_VOID_TITLE_END, voidContext);
 		addStatement(chebi_void_baseuri, DctermsConstants.DESCRIPTION, 
 				CHEBI_VOID_DESC_START + chebiVersion + CHEBI_VOID_DESC_END, voidContext);
 		addStatement(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
+		addStatement(chebiVoidUri, VoidConstants.DATA_DUMP, chebiURL, voidContext);
 		logger.debug("ChEBI Version: {}", chebiVersion);
 	}
 
