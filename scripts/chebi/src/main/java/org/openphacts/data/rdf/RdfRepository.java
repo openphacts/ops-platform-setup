@@ -157,19 +157,44 @@ public class RdfRepository {
 		} catch (UnsupportedRDFormatException e) {
 			String message = "Unsupported file format.";
 			logger.warn(message);
-			throw new RdfException(message);
+			throw new RdfException(message, e);
 		} catch (FileNotFoundException e) {
 			String message = "Unable to write to file: " + fileName;
 			logger.warn(message);
-			throw new RdfException(message);
+			throw new RdfException(message, e);
 		} catch (RepositoryException e) {
 			String message = "Unable to access the repository.";
 			logger.warn(message);
-			throw new RdfException(message);
+			throw new RdfException(message, e);
 		} catch (RDFHandlerException e) {
 			String message = "Problem writing triples to file.";
 			logger.warn(message);
-			throw new RdfException(message);
+			throw new RdfException(message, e);
+		}
+	}
+
+	public void removeContext(String context) throws RdfException {
+		RepositoryConnection connection = getConnection();
+		try {
+			logger.debug("Clearing context {}", context);
+			connection.clear(new URIImpl(context));
+			logger.debug("Size of repository: {}", connection.size());
+		} catch (RepositoryException e) {
+			String message = "Unable to remove context from the repository.";
+			logger.warn(message);
+			throw new RdfException(message, e);
+		}
+	}
+
+	public void close() throws RdfException {
+		try {
+			RepositoryConnection connection = getConnection();
+			logger.info("Closing repository connection");
+			connection.close();
+		} catch (RepositoryException e) {
+			String message = "Unable to close the repository.";
+			logger.warn(message);
+			throw new RdfException(message, e);
 		}
 	}
 	

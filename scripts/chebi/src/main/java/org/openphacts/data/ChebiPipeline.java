@@ -49,6 +49,7 @@ public class ChebiPipeline {
 		VoidGenerator generator = new VoidGenerator(repository);
 		String fileName = generator.generateVoid(context);
 		logger.info("VoID descriptor successfully generated {}", fileName);
+		repository.close();
 		System.out.println("ChEBI VoID file available from " + fileName);
 	}
 	

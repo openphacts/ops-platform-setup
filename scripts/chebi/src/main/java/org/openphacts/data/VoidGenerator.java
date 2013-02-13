@@ -52,8 +52,13 @@ public class VoidGenerator {
 		try {
 			logger.info("Loading in base void file");
 			String voidContext = importBaseVoidFile();
+			logger.info("Adding additional metadata using values from downloaded file");
 			addMetadataToContext(voidContext, dataContext);
+			logger.info("Writing VoID descriptor to file");
 			String file = writeVoidFile(voidContext);
+			logger.info("Removing temporary data");
+			repository.removeContext(dataContext);
+			repository.removeContext(voidContext);
 			return file;
 		} finally {
 			
@@ -114,7 +119,6 @@ public class VoidGenerator {
 		TupleQueryResult result = repository.query(query, context);
 		try {
 			while (result.hasNext()) {
-				System.out.println("here! " + context);
 				BindingSet bindingSet = result.next();
 				chebiVoidUri = bindingSet.getValue("s").stringValue();
 				logger.info("ChEBI VoID URI: {}", chebiVoidUri);
