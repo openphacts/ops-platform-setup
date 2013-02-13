@@ -1,9 +1,11 @@
 package org.openphacts.data;
 
+import java.io.File;
 import java.net.URL;
 
 import org.openphacts.data.rdf.RdfException;
 import org.openphacts.data.rdf.RdfRepository;
+import org.openphacts.data.rdf.constants.PavConstants;
 import org.openrdf.model.Value;
 import org.openrdf.query.BindingSet;
 import org.openrdf.query.QueryEvaluationException;
@@ -39,6 +41,8 @@ public class VoidGenerator {
 	
 	private final Logger logger = LoggerFactory.getLogger(VoidGenerator.class);	
 	private RdfRepository repository;
+	private String chebiVoidUri;
+	private String chebiVersion;
 
 	public VoidGenerator(RdfRepository repository) {
 		this.repository = repository;
@@ -46,17 +50,24 @@ public class VoidGenerator {
 
 	public String generateVoid(String dataContext) throws VoIDException, RdfException {
 		try {
-			String voidContext = "";//importBaseVoidFile();
+			logger.info("Loading in base void file");
+			String voidContext = importBaseVoidFile();
 			addMetadataToContext(voidContext, dataContext);
-			return "chebi.ttl";
+			String file = writeVoidFile(voidContext);
+			return file;
 		} finally {
 			
 		}
 	}
 
 	private void addMetadataToContext(String voidContext, String dataContext) throws RdfException {
-		String chebiVersion = getChebiVersion(dataContext);
+		chebiVersion = getChebiVersion(dataContext);
+		setChebiVersion(chebiVersion, voidContext);
 		logger.debug("ChEBI Version: {}", chebiVersion);
+	}
+
+	private void setChebiVersion(String chebiVersion, String voidContext) throws RdfException {
+		repository.addTriple(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
 	}
 
 	private String getChebiVersion(String dataContext) throws RdfException {
@@ -68,26 +79,58 @@ public class VoidGenerator {
 				"<http://www.w3.org/2002/07/owl#versionIRI> ?version }";
 		Value version = null;
 		try {
-		TupleQueryResult queryResult = repository.query(query, dataContext);
-		while (queryResult.hasNext()) {
-			   BindingSet bindingSet = queryResult.next();
-			   version = bindingSet.getValue("version");
-			   break;
+			TupleQueryResult queryResult = repository.query(query, dataContext);
+			while (queryResult.hasNext()) {
+				BindingSet bindingSet = queryResult.next();
+				version = bindingSet.getValue("version");
+				break;
 			}
-		if (version == null) {
-			throw new RdfException("Version number not found");
-		}
-		return version.stringValue();
+			if (version == null) {
+				throw new RdfException("Version number not found");
+			}
+			return version.stringValue();
 		} catch (QueryEvaluationException e) {
-			logger.error("Problem processing query results. " + e);
+			logger.error("Problem processing query results. {}", e);
 			throw new RdfException("Problem processing results.", e);
 		}
 	}
 
 	private String importBaseVoidFile() throws RdfException {
 		URL file = this.getClass().getResource("/" + CHEBI_VOID_IN);
+		logger.debug("Import base void file from {}", file.getPath());
 		String context = repository.loadRdf(file, CHEBI_BASEURI, RDFFormat.TURTLE);
+		logger.info("ChEBI VoID Context: {}", context);
+		getChebiVoidURI(context);
 		return context;
+	}
+
+	private void getChebiVoidURI(String context) throws RdfException {
+		String query =
+				"SELECT ?s " +
+				"FROM <" + context + "> " +
+				"WHERE { " +
+					"?s a <http://rdfs.org/ns/void#Dataset>" +
+				"}";
+		TupleQueryResult result = repository.query(query, context);
+		try {
+			while (result.hasNext()) {
+				System.out.println("here! " + context);
+				BindingSet bindingSet = result.next();
+				chebiVoidUri = bindingSet.getValue("s").stringValue();
+				logger.info("ChEBI VoID URI: {}", chebiVoidUri);
+				return;
+			}
+		} catch (QueryEvaluationException e) {
+			logger.error("Problem processing query results. {}", e);
+			throw new RdfException("Problem processing results.", e);
+		}
+	}
+	
+	private String writeVoidFile(String voidContext) throws RdfException {
+		String fileName = "chebiVoid" + chebiVersion + ".ttl";
+		logger.debug("Writing to file {}", fileName);
+		repository.writeToFile(voidContext, fileName);
+		return fileName;
 	}
 
 }

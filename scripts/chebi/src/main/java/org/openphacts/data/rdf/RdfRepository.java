@@ -1,11 +1,16 @@
 package org.openphacts.data.rdf;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 
+import org.openrdf.model.Literal;
 import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
+import org.openrdf.model.ValueFactory;
 import org.openrdf.model.impl.URIImpl;
+import org.openrdf.query.BindingSet;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.QueryLanguage;
@@ -18,7 +23,11 @@ import org.openrdf.repository.sail.SailRepository;
 import org.openrdf.sail.memory.MemoryStore;
 import org.openrdf.sail.nativerdf.NativeStore;
 import org.openrdf.rio.RDFFormat;
+import org.openrdf.rio.RDFHandlerException;
 import org.openrdf.rio.RDFParseException;
+import org.openrdf.rio.RDFWriter;
+import org.openrdf.rio.Rio;
+import org.openrdf.rio.UnsupportedRDFormatException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,7 +44,7 @@ public class RdfRepository {
 		try {
 			repository.initialize();
 		} catch (RepositoryException ex) {
-			logger.error("Error initializing Repository. ", ex);
+			logger.error("Error initializing Repository. {}", ex);
 		}
 	}
 	
@@ -44,7 +53,7 @@ public class RdfRepository {
 			RepositoryConnection connection =  repository.getConnection();
 			return connection;
 		} catch (RepositoryException ex) {
-			logger.error("Unable to get connection. ", ex);
+			logger.error("Unable to get connection. {}", ex);
 			throw new RdfException("Unable to establish a connection.");
 		}
 	}
@@ -54,18 +63,19 @@ public class RdfRepository {
 			RepositoryConnection connection = getConnection();
 			Resource context = getNewContext();
 			connection.add(file, baseURI, format, context);
-			logger.debug("empty after data load: " + connection.isEmpty());
+			logger.debug("empty after data load: {}", connection.isEmpty());
 			connection.close();
+//			doCountQuery(context.stringValue());
 			return context.stringValue();
 		} catch (RDFParseException e) {
-			logger.error("Could not parse remote file. " + e);
-			throw new RdfException("Error parsing file.", e);
+			logger.error("Could not parse remote file. {}", e);
+			throw new RdfException("Error parsing file. ", e);
 		} catch (IOException e) {
-			logger.error("Error retrieving remote file. " + e);
+			logger.error("Error retrieving remote file. {}", e);
 			throw new RdfException("Error retrieving remote file.", e);
 		} catch (RepositoryException e) {
-			logger.error("Problem with local repoistory. " + e);
-			throw new RdfException("Repository problem.", e);
+			logger.error("Problem with local repoistory. {}", e);
+			throw new RdfException("Repository problem. ", e);
 		}
 	}
 
@@ -76,21 +86,90 @@ public class RdfRepository {
 	}
 
 	public TupleQueryResult query(String queryString, String dataContext) throws RdfException {
+//		doCountQuery(dataContext);
 		try {
 			RepositoryConnection connection = getConnection();
-			logger.debug("Empty before query: " + connection.isEmpty());
 			TupleQuery tupleQuery = connection.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
 			TupleQueryResult result = tupleQuery.evaluate();
 			return result;
 		} catch (QueryEvaluationException e) {
-			logger.warn("Problem evaluating query " + queryString);
+			logger.warn("Problem evaluating query {}", queryString);
 			throw new RdfException("Query evalution error", e);
 		} catch (RepositoryException e) {
-			logger.error("Problem with local repoistory. " + e);
+			logger.error("Problem with local repoistory. {}", e);
 			throw new RdfException("Repository problem.", e);
 		} catch (MalformedQueryException e) {
-			logger.error("Malformed query " + queryString);
-			throw new RdfException("Malformed query", e);
+			logger.error("Malformed query {}", queryString);
+			throw new RdfException("Malformed query ", e);
+		}
+	}
+
+	private void doCountQuery(String dataContext) {		
+		String queryString =
+				"SELECT (COUNT (DISTINCT ?s ) AS ?no) " +
+				"FROM <" + dataContext + "> " +
+				"WHERE { ?s ?p ?o }";
+		try {
+			RepositoryConnection connection = getConnection();
+			TupleQuery tupleQuery = connection.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
+			TupleQueryResult result = tupleQuery.evaluate();
+			while (result.hasNext()) {
+				BindingSet bindingSet = result.next();
+				String count = bindingSet.getValue("no").stringValue();
+				logger.info("Count: {}", count);
+				return;
+			}
+		} catch (RdfException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RepositoryException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MalformedQueryException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (QueryEvaluationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void addTriple(String subject, String predicate, String object,
+			String context) throws RdfException {
+		try {
+			RepositoryConnection connection = getConnection();			
+			ValueFactory myFactory = connection.getValueFactory();
+			Literal obValue = myFactory.createLiteral(object);
+			connection.add(new URIImpl(subject), new URIImpl(predicate), obValue, new URIImpl(context));
+		} catch (RepositoryException e) {
+			logger.warn("Failed to add quad: {}, {}, {}, {}", subject, predicate, object, context);
+			throw new RdfException("Failed to load quad. ", e);
+		}
+	}
+
+	public void writeToFile(String context, String fileName) throws RdfException {
+		RepositoryConnection connection = getConnection();
+		RDFWriter rdfWriter;
+		try {
+			rdfWriter = Rio.createWriter(RDFFormat.TURTLE, 
+			        new FileOutputStream(fileName));
+			connection.export(rdfWriter, new URIImpl(context));
+		} catch (UnsupportedRDFormatException e) {
+			String message = "Unsupported file format.";
+			logger.warn(message);
+			throw new RdfException(message);
+		} catch (FileNotFoundException e) {
+			String message = "Unable to write to file: " + fileName;
+			logger.warn(message);
+			throw new RdfException(message);
+		} catch (RepositoryException e) {
+			String message = "Unable to access the repository.";
+			logger.warn(message);
+			throw new RdfException(message);
+		} catch (RDFHandlerException e) {
+			String message = "Problem writing triples to file.";
+			logger.warn(message);
+			throw new RdfException(message);
 		}
 	}
 	
