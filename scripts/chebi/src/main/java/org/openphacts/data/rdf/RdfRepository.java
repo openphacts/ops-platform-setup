@@ -5,6 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 
+import javax.xml.datatype.XMLGregorianCalendar;
+
 import org.openrdf.model.Literal;
 import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
@@ -134,7 +136,7 @@ public class RdfRepository {
 		}
 	}
 
-	public void addTripleWithValue(String subject, String predicate, String object, String context) 
+	public void addTripleWithLiteral(String subject, String predicate, String object, String context) 
 			throws RdfException {
 		try {
 			RepositoryConnection connection = getConnection();			
@@ -143,6 +145,20 @@ public class RdfRepository {
 			connection.add(new URIImpl(subject), new URIImpl(predicate), obValue, new URIImpl(context));
 		} catch (RepositoryException e) {
 			logger.warn("Failed to add quad: {}, {}, {}, {}", subject, predicate, object, context);
+			throw new RdfException("Failed to load quad. ", e);
+		}
+	}
+
+	public void addTripleWithDateTime(String subject, String predicate, XMLGregorianCalendar datetime, 
+			String context) 
+			throws RdfException {
+		try {
+			RepositoryConnection connection = getConnection();			
+			ValueFactory myFactory = connection.getValueFactory();
+			Literal obValue = myFactory.createLiteral(datetime);
+			connection.add(new URIImpl(subject), new URIImpl(predicate), obValue, new URIImpl(context));
+		} catch (RepositoryException e) {
+			logger.warn("Failed to add quad: {}, {}, {}, {}", subject, predicate, datetime, context);
 			throw new RdfException("Failed to load quad. ", e);
 		}
 	}

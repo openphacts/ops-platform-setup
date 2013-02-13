@@ -2,6 +2,13 @@ package org.openphacts.data;
 
 import java.io.File;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.openphacts.data.rdf.RdfException;
 import org.openphacts.data.rdf.RdfRepository;
@@ -30,8 +37,6 @@ public class VoidGenerator {
 
 //	<>
 //	pav:createdBy <%%SCRIPT_RUNNER%%> ;
-//	pav:createdOn "%%SCRIPT_RUNTIME%%"^^xsd:dateTime ;
-//	pav:lastUpdateOn "%%SCRIPT_RUNTIME%%"^^xsd:dateTime ;
 //  :chebi
 //	dcterms:created "%%CHEBI_DATETIME%%"^^xsd:dateTime;
 //	dcterms:modified "%%CHEBI_DATETIME%%"^^xsd:dateTime;
@@ -68,14 +73,32 @@ public class VoidGenerator {
 	}
 
 	private void addMetadataToContext(String voidContext, String dataContext, String chebiURL) 
-			throws RdfException {
-		repository.addTripleWithValue(chebi_void_baseuri, DctermsConstants.TITLE, 
+			throws RdfException, VoIDException {
+		repository.addTripleWithLiteral(chebi_void_baseuri, DctermsConstants.TITLE, 
 				CHEBI_VOID_TITLE_START + chebiVersion + CHEBI_VOID_TITLE_END, voidContext);
-		repository.addTripleWithValue(chebi_void_baseuri, DctermsConstants.DESCRIPTION, 
+		repository.addTripleWithLiteral(chebi_void_baseuri, DctermsConstants.DESCRIPTION, 
 				CHEBI_VOID_DESC_START + chebiVersion + CHEBI_VOID_DESC_END, voidContext);
-		repository.addTripleWithValue(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
+		repository.addTripleWithLiteral(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
 		repository.addTripleWithURI(chebiVoidUri, VoidConstants.DATA_DUMP, chebiURL, voidContext);
+		XMLGregorianCalendar currentDateTime = getCurrentDateTime();
+		repository.addTripleWithDateTime(chebi_void_baseuri, PavConstants.CREATED_ON, currentDateTime, voidContext);
+		repository.addTripleWithDateTime(chebi_void_baseuri, PavConstants.LAST_UPDATED_ON, currentDateTime, voidContext);
 		logger.debug("ChEBI Version: {}", chebiVersion);
+	}
+
+	private XMLGregorianCalendar getCurrentDateTime() throws VoIDException {
+		try {
+			GregorianCalendar gregorianCalendar = new GregorianCalendar();
+			DatatypeFactory datatypeFactory = DatatypeFactory.newInstance();
+			XMLGregorianCalendar now = 
+					datatypeFactory.newXMLGregorianCalendar(gregorianCalendar);
+			logger.info("Timestamp that will be applied: {}.", now);
+			return now;
+		} catch (DatatypeConfigurationException e) {
+			String message = "Problem generating current datetime.";
+			logger.error(message, e);
+			throw new VoIDException(message, e);
+		}
 	}
 
 	private void getChebiVersion(String dataContext) throws RdfException {
