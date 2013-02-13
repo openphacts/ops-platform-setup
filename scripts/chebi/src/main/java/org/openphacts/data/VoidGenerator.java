@@ -5,6 +5,7 @@ import java.net.URL;
 
 import org.openphacts.data.rdf.RdfException;
 import org.openphacts.data.rdf.RdfRepository;
+import org.openphacts.data.rdf.constants.DctermsConstants;
 import org.openphacts.data.rdf.constants.PavConstants;
 import org.openrdf.model.Value;
 import org.openrdf.query.BindingSet;
@@ -43,6 +44,7 @@ public class VoidGenerator {
 	private RdfRepository repository;
 	private String chebiVoidUri;
 	private String chebiVersion;
+	private String chebi_void_baseuri;
 
 	public VoidGenerator(RdfRepository repository) {
 		this.repository = repository;
@@ -50,8 +52,11 @@ public class VoidGenerator {
 
 	public String generateVoid(String dataContext) throws VoIDException, RdfException {
 		try {
+			logger.info("Retrieving ChEBI version number");
+			getChebiVersion(dataContext);
+			chebi_void_baseuri = CHEBI_BASEURI + "void" + chebiVersion + ".ttl";
 			logger.info("Loading in base void file");
-			String voidContext = importBaseVoidFile();
+			String voidContext = importBaseVoidFile(chebi_void_baseuri);
 			logger.info("Adding additional metadata using values from downloaded file");
 			addMetadataToContext(voidContext, dataContext);
 			logger.info("Writing VoID descriptor to file");
@@ -66,16 +71,19 @@ public class VoidGenerator {
 	}
 
 	private void addMetadataToContext(String voidContext, String dataContext) throws RdfException {
-		chebiVersion = getChebiVersion(dataContext);
-		setChebiVersion(chebiVersion, voidContext);
+		addStatement(chebi_void_baseuri, DctermsConstants.TITLE, 
+				CHEBI_VOID_TITLE_START + chebiVersion + CHEBI_VOID_TITLE_END, voidContext);
+		addStatement(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
 		logger.debug("ChEBI Version: {}", chebiVersion);
 	}
 
-	private void setChebiVersion(String chebiVersion, String voidContext) throws RdfException {
-		repository.addTriple(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
+	private void addStatement(String subject, String predicate, String object, String context) 
+			throws RdfException {
+		logger.debug("Adding triple to context: <{}, {}, {}>, {}", subject, predicate, object, context);
+		repository.addTriple(subject, predicate, object, context);
 	}
 
-	private String getChebiVersion(String dataContext) throws RdfException {
+	private void getChebiVersion(String dataContext) throws RdfException {
 		String query = 
 				"SELECT ?s ?version " +
 				"FROM <" + dataContext + "> " + 
@@ -93,17 +101,18 @@ public class VoidGenerator {
 			if (version == null) {
 				throw new RdfException("Version number not found");
 			}
-			return version.stringValue();
+			chebiVersion = version.stringValue();
+			return;
 		} catch (QueryEvaluationException e) {
 			logger.error("Problem processing query results. {}", e);
 			throw new RdfException("Problem processing results.", e);
 		}
 	}
 
-	private String importBaseVoidFile() throws RdfException {
+	private String importBaseVoidFile(String baseuri) throws RdfException {
 		URL file = this.getClass().getResource("/" + CHEBI_VOID_IN);
 		logger.debug("Import base void file from {}", file.getPath());
-		String context = repository.loadRdf(file, CHEBI_BASEURI, RDFFormat.TURTLE);
+		String context = repository.loadRdf(file, baseuri, RDFFormat.TURTLE);
 		logger.info("ChEBI VoID Context: {}", context);
 		getChebiVoidURI(context);
 		return context;
