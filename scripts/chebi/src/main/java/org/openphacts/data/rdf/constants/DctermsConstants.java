@@ -6,4 +6,6 @@ public class DctermsConstants {
 	
 	public static final String TITLE = BASE_URI + "title";
 
+	public static final String DESCRIPTION = BASE_URI + "description";
+
 }

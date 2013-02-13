@@ -28,7 +28,6 @@ public class VoidGenerator {
 	private static final String CHEBI_BASEURI = "http://purl.obolibrary.org/obo/";
 
 //	<>
-//	dcterms:title "%%CHEBI_VERSION%%"@en ;
 //	dcterms:description
 //	pav:createdBy <%%SCRIPT_RUNNER%%> ;
 //	pav:createdOn "%%SCRIPT_RUNTIME%%"^^xsd:dateTime ;
@@ -73,6 +72,8 @@ public class VoidGenerator {
 	private void addMetadataToContext(String voidContext, String dataContext) throws RdfException {
 		addStatement(chebi_void_baseuri, DctermsConstants.TITLE, 
 				CHEBI_VOID_TITLE_START + chebiVersion + CHEBI_VOID_TITLE_END, voidContext);
+		addStatement(chebi_void_baseuri, DctermsConstants.DESCRIPTION, 
+				CHEBI_VOID_DESC_START + chebiVersion + CHEBI_VOID_DESC_END, voidContext);
 		addStatement(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
 		logger.debug("ChEBI Version: {}", chebiVersion);
 	}
