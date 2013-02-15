@@ -1,9 +1,6 @@
 package org.openphacts.data;
 
-import java.io.File;
 import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -55,12 +52,13 @@ public class VoidGenerator {
 	public String generateVoid(String dataContext, String chebiURL) throws VoIDException, RdfException {
 		try {
 			logger.info("Retrieving ChEBI version number");
-			getChebiVersion(dataContext);
+			chebiVersion = getChebiVersion(dataContext);
+//			String chebiCreatedDatetime = getChebiCreatedDatetime(dataContext);
 			chebi_void_baseuri = CHEBI_BASEURI + "void" + chebiVersion + ".ttl";
 			logger.info("Loading in base void file");
 			String voidContext = importBaseVoidFile(chebi_void_baseuri);
 			logger.info("Adding additional metadata using values from downloaded file");
-			addMetadataToContext(voidContext, dataContext, chebiURL);
+			addMetadataToContext(voidContext, chebiURL);
 			logger.info("Writing VoID descriptor to file");
 			String file = writeVoidFile(voidContext);
 			logger.info("Removing temporary data");
@@ -72,7 +70,7 @@ public class VoidGenerator {
 		}
 	}
 
-	private void addMetadataToContext(String voidContext, String dataContext, String chebiURL) 
+	private void addMetadataToContext(String voidContext, String chebiURL) 
 			throws RdfException, VoIDException {
 		repository.addTripleWithLiteral(chebi_void_baseuri, DctermsConstants.TITLE, 
 				CHEBI_VOID_TITLE_START + chebiVersion + CHEBI_VOID_TITLE_END, voidContext);
@@ -100,31 +98,35 @@ public class VoidGenerator {
 			throw new VoIDException(message, e);
 		}
 	}
+//
+//	private XMLGregorianCalendar getChebiCreatedDatetime(String dataContext) {
+//		String query =
+//				"SELECT ?created " +
+//				"FROM <" + dataContext + "> " + 
+//				"WHERE {" +
+//				"?s " +
+//				"<http://purl.org/dc/elements/1.1/#date> ?created }";
+//		return repository.getDatetimeValue(query);
+//	}
 
-	private void getChebiVersion(String dataContext) throws RdfException {
+	private String getChebiVersion(String dataContext) throws RdfException {
 		String query = 
 				"SELECT ?s ?version " +
 				"FROM <" + dataContext + "> " + 
 				"WHERE {" +
 				"?s " +
 				"<http://www.w3.org/2002/07/owl#versionIRI> ?version }";
-		Value version = null;
-		try {
-			TupleQueryResult queryResult = repository.query(query, dataContext);
-			while (queryResult.hasNext()) {
-				BindingSet bindingSet = queryResult.next();
-				version = bindingSet.getValue("version");
-				break;
-			}
-			if (version == null) {
-				throw new RdfException("Version number not found");
-			}
-			chebiVersion = version.stringValue();
-			return;
-		} catch (QueryEvaluationException e) {
-			logger.error("Problem processing query results. {}", e);
-			throw new RdfException("Problem processing results.", e);
-		}
+		return repository.getLiteralValueAsString(query, "version");
+	}
+
+	private String getChebiVoidURI(String context) throws RdfException {
+		String query =
+				"SELECT ?subjectUri " +
+				"FROM <" + context + "> " +
+				"WHERE { " +
+					"?subjectUri a <http://rdfs.org/ns/void#Dataset>" +
+				"}";
+		return repository.getLiteralValueAsString(query, "subjectUri");
 	}
 
 	private String importBaseVoidFile(String baseuri) throws RdfException {
@@ -132,31 +134,10 @@ public class VoidGenerator {
 		logger.debug("Import base void file from {}", file.getPath());
 		String context = repository.loadRdf(file, baseuri, RDFFormat.TURTLE);
 		logger.info("ChEBI VoID Context: {}", context);
-		getChebiVoidURI(context);
+		chebiVoidUri = getChebiVoidURI(context);
 		return context;
 	}
 
-	private void getChebiVoidURI(String context) throws RdfException {
-		String query =
-				"SELECT ?s " +
-				"FROM <" + context + "> " +
-				"WHERE { " +
-					"?s a <http://rdfs.org/ns/void#Dataset>" +
-				"}";
-		TupleQueryResult result = repository.query(query, context);
-		try {
-			while (result.hasNext()) {
-				BindingSet bindingSet = result.next();
-				chebiVoidUri = bindingSet.getValue("s").stringValue();
-				logger.info("ChEBI VoID URI: {}", chebiVoidUri);
-				return;
-			}
-		} catch (QueryEvaluationException e) {
-			logger.error("Problem processing query results. {}", e);
-			throw new RdfException("Problem processing results.", e);
-		}
-	}
-	
 	private String writeVoidFile(String voidContext) throws RdfException {
 		String fileName = "chebiVoid" + chebiVersion + ".ttl";
 		logger.debug("Writing to file {}", fileName);

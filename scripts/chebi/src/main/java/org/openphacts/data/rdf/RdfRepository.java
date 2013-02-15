@@ -10,6 +10,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import org.openrdf.model.Literal;
 import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
+import org.openrdf.model.Value;
 import org.openrdf.model.ValueFactory;
 import org.openrdf.model.impl.URIImpl;
 import org.openrdf.query.BindingSet;
@@ -87,8 +88,7 @@ public class RdfRepository {
 		return context;
 	}
 
-	public TupleQueryResult query(String queryString, String dataContext) throws RdfException {
-//		doCountQuery(dataContext);
+	public TupleQueryResult query(String queryString) throws RdfException {
 		try {
 			RepositoryConnection connection = getConnection();
 			TupleQuery tupleQuery = connection.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
@@ -103,6 +103,26 @@ public class RdfRepository {
 		} catch (MalformedQueryException e) {
 			logger.error("Malformed query {}", queryString);
 			throw new RdfException("Malformed query ", e);
+		}
+	}
+
+	public String getLiteralValueAsString(String query, String parameterName) throws RdfException {
+		Value value = null;
+		try {
+			TupleQueryResult queryResult = query(query);
+			while (queryResult.hasNext()) {
+				BindingSet bindingSet = queryResult.next();
+				value = bindingSet.getValue(parameterName);
+				break;
+			}
+			if (value == null) {
+				logger.warn("{} not found in data.", parameterName);
+				throw new RdfException(parameterName + " not found");
+			}
+			return value.stringValue();
+		} catch (QueryEvaluationException e) {
+			logger.error("Problem processing query results. {}", e);
+			throw new RdfException("Problem processing results.", e);
 		}
 	}
 
