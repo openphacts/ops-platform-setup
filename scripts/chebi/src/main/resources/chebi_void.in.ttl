@@ -15,7 +15,7 @@
 	rdf:type void:DatasetDescription ;
 	pav:authoredBy <https://orcid.org/0000-0002-5711-4872> ;
 	pav:authoredOn "2013-01-25T16:40:12Z"^^xsd:dateTime ;
-	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/generateVoID.sh> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/> ;
 	foaf:primaryTopic :chebi .
 
 # Information about the ChEBI Dataset
