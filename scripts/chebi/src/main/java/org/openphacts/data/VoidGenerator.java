@@ -1,14 +1,11 @@
 package org.openphacts.data;
 
 import java.net.URL;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.TimeZone;
+import java.util.Set;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
@@ -19,7 +16,6 @@ import org.openphacts.data.rdf.RdfRepository;
 import org.openphacts.data.rdf.constants.DctermsConstants;
 import org.openphacts.data.rdf.constants.PavConstants;
 import org.openphacts.data.rdf.constants.VoidConstants;
-import org.openrdf.model.Namespace;
 import org.openrdf.rio.RDFFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,7 +39,7 @@ public class VoidGenerator {
 	private String chebiVoidUri;
 	private String chebiVersion;
 	private String chebi_void_baseuri;
-	private List<String> vocabularies;
+	private Set<String> vocabularies;
 
 	public VoidGenerator(RdfRepository repository) {
 		this.repository = repository;
