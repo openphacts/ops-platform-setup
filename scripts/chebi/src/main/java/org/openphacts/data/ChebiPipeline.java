@@ -26,12 +26,12 @@ public class ChebiPipeline {
 	 * @throws VoIDException 
 	 */
 	public static void main(String[] args) throws MalformedURLException, RdfException, VoIDException {
-		if (args.length != 1) {
+		if (args.length != 2) {
 			usage();
 			System.exit(1);
 		}
 		ChebiPipeline chebiPipeline = new ChebiPipeline();
-		chebiPipeline.run(args[0]);
+		chebiPipeline.run(args[0], args[1]);
 	}
 
 	private RdfRepository repository;
@@ -40,14 +40,14 @@ public class ChebiPipeline {
 		repository = new RdfRepository();
 	}
 	
-	public void run(String urlString) throws MalformedURLException, RdfException, VoIDException {
-		URL url = new URL(urlString);
-		logger.info("Downloading file from {}", urlString);
+	public void run(String downloadUrlString, String creatorURL) throws MalformedURLException, RdfException, VoIDException {
+		URL url = new URL(downloadUrlString);
+		logger.info("Downloading file from {}", downloadUrlString);
 		String context = repository.loadRdf(url, CHEBI_BASE, RDFFormat.RDFXML);
 		logger.info("Data successfully loaded into {}", context);
 		logger.info("Generating VoID descriptor for ChEBI.");
 		VoidGenerator generator = new VoidGenerator(repository);
-		String fileName = generator.generateVoid(context, urlString);
+		String fileName = generator.generateVoid(context, downloadUrlString, creatorURL);
 		logger.info("VoID descriptor successfully generated {}", fileName);
 		repository.close();
 		System.out.println("ChEBI VoID file available from " + fileName);

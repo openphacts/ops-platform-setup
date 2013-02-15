@@ -33,10 +33,8 @@ public class VoidGenerator {
 	private static final String CHEBI_VOID_DESC_END = " Ontology.";
 	private static final String CHEBI_BASEURI = "http://purl.obolibrary.org/obo/";
 
-//	<>
-//	pav:createdBy <%%SCRIPT_RUNNER%%> ;
+	//TODO: Extract vocabularies used from ChEBI
 
-	
 	private final Logger logger = LoggerFactory.getLogger(VoidGenerator.class);	
 	private RdfRepository repository;
 	private String chebiVoidUri;
@@ -47,7 +45,7 @@ public class VoidGenerator {
 		this.repository = repository;
 	}
 
-	public String generateVoid(String dataContext, String chebiURL) throws VoIDException, RdfException {
+	public String generateVoid(String dataContext, String chebiURL, String creatorURL) throws VoIDException, RdfException {
 		try {
 			chebiVersion = getChebiVersion(dataContext);
 			XMLGregorianCalendar chebiCreatedDatetime = getChebiCreatedDatetime(dataContext);
@@ -55,7 +53,7 @@ public class VoidGenerator {
 			logger.info("Loading in base void file");
 			String voidContext = importBaseVoidFile(chebi_void_baseuri);
 			logger.info("Adding additional metadata using values from downloaded file");
-			addMetadataToContext(voidContext, chebiURL, chebiCreatedDatetime);
+			addMetadataToContext(voidContext, chebiURL, chebiCreatedDatetime, creatorURL);
 			logger.info("Writing VoID descriptor to file");
 			String file = writeVoidFile(voidContext);
 			logger.info("Removing temporary data");
@@ -67,12 +65,13 @@ public class VoidGenerator {
 		}
 	}
 
-	private void addMetadataToContext(String voidContext, String chebiURL, XMLGregorianCalendar chebiCreatedDatetime) 
+	private void addMetadataToContext(String voidContext, String chebiURL, XMLGregorianCalendar chebiCreatedDatetime, String creatorURL) 
 			throws RdfException, VoIDException {
 		repository.addTripleWithLiteral(chebi_void_baseuri, DctermsConstants.TITLE, 
 				CHEBI_VOID_TITLE_START + chebiVersion + CHEBI_VOID_TITLE_END, voidContext);
 		repository.addTripleWithLiteral(chebi_void_baseuri, DctermsConstants.DESCRIPTION, 
 				CHEBI_VOID_DESC_START + chebiVersion + CHEBI_VOID_DESC_END, voidContext);
+		repository.addTripleWithURI(chebi_void_baseuri, PavConstants.CREATED_BY, creatorURL, voidContext);
 		repository.addTripleWithLiteral(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
 		repository.addTripleWithURI(chebiVoidUri, VoidConstants.DATA_DUMP, chebiURL, voidContext);
 		repository.addTripleWithDateTime(chebiVoidUri, DctermsConstants.CREATED, chebiCreatedDatetime, voidContext);
@@ -106,7 +105,7 @@ public class VoidGenerator {
 				"?s <http://purl.org/dc/elements/1.1/date> ?created }";
 		logger.info("Retrieving ChEBI created date");
 		String datetimeString = repository.getLiteralValueAsString(query, "created");
-		logger.info("Raw ChEBI creation datetime: {}", datetimeString);
+		logger.debug("Raw ChEBI creation datetime: {}", datetimeString);
 		try {
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 			Date date = sdf.parse(datetimeString);
