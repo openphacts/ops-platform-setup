@@ -4,8 +4,10 @@ import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.TimeZone;
 
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -17,6 +19,7 @@ import org.openphacts.data.rdf.RdfRepository;
 import org.openphacts.data.rdf.constants.DctermsConstants;
 import org.openphacts.data.rdf.constants.PavConstants;
 import org.openphacts.data.rdf.constants.VoidConstants;
+import org.openrdf.model.Namespace;
 import org.openrdf.rio.RDFFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,6 +43,7 @@ public class VoidGenerator {
 	private String chebiVoidUri;
 	private String chebiVersion;
 	private String chebi_void_baseuri;
+	private List<String> vocabularies;
 
 	public VoidGenerator(RdfRepository repository) {
 		this.repository = repository;
@@ -47,9 +51,11 @@ public class VoidGenerator {
 
 	public String generateVoid(String dataContext, String chebiURL, String creatorURL) throws VoIDException, RdfException {
 		try {
+			logger.info("Extracting values from ChEBI");
 			chebiVersion = getChebiVersion(dataContext);
 			XMLGregorianCalendar chebiCreatedDatetime = getChebiCreatedDatetime(dataContext);
 			chebi_void_baseuri = CHEBI_BASEURI + "void" + chebiVersion + ".ttl";
+			vocabularies = repository.getVocabularies(dataContext);
 			logger.info("Loading in base void file");
 			String voidContext = importBaseVoidFile(chebi_void_baseuri);
 			logger.info("Adding additional metadata using values from downloaded file");
@@ -75,11 +81,24 @@ public class VoidGenerator {
 		repository.addTripleWithLiteral(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
 		repository.addTripleWithURI(chebiVoidUri, VoidConstants.DATA_DUMP, chebiURL, voidContext);
 		repository.addTripleWithDateTime(chebiVoidUri, DctermsConstants.CREATED, chebiCreatedDatetime, voidContext);
-		repository.addTripleWithDateTime(chebiVoidUri, DctermsConstants.MODIFIED, chebiCreatedDatetime, voidContext);		
+		repository.addTripleWithDateTime(chebiVoidUri, DctermsConstants.MODIFIED, chebiCreatedDatetime, voidContext);	
+		addVocabularies(voidContext);
+		//XXX: CreationTime should be last as it uses the current time
+		addVoidCreationTime(voidContext);
+		logger.debug("ChEBI Version: {}", chebiVersion);
+	}
+
+	private void addVoidCreationTime(String voidContext) throws VoIDException,
+			RdfException {
 		XMLGregorianCalendar currentDateTime = getCurrentDateTime();
 		repository.addTripleWithDateTime(chebi_void_baseuri, PavConstants.CREATED_ON, currentDateTime, voidContext);
 		repository.addTripleWithDateTime(chebi_void_baseuri, PavConstants.LAST_UPDATED_ON, currentDateTime, voidContext);
-		logger.debug("ChEBI Version: {}", chebiVersion);
+	}
+
+	private void addVocabularies(String voidContext) throws RdfException {
+		for (String vocabulary : vocabularies) {
+			repository.addTripleWithURI(chebiVoidUri, VoidConstants.VOCABULARY, vocabulary, voidContext);
+		}
 	}
 
 	private XMLGregorianCalendar getCurrentDateTime() throws VoIDException {

@@ -4,16 +4,24 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import org.openrdf.model.Graph;
 import org.openrdf.model.Literal;
+import org.openrdf.model.Namespace;
 import org.openrdf.model.Resource;
+import org.openrdf.model.Statement;
 import org.openrdf.model.URI;
 import org.openrdf.model.Value;
 import org.openrdf.model.ValueFactory;
 import org.openrdf.model.impl.URIImpl;
 import org.openrdf.query.BindingSet;
+import org.openrdf.query.GraphQuery;
+import org.openrdf.query.GraphQueryResult;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.QueryLanguage;
@@ -22,6 +30,7 @@ import org.openrdf.query.TupleQueryResult;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.RepositoryResult;
 import org.openrdf.repository.sail.SailRepository;
 import org.openrdf.sail.memory.MemoryStore;
 import org.openrdf.sail.nativerdf.NativeStore;
@@ -46,6 +55,10 @@ public class RdfRepository {
 	public RdfRepository() {		
 		try {
 			repository.initialize();
+			RepositoryConnection connection = repository.getConnection();
+			connection.clear();
+			connection.clearNamespaces();
+			connection.commit();
 		} catch (RepositoryException ex) {
 			logger.error("Error initializing Repository. {}", ex);
 		}
@@ -86,6 +99,29 @@ public class RdfRepository {
 		long currentTimeMillis = System.currentTimeMillis();
 		URI context = new URIImpl(BASEURI + currentTimeMillis);
 		return context;
+	}
+
+	public List<String> getVocabularies(String context) throws RdfException {
+		String query = "SELECT DISTINCT ?p FROM <" + context + "> WHERE {?s ?p ?o}";
+		try {
+			RepositoryConnection connection = getConnection();
+			RepositoryResult<Namespace> namespaces = connection.getNamespaces();
+			List<String> vocabularies = new ArrayList<String>();
+			for (Namespace namespace : namespaces.asList()) {
+				vocabularies.add(namespace.getName());
+			}
+			return vocabularies;
+		} catch (RepositoryException e) {
+			String message = "Unable to get namespaces from the repository.";
+			logger.warn(message);
+			throw new RdfException(message, e);
+//		} catch (MalformedQueryException e) {
+//			logger.error("Malformed query {}", query);
+//			throw new RdfException("Malformed query ", e);
+//		} catch (QueryEvaluationException e) {
+//			logger.warn("Problem evaluating query {}", query);
+//			throw new RdfException("Query evalution error", e);
+		}
 	}
 
 	public TupleQueryResult query(String queryString) throws RdfException {

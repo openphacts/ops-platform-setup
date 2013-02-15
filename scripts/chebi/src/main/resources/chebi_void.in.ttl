@@ -28,13 +28,5 @@
 	void:uriSpace "http://purl.obolibrary.org/obo/"^^xsd:string;
 	dcterms:publisher <http://www.ebi.ac.uk/chebi/>;
 	dcterms:subject <http://dbpedia.org/resource/Molecule>, <http://purl.obolibrary.org/obo/CHEBI_25367>;
-	void:vocabulary 
-		<http://purl.obolibrary.org/obo/>,
-		<http://www.w3.org/2001/XMLSchema#>,
-		<http://purl.obolibrary.org/obo#>,
-		<http://purl.org/dc/elements/1.1/>,
-		<http://www.w3.org/2000/01/rdf-schema#>,
-		<http://www.w3.org/1999/02/22-rdf-syntax-ns#>,
-		<http://www.w3.org/2002/07/owl#>;
 	void:exampleResource <http://purl.obolibrary.org/obo/CHEBI_100> ;
 	voag:frequencyOfChange freq:monthly.
