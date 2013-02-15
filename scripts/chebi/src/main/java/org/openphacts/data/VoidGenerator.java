@@ -1,7 +1,12 @@
 package org.openphacts.data;
 
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
@@ -12,10 +17,6 @@ import org.openphacts.data.rdf.RdfRepository;
 import org.openphacts.data.rdf.constants.DctermsConstants;
 import org.openphacts.data.rdf.constants.PavConstants;
 import org.openphacts.data.rdf.constants.VoidConstants;
-import org.openrdf.model.Value;
-import org.openrdf.query.BindingSet;
-import org.openrdf.query.QueryEvaluationException;
-import org.openrdf.query.TupleQueryResult;
 import org.openrdf.rio.RDFFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,9 +35,6 @@ public class VoidGenerator {
 
 //	<>
 //	pav:createdBy <%%SCRIPT_RUNNER%%> ;
-//  :chebi
-//	dcterms:created "%%CHEBI_DATETIME%%"^^xsd:dateTime;
-//	dcterms:modified "%%CHEBI_DATETIME%%"^^xsd:dateTime;
 
 	
 	private final Logger logger = LoggerFactory.getLogger(VoidGenerator.class);	
@@ -51,14 +49,13 @@ public class VoidGenerator {
 
 	public String generateVoid(String dataContext, String chebiURL) throws VoIDException, RdfException {
 		try {
-			logger.info("Retrieving ChEBI version number");
 			chebiVersion = getChebiVersion(dataContext);
-//			String chebiCreatedDatetime = getChebiCreatedDatetime(dataContext);
+			XMLGregorianCalendar chebiCreatedDatetime = getChebiCreatedDatetime(dataContext);
 			chebi_void_baseuri = CHEBI_BASEURI + "void" + chebiVersion + ".ttl";
 			logger.info("Loading in base void file");
 			String voidContext = importBaseVoidFile(chebi_void_baseuri);
 			logger.info("Adding additional metadata using values from downloaded file");
-			addMetadataToContext(voidContext, chebiURL);
+			addMetadataToContext(voidContext, chebiURL, chebiCreatedDatetime);
 			logger.info("Writing VoID descriptor to file");
 			String file = writeVoidFile(voidContext);
 			logger.info("Removing temporary data");
@@ -70,7 +67,7 @@ public class VoidGenerator {
 		}
 	}
 
-	private void addMetadataToContext(String voidContext, String chebiURL) 
+	private void addMetadataToContext(String voidContext, String chebiURL, XMLGregorianCalendar chebiCreatedDatetime) 
 			throws RdfException, VoIDException {
 		repository.addTripleWithLiteral(chebi_void_baseuri, DctermsConstants.TITLE, 
 				CHEBI_VOID_TITLE_START + chebiVersion + CHEBI_VOID_TITLE_END, voidContext);
@@ -78,6 +75,8 @@ public class VoidGenerator {
 				CHEBI_VOID_DESC_START + chebiVersion + CHEBI_VOID_DESC_END, voidContext);
 		repository.addTripleWithLiteral(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
 		repository.addTripleWithURI(chebiVoidUri, VoidConstants.DATA_DUMP, chebiURL, voidContext);
+		repository.addTripleWithDateTime(chebiVoidUri, DctermsConstants.CREATED, chebiCreatedDatetime, voidContext);
+		repository.addTripleWithDateTime(chebiVoidUri, DctermsConstants.MODIFIED, chebiCreatedDatetime, voidContext);		
 		XMLGregorianCalendar currentDateTime = getCurrentDateTime();
 		repository.addTripleWithDateTime(chebi_void_baseuri, PavConstants.CREATED_ON, currentDateTime, voidContext);
 		repository.addTripleWithDateTime(chebi_void_baseuri, PavConstants.LAST_UPDATED_ON, currentDateTime, voidContext);
@@ -98,24 +97,45 @@ public class VoidGenerator {
 			throw new VoIDException(message, e);
 		}
 	}
-//
-//	private XMLGregorianCalendar getChebiCreatedDatetime(String dataContext) {
-//		String query =
-//				"SELECT ?created " +
-//				"FROM <" + dataContext + "> " + 
-//				"WHERE {" +
-//				"?s " +
-//				"<http://purl.org/dc/elements/1.1/#date> ?created }";
-//		return repository.getDatetimeValue(query);
-//	}
+
+	private XMLGregorianCalendar getChebiCreatedDatetime(String dataContext) throws RdfException, VoIDException {
+		String query =
+				"SELECT ?created " +
+				"FROM <" + dataContext + "> " + 
+				"WHERE {" +
+				"?s <http://purl.org/dc/elements/1.1/date> ?created }";
+		logger.info("Retrieving ChEBI created date");
+		String datetimeString = repository.getLiteralValueAsString(query, "created");
+		logger.info("Raw ChEBI creation datetime: {}", datetimeString);
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+			Date date = sdf.parse(datetimeString);
+			GregorianCalendar gc = new GregorianCalendar();
+			gc.setTimeInMillis(date.getTime());            
+			DatatypeFactory datatypeFactory = DatatypeFactory.newInstance();
+			XMLGregorianCalendar datetime = 
+					datatypeFactory.newXMLGregorianCalendar(gc);
+			logger.info("ChEBI creation time: {}.", datetime);
+			return datetime;
+		} catch (DatatypeConfigurationException e) {
+			String message = "Problem generating current datetime.";
+			logger.error(message, e);
+			throw new VoIDException(message, e);
+		} catch (ParseException e) {
+			String message = "Problem convertin ChEBI date to XML datetime.";
+			logger.error(message, e);
+			throw new VoIDException(message, e);
+		}
+	}
 
 	private String getChebiVersion(String dataContext) throws RdfException {
 		String query = 
-				"SELECT ?s ?version " +
+				"SELECT ?version " +
 				"FROM <" + dataContext + "> " + 
 				"WHERE {" +
 				"?s " +
 				"<http://www.w3.org/2002/07/owl#versionIRI> ?version }";
+		logger.info("Retrieving ChEBI version number");
 		return repository.getLiteralValueAsString(query, "version");
 	}
 
@@ -126,6 +146,7 @@ public class VoidGenerator {
 				"WHERE { " +
 					"?subjectUri a <http://rdfs.org/ns/void#Dataset>" +
 				"}";
+		logger.info("Retrieving ChEBI URI");
 		return repository.getLiteralValueAsString(query, "subjectUri");
 	}
 

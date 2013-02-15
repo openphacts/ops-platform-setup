@@ -109,12 +109,11 @@ public class RdfRepository {
 	public String getLiteralValueAsString(String query, String parameterName) throws RdfException {
 		Value value = null;
 		try {
+			logger.debug("Query: {}", query);
 			TupleQueryResult queryResult = query(query);
-			while (queryResult.hasNext()) {
-				BindingSet bindingSet = queryResult.next();
-				value = bindingSet.getValue(parameterName);
-				break;
-			}
+			BindingSet bindingSet = queryResult.singleResult();
+			logger.debug("Result bindings: {}", bindingSet.toString());
+			value = bindingSet.getValue(parameterName);
 			if (value == null) {
 				logger.warn("{} not found in data.", parameterName);
 				throw new RdfException(parameterName + " not found");
