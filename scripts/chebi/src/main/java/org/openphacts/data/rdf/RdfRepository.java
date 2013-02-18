@@ -91,7 +91,7 @@ public class RdfRepository {
 	}
 
 	public Set<String> getVocabularies(String context) throws RdfException {
-		String query = "SELECT DISTINCT ?p FROM <" + context + "> WHERE {?s ?p ?o}";
+		String query = "SELECT DISTINCT ?p FROM <" + context + "> WHERE {[] ?p []}";
 		try {
 			RepositoryConnection connection = getConnection();
 			TupleQuery tupleQuery = connection.prepareTupleQuery(QueryLanguage.SPARQL, query);
