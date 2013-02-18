@@ -16,7 +16,7 @@ public class ChebiPipeline {
 	private final Logger logger = LoggerFactory.getLogger(ChebiPipeline.class);
 	
 	public static void usage() {
-		System.out.println("Please specify the location of the ChEBI OWL file.");
+		System.out.println("Please specify the location of the ChEBI OWL file and a URI for the person running the script.");
 	}
 	
 	/**
