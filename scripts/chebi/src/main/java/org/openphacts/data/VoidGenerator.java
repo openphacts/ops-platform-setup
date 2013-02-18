@@ -32,8 +32,6 @@ public class VoidGenerator {
 	private static final String CHEBI_VOID_DESC_END = " Ontology.";
 	private static final String CHEBI_BASEURI = "http://purl.obolibrary.org/obo/";
 
-	//TODO: Extract vocabularies used from ChEBI
-
 	private final Logger logger = LoggerFactory.getLogger(VoidGenerator.class);	
 	private RdfRepository repository;
 	private String chebiVoidUri;
