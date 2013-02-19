@@ -28,5 +28,6 @@
 	void:uriSpace "http://purl.obolibrary.org/obo/"^^xsd:string;
 	dcterms:publisher <http://www.ebi.ac.uk/chebi/>;
 	dcterms:subject <http://dbpedia.org/resource/Molecule>, <http://purl.obolibrary.org/obo/CHEBI_25367>;
+	pav:createdWith <http://owlapi.sourceforge.net>;
 	void:exampleResource <http://purl.obolibrary.org/obo/CHEBI_100> ;
 	voag:frequencyOfChange freq:monthly.
