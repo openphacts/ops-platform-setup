@@ -27,6 +27,7 @@
 	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
 	void:uriSpace "http://purl.obolibrary.org/obo/"^^xsd:string;
 	dcterms:publisher <http://www.ebi.ac.uk/chebi/>;
+	void:subset :has_partsLinkset, :is_tautomer_ofLinkset;
 	dcterms:subject <http://dbpedia.org/resource/Molecule>, <http://purl.obolibrary.org/obo/CHEBI_25367>;
 	pav:createdWith <http://owlapi.sourceforge.net>;
 	void:exampleResource <http://purl.obolibrary.org/obo/CHEBI_100> ;
@@ -43,3 +44,16 @@
 	void:linkPredicate skos:exactMatch ;
 	dul:expresses <http://purl.obolibrary.org/obo#has_part> ;
 	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+	
+# Information about the ChEBI is_tautomer_of Linkset
+:is_tautomer_ofLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Tautomer linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their tautomers." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#is_tautomer_of> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+	

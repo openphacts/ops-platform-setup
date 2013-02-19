@@ -61,8 +61,8 @@ public class VoidGenerator {
 			String voidContext = importBaseVoidFile(chebi_void_file);
 			logger.info("Adding additional metadata using values from downloaded file");
 			addMetadataToContext(voidContext, chebiURL, chebiCreatedDatetime);
-			logger.info("Creating has_parts linkset");
-			createHasPartsLinkset(dataContext, voidContext, baseURI);
+			logger.info("Creating linksets");
+			createLinksets(dataContext, voidContext, baseURI);
 			logger.info("Writing VoID descriptor to file");
 			String file = writeVoidFile(voidContext);
 			logger.info("Removing temporary data");
@@ -187,20 +187,27 @@ public class VoidGenerator {
 		return fileName;
 	}
 
-	private void createHasPartsLinkset(String dataContext, String voidContext, String baseURI) 
+	private void createLinksets(String dataContext, String voidContext, String baseURI) 
+			throws RdfException {
+		logger.info("Creating has_parts linkset");
+		createLinkset(dataContext, voidContext, baseURI, "http://purl.obolibrary.org/obo#has_part", "chebiHasPartsLinkset", chebi_void_file + "#has_partsLinkset");
+		logger.info("Creating is_tautomer_of linkset");
+		createLinkset(dataContext, voidContext, baseURI, "http://purl.obolibrary.org/obo#is_tautomer_of", "chebiTautomerLinkset", chebi_void_file + "#is_tautomer_ofLinkset");
+	}
+	
+	private void createLinkset(String dataContext, String voidContext, String baseURI, String justificationURI, String linksetFileBase, String linksetVoidUri) 
 			throws RdfException {
 		String query = 
 				"CONSTRUCT { ?source <" + LINKING_PREDICATE + "> ?target } " +
 				"FROM <" + dataContext + "> " +
 				"WHERE { " +
 				"?source <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?tmp . " +
-				"?tmp <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo#has_part> ; " +
+				"?tmp <http://www.w3.org/2002/07/owl#onProperty> <" + justificationURI + "> ; " +
 				"<http://www.w3.org/2002/07/owl#someValuesFrom> ?target ." +
 				"}";
-		String fileName = "chebiHasPartsLinkset" + chebiVersion + ".ttl";
+		String fileName = linksetFileBase + chebiVersion + ".ttl";
 		String fileBaseUri = baseURI + "/" + fileName;
 		String linksetContext = repository.createNewContext();
-		String linksetVoidUri = chebi_void_file + "#has_partsLinkset";
 		repository.addTripleWithURI(fileBaseUri, VoidConstants.IN_DATASET, 
 				linksetVoidUri, linksetContext);
 		repository.createLinkset(query, linksetContext);
