@@ -7,5 +7,7 @@ public class VoidConstants {
 	public static final String DATA_DUMP = BASE_URI + "dataDump";
 
 	public static final String VOCABULARY = BASE_URI + "vocabulary";
+
+	public static final String IN_DATASET = BASE_URI + "inDataset";
 	
 }

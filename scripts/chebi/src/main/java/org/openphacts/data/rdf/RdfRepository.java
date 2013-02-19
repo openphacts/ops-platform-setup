@@ -11,12 +11,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.openrdf.model.Literal;
 import org.openrdf.model.Resource;
+import org.openrdf.model.Statement;
 import org.openrdf.model.URI;
 import org.openrdf.model.Value;
 import org.openrdf.model.ValueFactory;
 import org.openrdf.model.impl.URIImpl;
 import org.openrdf.query.BindingSet;
+import org.openrdf.query.GraphQuery;
+import org.openrdf.query.GraphQueryResult;
 import org.openrdf.query.MalformedQueryException;
+import org.openrdf.query.Query;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.QueryLanguage;
 import org.openrdf.query.TupleQuery;
@@ -84,6 +88,10 @@ public class RdfRepository {
 		}
 	}
 
+	public String createNewContext() {
+		return getNewContext().stringValue();
+	}
+	
 	private Resource getNewContext() {
 		long currentTimeMillis = System.currentTimeMillis();
 		URI context = new URIImpl(BASEURI + currentTimeMillis);
@@ -116,7 +124,7 @@ public class RdfRepository {
 		}
 	}
 
-	public TupleQueryResult query(String queryString) throws RdfException {
+	private TupleQueryResult selectQuery(String queryString) throws RdfException {
 		try {
 			RepositoryConnection connection = getConnection();
 			TupleQuery tupleQuery = connection.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
@@ -134,11 +142,29 @@ public class RdfRepository {
 		}
 	}
 
+
+	private GraphQueryResult constructQuery(String queryString) throws RdfException {
+		try {
+			RepositoryConnection connection = getConnection();
+			GraphQuery graphQuery = connection.prepareGraphQuery(QueryLanguage.SPARQL, queryString);
+			GraphQueryResult result = graphQuery.evaluate();
+			return result;
+		} catch (QueryEvaluationException e) {
+			logger.warn("Problem evaluating query {}", queryString);
+			throw new RdfException("Query evalution error", e);
+		} catch (RepositoryException e) {
+			logger.error("Problem with local repoistory. {}", e);
+			throw new RdfException("Repository problem.", e);
+		} catch (MalformedQueryException e) {
+			logger.error("Malformed query {}", queryString);
+			throw new RdfException("Malformed query ", e);
+		}
+	}
 	public String getLiteralValueAsString(String query, String parameterName) throws RdfException {
 		Value value = null;
 		try {
 			logger.debug("Query: {}", query);
-			TupleQueryResult queryResult = query(query);
+			TupleQueryResult queryResult = selectQuery(query);
 			BindingSet bindingSet = queryResult.singleResult();
 			logger.debug("Result bindings: {}", bindingSet.toString());
 			value = bindingSet.getValue(parameterName);
@@ -264,12 +290,30 @@ public class RdfRepository {
 	public void close() throws RdfException {
 		try {
 			RepositoryConnection connection = getConnection();
+			logger.info("Clearing repository");
+			connection.clear();
 			logger.info("Closing repository connection");
 			connection.close();
 		} catch (RepositoryException e) {
 			String message = "Unable to close the repository.";
 			logger.warn(message);
 			throw new RdfException(message, e);
+		}
+	}
+
+	public void createLinkset(String query, String context) throws RdfException {
+		try {
+			GraphQueryResult result = constructQuery(query);
+			RepositoryConnection connection = getConnection();
+			connection.add(result, new URIImpl(context));
+//			doCountQuery(resultContext.stringValue());
+		} catch (RepositoryException e) {
+			String message = "Unable to write linkset context into repository.";
+			logger.warn(message);
+			throw new RdfException(message, e);
+		} catch (QueryEvaluationException e) {
+			logger.error("Problem loading query results into repository. {}", e);
+			throw new RdfException("Problem loading query results into repository.", e);
 		}
 	}
 	

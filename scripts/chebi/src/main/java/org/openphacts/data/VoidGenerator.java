@@ -20,6 +20,8 @@ import org.openrdf.rio.RDFFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+//TODO: link to previous version
+
 public class VoidGenerator {
 
 	private static final String CHEBI_VOID_IN = "chebi_void.in.ttl";
@@ -36,24 +38,27 @@ public class VoidGenerator {
 	private RdfRepository repository;
 	private String chebiVoidUri;
 	private String chebiVersion;
-	private String chebi_void_baseuri;
+	private String chebi_void_file;
 	private Set<String> vocabularies;
 
 	public VoidGenerator(RdfRepository repository) {
 		this.repository = repository;
 	}
 
-	public String generateVoid(String dataContext, String chebiURL, String creatorURL) throws VoIDException, RdfException {
+	public String generateVoid(String dataContext, String chebiURL, String baseURI, String creatorURL) 
+			throws VoIDException, RdfException {
 		try {
 			logger.info("Extracting values from ChEBI");
 			chebiVersion = getChebiVersion(dataContext);
 			XMLGregorianCalendar chebiCreatedDatetime = getChebiCreatedDatetime(dataContext);
-			chebi_void_baseuri = CHEBI_BASEURI + "void" + chebiVersion + ".ttl";
+			chebi_void_file = baseURI + "/void" + chebiVersion + ".ttl";
 			vocabularies = repository.getVocabularies(dataContext);
 			logger.info("Loading in base void file");
-			String voidContext = importBaseVoidFile(chebi_void_baseuri);
+			String voidContext = importBaseVoidFile(chebi_void_file);
 			logger.info("Adding additional metadata using values from downloaded file");
 			addMetadataToContext(voidContext, chebiURL, chebiCreatedDatetime, creatorURL);
+			logger.info("Creating has_parts linkset");
+			createHasPartsLinkset(dataContext, voidContext, baseURI);
 			logger.info("Writing VoID descriptor to file");
 			String file = writeVoidFile(voidContext);
 			logger.info("Removing temporary data");
@@ -67,11 +72,11 @@ public class VoidGenerator {
 
 	private void addMetadataToContext(String voidContext, String chebiURL, XMLGregorianCalendar chebiCreatedDatetime, String creatorURL) 
 			throws RdfException, VoIDException {
-		repository.addTripleWithLiteral(chebi_void_baseuri, DctermsConstants.TITLE, 
+		repository.addTripleWithLiteral(chebi_void_file, DctermsConstants.TITLE, 
 				CHEBI_VOID_TITLE_START + chebiVersion + CHEBI_VOID_TITLE_END, voidContext);
-		repository.addTripleWithLiteral(chebi_void_baseuri, DctermsConstants.DESCRIPTION, 
+		repository.addTripleWithLiteral(chebi_void_file, DctermsConstants.DESCRIPTION, 
 				CHEBI_VOID_DESC_START + chebiVersion + CHEBI_VOID_DESC_END, voidContext);
-		repository.addTripleWithURI(chebi_void_baseuri, PavConstants.CREATED_BY, creatorURL, voidContext);
+		repository.addTripleWithURI(chebi_void_file, PavConstants.CREATED_BY, creatorURL, voidContext);
 		repository.addTripleWithLiteral(chebiVoidUri, PavConstants.VERSION, chebiVersion, voidContext);
 		repository.addTripleWithURI(chebiVoidUri, VoidConstants.DATA_DUMP, chebiURL, voidContext);
 		repository.addTripleWithDateTime(chebiVoidUri, DctermsConstants.CREATED, chebiCreatedDatetime, voidContext);
@@ -85,8 +90,8 @@ public class VoidGenerator {
 	private void addVoidCreationTime(String voidContext) throws VoIDException,
 			RdfException {
 		XMLGregorianCalendar currentDateTime = getCurrentDateTime();
-		repository.addTripleWithDateTime(chebi_void_baseuri, PavConstants.CREATED_ON, currentDateTime, voidContext);
-		repository.addTripleWithDateTime(chebi_void_baseuri, PavConstants.LAST_UPDATED_ON, currentDateTime, voidContext);
+		repository.addTripleWithDateTime(chebi_void_file, PavConstants.CREATED_ON, currentDateTime, voidContext);
+		repository.addTripleWithDateTime(chebi_void_file, PavConstants.LAST_UPDATED_ON, currentDateTime, voidContext);
 	}
 
 	private void addVocabularies(String voidContext) throws RdfException {
@@ -176,6 +181,26 @@ public class VoidGenerator {
 		logger.debug("Writing to file {}", fileName);
 		repository.writeToFile(voidContext, fileName);
 		return fileName;
+	}
+
+	private void createHasPartsLinkset(String dataContext, String voidContext, String baseURI) 
+			throws RdfException {
+		String query = 
+				"CONSTRUCT { ?source <http://purl.obolibrary.org/obo#has_part> ?target } " +
+				"FROM <" + dataContext + "> " +
+				"WHERE { " +
+				"?source <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?tmp . " +
+				"?tmp <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo#has_part> ; " +
+				"<http://www.w3.org/2002/07/owl#someValuesFrom> ?target ." +
+				"}";
+		String fileName = "chebiHasPartsLinkset" + chebiVersion + ".ttl";
+		String fileBaseUri = baseURI + "/" + fileName;
+		String linksetContext = repository.createNewContext();
+		repository.addTripleWithURI(fileBaseUri, VoidConstants.IN_DATASET, 
+				chebi_void_file + "#has_partsLinkset", linksetContext);
+		repository.createLinkset(query, linksetContext);
+		logger.info("Writing to file {}", fileName);
+		repository.writeToFile(linksetContext, fileName);
 	}
 
 }
