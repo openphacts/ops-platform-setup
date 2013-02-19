@@ -31,3 +31,15 @@
 	pav:createdWith <http://owlapi.sourceforge.net>;
 	void:exampleResource <http://purl.obolibrary.org/obo/CHEBI_100> ;
 	voag:frequencyOfChange freq:monthly.
+	
+# Information about the ChEBI has_parts Linkset
+:has_partsLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI has parts linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their sub-parts." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#has_part> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.

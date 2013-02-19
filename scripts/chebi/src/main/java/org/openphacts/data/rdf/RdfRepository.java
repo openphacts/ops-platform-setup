@@ -11,7 +11,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.openrdf.model.Literal;
 import org.openrdf.model.Resource;
-import org.openrdf.model.Statement;
 import org.openrdf.model.URI;
 import org.openrdf.model.Value;
 import org.openrdf.model.ValueFactory;
@@ -20,7 +19,6 @@ import org.openrdf.query.BindingSet;
 import org.openrdf.query.GraphQuery;
 import org.openrdf.query.GraphQueryResult;
 import org.openrdf.query.MalformedQueryException;
-import org.openrdf.query.Query;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.QueryLanguage;
 import org.openrdf.query.TupleQuery;
@@ -160,6 +158,23 @@ public class RdfRepository {
 			throw new RdfException("Malformed query ", e);
 		}
 	}
+	
+	public int getNumberLinks(String linkPredicate, String context) throws RdfException {
+		String query = "SELECT (COUNT (<" + linkPredicate + ">) AS ?numberLinks) " +
+				"FROM <" + context + "> " +
+				"WHERE { [] <" + linkPredicate + "> [] }";
+		try {
+			TupleQueryResult result = selectQuery(query);
+			BindingSet bindingSet = result.singleResult();
+			Value value = bindingSet.getValue("numberLinks");
+			return new Integer(value.stringValue()).intValue();
+		} catch (QueryEvaluationException e) {
+			String message = "Failed to discover number of links.";
+			logger.warn(message, e);
+			throw new RdfException(message, e);
+		}
+	}
+
 	public String getLiteralValueAsString(String query, String parameterName) throws RdfException {
 		Value value = null;
 		try {
@@ -209,7 +224,20 @@ public class RdfRepository {
 		}
 	}
 
-	public void addTripleWithLiteral(String subject, String predicate, String object, String context) 
+	public void addTripleWithString(String subject, String predicate, String object, String context) 
+			throws RdfException {
+		try {
+			RepositoryConnection connection = getConnection();			
+			ValueFactory myFactory = connection.getValueFactory();
+			Literal obValue = myFactory.createLiteral(object);
+			connection.add(new URIImpl(subject), new URIImpl(predicate), obValue, new URIImpl(context));
+		} catch (RepositoryException e) {
+			logger.warn("Failed to add quad: {}, {}, {}, {}", subject, predicate, object, context);
+			throw new RdfException("Failed to load quad. ", e);
+		}
+	}
+
+	public void addTripleWithInt(String subject, String predicate, int object, String context) 
 			throws RdfException {
 		try {
 			RepositoryConnection connection = getConnection();			

@@ -51,8 +51,8 @@ public class ChebiPipeline {
 			String context = repository.loadRdf(url, CHEBI_BASE, RDFFormat.RDFXML);
 			logger.info("Data successfully loaded into {}", context);
 			logger.info("Generating VoID descriptor for ChEBI.");
-			VoidGenerator generator = new VoidGenerator(repository);
-			String fileName = generator.generateVoid(context, downloadUrlString, baseURI, creatorURL);
+			VoidGenerator generator = new VoidGenerator(repository, creatorURL);
+			String fileName = generator.generateVoid(context, downloadUrlString, baseURI);
 			logger.info("VoID descriptor successfully generated {}", fileName);
 			repository.close();
 			System.out.println("ChEBI VoID file available from " + fileName);

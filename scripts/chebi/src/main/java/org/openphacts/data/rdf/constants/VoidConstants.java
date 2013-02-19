@@ -9,5 +9,7 @@ public class VoidConstants {
 	public static final String VOCABULARY = BASE_URI + "vocabulary";
 
 	public static final String IN_DATASET = BASE_URI + "inDataset";
+
+	public static final String TRIPLES = BASE_URI + "triples";
 	
 }
