@@ -122,413 +122,6 @@
 
     
 
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_100 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_100">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(-)-medicarpin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16114"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_enantiomer_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_6714"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(-)-Medicarpin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(6aR,11aR)-9-methoxy-6a,11a-dihydro-6H-[1]benzofuro[3,2-c]chromen-3-ol</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:1257009</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C16H14O4</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:32383-76-9</xref>
-        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C16H14O4/c1-18-10-3-5-11-13-8-19-14-6-9(17)2-4-12(14)16(13)20-15(11)7-10/h2-7,13,16-17H,8H2,1H3/t13-,16-/m0/s1</InChI>
-        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=NSRJSISNDPOJOP-BBRMVZONSA-N</InChIKey>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:32383-76-9</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C10503</xref>
-        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[H][C@@]12COc3cc(O)ccc3[C@]1([H])Oc1cc(OC)ccc21</SMILES>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medicarpin</Synonym>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_10003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_10003">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vistamycin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22479"/>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(1R,2R,3S,4R,6S)-4,6-diamino-3-hydroxy-2-(beta-D-ribofuranosyloxy)cyclohexyl 2,6-diamino-2,6-dideoxy-alpha-D-glucopyranoside</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C17H34N4O10</Synonym>
-        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C17H34N4O10/c18-2-6-10(24)12(26)8(21)16(28-6)30-14-5(20)1-4(19)9(23)15(14)31-17-13(27)11(25)7(3-22)29-17/h4-17,22-27H,1-3,18-21H2/t4-,5+,6-,7-,8-,9+,10-,11-,12-,13-,14-,15-,16-,17+/m1/s1</InChI>
-        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=NSKGQURZWSPSBC-VVPCINPTSA-N</InChIKey>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:25546-65-0</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C01759</xref>
-        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC[C@H]1O[C@H](O[C@@H]2[C@@H](N)C[C@@H](N)[C@H](O)[C@H]2O[C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)[C@H](N)[C@@H](O)[C@@H]1O</SMILES>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ribostamycin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vistamycin</Synonym>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_100147 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_100147">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nalidixic acid</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25384"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36624"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36047"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_conjugate_acid_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_62070"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22582"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59517"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1,4-dihydro-1-ethyl-7-methyl-4-oxo-1,8-naphthyridine-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Aethyl-7-methyl-1,8-naphthyridin-4-on-3-karbonsaeure</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Ethyl-7-methyl-4-oxo-1,4-dihydro-[1,8]naphthyridine-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-ethyl-1,4-dihydro-7-methyl-4-oxo-1,8-naphthyridine-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-ethyl-7-methyl-1,4-dihydro-1,8-naphthyridin-4-one-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-ethyl-7-methyl-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-carboxy-1-ethyl-7-methyl-1,8-naphthyridin-4-one</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C12H12N2O3</Synonym>
-        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCn1cc(C(O)=O)c(=O)c2ccc(C)nc12</SMILES>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEMBL:100147</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:389-08-2</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:11321869</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:12002106</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:12399485</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:12702698</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:14107587</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:16107187</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:16423473</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:16667857</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:16803589</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:17132068</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:17631104</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:18788798</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:19071706</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugBank:DB00779</xref>
-        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C12H12N2O3/c1-3-14-6-9(12(16)17)10(15)8-5-4-7(2)13-11(8)14/h4-6H,3H2,1-2H3,(H,16,17)</InChI>
-        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=MHWLWQUZZRMNGJ-UHFFFAOYSA-N</InChIKey>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:389-08-2</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C05079</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG DRUG:D00183</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NALIDIXIC ACID</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nalidixic acid</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:BE612258</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US3590036</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaxys:750515</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Nalidixic_Acid</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acide nalidixique</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acido nalidixico</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acidum nalidixicum</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nalidixic acid</Synonym>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_10015 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_10015">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vobasine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38958"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_parent_hydride"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36372"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22587"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-oxovobasan-17-oic acid, methyl ester</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:95955</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C21H24N2O3</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:2134-83-0</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:17265301</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:17404903</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:19525111</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:21353756</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:4021514</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:5654925</xref>
-        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C21H24N2O3/c1-4-12-11-23(2)17-9-15-13-7-5-6-8-16(13)22-20(15)18(24)10-14(12)19(17)21(25)26-3/h4-8,14,17,19,22H,9-11H2,1-3H3/b12-4-/t14-,17+,19-/m0/s1</InChI>
-        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=TYPMTMPLTVSOBU-WGRGEXIDSA-N</InChIKey>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:2134-83-0</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C09253</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US2007232588</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vobasine</Synonym>
-        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[H]\\C(C)=C1/CN(C)[C@]2([H])Cc3c([nH]c4ccccc34)C(=O)C[C@]1([H])[C@]2([H])C(=O)OC</SMILES>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methyl 3-oxovobasan-17-oate</Synonym>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_10016 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_10016">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vobtusine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27288"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38481"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38482"/>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:4641215</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:77486</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C43H50N4O6</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:19772-79-3</xref>
-        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C43H50N4O6/c1-50-30-9-5-7-28-32(30)47-24-38(20-25-21-39-13-18-52-31(39)10-15-45-17-12-42(28,36(39)45)43(25,47)49)23-46-16-11-41-27-6-3-4-8-29(27)44-33(41)26(34(48)51-2)22-40(35(41)46)14-19-53-37(38)40/h3-9,25,31,35-37,44,49H,10-24H2,1-2H3/t25-,31+,35+,36+,37+,38+,39-,40+,41+,42-,43-/m1/s1</InChI>
-        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=IIMPGJMHQMBXKL-OPDPKHDKSA-N</InChIKey>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:19772-79-3</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C09254</xref>
-        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[H][C@@]12C[C@]3(CN4CC[C@@]56C(Nc7ccccc57)=C(C[C@@]5(CCO[C@@]35[H])[C@]46[H])C(=O)OC)CN3c4c(OC)cccc4[C@@]4(CCN5CC[C@]6([H])OCC[C@]6(C1)[C@@]45[H])[C@]23O</SMILES>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vobtusine</Synonym>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_10023 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_10023">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voriconazole</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35727"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37143"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_39447"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35718"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23924"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(2R,3S)-2-(2,4-difluorophenyl)-3-(5-fluoropyrimidin-4-yl)-1-(1H-1,2,4-triazol-1-yl)butan-2-ol</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(R-(R*,S*))-alpha-(2,4-difluorophenyl)-5-fluoro-beta-methyl-alpha-(1H-1,2,4-triazol-1-ylmethyl)-4-pyrimidineethanol</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(alphaR,betaS)-alpha-(2,4-difluorophenyl)-5-fluoro-beta-methyl-alpha(1H-1,2,4-triazol-1-ylmethyl)-4-pyrimidineethanol</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:7694998</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C16H14F3N5O</Synonym>
-        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C[C@@H](c1ncncc1F)[C@](O)(Cn1cncn1)c1ccc(F)cc1F</SMILES>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEMBL:127308</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:137234-62-9</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugBank:137234-62-9</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugBank:DB00582</xref>
-        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C16H14F3N5O/c1-10(15-14(19)5-20-7-22-15)16(25,6-24-9-21-8-23-24)12-3-2-11(17)4-13(12)18/h2-5,7-10,25H,6H2,1H3/t10-,16+/m0/s1</InChI>
-        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=BCEHBSKCWLPMDN-MGPLVRAMSA-N</InChIKey>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:137234-62-9</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C07622</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG DRUG:137234-62-9</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG DRUG:D00578</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:EP440372</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US5278175</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VCZ</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vfend</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Voriconazole</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voriconazole</Synonym>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_100241 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_100241">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ciprofloxacin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23765"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26512"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36709"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37143"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46848"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35441"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36047"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50750"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_53559"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-CYCLOPROPYL-6-FLUORO-4-OXO-7-PIPERAZIN-1-YL-1,4-DIHYDROQUINOLINE-3-CARBOXYLIC ACID</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Cyclopropyl-6-fluoro-4-oxo-7-piperazin-1-yl-1,4-dihydro-quinoline-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Cyclopropyl-6-fluoro-7-(4-methyl-piperazin-1-yl)-4-oxo-1,4-dihydro-quinoline-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-cyclopropyl-6-fluoro-1,4-dihydro-4-oxo-7-(1-piperazinyl)-3-quinolinecarboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-cyclopropyl-6-fluoro-4-oxo-7-(piperazin-1-yl)-1,4-dihydroquinoline-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-cyclopropyl-6-fluoro-4-oxo-7-piperazin-1-yl-1,4-dihydroquinoline-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-cyclopropyl-6-fluoro-4-oxo-7-piperazin-1-ylquinoline-3-carboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-cyclopropyl-6-fluoro-7-hexahydro-1-pyrazinyl-4-oxo-1,4-dihydro-3-quinolinecarboxylic acid</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:3568352</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C17H18FN3O3</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEMBL:100241</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEMBL:102718</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEMBL:10397494</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEMBL:10737746</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:85721-33-1</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciprofloxacin</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugBank:DB00537</xref>
-        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C17H18FN3O3/c18-13-7-11-14(8-15(13)20-5-3-19-4-6-20)21(10-1-2-10)9-12(16(11)22)17(23)24/h7-10,19H,1-6H2,(H,23,24)</InChI>
-        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=MYSWGUAQZAJSOK-UHFFFAOYSA-N</InChIKey>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:85721-33-1</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG DRUG:D00186</xref>
-        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OC(=O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O</SMILES>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:DE3142854</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US4670444</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Ciprofloxacin</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ciprofloxacin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ciprofloxacine</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ciprofloxacino</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ciprofloxacinum</Synonym>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_100246 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_100246">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">norfloxacin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23765"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26512"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37143"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46848"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59517"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36047"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1,4-Dihydro-1-ethyl-6-fluoro-4-oxo-7-(1-piperazinyl)-3-quinolinecarboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Ethyl-6-fluor-1,4-dihydro-4-oxo-7-(1-piperazinyl)-3-chinolincarbonsaeure</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Ethyl-6-fluoro-1,4-dihydro-4-oxo-7-(1-piperazinyl)-3-quinolinecarboxylic acid</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-ethyl-6-fluoro-4-oxo-7-(piperazin-1-yl)-1,4-dihydroquinoline-3-carboxylic acid</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:567897</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C16H18FN3O3</Synonym>
-        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCn1cc(C(O)=O)c(=O)c2cc(F)c(cc12)N1CCNCC1</SMILES>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChEMBL:100246</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:70458-96-7</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:3317294</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:3908074</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:6211142</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:6224685</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:6234465</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:6454381</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:6461606</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugBank:DB01059</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gmelin:1576626</xref>
-        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C16H18FN3O3/c1-2-19-9-11(16(22)23)15(21)10-7-12(17)14(8-13(10)19)20-5-3-18-4-6-20/h7-9,18H,2-6H2,1H3,(H,22,23)</InChI>
-        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=OGJPXUAPXNRGGI-UHFFFAOYSA-N</InChIKey>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:70458-96-7</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C06687</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG DRUG:D00210</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NFLX</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:BE863429</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:DE2840910</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US4146719</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US4292317</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Norfloxacin</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">norfloxacin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">norfloxacine</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">norfloxacino</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">norfloxacinum</Synonym>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_10033 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_10033">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warfarin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38445"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33288"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_conjugate_acid_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50393"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50249"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50390"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(Phenyl-1 acetyl-2 ethyl) 3-hydroxy-4 coumarine</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-(4&#39;-Hydroxy-3&#39;-coumarinyl)-1-phenyl-3-butanone</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2H-1-Benzopyran-2-one, 4-hydroxy-3-(3-oxo-1-phenylbutyl)-</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-(1&#39;-Phenyl-2&#39;-acetylethyl)-4-hydroxycoumarin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-(alpha-Phenyl-beta-acetylaethyl)-4-hydroxycumarin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-(alpha-Phenyl-beta-acetylethyl)-4-hydroxycoumarin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-Hydroxy-3-(3-oxo-1-phenyl-butyl)-cumarin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-Hydroxy-3-(3-oxo-1-phenylbutyl)coumarin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-hydroxy-3-(3-oxo-1-phenylbutyl)-2H-1-benzopyran-2-one</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:1293536</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C19H16O4</Synonym>
-        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O</SMILES>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coumafene</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugBank:DB00682</xref>
-        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C19H16O4/c1-12(20)11-15(13-7-3-2-4-8-13)17-18(21)14-9-5-6-10-16(14)23-19(17)22/h2-10,15,21H,11H2,1H3</InChI>
-        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=PJVWKTKQMONHTI-UHFFFAOYSA-N</InChIKey>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US2427578</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US2765321</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US2777859</xref>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US3239529</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warf 10</Synonym>
-        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Warfarin</xref>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoocoumarin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warfarin</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warfarina</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warfarine</Synonym>
-        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warfarinum</Synonym>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/CHEBI_10034 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_10034">
@@ -558,7 +151,136 @@
         <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[Na+].CC(=O)CC(c1ccccc1)c1c([O-])c2ccccc2oc1=O</SMILES>
         <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sodium 2-oxo-3-(3-oxo-1-phenylbutyl)-2H-benzopyran-4-olate</Synonym>
     </owl:Class>
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50393 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50393">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warfarin(1-)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25696"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_10033"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-oxo-3-(3-oxo-1-phenylbutyl)-2H-benzopyran-4-olate</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C19H15O4</Synonym>
+        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CC(=O)CC(c1ccccc1)c1c([O-])c2ccccc2oc1=O</SMILES>
+        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C19H16O4/c1-12(20)11-15(13-7-3-2-4-8-13)17-18(21)14-9-5-6-10-16(14)23-19(17)22/h2-10,15,21H,11H2,1H3/p-1</InChI>
+        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=PJVWKTKQMONHTI-UHFFFAOYSA-M</InChIKey>
+    </owl:Class>
     
+    <!-- http://purl.obolibrary.org/obo/CHEBI_10057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_10057">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9H-xanthene</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36440"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_tautomer_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36441"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_tautomer_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36442"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10H-9-oxaanthracene</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9H-xanthene</Synonym>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:133939</xref>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C13H10O</Synonym>
+        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1c2ccccc2Oc2ccccc12</SMILES>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:92-83-1</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gmelin:83576</xref>
+        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C13H10O/c1-3-7-12-10(5-1)9-11-6-2-4-8-13(11)14-12/h1-8H,9H2</InChI>
+        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=GJCOSYZMQJWQCA-UHFFFAOYSA-N</InChIKey>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:92-83-1</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C01464</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIST Chemistry WebBook:92-83-1</xref>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xanthan</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xanthene</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dibenzo[a,e]pyran</Synonym>
+    </owl:Class>
+    
+    
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36442 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36442">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4aH-xanthene</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36440"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_tautomer_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36441"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_tautomer_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_10057"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4aH-xanthene</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C13H10O</Synonym>
+        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C13H10O/c1-3-7-12-10(5-1)9-11-6-2-4-8-13(11)14-12/h1-9,12H</InChI>
+        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=UKZBOPNPZRJVNI-UHFFFAOYSA-N</InChIKey>
+        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O1C2C=CC=CC2=Cc2ccccc12</SMILES>
+    </owl:Class>
+    
+   <!-- http://purl.obolibrary.org/obo/CHEBI_36441 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36441">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3H-xanthene</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36440"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_tautomer_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36442"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_tautomer_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_10057"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3H-xanthene</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C13H10O</Synonym>
+        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1C=CC2=Cc3ccccc3OC2=C1</SMILES>
+        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C13H10O/c1-3-7-12-10(5-1)9-11-6-2-4-8-13(11)14-12/h1-3,5-9H,4H2</InChI>
+        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=WANKCLVBRDARAX-UHFFFAOYSA-N</InChIKey>
+    </owl:Class>
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_10126 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_10126">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zolpidem tartrate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50562"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_part"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_10125"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2C19H21N3O.C4H6O6</Synonym>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:10317975</xref>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C42H48N6O8</Synonym>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:99294-93-6</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugBank:DB00425</xref>
+        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/2C19H21N3O.C4H6O6/c2*1-13-5-8-15(9-6-13)19-16(11-18(23)21(3)4)22-12-14(2)7-10-17(22)20-19;5-1(3(7)8)2(6)4(9)10/h2*5-10,12H,11H2,1-4H3;1-2,5-6H,(H,7,8)(H,9,10)/t;;1-,2-/m..1/s1</InChI>
+        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=VXRDAMSNTXUHFX-CEAXSRTFSA-N</InChIKey>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG DRUG:99294-93-6</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG DRUG:D00706</xref>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N,N,6-Trimethyl-2-p-tolylimidazo(1,2-a)pyridine-3-acetamide L-(+)-tartrate (2:1)</Synonym>
+        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O[C@H]([C@@H](O)C(O)=O)C(O)=O.CN(C)C(=O)Cc1c(nc2ccc(C)cn12)-c1ccc(C)cc1.CN(C)C(=O)Cc1c(nc2ccc(C)cn12)-c1ccc(C)cc1</SMILES>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zolpidem L-(+)-hemitartrate</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zolpidem hemitartrate</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bis{N,N-dimethyl-2-[6-methyl-2-(4-methylphenyl)imidazo[1,2-a]pyridin-3-yl]acetamide} (2R,3R)-2,3-dihydroxysuccinic acid</Synonym>
+    </owl:Class>
+    
+                
 </rdf:RDF>
 
 
