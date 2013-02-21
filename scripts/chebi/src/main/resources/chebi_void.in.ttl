@@ -80,4 +80,16 @@
 	void:linkPredicate skos:exactMatch ;
 	dul:expresses <http://purl.obolibrary.org/obo#has_parent_hydride> ;
 	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+
+# Information about the ChEBI has_role Linkset
+:has_roleLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Has Role linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their roles." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#has_role> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
 	
