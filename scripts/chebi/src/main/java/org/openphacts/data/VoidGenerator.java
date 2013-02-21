@@ -25,11 +25,15 @@ import org.slf4j.LoggerFactory;
 public class VoidGenerator {
 	
 	private static final String[] links = {
-		"has_parts",
+		"has_part",
 		"is_tautomer_of",
 		"has_functional_parent",
 		"has_parent_hydride",
-		"has_role"
+		"has_role",
+		"is_conjugate_acid_of",
+		"is_conjugate_base_of",
+		"is_enantiomer_of",
+		"is_substituent_group_from"
 	};
 
 	private static final String CHEBI_VOID_IN = "chebi_void.in.ttl";
