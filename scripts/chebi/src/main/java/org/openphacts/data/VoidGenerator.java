@@ -23,6 +23,13 @@ import org.slf4j.LoggerFactory;
 //TODO: link to previous version
 
 public class VoidGenerator {
+	
+	private static final String[] links = {
+		"has_parts",
+		"is_tautomer_of",
+		"has_functional_parent",
+		"has_parent_hydride"
+	};
 
 	private static final String CHEBI_VOID_IN = "chebi_void.in.ttl";
 	private static final String CHEBI_VOID_TITLE_START = 
@@ -181,7 +188,7 @@ public class VoidGenerator {
 	}
 
 	private String writeVoidFile(String voidContext) throws RdfException {
-		String fileName = "chebiVoid" + chebiVersion + ".ttl";
+		String fileName = "ChEBI" + chebiVersion + "VoID.ttl";
 		logger.debug("Writing to file {}", fileName);
 		repository.writeToFile(voidContext, fileName);
 		return fileName;
@@ -189,22 +196,29 @@ public class VoidGenerator {
 
 	private void createLinksets(String dataContext, String voidContext, String baseURI) 
 			throws RdfException {
-		logger.info("Creating has_parts linkset");
-		createLinkset(dataContext, voidContext, baseURI, 
-				"http://purl.obolibrary.org/obo#has_part", 
-				"chebiHasPartsLinkset", chebi_void_file + "#has_partsLinkset");
-		logger.info("Creating is_tautomer_of linkset");
-		createLinkset(dataContext, voidContext, baseURI, 
-				"http://purl.obolibrary.org/obo#is_tautomer_of", 
-				"chebiTautomerLinkset", chebi_void_file + "#is_tautomer_ofLinkset");		
-		logger.info("Creating has_functional_parent linkset");
-		createLinkset(dataContext, voidContext, baseURI, 
-				"http://purl.obolibrary.org/obo#has_functional_parent", 
-				"chebiFunctionalParentLinkset", chebi_void_file + "#has_functional_parentLinkset");
-		logger.info("Creating has_parent_hydride linkset");
-		createLinkset(dataContext, voidContext, baseURI, 
-				"http://purl.obolibrary.org/obo#has_parent_hydride", 
-				"chebihas_parent_hydrideLinkset", chebi_void_file + "#has_parent_hydrideLinkset");
+		for (int i = 0; i < links.length; i++) {
+			logger.info("Creating " + links[i] + " linkset");
+			createLinkset(dataContext, voidContext, baseURI, 
+					"http://purl.obolibrary.org/obo#" + links[i], 
+					links[i] + "ChEBI" + chebiVersion + "Linkset", 
+					chebi_void_file + "#" + links[i] + "Linkset");			
+		}
+//		logger.info("Creating has_parts linkset");
+//		createLinkset(dataContext, voidContext, baseURI, 
+//				"http://purl.obolibrary.org/obo#has_part", 
+//				"chebiHasPartsLinkset", chebi_void_file + "#has_partsLinkset");
+//		logger.info("Creating is_tautomer_of linkset");
+//		createLinkset(dataContext, voidContext, baseURI, 
+//				"http://purl.obolibrary.org/obo#is_tautomer_of", 
+//				"chebiTautomerLinkset", chebi_void_file + "#is_tautomer_ofLinkset");		
+//		logger.info("Creating has_functional_parent linkset");
+//		createLinkset(dataContext, voidContext, baseURI, 
+//				"http://purl.obolibrary.org/obo#has_functional_parent", 
+//				"chebiFunctionalParentLinkset", chebi_void_file + "#has_functional_parentLinkset");
+//		logger.info("Creating has_parent_hydride linkset");
+//		createLinkset(dataContext, voidContext, baseURI, 
+//				"http://purl.obolibrary.org/obo#has_parent_hydride", 
+//				"chebihas_parent_hydrideLinkset", chebi_void_file + "#has_parent_hydrideLinkset");
 	}
 	
 	private void createLinkset(String dataContext, String voidContext, String baseURI, String justificationURI, String linksetFileBase, String linksetVoidUri) 
@@ -217,7 +231,7 @@ public class VoidGenerator {
 				"?tmp <http://www.w3.org/2002/07/owl#onProperty> <" + justificationURI + "> ; " +
 				"<http://www.w3.org/2002/07/owl#someValuesFrom> ?target ." +
 				"}";
-		String fileName = linksetFileBase + chebiVersion + ".ttl";
+		String fileName = linksetFileBase + ".ttl";
 		String fileBaseUri = baseURI + "/" + fileName;
 		String linksetContext = repository.createNewContext();
 		repository.addTripleWithURI(fileBaseUri, VoidConstants.IN_DATASET, 
