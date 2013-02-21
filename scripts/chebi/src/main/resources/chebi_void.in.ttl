@@ -69,3 +69,15 @@
 	dul:expresses <http://purl.obolibrary.org/obo#has_functional_parent> ;
 	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
 	
+# Information about the ChEBI has_parent_hydride Linkset
+:has_parent_hydrideLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Parent Hydride linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their parent hydrides." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#has_parent_hydride> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+	

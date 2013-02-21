@@ -201,6 +201,10 @@ public class VoidGenerator {
 		createLinkset(dataContext, voidContext, baseURI, 
 				"http://purl.obolibrary.org/obo#has_functional_parent", 
 				"chebiFunctionalParentLinkset", chebi_void_file + "#has_functional_parentLinkset");
+		logger.info("Creating has_parent_hydride linkset");
+		createLinkset(dataContext, voidContext, baseURI, 
+				"http://purl.obolibrary.org/obo#has_parent_hydride", 
+				"chebihas_parent_hydrideLinkset", chebi_void_file + "#has_parent_hydrideLinkset");
 	}
 	
 	private void createLinkset(String dataContext, String voidContext, String baseURI, String justificationURI, String linksetFileBase, String linksetVoidUri) 

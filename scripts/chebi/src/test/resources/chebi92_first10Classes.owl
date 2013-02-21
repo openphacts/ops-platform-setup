@@ -306,7 +306,43 @@
         <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C05825</xref>
     </owl:Class>
     
-                    
+    <!-- http://purl.obolibrary.org/obo/CHEBI_10015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_10015">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vobasine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38958"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_role"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22587"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_parent_hydride"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36372"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-oxovobasan-17-oic acid, methyl ester</Synonym>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beilstein:95955</xref>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C21H24N2O3</Synonym>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChemIDplus:2134-83-0</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:17265301</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:17404903</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:19525111</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:21353756</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:4021514</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiteXplore:5654925</xref>
+        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C21H24N2O3/c1-4-12-11-23(2)17-9-15-13-7-5-6-8-16(13)22-20(15)18(24)10-14(12)19(17)21(25)26-3/h4-8,14,17,19,22H,9-11H2,1-3H3/b12-4-/t14-,17+,19-/m0/s1</InChI>
+        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=TYPMTMPLTVSOBU-WGRGEXIDSA-N</InChIKey>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:2134-83-0</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C09253</xref>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent:US2007232588</xref>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vobasine</Synonym>
+        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[H]\\C(C)=C1/CN(C)[C@]2([H])Cc3c([nH]c4ccccc34)C(=O)C[C@]1([H])[C@]2([H])C(=O)OC</SMILES>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methyl 3-oxovobasan-17-oate</Synonym>
+    </owl:Class>
+                        
 </rdf:RDF>
 
 
