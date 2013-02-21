@@ -280,7 +280,33 @@
         <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bis{N,N-dimethyl-2-[6-methyl-2-(4-methylphenyl)imidazo[1,2-a]pyridin-3-yl]acetamide} (2R,3R)-2,3-dihydroxysuccinic acid</Synonym>
     </owl:Class>
     
-                
+    <!-- http://purl.obolibrary.org/obo/CHEBI_1010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_1010">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-amino-5-oxohexanoate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33558"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#has_functional_parent"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17120"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_19450"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-Amino-5-oxohexanoate</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-amino-5-oxohexanoate</Synonym>
+        <Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C6H10NO3</Synonym>
+        <SMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CC(=O)CCC(N)C([O-])=O</SMILES>
+        <InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C6H11NO3/c1-4(8)2-3-5(7)6(9)10/h5H,2-3,7H2,1H3,(H,9,10)/p-1</InChI>
+        <InChIKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChIKey=KSIJECNNZVKMJG-UHFFFAOYSA-M</InChIKey>
+        <xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG COMPOUND:C05825</xref>
+    </owl:Class>
+    
+                    
 </rdf:RDF>
 
 

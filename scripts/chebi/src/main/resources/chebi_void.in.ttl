@@ -57,3 +57,15 @@
 	dul:expresses <http://purl.obolibrary.org/obo#is_tautomer_of> ;
 	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
 	
+# Information about the ChEBI has_functional_parent Linkset
+:has_functional_parentLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Function Parent linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their functional parents." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#has_functional_parent> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+	

@@ -190,9 +190,17 @@ public class VoidGenerator {
 	private void createLinksets(String dataContext, String voidContext, String baseURI) 
 			throws RdfException {
 		logger.info("Creating has_parts linkset");
-		createLinkset(dataContext, voidContext, baseURI, "http://purl.obolibrary.org/obo#has_part", "chebiHasPartsLinkset", chebi_void_file + "#has_partsLinkset");
+		createLinkset(dataContext, voidContext, baseURI, 
+				"http://purl.obolibrary.org/obo#has_part", 
+				"chebiHasPartsLinkset", chebi_void_file + "#has_partsLinkset");
 		logger.info("Creating is_tautomer_of linkset");
-		createLinkset(dataContext, voidContext, baseURI, "http://purl.obolibrary.org/obo#is_tautomer_of", "chebiTautomerLinkset", chebi_void_file + "#is_tautomer_ofLinkset");
+		createLinkset(dataContext, voidContext, baseURI, 
+				"http://purl.obolibrary.org/obo#is_tautomer_of", 
+				"chebiTautomerLinkset", chebi_void_file + "#is_tautomer_ofLinkset");		
+		logger.info("Creating has_functional_parent linkset");
+		createLinkset(dataContext, voidContext, baseURI, 
+				"http://purl.obolibrary.org/obo#has_functional_parent", 
+				"chebiFunctionalParentLinkset", chebi_void_file + "#has_functional_parentLinkset");
 	}
 	
 	private void createLinkset(String dataContext, String voidContext, String baseURI, String justificationURI, String linksetFileBase, String linksetVoidUri) 
