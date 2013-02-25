@@ -1,3 +1,4 @@
+@base <https://github.com/openphacts/ops-platform-setup/tree/master/void/drugbank_void.ttl> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -7,20 +8,20 @@
 @prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lifedata: <http://linkedlifedata.com/resource/> .
 @prefix : <#> .
 
 # VoID Header for the DrugBank RDF dataset
-<>
-	rdf:type void:DatasetDescription ;
+<>	rdf:type void:DatasetDescription ;
 	dcterms:title "DrugBank VoID Description"@en ;
 	dcterms:description "The VoID description for the RDF representation of the DrugBank dataset."@en ;
 	pav:createdBy <https://orcid.org/0000-0002-5711-4872> ;
 	pav:createdOn "2012-10-30T16:08:36Z"^^xsd:dateTime ;
 	pav:lastUpdateOn "2012-11-05T12:39:54Z"^^xsd:dateTime ;
-	foaf:primaryTopic :drugbank_rdf .
+	foaf:primaryTopic lifedata:drugbank_rdf .
 
 # Metadata about the original DrugBank dataset
-:drugbank rdf:type dcterms:Dataset ;
+lifedata:drugbank rdf:type dcterms:Dataset ;
 	dcterms:title "DrugBank dataset"@en ;
 	dcterms:description "DrugBank dataset published as web pages."@en ;
 	foaf:homepage <http://www.drugbank.ca/> ;
@@ -28,11 +29,10 @@
 	dcterms:license <http://www.drugbank.ca/about#cite> ;
 	pav:version "2.5" ;
 	dcterms:publisher <http://www.drugbank.ca/> ;
-	dcterms:created "2008-09-15T00:00:00Z"^^xsd:datetime ; 
-	. 
+	dcterms:created "2008-09-15T00:00:00Z"^^xsd:datetime . 
 
 # Metadata about the RDF representation of DrugBank
-:drugbank-rdf rdf:type void:Dataset ;
+lifedata:drugbank_rdf rdf:type void:Dataset ;
 	dcterms:title "DrugBank RDF"@en;
 	dcterms:description "RDF representation of DrugBank"@en;
 	foaf:homepage <http://www4.wiwiss.fu-berlin.de/drugbank/> ;
@@ -41,12 +41,12 @@
 	dcterms:license <http://www.drugbank.ca/about#cite> ;
 	void:uriSpace "http://www4.wiwiss.fu-berlin.de/drugbank/resource/"^^xsd:string ;
 	pav:version "2.5" ;
-	pav:importedFrom :drugbank ;
+	pav:importedFrom lifedata:drugbank ;
 	pav:importedBy <mailto:anja@anjeve.de> ;
 	pav:importedOn "2008-11-17T20:52:39"^^xsd:datetime ;
 	pav:createdWith <https://github.com/anjeve/lodd/tree/master/datasets/DrugBank> ;
 	void:triples "765936"^^xsd:integer ;
-	void:subset :db-drugs, :db-targets ; 
+	void:subset lifedata:db-drugs, lifedata:db-targets ; 
 	void:vocabulary <http://www.w3.org/1999/02/22-rdf-syntax-ns#>,
 		<http://www.w3.org/2002/07/owl#>,
 		<http://xmlns.com/foaf/0.1/>,
@@ -57,14 +57,14 @@
 	voag:frequencyOfChange voag:Never .
 
 # Subset containing drug compound information
-:db-drugs rdf:type void:Dataset ;
+lifedata:db-drugs rdf:type void:Dataset ;
 	void:uriSpace "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/"^^xsd:string ;
 	dcterms:subject <http://dbpedia.org/resource/Pharmaceutical_drug> ;
 	void:exampleResource <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00001> ;
 	void:triples "4772"^^xsd:integer .
 
 # Subset containing target information
-:db-targets rdf:type void:Dataset ;
+lifedata:db-targets rdf:type void:Dataset ;
 	void:uriSpace "http://www4.wiwiss.fu-berlin.de/drugbank/resource/targets/"^^xsd:string ;
 	dcterms:subject <http://dbpedia.org/resource/Drug_target> ;
 	void:exampleResource <http://www4.wiwiss.fu-berlin.de/drugbank/resource/targets/1> .
