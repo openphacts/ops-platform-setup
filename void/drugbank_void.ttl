@@ -28,7 +28,7 @@
 	dcterms:license <http://www.drugbank.ca/about#cite> ;
 	pav:version "2.5" ;
 	dcterms:publisher <http://www.drugbank.ca/> ;
-	dcterms:created "2008-09-15T00:00:00Z"^^xsd:datetime ; 
+	dcterms:created "2008-09-15T00:00:00Z"^^xsd:dateTime ; 
 	. 
 
 # Metadata about the RDF representation of DrugBank
@@ -43,7 +43,7 @@
 	pav:version "2.5" ;
 	pav:importedFrom :drugbank ;
 	pav:importedBy <mailto:anja@anjeve.de> ;
-	pav:importedOn "2008-11-17T20:52:39"^^xsd:datetime ;
+	pav:importedOn "2008-11-17T20:52:39"^^xsd:dateTime ;
 	pav:createdWith <https://github.com/anjeve/lodd/tree/master/datasets/DrugBank> ;
 	void:triples "765936"^^xsd:integer ;
 	void:subset :db-drugs, :db-targets ; 
