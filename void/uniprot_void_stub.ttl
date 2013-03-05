@@ -1,14 +1,15 @@
-@base <https://github.com/openphacts/ops-platform-setup/tree/master/void/uniprot_void_stub.ttl> .
+@base <https://github.com/openphacts/ops-platform-setup/raw/master/void/uniprot_void_stub.ttl> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix void: <http://rdfs.org/ns/void#> .
+@prefix : <#> .
 
 <>	rdf:type void:DatasetDescription ;
 	dcterms:title "Uniprot VoID Description"@en ;
-	foaf:primaryTopic <http://purl.uniprot.org> .
+	foaf:primaryTopic :uniprot .
 
-<http://purl.uniprot.org> rdf:type void:Dataset ;
-		dcterms:title "Uniprot dataset"@en ;
-		dcterms:description "Uniprot dataset published as web pages."@en .
+:uniprot rdf:type void:Dataset ;
+	dcterms:title "Uniprot dataset"@en ;
+	dcterms:description "Uniprot dataset published as web pages."@en .
 

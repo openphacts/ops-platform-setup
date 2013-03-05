@@ -1,16 +1,37 @@
-@base <https://github.com/openphacts/ops-platform-setup/tree/master/void/go_void_stub.ttl> .
+@base <https://github.com/openphacts/ops-platform-setup/raw/master/void/go_void_stub.ttl> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix void: <http://rdfs.org/ns/void#> .
+@prefix : <#> .
 
 <>	rdf:type void:DatasetDescription ;
 	dcterms:title "GO/GOA VoID Description"@en ;
-	foaf:primaryTopic <http://{go_goa_link}> .
+	foaf:primaryTopic :go .
 
-<http://{go_goa_link}> rdf:type void:Dataset ;
-		dcterms:title "GO/GOA dataset"@en ;
-		dcterms:description "GO/GOA dataset."@en .
+:go rdf:type void:Dataset ;
+	dcterms:title "GO/GOA dataset"@en ;
+	dcterms:description "GO/GOA dataset."@en ;
+        void:subset :go-subset1,
+		    :go-subset2 .
 
+
+:go-subset1 rdf:type void:Dataset ;
+	    dcterms:title "GO subset 1"@en ;
+	    void:subset :go-subsubset11,
+			:go-subsubset12 .
+
+:go-subsubset11 rdf:type void:Dataset ;
+		dcterms:title "GO subset 11"@en ;
+		void:subset :go-subsubsubset111 .
+
+:go-subsubsubset111 rdf:type void:Linkset ;
+		dcterms:title "GO linkset 111"@en .
+
+:go-subsubset12 rdf:type void:Dataset ;
+		dcterms:title "GO subset 12"@en .
+
+:go-subset2 rdf:type void:Linkset ;
+		dcterms:title "GO subset 2"@en .
 
 
