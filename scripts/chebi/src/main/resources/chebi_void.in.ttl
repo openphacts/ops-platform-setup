@@ -1,0 +1,145 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix freq: <http://purl.org/cld/freq/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <#> .
+
+# VoID Header for the ChEBI RDF dataset
+<>
+	rdf:type void:DatasetDescription ;
+	pav:authoredBy <https://orcid.org/0000-0002-5711-4872> ;
+	pav:authoredOn "2013-01-25T16:40:12Z"^^xsd:dateTime ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/> ;
+	foaf:primaryTopic :chebi .
+
+# Information about the ChEBI Dataset
+:chebi 
+	rdf:type void:Dataset ;
+	dcterms:title "Chemical Entities of Biological Interest (ChEBI)"@en ;
+	dcterms:description "Chemical Entities of Biological Interest (ChEBI) is a freely available dictionary of molecular entities focused on &#39;small&#39; chemical compounds."@en;
+	foaf:homepage <http://www.ebi.ac.uk/chebi/>;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:uriSpace "http://purl.obolibrary.org/obo/"^^xsd:string;
+	dcterms:publisher <http://www.ebi.ac.uk/chebi/>;
+	void:subset :has_partLinkset, :is_tautomer_ofLinkset, :has_functional_parentLinkset, 
+		:has_parent_hydrideLinkset, :has_roleLinkset, :is_conjugate_acid_ofLinkset,
+		:is_conjugate_base_ofLinkset, :is_enantiomer_ofLinkset, :is_substituent_group_fromLinkset;
+	dcterms:subject <http://dbpedia.org/resource/Molecule>, <http://purl.obolibrary.org/obo/CHEBI_25367>;
+	pav:createdWith <http://owlapi.sourceforge.net>;
+	void:exampleResource <http://purl.obolibrary.org/obo/CHEBI_100> ;
+	voag:frequencyOfChange freq:monthly.
+	
+# Information about the ChEBI has_part Linkset
+:has_partLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI has part linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their sub-parts." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#has_part> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+	
+# Information about the ChEBI is_tautomer_of Linkset
+:is_tautomer_ofLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Tautomer linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their tautomers." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#is_tautomer_of> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+	
+# Information about the ChEBI has_functional_parent Linkset
+:has_functional_parentLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Function Parent linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their functional parents." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#has_functional_parent> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+	
+# Information about the ChEBI has_parent_hydride Linkset
+:has_parent_hydrideLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Parent Hydride linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their parent hydrides." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#has_parent_hydride> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+
+# Information about the ChEBI has_role Linkset
+:has_roleLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Has Role linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their roles." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#has_role> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+
+# Information about the ChEBI is_conjugate_acid_of Linkset
+:is_conjugate_acid_ofLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Conjugate Acid linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their conjugate acids." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#is_conjugate_acid_of> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+
+# Information about the ChEBI is_conjugate_base_of Linkset
+:is_conjugate_base_ofLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Conjugate Base linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their conjugate base." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#is_conjugate_base_of> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+
+# Information about the ChEBI is_enantiomer_of Linkset
+:is_enantiomer_ofLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Enantiomer linkset" ;
+	dcterms:description "Linkset relating ChEBI concepts to their Enantiomer." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#is_enantiomer_of> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+
+# Information about the ChEBI is_substituent_group_from Linkset
+:is_substituent_group_fromLinkset
+	rdf:type void:Linkset ;
+	dcterms:title "ChEBI Substituent Group linkset" ;
+	dcterms:description "Linkset for ChEBI Substituent Group." ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+	void:subjectsTarget :chebi ;
+	void:objectsTarget :chebi ;
+	void:linkPredicate skos:exactMatch ;
+	dul:expresses <http://purl.obolibrary.org/obo#is_substituent_group_from> ;
+	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/>.
+	
