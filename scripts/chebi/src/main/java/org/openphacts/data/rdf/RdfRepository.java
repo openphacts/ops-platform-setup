@@ -165,7 +165,8 @@ public class RdfRepository {
 				"WHERE { [] <" + linkPredicate + "> [] }";
 		try {
 			TupleQueryResult result = selectQuery(query);
-			BindingSet bindingSet = result.singleResult();
+			//Will only consider the first result returned. There should only be one
+			BindingSet bindingSet = result.next();
 			Value value = bindingSet.getValue("numberLinks");
 			return new Integer(value.stringValue()).intValue();
 		} catch (QueryEvaluationException e) {
@@ -180,7 +181,8 @@ public class RdfRepository {
 		try {
 			logger.debug("Query: {}", query);
 			TupleQueryResult queryResult = selectQuery(query);
-			BindingSet bindingSet = queryResult.singleResult();
+			//Will only consider the first result returned. There should only be one
+			BindingSet bindingSet = queryResult.next();
 			logger.debug("Result bindings: {}", bindingSet.toString());
 			value = bindingSet.getValue(parameterName);
 			if (value == null) {
