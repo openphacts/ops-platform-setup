@@ -14,8 +14,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<https://github.com/openphacts/ops-platform-setup/blob/master/void/chebi/chebi102/has_functional_parentChEBI102Linkset.ttl> void:inDataset 
-    <http://www.openphacts.org/void/void102.ttl#has_functional_parentLinkset> .
+<http://www.openphacts.org/void/has_functional_parentChEBI102Linkset.ttl> void:inDataset <http://www.openphacts.org/void/void102.ttl#has_functional_parentLinkset> .
     
 obo:CHEBI_47857 skos:exactMatch obo:CHEBI_16199 .
 
@@ -11977,4 +11976,3 @@ obo:CHEBI_72992 skos:exactMatch obo:CHEBI_72797 .
 
 obo:CHEBI_9050 skos:exactMatch obo:CHEBI_2631 .
 
-<http://www.openphacts.org/void/has_functional_parentChEBI102Linkset.ttl> void:inDataset <http://www.openphacts.org/void/void102.ttl#has_functional_parentLinkset> .
