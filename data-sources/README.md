@@ -32,13 +32,18 @@ TEMP FIX:
 
 ## Swissprot on 07 Aug 2012 17:00 EST
 
-Obtained from <http://www.uniprot.org> on 07 Aug 2012 by running:
+Obtained from <http://www.uniprot.org> on 24 May 2013 by running:
 
-    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot.rdf
+    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_24052013.rdf.xml
+    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_24052013.rdf.xml
+    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniref/ > uniref_24052013.rdf.xml
 
 Graph URI: <http://purl.uniprot.org>
 
-- swissprot.rdf
+- swissprot_24052013.rdf.xml (203715860 triples)
+- uniparc_24052013.rdf.xml (157836030 triples)
+- uniref_24052013.rdf.xml (171842257 triples)
+- TOTAL: 533394147 triples
 
 ##Enzyme
 
