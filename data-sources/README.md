@@ -30,7 +30,7 @@ TEMP FIX:
     cat quotes.2  | sed -e :a -e '/@en .$/!N; s/\n//; ta' > newlines
     cat newlines   | sed 's,mariner\\T,mariner-T,' | sed 's,MARINER\\T,MARINER-T,' > cw_url_preflabels_20120620_validTurtle.ttl
 
-## Swissprot on 07 Aug 2012 17:00 EST
+## Swissprot on 24 May 2013 12.00EST
 
 Obtained from <http://www.uniprot.org> on 24 May 2013 by running:
 
