@@ -6,7 +6,6 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix : <#> .
 
-
 <http://aers.data2semantics.org/void.ttl#aers-ld> rdf:type void:Dataset ;
  foaf:homepage <http://aers.data2semantics.org> ;
  dcterms:title "AERS-LD" ;
