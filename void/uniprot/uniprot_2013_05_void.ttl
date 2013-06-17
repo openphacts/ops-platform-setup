@@ -34,9 +34,7 @@
 	     pav:previousVersion :uniprot_2013_04_void.ttl#uniprotkb_rdf ;
 	     pav:retrievedFrom <http://www.uniprot.org/uniprot/> ;
 	     pav:retrievedBy <http://orcid.org/0000-0002-1303-2189> ;
-	     pav:createdWith """curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_24052013.rdf.xml
-	     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_24052013.rdf.xml
-	     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniref/ > uniref_24052013.rdf.xml""";
+	     pav:createdWith :uniprot-download-script;
 	     void:uriSpace "http://purl.uniprot.org/uniprot/";
 	     void:sparqlEndpoint <http://beta.sparql.uniprot.org/> ;
 	     dcterms:accrualPeriodicity freq:monthly.
@@ -45,3 +43,9 @@
 	dcat:downloadURL <ftp://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2013_05/knowledgebase/knowledgebase2013_05.tar.gz> ;
 	dcat:mediaType "application/x-gzip" ;
 	dcat:byteSize "15000000000"^^xsd:decimal .
+	
+:uniprot-download-script dcterms:title "UniProt Download Script";
+	dcterms:description """curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_24052013.rdf.xml
+	     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_24052013.rdf.xml
+	     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniref/ > uniref_24052013.rdf.xml""";
+	dcterms:license <http://www.apache.org/licenses/LICENSE-2.0> .
