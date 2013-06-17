@@ -18,6 +18,7 @@
 
 :Uniprot-RGD a void:Linkset ;
 	void:linkPredicate skos:exactMatch ;
+	dcterms:title "Uniprot-RGD Linkset"@en ;
 	dcterms:license <http://creativecommons.org/licenses/by-nd/3.0/> ;
 	pav:createdBy <http://orcid.org/0000-0002-1303-2189> ;
 	pav:createdOn "2013-06-17T12:00:23Z"^^xsd:dateTime ;
