@@ -16,6 +16,8 @@
 	pav:createdOn "2013-06-17T12:30:23Z"^^xsd:dateTime ;
 	foaf:primaryTopic :Uniprot-MGI .
 
+<https://raw.github.com/openphacts/ops-platform-setup/master/void/uniprot/uniprot_2013_05_void.ttl#uniprotkb_rdf> void:subset :Uniprot-MGI .
+
 :Uniprot-MGI a void:Linkset ;
 	void:linkPredicate skos:exactMatch ;
 	dcterms:title "Uniprot-MGI Linkset"@en ;
@@ -33,6 +35,8 @@
 	void:triples "16525"^^xsd:integer .
 
 :MGI a dctypes:Dataset ;
+	dcterms:title "MGI" ; 
+	dcterms:description "References to the MGI dataset from Uniprot" ;
 	void:uriSpace "http://purl.uniprot.org/mgi/" .
 
 :uniprot-mgi-query dcterms:title "UniProt MGI linkset generation SPARQL query" ;

@@ -16,6 +16,8 @@
 	pav:createdOn "2013-06-17T13:00:23Z"^^xsd:dateTime ;
 	foaf:primaryTopic :Uniprot-GeneID .
 
+<https://raw.github.com/openphacts/ops-platform-setup/master/void/uniprot/uniprot_2013_05_void.ttl#uniprotkb_rdf> void:subset :Uniprot-GeneID .
+
 :Uniprot-GeneID a void:Linkset ;
 	void:linkPredicate skos:exactMatch ;
 	dcterms:title "Uniprot-GeneID Linkset"@en ;
@@ -33,6 +35,8 @@
 	void:triples "502043"^^xsd:integer .
 
 :GeneID a dctypes:Dataset ;
+	dcterms:title "GeneID" ; 
+	dcterms:description "References to the GeneID dataset from Uniprot" ;
 	void:uriSpace "http://purl.uniprot.org/geneid/" .
 
 :uniprot-geneid-query dcterms:title "UniProt GeneID linkset generation SPARQL query" ;

@@ -16,6 +16,8 @@
 	pav:createdOn "2013-06-17T12:00:23Z"^^xsd:dateTime ;
 	foaf:primaryTopic :Uniprot-RGD .
 
+<https://raw.github.com/openphacts/ops-platform-setup/master/void/uniprot/uniprot_2013_05_void.ttl#uniprotkb_rdf> void:subset :Uniprot-RGD .
+
 :Uniprot-RGD a void:Linkset ;
 	void:linkPredicate skos:exactMatch ;
 	dcterms:title "Uniprot-RGD Linkset"@en ;
@@ -45,4 +47,6 @@ CONSTRUCT {
 	dcterms:license <http://www.apache.org/licenses/LICENSE-2.0> .
 
 :RGD a dctypes:Dataset ;
+	dcterms:title "RGD" ; 
+	dcterms:description "References to the RGD dataset from Uniprot" ;
 	void:uriSpace "http://purl.uniprot.org/rgd/" .
