@@ -18,7 +18,7 @@
 	pav:createdBy <https://orcid.org/0000-0002-5711-4872> ;
 	pav:createdOn "2013-06-14T12:31:00Z"^^xsd:dateTime ;
 	pav:lastUpdateOn "2013-06-14T13:37:00Z"^^xsd:dateTime ;
-	pav:previousVersion :uniprot_2013_05_void.ttl ;
+	pav:previousVersion <https://github.com/openphacts/ops-platform-setup/blob/master/void/uniprot/uniprot_2013_05_void.ttl> ;
 	foaf:primaryTopic :uniprotkb_rdf .
 
 :uniprotkb_rdf a void:Dataset ;
@@ -33,7 +33,7 @@
 	     void:dataDump <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniparc.rdf.gz>;
 	     dcat:distribution uniprotkb_distribution ;
 	     pav:version "2013_06";
-	     pav:previousVersion :uniprot_2013_05_void.ttl#uniprotkb_rdf ;	     
+	     pav:previousVersion <https://github.com/openphacts/ops-platform-setup/blob/master/void/uniprot/uniprot_2013_05_void.ttl#uniprotkb_rdf> ;	     
 	     void:sparqlEndpoint <http://beta.sparql.uniprot.org/> ;
 	     dcterms:accrualPeriodicity freq:monthly.
 	     
