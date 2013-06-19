@@ -1,7 +1,9 @@
 @prefix cito: <http://purl.org/spar/cito/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix freq: <http://purl.org/cld/freq/> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -29,7 +31,7 @@
 	     dcterms:license <http://creativecommons.org/licenses/by-nd/3.0/> ;
 	     cito:citeAsAuthority <http://nar.oxfordjournals.org/content/40/D1/D71> ; #required by license
 	     dcterms:issued "2013-05-01T14:00:00Z"^^xsd:dateTime ;
-	     dcat:distribution uniprotkb_distribution ;
+	     dcat:distribution :uniprotkb_distribution ;
 	     pav:version "2013_05";
 	     pav:previousVersion <https://github.com/openphacts/ops-platform-setup/blob/master/void/uniprot/uniprot_2013_04_void.ttl#uniprotkb_rdf> ;
 	     pav:retrievedFrom <http://www.uniprot.org/uniprot/> ;
