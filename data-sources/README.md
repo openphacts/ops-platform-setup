@@ -1,4 +1,4 @@
-qData Loaded by the platform
+Data Loaded by the platform
 ===================================
 
 This directory should eventually contain void descriptions of each data source used by the platform, which can then be automatically obtained by the platform. In the mean-time, we hope to keep this file up-to-date. Sections are data source.
@@ -96,18 +96,18 @@ Graph URI: <http://linkedlifedata.com/resource/drugbank>
 Obtained by downloading all the files from <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/> on 25 June 2013 
 
 Graph URI <http://www.ebi.ac.uk/chembl>
-chembl_16_activity.ttl
-chembl_16_assay.ttl
-chembl_16_biocmpt.ttl
-chembl_16_document.ttl
-chembl_16_journal.ttl
-chembl_16_molecule.ttl
-chembl_16_protclass.ttl
-chembl_16_source.ttl
-chembl_16_targetcmpt.ttl
-chembl_16_targetcmpt_uniprot_ls.ttl
-chembl_16_target.ttl
-chembl_16_unichem.ttl
+- chembl_16_activity.ttl
+- chembl_16_assay.ttl
+- chembl_16_biocmpt.ttl
+- chembl_16_document.ttl
+- chembl_16_journal.ttl
+- chembl_16_molecule.ttl
+- chembl_16_protclass.ttl
+- chembl_16_source.ttl
+- chembl_16_targetcmpt.ttl
+- chembl_16_targetcmpt_uniprot_ls.ttl
+- chembl_16_target.ttl
+- chembl_16_unichem.ttl
 
 Replaced Chebi prefixes in chembl_16_molecule.ttl with <http://purl.obolibrary.org/obo/CHEBI_*> . 
 Replaced Enzyme prefixes in chembl_16_targetcmpt.ttl with <http://purl.uniprot.org/enzyme/*> .
