@@ -91,21 +91,27 @@ Graph URI: <http://linkedlifedata.com/resource/drugbank>
 
 	Generated manually 553 elements (The suffix of all drug category URLs)
 
-##Chembl 13
+##Chembl 16
 
-Obtained by downloading from <http://semantics.bigcat.unimaas.nl/chembl/v13_ops/> on 08 Aug 2012 08:41 EST 
+Obtained by downloading all the files from <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/> on 25 June 2013 
 
-Graph URI <http://data.kasabi.com/dataset/chembl-rdf>
+Graph URI <http://www.ebi.ac.uk/chembl>
+- chembl_16_activity.ttl
+- chembl_16_assay.ttl
+- chembl_16_biocmpt.ttl
+- chembl_16_document.ttl
+- chembl_16_journal.ttl
+- chembl_16_molecule.ttl
+- chembl_16_protclass.ttl
+- chembl_16_source.ttl
+- chembl_16_targetcmpt.ttl
+- chembl_16_targetcmpt_uniprot_ls.ttl
+- chembl_16_target.ttl
+- chembl_16_unichem.ttl
 
-- activities.nt
-- activities_qudt.nt 
-- assays.nt
-- compounds.nt
-- docs.nt 
-- targets.nt 
-- chemspider_match.nt 
-- compounds_props.nt 
-- compounds_chebi.nt
+Replaced Chebi prefixes in chembl_16_molecule.ttl from <http://purl.org/obo/owl/CHEBI#*> to <http://purl.obolibrary.org/obo/CHEBI_*> . 
+
+Replaced Enzyme prefixes in chembl_16_targetcmpt.ttl from <http://identifiers.org/ec-code/*> to <http://purl.uniprot.org/enzyme/*> .
 
 ## Chebi
 

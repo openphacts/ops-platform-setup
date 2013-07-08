@@ -1,0 +1,57 @@
+@prefix : <http://aers.data2semantics.org/void.ttl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pav: <http://purl.org/pav/2.0/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Drugbank_AERS a void:Linkset ;
+    void:target :Drugbank ;
+    void:target :AERS ;
+    void:linkPredicate skos:exactMatch ;
+    dcterms:created "2013-05-06T00:00:00Z"^^xsd:dateTime;
+    dcterms:contributor :Ronald_Siebes ;
+    dcterms:contributor :Antonis_Loizou ;
+    dcterms:contributor :VU_Amsterdam ;
+    dcterms:contributor :OpenPHacts_consortium ;
+    dcterms:title "Void linkset containing SKOS-exactMatch relations between Drugbank drug ids and AERS drug ids" .
+    
+:Drugbank a void:Dataset ;
+    pav:retrievedOn "2013-05-03T00:00:00Z"^^xsd:dateTime;
+    void:uriSpace <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/> ;
+    dcterms:source <http://wifo5-04.informatik.uni-mannheim.de/drugbank/> ;
+    dcterms:contributor :Univertät_Mannheim ;
+    dcterms:contributor :Drugbank ;
+    dcterms:license <http://www.drugbank.ca/about> ;
+    dcterms:title "Linked Data version of the DrugBank Database" .
+    
+:AERS a void:Dataset ;
+    pav:retrievedOn "2013-05-03T00:00:00Z"^^xsd:dateTime ;
+    void:uriSpace <aers.data2semantics.org/resource/drug> ;
+    dcterms:title "Linked Data version of adverse events reported to the Federal Drug Administration" ;
+    dcterms:source <http://aers.data2semantics.org/> ;
+    dcterms:contributor :VU_Amsterdam ;
+    dcterms:contributor :FDA .
+
+:OpenPHacts_consortium a foaf:Organization ;
+    rdfs:label "OpenPHacts Consortium" ;
+    foaf:homepage <http://www.openphacts.org/> .
+
+:Univertät_Mannheim a foaf:Organization ;
+    rdfs:label "Universität Mannheim" ;
+    foaf:homepage <http://www.uni-mannheim.de/> .
+    
+:VU_Amsterdam a foaf:Organization ;
+    rdfs:label "VU university Amsterdam" ;
+    foaf:homepage <http://www.vu.nl/> .
+    
+:Ronald_Siebes a foaf:Person ;
+    rdfs:label "Ronald Siebes" ;
+    foaf:homepage <http://www.few.vu.nl/~ronny> .
+    
+:Antonis_Loizou a foaf:Person ;
+    rdfs:label "Antonis Loizou" ;
+    foaf:homepage <http://www.few.vu.nl/~alu900> .

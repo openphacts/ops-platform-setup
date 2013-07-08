@@ -1,7 +1,9 @@
 @prefix cito: <http://purl.org/spar/cito/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix freq: <http://purl.org/cld/freq/> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,7 +20,7 @@
 	pav:createdBy <https://orcid.org/0000-0002-5711-4872> ;
 	pav:createdOn "2013-05-20T13:52:23Z"^^xsd:dateTime ;
 	pav:lastUpdateOn "2013-06-14T13:36:00Z"^^xsd:dateTime ;
-	pav:previousVersion :uniprot_2013_04_void.ttl ;
+	pav:previousVersion <https://github.com/openphacts/ops-platform-setup/blob/master/void/uniprot/uniprot_2013_04_void.ttl> ;
 	foaf:primaryTopic :uniprotkb_rdf .
 
 :uniprotkb_rdf a void:Dataset ;
@@ -29,14 +31,12 @@
 	     dcterms:license <http://creativecommons.org/licenses/by-nd/3.0/> ;
 	     cito:citeAsAuthority <http://nar.oxfordjournals.org/content/40/D1/D71> ; #required by license
 	     dcterms:issued "2013-05-01T14:00:00Z"^^xsd:dateTime ;
-	     dcat:distribution uniprotkb_distribution ;
+	     dcat:distribution :uniprotkb_distribution ;
 	     pav:version "2013_05";
-	     pav:previousVersion :uniprot_2013_04_void.ttl#uniprotkb_rdf ;
+	     pav:previousVersion <https://github.com/openphacts/ops-platform-setup/blob/master/void/uniprot/uniprot_2013_04_void.ttl#uniprotkb_rdf> ;
 	     pav:retrievedFrom <http://www.uniprot.org/uniprot/> ;
 	     pav:retrievedBy <http://orcid.org/0000-0002-1303-2189> ;
-	     pav:createdWith """curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_24052013.rdf.xml
-	     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_24052013.rdf.xml
-	     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniref/ > uniref_24052013.rdf.xml""";
+	     pav:createdWith :uniprot-download-script;
 	     void:uriSpace "http://purl.uniprot.org/uniprot/";
 	     void:sparqlEndpoint <http://beta.sparql.uniprot.org/> ;
 	     dcterms:accrualPeriodicity freq:monthly.
@@ -45,3 +45,9 @@
 	dcat:downloadURL <ftp://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2013_05/knowledgebase/knowledgebase2013_05.tar.gz> ;
 	dcat:mediaType "application/x-gzip" ;
 	dcat:byteSize "15000000000"^^xsd:decimal .
+	
+:uniprot-download-script dcterms:title "UniProt Download Script";
+	dcterms:description """curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_24052013.rdf.xml
+	     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_24052013.rdf.xml
+	     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniref/ > uniref_24052013.rdf.xml""";
+	dcterms:license <http://www.apache.org/licenses/LICENSE-2.0> .
