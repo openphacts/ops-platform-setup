@@ -109,8 +109,9 @@ Graph URI <http://www.ebi.ac.uk/chembl>
 - chembl_16_target.ttl
 - chembl_16_unichem.ttl
 
-Replaced Chebi prefixes in chembl_16_molecule.ttl with <http://purl.obolibrary.org/obo/CHEBI_*> . 
-Replaced Enzyme prefixes in chembl_16_targetcmpt.ttl with <http://purl.uniprot.org/enzyme/*> .
+Replaced Chebi prefixes in chembl_16_molecule.ttl from <http://purl.org/obo/owl/CHEBI#*> to <http://purl.obolibrary.org/obo/CHEBI_*> . 
+
+Replaced Enzyme prefixes in chembl_16_targetcmpt.ttl from <http://identifiers.org/ec-code/*> to <http://purl.uniprot.org/enzyme/*> .
 
 ## Chebi
 
