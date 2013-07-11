@@ -36,4 +36,4 @@ ld_dir('/media/SSD/current_data/' , 'SYNONYMS_MeSH20120731.ttl' , 'http://www.ch
 ld_dir('/media/SSD/current_data/' , 'SYNONYMS_ChEBI20120731.ttl' , 'http://www.chemspider.com' );
 ld_dir('/media/SSD/current_data/' , 'SYNONYMS_PDB20120731.ttl' , 'http://www.chemspider.com' );
 ld_dir('/media/SSD/current_data/void' , '*.ttl' , 'http://www.openphacts.org/api/datasetDescriptors' );
-
+ld_dir('/media/SSD/current_data/chembl16', '*.ttl', 'http://www.ebi.ac.uk/chembl');
