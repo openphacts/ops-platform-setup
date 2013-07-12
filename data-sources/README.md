@@ -115,20 +115,20 @@ Replaced Enzyme prefixes in chembl_16_targetcmpt.ttl from <http://identifiers.or
 
 Created file for activity types and units:
 
-  CONSTRUCT {
-   ?type_uri rdfs:subClassOf ?act_type ;
-     rdfs:label ?standard_type ;
-     <http://rdf.ebi.ac.uk/terms/chembl#hasQUDT>  ?qudt_uri .
-   ?qudt_uri rdfs:label ?standard_unit .
-  }
-  WHERE {
-  GRAPH <http://www.ebi.ac.uk/chembl>  {
-   ?act <http://rdf.ebi.ac.uk/terms/chembl#standardType> ?standard_type  ;
-     <http://rdf.ebi.ac.uk/terms/chembl#standardUnits> ?standard_unit ;
-     <http://rdf.ebi.ac.uk/terms/chembl#hasQUDT> ?qudt_uri ;
-     a ?act_type .
-   BIND( IRI (CONCAT("http://www.openphacts.org/terms/chembl#", ENCODE_FOR_URI(?standard_type))) AS ?type_uri)
-  } } 
+     CONSTRUCT {
+       ?type_uri rdfs:subClassOf ?act_type ;
+         rdfs:label ?standard_type ;
+         <http://rdf.ebi.ac.uk/terms/chembl#hasQUDT>  ?qudt_uri .
+       ?qudt_uri rdfs:label ?standard_unit .
+      }
+      WHERE {
+      GRAPH <http://www.ebi.ac.uk/chembl>  {
+       ?act <http://rdf.ebi.ac.uk/terms/chembl#standardType> ?standard_type  ;
+         <http://rdf.ebi.ac.uk/terms/chembl#standardUnits> ?standard_unit ;
+         <http://rdf.ebi.ac.uk/terms/chembl#hasQUDT> ?qudt_uri ;
+         a ?act_type .
+       BIND( IRI (CONCAT("http://www.openphacts.org/terms/chembl#", ENCODE_FOR_URI(?standard_type))) AS ?type_uri)
+      } } 
 
 
 ## Chebi
