@@ -24,6 +24,7 @@
         """The HUGO Gene Nomenclature Committee (HGNC) has assigned unique gene symbols and names to over 37,000 human loci, of which around 19,000 are protein coding. genenames.org is a curated online repository of HGNC-approved gene nomenclature and associated resources including links to genomic, proteomic and phenotypic information, as well as dedicated gene family pages."""@en;
     dct:publisher <http://www.genenames.org/> ;
     dct:landingPage <http://www.genenames.org/> ;
+    foaf:page <http://identifiers.org/hgnc/>, <http://identifiers.org/hgnc.symbol/> ;
     dct:license <http://www.genenames.org/about/overview> ;
     dct:rights "No restrictions; Attributions to HUGO Gene Nomenclature Committee at the European Bioinformatics Institute"@en;
     dcat:distribution :hgncDatasetDistribution .
