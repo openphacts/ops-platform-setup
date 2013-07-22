@@ -39,9 +39,9 @@
     dct:description "Links from HGNC Identifier to the equivalent HGNC Symbol as extracted from HGNC."@en ;
     dct:publisher <http://www.openphacts.org/> ;
     dct:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
-    dct:dataDump <https://raw.github.com/openphacts/ops-platform-setup/ag_hgnc/void/HGNC/hgncLinksets.ttl> ;
+    dct:dataDump <https://raw.github.com/openphacts/ops-platform-setup/master/void/HGNC/hgncLinksets.ttl> ;
     void:subjectsTarget :hgncDataset ;
     void:objectsTarget :hgncDataset ;
     void:linkPredicate skos:exactMatch ;
     dul:expresses <http://semanticscience.org/resource/SIO_001171> ;
-    pav:createdWith <https://github.com/openphacts/ops-platform-setup/scripts/hgnc/extractHgncLinkset.sh> .
+    pav:createdWith <https://raw.github.com/openphacts/ops-platform-setup/master/scripts/hgnc/extractHgncLinkset.sh> .
