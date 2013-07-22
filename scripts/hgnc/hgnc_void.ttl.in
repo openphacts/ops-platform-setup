@@ -1,0 +1,15 @@
+@prefix pav:     <http://purl.org/pav/> .
+@prefix bdb:     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix dctypes:  <http://purl.org/dc/dcmitype/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+[] a void:DatasetDescription ;
+    dct:title "HGNC VoID Description" ;
+    pav:createdBy <http://orcid.org/0000-0002-5711-4872> ;
+    pav:createdOn "2013-07-22T15:28:59Z"^^xsd:dateTime;
+    foaf:primaryTopic :hgncDataset .
+
