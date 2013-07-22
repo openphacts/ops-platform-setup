@@ -9,7 +9,8 @@ OUTPUT_LINKSET_FILE=/tmp/hgncLinksets.ttl
 
 write_void() {
     cp $INPUT_VOID_FILE $OUTPUT_VOID_FILE
-    echo "[] pav:lastUpdateOn $SCRIPT_RUNTIME ." >> $OUTPUT_VOID_FILE
+    echo "<> pav:lastUpdateOn $SCRIPT_RUNTIME ." >> $OUTPUT_VOID_FILE
+    echo ":hgncDataset dct:issued $SCRIPT_RUNTIME ." >> $OUTPUT_VOID_FILE
 }
 
 extract_links() {
@@ -20,6 +21,6 @@ extract_links() {
 '} >> $OUTPUT_LINKSET_FILE
 }
 
-SCRIPT_RUNTIME=$(date +"%Y-%m-%dT%T%z")
+SCRIPT_RUNTIME="\""$(date +"%Y-%m-%dT%T%z")"\"^^xsd:dateTime"
 write_void
 extract_links
