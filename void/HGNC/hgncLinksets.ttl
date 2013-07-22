@@ -1,6 +1,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
-<> void:inDataset :HGNC_ID-HGNC_Symbol-Linkset
+@prefix hgnc: <> .
+<> void:inDataset hgnc:hgncId-SymbolLinkset
 <http://identifiers.org/hgnc/HGNC> skos:exactMatch <http://identifiers.org/hgnc.symbol/ID> .
 <http://identifiers.org/hgnc/100> skos:exactMatch <http://identifiers.org/hgnc.symbol/ASIC1> .
 <http://identifiers.org/hgnc/1000> skos:exactMatch <http://identifiers.org/hgnc.symbol/BCL5> .

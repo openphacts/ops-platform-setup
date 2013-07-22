@@ -31,3 +31,17 @@
     
 :hgncDatasetDistribution a dcat:Distribution ;
     dcat:landingPage <http://www.genenames.org/cgi-bin/hgnc_stats> .
+
+:hgncDataset void:subset :hgncId-SymbolLinkset .
+
+:hgncId-SymbolLinkset a void:Linkset ;
+    dct:title "HGNC ID to Symbol Linkset" ;
+    dct:description "Links from HGNC Identifier to the equivalent HGNC Symbol as extracted from HGNC."@en ;
+    dct:publisher <http://www.openphacts.org/> ;
+    dct:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+    dct:dataDump <https://raw.github.com/openphacts/ops-platform-setup/ag_hgnc/void/HGNC/hgncLinksets.ttl> ;
+    void:subjectsTarget :hgncDataset ;
+    void:objectsTarget :hgncDataset ;
+    void:linkPredicate skos:exactMatch ;
+    dul:expresses <http://semanticscience.org/resource/SIO_001171> ;
+    pav:createdWith <https://github.com/openphacts/ops-platform-setup/scripts/hgnc/extractHgncLinkset.sh> .
