@@ -16,11 +16,11 @@
     dct:title "Wikipathways Pathway Ontology Linkset VoID Description" ;
     pav:createdBy <http://orcid.org/0000-0002-5711-4872> ;
     pav:createdOn "2013-07-23T12:24:16Z"^^xsd:dateTime;
-    foaf:primaryTopic :wp-poLinkset .
+    foaf:primaryTopic wprdf:wp-poLinkset .
 
-wprdf: void:subset :wp-poLinkset .
+wprdf: void:subset wprdf:wp-poLinkset .
 
-:wp-poLinkset a void:Linkset ;
+wprdf:wp-poLinkset a void:Linkset ;
     dct:title "Wikipathways to Pathway Ontology Linkset" ;
     dct:description "Links from Wikipathways pathways to Pathway Ontology terms for the pathway."@en ;
     dct:publisher <http://www.wikipathways.org/> ;
