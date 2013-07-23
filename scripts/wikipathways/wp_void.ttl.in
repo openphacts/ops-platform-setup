@@ -9,39 +9,25 @@
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix void:    <http://rdfs.org/ns/void#> .
+@prefix wprdf:   <http://rdf.wikipathways.org/> .
 
 
 <> a void:DatasetDescription ;
-    dct:title "HGNC VoID Description" ;
+    dct:title "Wikipathways Pathway Ontology Linkset VoID Description" ;
     pav:createdBy <http://orcid.org/0000-0002-5711-4872> ;
-    pav:createdOn "2013-07-22T15:28:59Z"^^xsd:dateTime;
-    foaf:primaryTopic :hgncDataset .
+    pav:createdOn "2013-07-23T12:24:16Z"^^xsd:dateTime;
+    foaf:primaryTopic :wp-poLinkset .
 
-:hgncDataset a dctypes:Dataset ;
-    dct:alternative "HGNC" ;
-    dct:title "HUGO Gene Nomenclature Committee" ;
-    dct:description 
-        """The HUGO Gene Nomenclature Committee (HGNC) has assigned unique gene symbols and names to over 37,000 human loci, of which around 19,000 are protein coding. genenames.org is a curated online repository of HGNC-approved gene nomenclature and associated resources including links to genomic, proteomic and phenotypic information, as well as dedicated gene family pages."""@en;
-    dct:publisher <http://www.genenames.org/> ;
-    dct:landingPage <http://www.genenames.org/> ;
-    foaf:page <http://identifiers.org/hgnc/>, <http://identifiers.org/hgnc.symbol/> ;
-    dct:license <http://www.genenames.org/about/overview> ;
-    dct:rights "No restrictions; Attributions to HUGO Gene Nomenclature Committee at the European Bioinformatics Institute"@en;
-    dcat:distribution :hgncDatasetDistribution .
-    
-:hgncDatasetDistribution a dcat:Distribution ;
-    dcat:landingPage <http://www.genenames.org/cgi-bin/hgnc_stats> .
+wprdf: void:subset :wp-poLinkset .
 
-:hgncDataset void:subset :hgncId-SymbolLinkset .
-
-:hgncId-SymbolLinkset a void:Linkset ;
-    dct:title "HGNC ID to Symbol Linkset" ;
-    dct:description "Links from HGNC Identifier to the equivalent HGNC Symbol as extracted from HGNC."@en ;
-    dct:publisher <http://www.openphacts.org/> ;
-    dct:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
-    dct:dataDump <https://raw.github.com/openphacts/ops-platform-setup/master/void/HGNC/hgncLinksets.ttl> ;
-    void:subjectsTarget :hgncDataset ;
-    void:objectsTarget :hgncDataset ;
-    void:linkPredicate skos:exactMatch ;
-    dul:expresses <http://semanticscience.org/resource/SIO_001171> ;
-    pav:createdWith <https://raw.github.com/openphacts/ops-platform-setup/master/scripts/hgnc/extractHgncLinkset.sh> .
+:wp-poLinkset a void:Linkset ;
+    dct:title "Wikipathways to Pathway Ontology Linkset" ;
+    dct:description "Links from Wikipathways pathways to Pathway Ontology terms for the pathway."@en ;
+    dct:publisher <http://www.wikipathways.org/> ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+    dct:dataDump <https://raw.github.com/openphacts/ops-platform-setup/master/void/wikipathways/wp-po_Linkset.ttl> ;
+    void:subjectsTarget wprdf:wpDataset ;
+    void:objectsTarget <http://identifiers.org/pw/> ;
+    void:linkPredicate skos:relatedMatch ;
+    dul:expresses <http://edamontology.org/data_2342> ;
+    pav:createdWith <https://raw.github.com/openphacts/ops-platform-setup/master/scripts/wikipathways/extractWPLinkset.sh> .
