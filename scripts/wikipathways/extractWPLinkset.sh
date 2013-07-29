@@ -4,14 +4,20 @@
 
 BASE_URI="<>"
 
-INPUT_VOID_FILE=wp_void.ttl.in
-OUTPUT_VOID_FILE=/tmp/wpVoid.ttl
+INPUT_VOID_FILE=wp-po_void.ttl.in
+OUTPUT_VOID_FILE=/tmp/wp-po_Void.ttl
 OUTPUT_LINKSET_FILE=/tmp/wp-po_Linkset.ttl
 
 write_void() {
-    cp $INPUT_VOID_FILE $OUTPUT_VOID_FILE
-    echo "<> pav:lastUpdateOn $SCRIPT_RUNTIME ." >> $OUTPUT_VOID_FILE
-    echo ":wp-poLinkset dct:issued $SCRIPT_RUNTIME ." >> $OUTPUT_VOID_FILE
+    if [ -f $INPUT_VOID_FILE ]
+    then
+        cp $INPUT_VOID_FILE $OUTPUT_VOID_FILE
+        echo "<> pav:lastUpdateOn $SCRIPT_RUNTIME ." >> $OUTPUT_VOID_FILE
+        echo ":wp-poLinkset dct:issued $SCRIPT_RUNTIME ." >> $OUTPUT_VOID_FILE
+    else
+        echo "Unable to find input VoID file: $INPUT_VOID_FILE"
+        exit 1
+    fi
 }
 
 extract_links() {
