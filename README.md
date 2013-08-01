@@ -63,6 +63,8 @@ For each hierarchy we have three named graphs
 
     [antonis@ops2 ~]$ service httpd start
 
+Note: The ARC library harcodes the limit on the execution time of a function call. We had to change this limit to 0 (infinite) so that we can parse large responses. The change was done in lib/arc/parsers/ARC2_RDFXMLParser.php only, because this is where the response from the triple store is parsed.
+
 #### Steps to enable caching from RAM instead of disk
 1. Edit deployment.settings.php from the root of LDA and change:
 
