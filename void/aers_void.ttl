@@ -2,29 +2,37 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix pav:     <http://purl.org/pav/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix : <#> .
 
+<> 
+    a void:DatasetDescription;
+    dcterms:title "AERS-LD Dataset Description"@en;
+    dcterms:description """This is the Open PHACTS conformant dataset description for the RDF representation of the aers dataset."""@en;
+    pav:createdBy :Rinke_Hoekstra;
+    dcterms:contributor :Ronald_Siebes ;
+    dcterms:contributor :VU_Amsterdam ;
+    pav:createdOn "2013-05-30T16:00:07Z"^^xsd:dateTime;
+    foaf:primaryTopic <http://aers.data2semantics.org/void.ttl#aers-ld>.
+
 <http://aers.data2semantics.org/void.ttl#aers-ld> rdf:type void:Dataset ;
- foaf:homepage <http://aers.data2semantics.org> ;
- dcterms:title "AERS-LD" ;
- dcterms:description "Linked Data version of the Adverse Event Reporting System of the FDA" ;
- dcterms:source <http://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/default.htm> ;
-     pav:createdBy : Rinke_Hoekstra;
-     dcterms:contributor:Ronald_Siebes ;
-    dcterms:contributor:VU_Amsterdam ;
- void:sparqlEndpoint <http://aers.data2semantics.org/sparql/> ;
- void:dataDump <http://aers.data2semantics.org/data/dump-of-2012-generated-on-2012-07-09.nt.gz, http://aers.data2semantics.org/data/dump-of-2011-generated-on-2012-07-09.nt.gz, http://aers.data2semantics.org/data/dump-of-2010-generated-on-2012-07-09.nt.gz, http://aers.data2semantics.org/data/dump-of-2009-generated-on-2012-07-09.nt.gz, http://aers.data2semantics.org/data/dump-of-2008-generated-on-2012-07-09.nt.gz, http://aers.data2semantics.org/data/dump-of-2007-generated-on-2012-07-09.nt.gz, http://aers.data2semantics.org/data/dump-of-2006-generated-on-2012-07-09.nt.gz, http://aers.data2semantics.org/data/dump-of-2005-generated-on-2012-07-09.nt.gz, http://aers.data2semantics.org/data/provenance-trail-2012-07-09.ttl> ;
- void:vocabulary <http://www.w3.org/ns/prov#> ;
- void:vocabulary <http://www.w3.org/2004/02/skos/core#> ;
- void:vocabulary <http://www.w3.org/2000/01/rdf-schema#> ;
-   pav:createdOn "2012-07-12T00:00:00Z"^^xsd:dateTime;
- void:exampleResource <http://aers.data2semantics.org/resource/diagnosis/FEBRILE_NEUTROPENIA> ;
- void:subset :aers-dbpedia-exact, :aers-dbpedia-related, :aers-lld-exact, :aers-lld-related.
+	foaf:homepage <http://aers.data2semantics.org> ;
+	dcterms:title "AERS-LD" ;
+	dcterms:description "Linked Data version of the Adverse Event Reporting System of the FDA" ;
+	dcterms:source <http://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/default.htm> ;
+	void:sparqlEndpoint <http://aers.data2semantics.org/sparql/> ;
+	void:dataDump <http://aers.data2semantics.org/data/dump-of-2012-generated-on-2012-07-09.nt.gz>, <http://aers.data2semantics.org/data/dump-of-2011-generated-on-2012-07-09.nt.gz>, <http://aers.data2semantics.org/data/dump-of-2010-generated-on-2012-07-09.nt.gz>, <http://aers.data2semantics.org/data/dump-of-2009-generated-on-2012-07-09.nt.gz>, <http://aers.data2semantics.org/data/dump-of-2008-generated-on-2012-07-09.nt.gz>, <http://aers.data2semantics.org/data/dump-of-2007-generated-on-2012-07-09.nt.gz>, <http://aers.data2semantics.org/data/dump-of-2006-generated-on-2012-07-09.nt.gz>, <http://aers.data2semantics.org/data/dump-of-2005-generated-on-2012-07-09.nt.gz>, <http://aers.data2semantics.org/data/provenance-trail-2012-07-09.ttl> ;
+	void:vocabulary <http://www.w3.org/ns/prov#> ;
+	void:vocabulary <http://www.w3.org/2004/02/skos/core#> ;
+	void:vocabulary <http://www.w3.org/2000/01/rdf-schema#> ;
+	pav:createdOn "2012-07-12T00:00:00Z"^^xsd:dateTime;
+	void:exampleResource <http://aers.data2semantics.org/resource/diagnosis/FEBRILE_NEUTROPENIA> ;
+	void:subset :aers-dbpedia-exact, :aers-dbpedia-related, :aers-lld-exact, :aers-lld-related.
 
  
- :Rinke_Hoekstra a foaf:Person;
+:Rinke_Hoekstra a foaf:Person;
     rdfs:label "Rinke Hoekstra" ;
     foaf:homepage <http://www.rinkehoekstra.nl> .
     
