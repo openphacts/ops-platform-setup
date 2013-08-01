@@ -58,5 +58,3 @@
     rdfs:label "Antonis Loizou" ;
     foaf:homepage <http://www.few.vu.nl/~alu900> .
   
-
-
