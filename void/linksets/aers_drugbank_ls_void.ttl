@@ -11,7 +11,9 @@
 :Drugbank_AERS a void:Linkset ;
     void:target :Drugbank ;
     void:target :AERS ;
-    void:linkPredicate skos:exactMatch ;
+    void:linkPredicate skos:closeMatch ;
+    dul:expresses <http://semanticscience.org/resource/SIO_010038> ;
+    dct:dataDump <https://raw.github.com/openphacts/ops-platform-setup/master/linksets_dev/compounds/aers_drugbank_linkset.ttl> 
     dcterms:created "2013-05-06T00:00:00Z"^^xsd:dateTime;
     dcterms:contributor :Ronald_Siebes ;
     dcterms:contributor :Antonis_Loizou ;
@@ -23,7 +25,7 @@
     pav:retrievedOn "2013-05-03T00:00:00Z"^^xsd:dateTime;
     void:uriSpace <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/> ;
     dcterms:source <http://wifo5-04.informatik.uni-mannheim.de/drugbank/> ;
-    dcterms:contributor :Univertät_Mannheim ;
+    dcterms:contributor :Univertaet_Mannheim ;
     dcterms:contributor :Drugbank ;
     dcterms:license <http://www.drugbank.ca/about> ;
     dcterms:title "Linked Data version of the DrugBank Database" .
@@ -37,11 +39,11 @@
     dcterms:contributor :FDA .
 
 :OpenPHacts_consortium a foaf:Organization ;
-    rdfs:label "OpenPHacts Consortium" ;
+    rdfs:label "OpenPHACTS Consortium" ;
     foaf:homepage <http://www.openphacts.org/> .
 
 :Univertät_Mannheim a foaf:Organization ;
-    rdfs:label "Universität Mannheim" ;
+    rdfs:label "Universitat Mannheim" ;
     foaf:homepage <http://www.uni-mannheim.de/> .
     
 :VU_Amsterdam a foaf:Organization ;
@@ -55,3 +57,6 @@
 :Antonis_Loizou a foaf:Person ;
     rdfs:label "Antonis Loizou" ;
     foaf:homepage <http://www.few.vu.nl/~alu900> .
+  
+
+
