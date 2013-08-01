@@ -7,8 +7,9 @@ ENZYME_HAS_MEMBERS_API_CALL="http://$SERVER_NAME/target/enzyme/members?uri="
 #will be called for all enzyme classes except the 6 roots
 ENZYME_CLASS_API_CALL="http://$SERVER_NAME/target/enzyme/node?uri="
 
-PAGE_SIZE=50
-ENZYME_PHARMA_PAGINATED_API_CALL="http://$SERVER_NAME/target/enzyme/pharmacology/pages?_format=json&_pageSize=$PAGE_SIZE"
+PAGE_SIZE=250
+FORMAT=tsv
+ENZYME_PHARMA_PAGINATED_API_CALL="http://$SERVER_NAME/target/enzyme/pharmacology/pages?_format=$FORMAT&_pageSize=$PAGE_SIZE"
 ENZYME_PHARMA_COUNT_API_CALL="http://$SERVER_NAME/target/enzyme/pharmacology/count?_format=tsv&uri="
 
 #query http://purl.uniprot.org/enzyme for all the enzyme classes 
