@@ -25,7 +25,7 @@
     pav:createdBy <http://orcid.org/0000-0001-9773-4008> ;
     pav:contributedBy <http://orcid.org/0000-0002-5711-4872> ;
     dcterms:contributor :Ronald_Siebes ;
-    dcterms:contributor :Sever_Fundatureanu ;
+    pav:contributedBy <http://orcid.org/0000-0002-8168-0604> ;
     pav:createdOn "2013-05-20T16:56:07Z"^^xsd:dateTime;
     pav:lastUpdateOn "2013-07-29T16:07:00Z"^^xsd:dateTime;
     foaf:primaryTopic :wpdrf.

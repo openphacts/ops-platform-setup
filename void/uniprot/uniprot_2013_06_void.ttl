@@ -18,7 +18,7 @@
 	dcterms:title "UniProt Knowledgebase VoID Description"@en ;
 	dcterms:description "The VoID description for the RDF representation of the UniProt dataset."@en ;
 	pav:createdBy <https://orcid.org/0000-0002-5711-4872> ;
-	dcterms:contributor :Sever_Fundatureanu ;
+	pav:contributedBy <http://orcid.org/0000-0002-8168-0604> ;
 	pav:createdOn "2013-06-14T12:31:00Z"^^xsd:dateTime ;
 	pav:lastUpdateOn "2013-08-01T14:47:00Z"^^xsd:dateTime ;
 	pav:previousVersion <https://github.com/openphacts/ops-platform-setup/blob/master/void/uniprot/uniprot_2013_05_void.ttl> ;
@@ -30,6 +30,7 @@
 :uniprot_enzyme a void:Dataset ;
 	dcterms:title "Enzyme"@en ;
 	dcterms:publisher <http://www.uniprot.org/> ;
+	dcat:landingPage <http://www.uniprot.org/> ;
 	void:dataDump <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/enzyme.rdf.gz> ;
 	void:triples "47661"^^xsd:integer .
 
@@ -61,6 +62,3 @@
 	     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniref/ > uniref_24052013.rdf.xml""";
 	dcterms:license <http://www.apache.org/licenses/LICENSE-2.0> .
 
-:Sever_Fundatureanu a foaf:Person;
-    rdfs:label "Sever Fundatureanu" ;
-    foaf:homepage <https://github.com/fundatureanu-sever> .
