@@ -1,7 +1,7 @@
 -- ConceptWiki
 ld_dir('/media/SSD/current_data' , 'cw_url_preflabels_20120620_validTurtle.ttl' , 'http://www.conceptwiki.org' );
 ld_dir('/media/SSD/current_data' , 'CW_ChemSpider.ttl' , 'http://www.conceptwiki.org' );
-ld_dir('/media/SSD/current_datai/CW' , '*.ttl' , 'http://www.conceptwiki.org' );
+ld_dir('/media/SSD/current_data/CW' , '*.ttl' , 'http://www.conceptwiki.org' );
 
 
 -- Enzyme
