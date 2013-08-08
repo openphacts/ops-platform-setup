@@ -72,6 +72,7 @@ ld_dir('/media/SSD/current_data/api-config-files' , '*.ttl' , 'http://www.openph
 
 -- Gene Ontology
 ld_dir('/media/SSD/current_data' , 'go_daily-termdb.owl' , 'http://www.geneontology.org' );
+ld_dir('/media/SSD/current_data' , 'goTreeInference.ttl', 'http://www.geneontology.org/inference');
 ld_dir('/media/SSD/current_data' , 'go_daily-termdb.nt' , 'http://www.geneontology.org/terms' );
 
 -- GOA
