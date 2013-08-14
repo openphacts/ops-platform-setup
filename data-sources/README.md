@@ -5,13 +5,18 @@ This directory should eventually contain void descriptions of each data source u
 
 ##ConceptWiki
 
-Obtained from <https://trac.nbic.nl/openphacts/browser/linksets/conceptwiki/>  on 07 Aug 2012 17:00 EST
-
 Graph URI: <http://www.conceptwiki.org>
 
-- cw-cs_linkset.ttl 
+- cw_prefLabels.ttl
+	* http://downloads.nbiceng.net/linksets/pref-mapping-2013-08-08.bz2
+	* Generated on:2013-08-08     
+	* Replaced '"' with '"""' (Long literals) 
+	* Replaced '"""" with '" """' (literals ending with ")
+	* Replaced '\T' with '\\T' (read as escaped character)
+	* Renamed file
 
-- cw_url_preflabels_20120620_validTurtle.ttl
+- inverted_CW_OCRS_via_CS.ttl
+	* 
 
 BUG: http://staging.conceptwiki.org/wiki prefix is used
 
