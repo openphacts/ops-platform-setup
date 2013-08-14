@@ -14,28 +14,23 @@ Graph URI: <http://www.conceptwiki.org>
 	* Replaced '"""" with '" """' (literals ending with ")
 	* Replaced '\T' with '\\T' (read as escaped character)
 	* Renamed file
+	* 3024334 triples
 
 - inverted_CW_OCRS_via_CS.ttl
-	* 
+	* 1317126 triples
 
-BUG: http://staging.conceptwiki.org/wiki prefix is used
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive17and6.ttl
+    http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive21and6.ttl
+    http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive25and6.ttl
+    http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive29and6.ttl
+    http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive33and6.ttl
+    cat *.ttl > ocrs_cw.tmp
+    rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_OCRS_via_CS.ttl
+    rm ocrs_cw.tmp
 
-TEMP FIX:
+- Total: 4341460
 
-    cat cw_url_preflabels_20120620.ttl | sed 's,http://staging.conceptwiki.org/wiki,http://www.conceptwiki.org,' > cw_url_preflabels_20120620_fix.ttl
-
-BUG: Invalid characters '\n' , '"' , '\T' Appear inside literals.
-
-TEMP FIX:
-
-    echo '@prefix skos: <http://www.w3.org/2004/02/skos/core#> .' > tmp
-    cat cw_url_preflabels_20120620_fix.ttl >> tmp
-    cat tmp | sed 's, "\([[:print:]]*\)"\([[:print:]]*\)", "\1<twoquotes>\2",g' | sed "s,<twoquotes>,'',g" > quotes.1
-    cat quotes.1 |  sed 's, "\([[:print:]]*\)"\([[:print:]]*\)", "\1<twoquotes>\2",g' | sed "s,<twoquotes>,'',g" > quotes.2
-    cat quotes.2  | sed -e :a -e '/@en .$/!N; s/\n//; ta' > newlines
-    cat newlines   | sed 's,mariner\\T,mariner-T,' | sed 's,MARINER\\T,MARINER-T,' > cw_url_preflabels_20120620_validTurtle.ttl
-
-## Swissprot on 24 May 2013 12.00EST
+## Uniprot on 24 May 2013 12.00EST
 
 Obtained from <http://www.uniprot.org> on 24 May 2013 by running:
 
@@ -164,102 +159,45 @@ Obtained from <ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl> on 19
 
 	    curl --data-urlencode 'query=construct {?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass} where {graph <http://www.ebi.ac.uk/chebi/direct> {?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf>+ ?superclass } graph <http://www.ebi.ac.uk/chebi>{ ?subclass rdfs:label ?label}}' http://localhost:8890/sparql/ > chebi_inference.ttl
 
-## ACD Labs and Chemspider data
+## Openphacts Chemistry Registration Service data
 
-Obtained from the OPS dropbox on 08 Aug 2012 09:03 EST also would be good to get the version url
+Downloaded from: ftp://ftp.rsc-us.org/OPS/20130724/ (no longer available?)
 
-Graph URI: <http://www.chemspider.com>
+Graph URI: <http://ops.rsc-us.org>
 
-- ChEMBL20120731.zip
-	
-	- PROPERTIES_ChEMBL20120731.ttl
+	- PROPERTIES_CHEMBL20130724.ttl
+	- SYNONYMS_CHEMBL20130724.ttl
+	- LINKSET_EXACT_CHEMBL20130724.ttl
+	- PROPERTIES_CHEBI20130724.ttl
+	- SYNONYMS_CHEBI20130724.ttl
+	- LINKSET_EXACT_CHEBI20130724.ttl
+	- PROPERTIES_DRUGBANK20130724.ttl
+	- LINKSET_EXACT_DRUGBANK20130724.ttl
+	- PROPERTIES_PDB20130724.ttl
+	- SYNONYMS_PDB20130724.ttl
+	- PROPERTIES_MESH20130724.ttl
+	- SYNONYMS_MESH20130724.ttl
+	- 193838638 triples
 
-		BUG: rdf:label used instead of rdfs:label
+## FDA Adverse Events
+	- http://aers.data2semantics.org/data/dump-of-2012-generated-on-2012-07-09.nt.gz
 
-		BUG: Erroneous prefix qud:standardUncertainty
+## GO
+	- go_daily-termdb.owl
+		* Downloaded from , Jan 21 2013
+	- go_daily-termdb.rdf-xml
+		* Downloaded from , Jan 21 2013
+	- goTreeInference.ttl
+		* Generated manually, rdfs:subClassOf inference
 
-		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
+## GOA 
 
-		BUG: obo:IAO:0000136 used instead of obo:IAO_0000136
+Downloaded from : http://downloads.nbiceng.net/gene_association/
 
-		TEMP FIX:
+Generated on : 05 Mar 2013
 
-		    cat /media/SSD/current_data/PROPERTIES_ChEMBL20120731.ttl | sed 's,IAO:0000136,IAO_0000136,g' > PROPERTIES_ChEMBL20120731_fix.ttl	
+	- goTreeInference.ttl
 
-	- SYNONYMS_ChEMBL20120731.ttl
+## Wikipathways
 
-	- LINKSET_EXACTMATCH_DrugBank20120731.ttl
-
-	- PROPERTIES_DrugBank20120731.tll
-
-		BUG: rdf:label used instead of rdfs:label
-
-		BUG: Erroneous prefix qud:standardUncertainty
-
-		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
-
-		BUG: obo:IAO:0000136 used instead of obo:IAO_0000136
-
-		TEMP FIX:
-		
-		    mv PROPERTIES_DrugBank20120731.ttl PROPERTIES_DrugBank20120731_orig.tll
-		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_DrugBank20120731.ttl
-		    echo '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .' >> PROPERTIES_DrugBank20120731.ttl
-		    cat PROPERTIES_DrugBank20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_DrugBank20120731.ttl
-
-	- PROPERTIES_MeSH20120731.tll
-
-		BUG: rdf:label used instead of rdfs:label
-
-		BUG: Erroneous prefix qud:standardUncertainty
-
-		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
-
-		BUG: obo:IAO:0000136 used instead of obo:IAO_0000136
-
-		TEMP FIX:
-		
-		    mv PROPERTIES_MeSH20120731.ttl PROPERTIES_MeSH20120731_orig.tll
-		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_MeSH20120731.ttl
-		    echo '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .' >> PROPERTIES_MeSH20120731.ttl
-		    cat PROPERTIES_MeSH20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_MeSH20120731.ttl
-
-	- PROPERTIES_ChEBI20120731.tll
-
-		BUG: rdf:label used instead of rdfs:label
-
-		BUG: Erroneous prefix qud:standardUncertainty
-
-		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
-
-		BUG: obo:IAO:0000136 used instead of obo:IAO_0000136
-
-		TEMP FIX:
-		
-		    mv PROPERTIES_ChEBI20120731.ttl PROPERTIES_ChEBI20120731_orig.tll
-		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_ChEBI20120731.ttl
-		    echo '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .' >> PROPERTIES_ChEBI20120731.ttl
-		    cat PROPERTIES_ChEBI20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_ChEBI20120731.ttl
-
-	- PROPERTIES_PDB20120731.tll
-
-		BUG: rdf:label used instead of rdfs:label
-
-		BUG: Erroneous prefix qud:standardUncertainty
-
-		TEMP FIX: Add: @prefix qud: <http://qudt.org/1.1/schema/qudt#>
-
-		BUG: obo:IAO:0000136 used instead of obo:IAO_0000136
-
-		TEMP FIX:
-		
-		    mv PROPERTIES_PDB20120731.ttl PROPERTIES_PDB20120731_orig.tll
-		    echo '@prefix qud: <http://qudt.org/1.1/schema/qudt#> .' > PROPERTIES_PDB20120731.ttl
-		    echo '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .' >> PROPERTIES_PDB20120731.ttl
-		    cat PROPERTIES_PDB20120731_orig.tll | sed -e 's,obo:IAO:0000136,obo:IAO_0000136,g' -e 's,rdf:label,rdfs:label,g' >> PROPERTIES_PDB20120731.ttl
-
-	- SYNONYMS_MeSH20120731.ttl
-
-	- SYNONYMS_ChEBI20120731.ttl
-
-	- SYNONYMS_PDB20120731.ttl
+Downloaded from : http://openphactsdata.bigcat.maastrichtuniversity.nl/v1.3/wpContent_v0.0.69675_20130710.ttl
