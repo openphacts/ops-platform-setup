@@ -28,12 +28,7 @@ Graph URI: <http://www.conceptwiki.org>
     rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_OCRS_via_CS.ttl
     rm ocrs_cw.tmp
 
-- CW_DB.ttl
-	* http://openphacts.cs.man.ac.uk/ims/linkset/version1.3.alpha4/Conceptwiki/Berlin_Drukbank_target_20130730_11.ttl
-	* Renamed
-	* 3639 triples
-
-- Total: 4345099
+- Total: 4341460 
 
 ## Uniprot on 24 May 2013 12.00EST
 
