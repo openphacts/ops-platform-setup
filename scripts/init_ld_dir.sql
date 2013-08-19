@@ -1,6 +1,7 @@
 -- ConceptWiki
 ld_dir('/media/SSD/current_data/CW' , 'cw_prefLabels.ttl' , 'http://www.conceptwiki.org' );
 ld_dir('/media/SSD/current_data/CW', 'inverted_CW_OCRS_via_CS.ttl' , 'http://www.conceptwiki.org' );
+ld_dir('/media/SSD/current_data/CW', 'CW_DB.ttl' , 'http://www.conceptwiki.org' );
 
 -- Enzyme
 ld_dir('/media/SSD/current_data/enzyme' , 'inference.ttl' , 'http://purl.uniprot.org/enzyme/inference' );
