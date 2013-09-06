@@ -16,7 +16,7 @@ Graph URI: <http://www.conceptwiki.org>
 	* Renamed file
 	* 3024334 triples
 
-### inverted_CW_OCRS_via_CS.ttl
+### inverted_CW_OCRS_via_CS.ttl (20130906)
 
 
     wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive15and2.ttl
@@ -33,10 +33,16 @@ Graph URI: <http://www.conceptwiki.org>
     rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_OCRS_via_CS.ttl
     rm ocrs_cw.tmp
 
-* 1317126 triples
+* 1318391 triples
 
-- Total: 4341460 
+### inverted_CW_ChEMBL_TC_via_Uniprot.ttl (20130906)
 
+    
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive35and6.ttl
+    rapper -i turtle Transitive35and6.ttl -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
+
+* 5641 triples
+* 
 ## Uniprot on 24 May 2013 12.00EST
 
 Obtained from <http://www.uniprot.org> on 24 May 2013 by running:
