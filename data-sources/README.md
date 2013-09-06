@@ -19,11 +19,16 @@ Graph URI: <http://www.conceptwiki.org>
 - inverted_CW_OCRS_via_CS.ttl
 	* 1317126 triples
 
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive17and6.ttl
-    http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive21and6.ttl
-    http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive25and6.ttl
-    http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive29and6.ttl
-    http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive33and6.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive15and2.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive15and4.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive19and2.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive19and4.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive23and2.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive23and4.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive27and2.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive27and4.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive31and2.ttl
+    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive31and4.ttl
     cat *.ttl > ocrs_cw.tmp
     rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_OCRS_via_CS.ttl
     rm ocrs_cw.tmp
