@@ -42,7 +42,7 @@ Graph URI: <http://www.conceptwiki.org>
     rapper -i turtle Transitive35and6.ttl -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
 
 * 5641 triples
-* 
+ 
 ## Uniprot on 24 May 2013 12.00EST
 
 Obtained from <http://www.uniprot.org> on 24 May 2013 by running:
