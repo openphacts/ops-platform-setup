@@ -17,7 +17,7 @@ Graph URI: <http://www.conceptwiki.org>
 	* 3024334 triples
 
 - inverted_CW_OCRS_via_CS.ttl
-	* 1317126 triples
+
 
     wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive15and2.ttl
     wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive15and4.ttl
@@ -32,6 +32,8 @@ Graph URI: <http://www.conceptwiki.org>
     cat *.ttl > ocrs_cw.tmp
     rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_OCRS_via_CS.ttl
     rm ocrs_cw.tmp
+
+* 1317126 triples
 
 - Total: 4341460 
 
