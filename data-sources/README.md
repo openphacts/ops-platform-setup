@@ -16,7 +16,7 @@ Graph URI: <http://www.conceptwiki.org>
 	* Renamed file
 	* 3024334 triples
 
-- inverted_CW_OCRS_via_CS.ttl
+### inverted_CW_OCRS_via_CS.ttl
 
 
     wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive15and2.ttl
