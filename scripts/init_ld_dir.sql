@@ -1,6 +1,7 @@
 -- ConceptWiki
-ld_dir('/media/SSD/current_data/CW' , 'cw_prefLabels.ttl' , 'http://www.conceptwiki.org' );
+ld_dir('/media/SSD/current_data/CW' , 'pref-mapping-2013-09-04.ttl' , 'http://www.conceptwiki.org' );
 ld_dir('/media/SSD/current_data/CW', 'inverted_CW_OCRS_via_CS.ttl' , 'http://www.conceptwiki.org' );
+ld_dir('/media/SSD/current_data/CW', 'inverted_CW_ChEMBL_TC_via_Uniprot.ttl', 'http://www.conceptwiki.org');
 
 -- Enzyme
 ld_dir('/media/SSD/current_data/enzyme' , 'inference.ttl' , 'http://purl.uniprot.org/enzyme/inference' );
@@ -19,8 +20,8 @@ ld_dir('/media/SSD/current_data/uniprot' , 'uniref_24052013.rdf.xml' , 'http://p
 
 -- ChEBI
 ld_dir('/media/SSD/current_data/chebi' , 'chebi_direct.nt' , 'http://www.ebi.ac.uk/chebi/direct' );
-ld_dir('/media/SSD/current_data/chebi' , 'chebi_inference.ttl' , 'http://www.ebi.ac.uk/chebi/inference' );
-ld_dir('/media/SSD/current_data/chebi' , 'chebi_class_labels.nt' , 'http://www.ebi.ac.uk/chebi' );
+ld_dir('/media/SSD/current_data/chebi' , 'chebi_inference.nt' , 'http://www.ebi.ac.uk/chebi/inference' );
+ld_dir('/media/SSD/current_data/chebi' , 'chebi.owl' , 'http://www.ebi.ac.uk/chebi' );
 
 -- WikiPathways
 ld_dir('/media/SSD/current_data/WP' , 'wpContent_v0.0.69675_20130710.ttl' , 'http://www.wikipathways.org' );
@@ -54,15 +55,19 @@ ld_dir('/media/SSD/current_data/target_tree' , 'targetTreeDirect.ttl', 'http://w
 ld_dir('/media/SSD/current_data/target_tree' , 'targetTreeInference.ttl', 'http://www.ebi.ac.uk/chembl/target/inference');
 
 -- Open PHACTS Chemical Registry
-ld_dir('/media/SSD/current_data/OCRS/20130724/CHEMBL' , 'PROPERTIES_CHEMBL20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/CHEMBL' , 'SYNONYMS_CHEMBL20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/CHEMBL' , 'LINKSET_EXACT_CHEMBL20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/CHEBI' , 'PROPERTIES_CHEBI20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/CHEBI' , 'SYNONYMS_CHEBI20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/CHEBI' , 'LINKSET_EXACT_CHEBI20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/DRUGBANK' , 'PROPERTIES_DRUGBANK20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/DRUGBANK' , 'LINKSET_EXACT_DRUGBANK20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/PDB' , 'PROPERTIES_PDB20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/PDB' , 'SYNONYMS_PDB20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/MESH' , 'PROPERTIES_MESH20130724.ttl' , 'http://ops.rsc-us.org' );
-ld_dir('/media/SSD/current_data/OCRS/20130724/MESH' , 'SYNONYMS_MESH20130724.ttl' , 'http://ops.rsc-us.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/CHEMBL' , 'PROPERTIES_CHEMBL20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/CHEMBL' , 'SYNONYMS_CHEMBL20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/CHEMBL' , 'LINKSET_EXACT_CHEMBL20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/CHEBI' , 'PROPERTIES_CHEBI20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/CHEBI' , 'SYNONYMS_CHEBI20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/CHEBI' , 'LINKSET_EXACT_CHEBI20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/DRUGBANK' , 'PROPERTIES_DRUGBANK20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/DRUGBANK' , 'LINKSET_EXACT_DRUGBANK20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/PDB' , 'PROPERTIES_PDB20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/PDB' , 'SYNONYMS_PDB20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/MESH' , 'PROPERTIES_MESH20130904.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/20130904/MESH' , 'SYNONYMS_MESH20130904.ttl' , 'http://ops.rsc.org' );
+
+
+-- DisGeneT
+ld_dir('/media/SSD/current_data/disgenet', '*.ttl', 'http://rdf.imim.es');
