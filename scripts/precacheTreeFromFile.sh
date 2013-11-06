@@ -1,14 +1,25 @@
 #!/bin/bash
 
-if [ $# != 3 ]
+if [ $# -ne 3 -a $# -ne 5 ]
 then
 	echo 'Usage: precacheTree.sh <tree_name> <format> <server_name>'
+	echo 'Usage: precacheTree.sh <tree_name> <format> <server_name> <app_id> <app_key>'
 	exit 1
 fi
 
 TREE_NAME=$1
 FORMAT=$2
 SERVER_NAME=$3
+
+if [ $# -eq 5 ]
+then
+	APP_ID="app_id=$4&"
+	APP_KEY="app_key=$5&"
+else
+	APP_ID=""
+	APP_KEY=""
+fi
+
 
 #sanitization
 ACCEPTED_TREES=("enzyme" "chembl" "chebi" "go")
@@ -40,17 +51,11 @@ else #assuming tsv
 	PAGE_SIZE=250
 fi
 
-declare -A PREFIX
-PREFIX[enzyme]='http://purl.uniprot.org/enzyme/'
-PREFIX[chembl]='http://rdf.ebi.ac.uk/resource/chembl/protclass/'
-PREFIX[chebi]='http://purl.obolibrary.org/obo/'
-PREFIX[go]='http://purl.org/obo/owl/'
+COMPOUND_CLASS_PHARMA_API_CALL="http://$SERVER_NAME/compound/tree/pharmacology/pages?${APP_ID}${APP_KEY}_format=$FORMAT&_pageSize=$PAGE_SIZE"
+TARGET_CLASS_PHARMA_API_CALL="http://$SERVER_NAME/target/tree/pharmacology/pages?${APP_ID}${APP_KEY}_format=$FORMAT&_pageSize=$PAGE_SIZE"
 
-COMPOUND_CLASS_PHARMA_API_CALL="http://$SERVER_NAME/compound/tree/pharmacology/pages?_format=$FORMAT&_pageSize=$PAGE_SIZE"
-TARGET_CLASS_PHARMA_API_CALL="http://$SERVER_NAME/target/tree/pharmacology/pages?_format=$FORMAT&_pageSize=$PAGE_SIZE"
-
-COMPOUND_CLASS_COUNT_API_CALL="http://$SERVER_NAME/compound/tree/pharmacology/count?_format=tsv&uri="
-TARGET_CLASS_COUNT_API_CALL="http://$SERVER_NAME/target/tree/pharmacology/count?_format=tsv&uri="
+COMPOUND_CLASS_COUNT_API_CALL="http://$SERVER_NAME/compound/tree/pharmacology/count?${APP_ID}${APP_KEY}_format=tsv&uri="
+TARGET_CLASS_COUNT_API_CALL="http://$SERVER_NAME/target/tree/pharmacology/count?${APP_ID}${APP_KEY}_format=tsv&uri="
 
 if [ "$TREE_NAME" == "chebi" ]
 then
@@ -62,21 +67,13 @@ else
 fi
 
 #make the call to get the root elements and store them in the file "elementList"
-curl "http://$SERVER_NAME/tree?root=$TREE_NAME&_format=json" | grep -o -E "rootNode\":\[?{.*}\]?" | grep -o -e "\"_about\":\"[^\"]*\"" | cut -d ':' -f 1 --complement | tr -d '\"' >elementList
 
 #exit 0
 
-#declare an associative array between short names and graph names
-declare -A graphMappings
-graphMappings[enzyme]="http://purl.uniprot.org/enzyme/direct"
-graphMappings[chembl]="http://www.ebi.ac.uk/chembl/target/direct"
-graphMappings[chebi]="http://www.ebi.ac.uk/chebi/direct"
-graphMappings[go]="http://www.geneontology.org"
+inputFile="$TREE_NAME""Hierarchy"
+echo $inputFile
 
-#get the tree subclasses from the direct graph and add the subclasses to the same file "elementList"
-encodedGraph=$(php -r "echo urlencode(\"${graphMappings[$TREE_NAME]}\");")
-echo $encodedGraph
-curl "http://$SERVER_NAME:8890/sparql?default-graph-uri=&query=PREFIX+rdfs%3A+<http%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23>%0D%0ASELECT+DISTINCT+%3Fs+WHERE+%7B%0D%0A%09GRAPH+<$encodedGraph>+%7B%0D%0A%09%09%3Fs+rdfs%3AsubClassOf+%3Fo+.%0D%0A%09%7D+%0D%0A%7D&format=csv" | tr -d '"' | grep ${PREFIX[$TREE_NAME]}  >>elementList
+
 
 #for each element in the elementList make do a count API call and then request each page
 NON_EMPTY_PAGE_COUNT=0
@@ -116,7 +113,7 @@ do
 			TOTAL_SIZE=$(($TOTAL_SIZE+$FILESIZE/1024))
 		done
 	fi
-done <elementList
+done <$inputFile
 
 echo "Total cached pages: $NON_EMPTY_PAGE_COUNT"
 echo "Total classes with no results: $EMPTY_PAGE_COUNT"
