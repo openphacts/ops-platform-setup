@@ -10,6 +10,8 @@ TREE_NAME=$1
 FORMAT=$2
 SERVER_NAME=$3
 
+echo "Running precaching for $TREE_NAME hierarchy with $FORMAT format"
+
 #sanitization
 ACCEPTED_TREES=("enzyme" "chembl" "chebi" "go")
 found=false

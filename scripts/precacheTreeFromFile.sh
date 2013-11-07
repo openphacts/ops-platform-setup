@@ -15,9 +15,11 @@ if [ $# -eq 5 ]
 then
 	APP_ID="app_id=$4&"
 	APP_KEY="app_key=$5&"
+	PROTOCOL="https"
 else
 	APP_ID=""
 	APP_KEY=""
+	PROTOCOL="http"
 fi
 
 
@@ -51,11 +53,11 @@ else #assuming tsv
 	PAGE_SIZE=250
 fi
 
-COMPOUND_CLASS_PHARMA_API_CALL="http://$SERVER_NAME/compound/tree/pharmacology/pages?${APP_ID}${APP_KEY}_format=$FORMAT&_pageSize=$PAGE_SIZE"
-TARGET_CLASS_PHARMA_API_CALL="http://$SERVER_NAME/target/tree/pharmacology/pages?${APP_ID}${APP_KEY}_format=$FORMAT&_pageSize=$PAGE_SIZE"
+COMPOUND_CLASS_PHARMA_API_CALL="$PROTOCOL://$SERVER_NAME/compound/tree/pharmacology/pages?${APP_ID}${APP_KEY}_format=$FORMAT&_pageSize=$PAGE_SIZE"
+TARGET_CLASS_PHARMA_API_CALL="$PROTOCOL://$SERVER_NAME/target/tree/pharmacology/pages?${APP_ID}${APP_KEY}_format=$FORMAT&_pageSize=$PAGE_SIZE"
 
-COMPOUND_CLASS_COUNT_API_CALL="http://$SERVER_NAME/compound/tree/pharmacology/count?${APP_ID}${APP_KEY}_format=tsv&uri="
-TARGET_CLASS_COUNT_API_CALL="http://$SERVER_NAME/target/tree/pharmacology/count?${APP_ID}${APP_KEY}_format=tsv&uri="
+COMPOUND_CLASS_COUNT_API_CALL="$PROTOCOL://$SERVER_NAME/compound/tree/pharmacology/count?${APP_ID}${APP_KEY}_format=tsv&uri="
+TARGET_CLASS_COUNT_API_CALL="$PROTOCOL://$SERVER_NAME/target/tree/pharmacology/count?${APP_ID}${APP_KEY}_format=tsv&uri="
 
 if [ "$TREE_NAME" == "chebi" ]
 then
