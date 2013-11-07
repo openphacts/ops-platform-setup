@@ -68,6 +68,10 @@ ld_dir('/media/SSD/current_data/OCRS/20130904/PDB' , 'SYNONYMS_PDB20130904.ttl' 
 ld_dir('/media/SSD/current_data/OCRS/20130904/MESH' , 'PROPERTIES_MESH20130904.ttl' , 'http://ops.rsc.org' );
 ld_dir('/media/SSD/current_data/OCRS/20130904/MESH' , 'SYNONYMS_MESH20130904.ttl' , 'http://ops.rsc.org' );
 
-
 -- DisGeneT
 ld_dir('/media/SSD/current_data/disgenet', '*.ttl', 'http://rdf.imim.es');
+ld_dir('/media/SSD/current_data/disgenet', 'sio.owl', 'http://rdf.imim.es');
+
+-- linkedct.org
+
+ld_dir('/media/SSD/current_data/linkedct', 'linkedct-dump-2013-10-01.nt', 'http://linkedct.org');
