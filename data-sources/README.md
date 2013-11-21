@@ -40,10 +40,10 @@ Graph URI: <http://www.conceptwiki.org>
     wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and56.ttl
     wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and70.ttl
     cat *.ttl > ocrs_cw.tmp
-    rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_OCRS_via_CS.ttl
+    rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch > inverted_CW_OCRS_via_CS.ttl
     rm ocrs_cw.tmp
 
-* 1318391 triples
+* 1352641 triples
 
 ### inverted_CW_ChEMBL_TC_via_Uniprot.ttl (20130906)
 
