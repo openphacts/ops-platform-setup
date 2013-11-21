@@ -46,6 +46,8 @@ then
 	exit 1
 fi
 
+echo "Precaching hierarchy $TREE_NAME in format $FORMAT"
+
 if [ "$FORMAT" == "json" ]
 then
 	PAGE_SIZE=50
@@ -113,6 +115,10 @@ do
 			curl "$FINAL_PHARMA_API_CALL">pageFile
 			FILESIZE=$(stat -c%s "pageFile")
 			TOTAL_SIZE=$(($TOTAL_SIZE+$FILESIZE/1024))
+			if ! (($PAGE_NO % 10))
+			then
+				echo "Total size cached so far in KB: $TOTAL_SIZE"
+			fi
 		done
 	fi
 done <$inputFile
