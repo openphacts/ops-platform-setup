@@ -48,12 +48,10 @@ Graph URI: <http://www.conceptwiki.org>
 ### inverted_CW_ChEMBL_TC_via_Uniprot.ttl (20130906)
 
     
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive119and110.ttl
     wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive119and112.ttl
-    cat *.ttl > chembltc_cw.tmp
-    rapper -i turtle chembltc_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
+    rapper -i turtle Transitive119and112.ttl -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
 
-* 11178 triples
+* 5655 triples
  
 ## Uniprot on 24 May 2013 12.00EST
 
