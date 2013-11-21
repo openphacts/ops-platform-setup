@@ -19,29 +19,39 @@ Graph URI: <http://www.conceptwiki.org>
 ### inverted_CW_OCRS_via_CS.ttl (20130906)
 
 
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive15and2.ttl
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive15and4.ttl
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive19and2.ttl
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive19and4.ttl
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive23and2.ttl
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive23and4.ttl
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive27and2.ttl
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive27and4.ttl
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive31and2.ttl
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive31and4.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and14.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and28.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and42.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and56.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and70.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and14.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and28.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and42.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and56.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and70.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and14.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and28.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and42.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and56.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and70.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and14.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and28.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and42.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and56.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and70.ttl
     cat *.ttl > ocrs_cw.tmp
-    rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_OCRS_via_CS.ttl
+    rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch > inverted_CW_OCRS_via_CS.ttl
     rm ocrs_cw.tmp
 
-* 1318391 triples
+* 1352641 triples
 
 ### inverted_CW_ChEMBL_TC_via_Uniprot.ttl (20130906)
 
     
-    wget http://openphacts.cs.man.ac.uk:9093/Transitive/Transitive35and6.ttl
-    rapper -i turtle Transitive35and6.ttl -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
+    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive119and112.ttl
+    rapper -i turtle Transitive119and112.ttl -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
 
-* 5641 triples
+* 5655 triples
  
 ## Uniprot on 24 May 2013 12.00EST
 
@@ -181,23 +191,22 @@ Obtained from <ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl> on 19
 
 ## Openphacts Chemistry Registration Service data
 
-Downloaded from: ftp://ftp.rsc-us.org/OPS/20130724/ (no longer available?)
+Downloaded from: ftp://ftp.rsc-us.org/OPS/20131111/ 
 
 Graph URI: <http://ops.rsc-us.org>
 
-	- PROPERTIES_CHEMBL20130724.ttl
-	- SYNONYMS_CHEMBL20130724.ttl
-	- LINKSET_EXACT_CHEMBL20130724.ttl
-	- PROPERTIES_CHEBI20130724.ttl
-	- SYNONYMS_CHEBI20130724.ttl
-	- LINKSET_EXACT_CHEBI20130724.ttl
-	- PROPERTIES_DRUGBANK20130724.ttl
-	- LINKSET_EXACT_DRUGBANK20130724.ttl
-	- PROPERTIES_PDB20130724.ttl
-	- SYNONYMS_PDB20130724.ttl
-	- PROPERTIES_MESH20130724.ttl
-	- SYNONYMS_MESH20130724.ttl
-	- 193838638 triples
+	- PROPERTIES_CHEMBL20131111ttl
+	- SYNONYMS_CHEMBL20131111.ttl
+	- LINKSET_EXACT_CHEMBL20131111.ttl
+	- PROPERTIES_CHEBI20131111.ttl
+	- SYNONYMS_CHEBI20131111.ttl
+	- LINKSET_EXACT_CHEBI20131111.ttl
+	- PROPERTIES_DRUGBANK20131111.ttl
+	- LINKSET_EXACT_DRUGBANK20131111.ttl
+	- PROPERTIES_PDB20131111.ttl
+	- SYNONYMS_PDB20131111.ttl
+	- PROPERTIES_MESH20131111.ttl
+	- SYNONYMS_MESH20131111.ttl
 
 ## FDA Adverse Events
 	- http://aers.data2semantics.org/data/dump-of-2012-generated-on-2012-07-09.nt.gz
