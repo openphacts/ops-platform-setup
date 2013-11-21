@@ -53,7 +53,7 @@ Graph URI: <http://www.conceptwiki.org>
     cat *.ttl > chembltc_cw.tmp
     rapper -i turtle chembltc_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
 
-* 5641 triples
+* 11178 triples
  
 ## Uniprot on 24 May 2013 12.00EST
 
