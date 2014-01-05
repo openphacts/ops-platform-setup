@@ -12,29 +12,11 @@ Graph URI: <http://www.conceptwiki.org>
 	* Added cw and skos prefixes.
 	* 3024385 triples
 
-### inverted_CW_OCRS_via_CS.ttl (20130906)
+### inverted_CW_OCRS_via_CS.ttl (20131212)
 
 
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and14.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and28.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and42.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and56.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive97and70.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and14.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and28.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and42.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and56.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive99and70.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and14.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and28.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and42.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and56.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive105and70.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and14.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and28.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and42.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and56.ttl
-    wget http://openphacts.cs.man.ac.uk:9092/Transitive/Transitive107and70.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive413and424.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive415and424.ttl
     cat *.ttl > ocrs_cw.tmp
     rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch > inverted_CW_OCRS_via_CS.ttl
     rm ocrs_cw.tmp
