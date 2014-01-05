@@ -28,7 +28,7 @@ Graph URI: <http://www.conceptwiki.org>
     
     wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive413and424.ttl
     wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive415and424.ttl
-    rapper -i turtle chembl_cw.tmp -o ntriples | grep exactMatch > > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
+    rapper -i turtle chembl_cw.tmp -o ntriples | grep exactMatch > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
     rm chembl_cw.tmp
 
 * 5655 triples
