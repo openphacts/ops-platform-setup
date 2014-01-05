@@ -1,5 +1,5 @@
 -- ConceptWiki
-ld_dir('/media/SSD/current_data/CW' , 'pref-mapping-2013-09-04.ttl' , 'http://www.conceptwiki.org' );
+ld_dir('/media/SSD/current_data/CW' , 'pref-mapping-20131212.ttl' , 'http://www.conceptwiki.org' );
 ld_dir('/media/SSD/current_data/CW', 'inverted_CW_OCRS_via_CS.ttl' , 'http://www.conceptwiki.org' );
 ld_dir('/media/SSD/current_data/CW', 'inverted_CW_ChEMBL_TC_via_Uniprot.ttl', 'http://www.conceptwiki.org');
 
