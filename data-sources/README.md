@@ -14,11 +14,20 @@ Graph URI: <http://www.conceptwiki.org>
 
 ### inverted_CW_OCRS_via_CS.ttl (20131212)
 
-
-    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive413and424.ttl
-    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive415and424.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive290and382.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive290and396.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive300and382.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive300and396.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive308and390.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive308and400.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive310and382.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive310and396.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive320and382.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive320and396.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive330and382.ttl
+    wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive330and396.ttl
     cat *.ttl > ocrs_cw.tmp
-    rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch > inverted_CW_OCRS_via_CS.ttl
+    rapper -i turtle ocrs_cw.tmp -o ntriples | grep exactMatch | sed 's,\(^[[:print:]]*\) \([[:print:]]*\) \([[:print:]]*\) ,\3 \2 \1 ,' > inverted_CW_OCRS_via_CS.ttl
     rm ocrs_cw.tmp
 
 * 1352641 triples
@@ -31,7 +40,7 @@ Graph URI: <http://www.conceptwiki.org>
     rapper -i turtle chembl_cw.tmp -o ntriples | grep exactMatch > inverted_CW_ChEMBL_TC_via_Uniprot.ttl
     rm chembl_cw.tmp
 
-* 5655 triples
+* 11179 triples
  
 ## Uniprot on 24 May 2013 12.00EST
 
