@@ -32,7 +32,7 @@ Graph URI: <http://www.conceptwiki.org>
 
 * 1352641 triples
 
-### inverted_CW_ChEMBL_TC_via_Uniprot.ttl (20130906)
+### inverted_CW_ChEMBL_TC_via_Uniprot.ttl (20131212)
 
     
     wget http://openphacts.cs.man.ac.uk:9091/Transitive/Transitive413and424.ttl
