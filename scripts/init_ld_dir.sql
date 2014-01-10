@@ -6,7 +6,7 @@ ld_dir('/media/SSD/current_data/CW', 'inverted_CW_ChEMBL_TC_via_Uniprot.ttl', 'h
 -- Enzyme
 ld_dir('/media/SSD/current_data/enzyme' , 'inference.ttl' , 'http://purl.uniprot.org/enzyme/inference' );
 ld_dir('/media/SSD/current_data/enzyme' , 'direct.ttl' , 'http://purl.uniprot.org/enzyme/direct' );
-ld_dir('/media/SSD/current_data/enzyme' , 'enzyme_names_comments.ttl' , 'http://purl.uniprot.org/enzyme' );
+ld_dir('/media/SSD/current_data/enzyme' , 'enzyme.rdf' , 'http://purl.uniprot.org/enzyme' );
 
 -- Drugbank
 ld_dir('/media/SSD/current_data/drugbank' , 'drugbank_dump.nt' , 'http://linkedlifedata.com/resource/drugbank' );
