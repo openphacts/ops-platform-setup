@@ -10,6 +10,7 @@ sudo service apache2 restart
 apt-get install -y git
 
 #Install Linked Data API
+sudo mkdir /var/www
 cd /var/www
 sudo git clone https://github.com/openphacts/OPS_LinkedDataApi -b develop html
 sudo sed -i 's,/var/www,/var/www/html,' /etc/apache2/sites-available/default
@@ -23,6 +24,7 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again p
 sudo apt-get install -y mysql-server-5.5 
 sudo apt-get install -y tomcat7
 
+cd /home/vagrant
 sudo git clone https://github.com/openphacts/deployment.git deployment
 sudo cp deployment/IMSandExpander/Ops1.3.1/QueryExpander.war /var/lib/tomcat7/webapps
 sudo chown tomcat7:tomcat7 /var/lib/tomcat7/webapps/QueryExpander.war
@@ -33,4 +35,7 @@ mysql -uroot -ppassword ims <./deployment/IMSandExpander/Ops1.3.1/imsMin.sql
 sudo service tomcat7 start
 
 #Install Virtuoso RDF Store
-sudo apt-get install virtuoso-opensource
+
+sudo debconf-set-selections <<<  'virtuoso-opensource-6.1 virtuoso-opensource-6.1/dba-password password dba'
+sudo debconf-set-selections <<<  'virtuoso-opensource-6.1 virtuoso-opensource-6.1/dba-password-again password dba'
+sudo apt-get install -y virtuoso-opensource
