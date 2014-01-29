@@ -31,3 +31,6 @@ mysql -uroot -ppassword test <./deployment/IMSandExpander/Ops1.3/mysqlConfig.sql
 mysql -uroot -ppassword ims <./deployment/IMSandExpander/Ops1.3.1/imsMin.sql
 
 sudo service tomcat7 start
+
+#Install Virtuoso RDF Store
+sudo apt-get install virtuoso-opensource
