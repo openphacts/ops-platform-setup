@@ -3,7 +3,8 @@ OPS Deploy in a Virtual Machine
 
 - Install VirtualBox https://www.virtualbox.org/wiki/Downloads (On Ubuntu: sudo apt-get install virtualbox)
 - Download Vagrant installer from http://www.vagrantup.com/downloads
-- From the current directory: vagrant up (this first time this will download a VM image, so for a fast install it should be done over an Ethernet connection).
+- cd ops-platform-setup/vagrant_install
+- vagrant up (this first time this will download a VM image, so for a fast install it should be done over an Ethernet connection).
 
 Behind the scenes this will create a VM Box which contains the 3 OPS platform subsystems: 
 - the Linked Data API(default port 4500)
