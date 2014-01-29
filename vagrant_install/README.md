@@ -1,7 +1,7 @@
 OPS Deploy in a Virtual Machine
 ============================================
 
-- sudo apt-get install virtualbox
+- Install VirtualBox https://www.virtualbox.org/wiki/Downloads (On Ubuntu: sudo apt-get install virtualbox)
 - Download Vagrant installer from http://www.vagrantup.com/downloads
 - From the current directory: vagrant up (this first time this will download a VM image, so for a fast install it should be done over an Ethernet connection).
 
