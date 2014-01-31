@@ -14,8 +14,12 @@ sudo mkdir /var/www
 cd /var/www
 sudo git clone https://github.com/openphacts/OPS_LinkedDataApi -b develop html
 sudo sed -i 's,/var/www,/var/www/html,' /etc/apache2/sites-available/default
+cat /etc/apache2/sites-available/default | tr "\n" "|" | sed 's,\(<Directory /var/www/html/>[^<]*\)AllowOverride None\([^<]*</Directory>\),\1AllowOverride All\2,' | sed 's/|/\n/g' >~/temp
+sudo mv ~/temp /etc/apache2/sites-available/default
 sudo mkdir /var/www/html/logs
+sudo chmod 766 /var/www/html/logs
 sudo mkdir /var/www/html/cache
+sudo chmod 766 /var/www/html/cache
 sudo service apache2 restart
 
 #Install IMS
