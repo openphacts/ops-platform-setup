@@ -1,3 +1,4 @@
+@base <https://raw.github.com/openphacts/ops-platform-setup/severVOIDs/void/drugbank_void.ttl> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
