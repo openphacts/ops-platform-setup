@@ -1,4 +1,4 @@
-@base <https://github.com/openphacts/ops-platform-setup/raw/master/void/chembl-16.ttl>
+@base <https://github.com/openphacts/ops-platform-setup/raw/master/void/chembl/chembl-16.ttl>
 @prefix : <#> .
 @prefix cco: <http://rdf.ebi.ac.uk/terms/chembl#> .
 @prefix chembl: <http://rdf.ebi.ac.uk/resource/chembl/> .
