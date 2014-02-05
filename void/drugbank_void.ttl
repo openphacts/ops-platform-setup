@@ -65,7 +65,7 @@
 	void:triples "4772"^^xsd:integer .
 
 # Subset containing target information
-:db-targets rdf:type void:Dataset ;
+:db-targets rdf:type void:Linkset ;
 	void:uriSpace "http://www4.wiwiss.fu-berlin.de/drugbank/resource/targets/"^^xsd:string ;
 	dcterms:subject <http://dbpedia.org/resource/Drug_target> ;
 	void:dataDump <http://dummyDump2> ;
