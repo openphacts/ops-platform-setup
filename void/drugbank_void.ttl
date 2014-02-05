@@ -60,6 +60,7 @@
 :db-drugs rdf:type void:Dataset ;
 	void:uriSpace "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/"^^xsd:string ;
 	dcterms:subject <http://dbpedia.org/resource/Pharmaceutical_drug> ;
+	void:dataDump <http://dummyDump1> ;
 	void:exampleResource <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00001> ;
 	void:triples "4772"^^xsd:integer .
 
@@ -67,4 +68,5 @@
 :db-targets rdf:type void:Dataset ;
 	void:uriSpace "http://www4.wiwiss.fu-berlin.de/drugbank/resource/targets/"^^xsd:string ;
 	dcterms:subject <http://dbpedia.org/resource/Drug_target> ;
+	void:dataDump <http://dummyDump2> ;
 	void:exampleResource <http://www4.wiwiss.fu-berlin.de/drugbank/resource/targets/1> .
