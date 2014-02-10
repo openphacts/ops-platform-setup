@@ -1,3 +1,4 @@
+@base https://raw.github.com/openphacts/ops-platform-setup/master/void/drugbank_void.ttl .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -9,9 +10,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <#> .
 
-# VoID Header for the DrugBank RDF dataset
-<>
-	rdf:type void:DatasetDescription ;
+<>	rdf:type void:DatasetDescription ;
 	dcterms:title "DrugBank VoID Description"@en ;
 	dcterms:description "The VoID description for the RDF representation of the DrugBank dataset."@en ;
 	pav:createdBy <https://orcid.org/0000-0002-5711-4872> ;
