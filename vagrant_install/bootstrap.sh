@@ -41,6 +41,31 @@ sudo service tomcat7 start
 
 #Install Virtuoso RDF Store
 
-sudo debconf-set-selections <<<  'virtuoso-opensource-6.1 virtuoso-opensource-6.1/dba-password password dba'
-sudo debconf-set-selections <<<  'virtuoso-opensource-6.1 virtuoso-opensource-6.1/dba-password-again password dba'
-sudo apt-get install -y virtuoso-opensource
+#sudo debconf-set-selections <<<  'virtuoso-opensource-6.1 virtuoso-opensource-6.1/dba-password password dba'
+#sudo debconf-set-selections <<<  'virtuoso-opensource-6.1 virtuoso-opensource-6.1/dba-password-again password dba'
+#sudo apt-get install -y virtuoso-opensource
+
+cd /home/vagrant
+sudo apt-get install -y autoconf automake libtool flex bison gperf gawk m4 make openssl libssl-dev
+git clone https://github.com/openlink/virtuoso-opensource.git -b stable/7 virtuoso7
+cd virtuoso7
+./autogen.sh
+export CFLAGS="-O2 -m64"
+./configure --prefix=/usr/local/virtuoso-opensource
+make && sudo make install
+export PATH=$PATH:/usr/local/virtuoso-opensource/bin
+cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db
+virtuoso-t -f &
+
+isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_INSERT_DICT_CONTENT TO \"SPARQL\";"
+isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.L_O_LOOK TO \"SPARQL\";"
+isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARUL_RUN TO \"SPARQL\";"
+isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_DELETE_DICT_CONTENT TO \"SPARQL\";"
+isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.RDF_OBJ_ADD_KEYWORD_FOR_GRAPH TO \"SPARQL\";"
+
+#Loading
+sudo apt-get install -y curl php5-cli unzip bunzip2
+#Add data directory to DirsAllowed clause in virtuoso.ini
+
+
+
