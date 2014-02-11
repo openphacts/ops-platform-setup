@@ -1,3 +1,4 @@
+@base <https://raw.github.com/openphacts/ops-platform-setup/severVOIDs/void/chebi/chebiVoid100.ttl>
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix : <http://purl.obolibrary.org/obo#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -14,7 +15,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<http://www.openphacts.org/void/void100.ttl> a void:DatasetDescription ;
+<> a void:DatasetDescription ;
 	pav:authoredBy <https://orcid.org/0000-0002-5711-4872> ;
 	pav:authoredOn "2013-01-25T16:40:12Z"^^xsd:dateTime ;
 	pav:createdWith <https://github.com/openphacts/ops-platform-setup/blob/ag_chebi/scripts/chebi/> ;
