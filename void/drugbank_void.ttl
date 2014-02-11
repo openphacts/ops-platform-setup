@@ -27,8 +27,7 @@
 	dcterms:license <http://www.drugbank.ca/about#cite> ;
 	pav:version "2.5" ;
 	dcterms:publisher <http://www.drugbank.ca/> ;
-	dcterms:created "2008-09-15T00:00:00Z"^^xsd:dateTime ; 
-	. 
+	dcterms:created "2008-09-15T00:00:00Z"^^xsd:dateTime .
 
 # Metadata about the RDF representation of DrugBank
 :drugbank-rdf rdf:type void:Dataset ;
