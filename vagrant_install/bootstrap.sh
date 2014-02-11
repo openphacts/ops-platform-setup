@@ -45,16 +45,35 @@ sudo service tomcat7 start
 #sudo debconf-set-selections <<<  'virtuoso-opensource-6.1 virtuoso-opensource-6.1/dba-password-again password dba'
 #sudo apt-get install -y virtuoso-opensource
 
+#prefer more RAM over swap
+sudo sysctl -w vm.swappiness=10 
+
 cd /home/vagrant
 sudo apt-get install -y autoconf automake libtool flex bison gperf gawk m4 make openssl libssl-dev
 git clone https://github.com/openlink/virtuoso-opensource.git -b stable/7 virtuoso7
 cd virtuoso7
 ./autogen.sh
 export CFLAGS="-O2 -m64"
-./configure --prefix=/usr/local/virtuoso-opensource
+$VIRT_INSTALATION_PATH=/usr/local/virtuoso-opensource
+./configure --prefix=$VIRT_INSTALATION_PATH
 make && sudo make install
 export PATH=$PATH:/usr/local/virtuoso-opensource/bin
-cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db
+echo $PATH >>~/.bashrc
+
+#set NumberOfBuffers and MaxDirtyBuffers parameters in Virtuoso.ini
+totalMem=$(cat /proc/meminfo | grep "MemTotal" | grep -o "[0-9]*")
+
+virtMemAlloc=$(($totalMem*2/3))
+nBuffers=$(($virtMemAlloc/9))
+dirtyBuffers=$(($nBuffers*3/4))
+
+echo "Virtuoso params: NumberOfBuffers $nBuffers ; MaxDirtyBuffers: $dirtyBuffers "
+
+sudo sed -i "s/^\(NumberOfBuffers\s*= \)[0-9]*/\1$nBuffers/" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
+sudo sed -i "s/^\(MaxDirtyBuffers\s*= \)[0-9]*/\1$dirtyBuffers/" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
+
+#start Virtuoso
+cd $VIRT_INSTALATION_PATH/var/lib/virtuoso/db
 virtuoso-t -f &
 
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_INSERT_DICT_CONTENT TO \"SPARQL\";"
@@ -64,7 +83,7 @@ isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=std
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.RDF_OBJ_ADD_KEYWORD_FOR_GRAPH TO \"SPARQL\";"
 
 #Loading
-sudo apt-get install -y curl php5-cli unzip bunzip2
+sudo apt-get install -y curl php5-cli unzip bzip2
 #Add data directory to DirsAllowed clause in virtuoso.ini
 
 
