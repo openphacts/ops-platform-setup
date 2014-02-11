@@ -54,11 +54,12 @@ git clone https://github.com/openlink/virtuoso-opensource.git -b stable/7 virtuo
 cd virtuoso7
 ./autogen.sh
 export CFLAGS="-O2 -m64"
-$VIRT_INSTALATION_PATH=/usr/local/virtuoso-opensource
-./configure --prefix=$VIRT_INSTALATION_PATH
+export VIRT_INSTALATION_PATH=/usr/local/virtuoso-opensource
+sudo ./configure --prefix=$VIRT_INSTALATION_PATH
 make && sudo make install
 export PATH=$PATH:/usr/local/virtuoso-opensource/bin
 echo $PATH >>~/.bashrc
+echo $VIRT_INSTALATION_PATH >>~/.bashrc
 
 #set NumberOfBuffers and MaxDirtyBuffers parameters in Virtuoso.ini
 totalMem=$(cat /proc/meminfo | grep "MemTotal" | grep -o "[0-9]*")
@@ -72,19 +73,27 @@ echo "Virtuoso params: NumberOfBuffers $nBuffers ; MaxDirtyBuffers: $dirtyBuffer
 sudo sed -i "s/^\(NumberOfBuffers\s*= \)[0-9]*/\1$nBuffers/" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
 sudo sed -i "s/^\(MaxDirtyBuffers\s*= \)[0-9]*/\1$dirtyBuffers/" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
 
+#Loading script dependencies
+sudo apt-get install -y curl php5-cli unzip bzip2
+
+#Setup Data directory
+export DATA_DIR="$1"
+echo $DATA_DIR >>~/.bashrc
+mkdir -p $DATA_DIR
+
+sudo sed -i "s%^\(DirsAllowed.*\)$%\1,$DATA_DIR%" $VIRT_INSTALATION_PATH/virtuoso.ini
+
+
 #start Virtuoso
 cd $VIRT_INSTALATION_PATH/var/lib/virtuoso/db
-virtuoso-t -f &
+sudo virtuoso-t -f &
 
+sleep 60 #wait for Virtuoso to bootup
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_INSERT_DICT_CONTENT TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.L_O_LOOK TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARUL_RUN TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_DELETE_DICT_CONTENT TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.RDF_OBJ_ADD_KEYWORD_FOR_GRAPH TO \"SPARQL\";"
-
-#Loading
-sudo apt-get install -y curl php5-cli unzip bzip2
-#Add data directory to DirsAllowed clause in virtuoso.ini
 
 
 

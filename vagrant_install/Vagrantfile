@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
-  config.vm.provision :shell, :path => "bootstrap.sh"
+  config.vm.provision :shell, :path => "bootstrap.sh", :args => "/vagrant/data"
   config.vm.network :forwarded_port, host: 4500, guest: 80
   config.vm.network :forwarded_port, host: 4501, guest: 8080
   config.vm.network :forwarded_port, host: 4502, guest: 8890
