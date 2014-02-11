@@ -16,7 +16,7 @@
 	pav:createdBy <https://orcid.org/0000-0002-5711-4872> ;
 	pav:createdOn "2012-10-30T16:08:36Z"^^xsd:dateTime ;
 	pav:lastUpdateOn "2012-11-05T12:39:54Z"^^xsd:dateTime ;
-	foaf:primaryTopic :drugbank_rdf .
+	foaf:primaryTopic :drugbank-rdf .
 
 # Metadata about the original DrugBank dataset
 :drugbank rdf:type dcterms:Dataset ;
