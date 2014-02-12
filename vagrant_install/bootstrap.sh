@@ -50,6 +50,9 @@ sudo apt-get install -y curl php5-cli unzip bzip2
 
 #prefer more RAM over swap
 sudo sysctl -w vm.swappiness=10 
+sudo swapoff -a
+sudo swapon -a
+echo "vm.swappiness = 10" | sudo tee -a /etc/sysctl.conf
 
 cd /home/vagrant
 sudo apt-get install -y autoconf automake libtool flex bison gperf gawk m4 make openssl libssl-dev
