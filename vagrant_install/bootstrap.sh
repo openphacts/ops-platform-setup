@@ -10,7 +10,7 @@ sudo service apache2 restart
 apt-get install -y git
 
 #Install Linked Data API
-sudo mkdir /var/www
+sudo mkdir -p /var/www
 cd /var/www
 sudo git clone https://github.com/openphacts/OPS_LinkedDataApi -b meta_calls html
 sudo sed -i 's,/var/www,/var/www/html,' /etc/apache2/sites-available/default
@@ -45,6 +45,9 @@ sudo service tomcat7 start
 #sudo debconf-set-selections <<<  'virtuoso-opensource-6.1 virtuoso-opensource-6.1/dba-password-again password dba'
 #sudo apt-get install -y virtuoso-opensource
 
+#Loading script dependencies
+sudo apt-get install -y curl php5-cli unzip bzip2
+
 #prefer more RAM over swap
 sudo sysctl -w vm.swappiness=10 
 
@@ -54,12 +57,12 @@ git clone https://github.com/openlink/virtuoso-opensource.git -b stable/7 virtuo
 cd virtuoso7
 ./autogen.sh
 export CFLAGS="-O2 -m64"
-export VIRT_INSTALATION_PATH=/usr/local/virtuoso-opensource
+VIRT_INSTALATION_PATH="/usr/local/virtuoso-opensource"
 sudo ./configure --prefix=$VIRT_INSTALATION_PATH
 make && sudo make install
-export PATH=$PATH:/usr/local/virtuoso-opensource/bin
-echo $PATH >>~/.bashrc
-echo $VIRT_INSTALATION_PATH >>~/.bashrc
+PATH=$PATH:"$VIRT_INSTALATION_PATH/bin"
+echo "export PATH=$PATH" >>/home/vagrant/.bashrc
+echo "export VIRT_INSTALATION_PATH=$VIRT_INSTALATION_PATH" >>/home/vagrant/.bashrc
 
 #set NumberOfBuffers and MaxDirtyBuffers parameters in Virtuoso.ini
 totalMem=$(cat /proc/meminfo | grep "MemTotal" | grep -o "[0-9]*")
@@ -73,20 +76,16 @@ echo "Virtuoso params: NumberOfBuffers $nBuffers ; MaxDirtyBuffers: $dirtyBuffer
 sudo sed -i "s/^\(NumberOfBuffers\s*= \)[0-9]*/\1$nBuffers/" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
 sudo sed -i "s/^\(MaxDirtyBuffers\s*= \)[0-9]*/\1$dirtyBuffers/" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
 
-#Loading script dependencies
-sudo apt-get install -y curl php5-cli unzip bzip2
-
 #Setup Data directory
 export DATA_DIR="$1"
-echo $DATA_DIR >>~/.bashrc
+echo "export DATA_DIR=$DATA_DIR" >>/home/vagrant/.bashrc
 mkdir -p $DATA_DIR
 
-sudo sed -i "s%^\(DirsAllowed.*\)$%\1,$DATA_DIR%" $VIRT_INSTALATION_PATH/virtuoso.ini
-
+sudo sed -i "s%^\(DirsAllowed.*\)$%\1,$DATA_DIR%" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
 
 #start Virtuoso
 cd $VIRT_INSTALATION_PATH/var/lib/virtuoso/db
-sudo virtuoso-t -f &
+$VIRT_INSTALATION_PATH/bin/virtuoso-t -f &
 
 sleep 60 #wait for Virtuoso to bootup
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_INSERT_DICT_CONTENT TO \"SPARQL\";"
@@ -94,6 +93,4 @@ isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=std
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARUL_RUN TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_DELETE_DICT_CONTENT TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.RDF_OBJ_ADD_KEYWORD_FOR_GRAPH TO \"SPARQL\";"
-
-
 
