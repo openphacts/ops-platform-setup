@@ -67,7 +67,7 @@ echo "export VIRT_INSTALATION_PATH=$VIRT_INSTALATION_PATH" >>/home/vagrant/.bash
 #set NumberOfBuffers and MaxDirtyBuffers parameters in Virtuoso.ini
 totalMem=$(cat /proc/meminfo | grep "MemTotal" | grep -o "[0-9]*")
 
-virtMemAlloc=$(($totalMem*2/3))
+virtMemAlloc=$(($totalMem*585/1000))
 nBuffers=$(($virtMemAlloc/9))
 dirtyBuffers=$(($nBuffers*3/4))
 
@@ -85,7 +85,7 @@ sudo sed -i "s%^\(DirsAllowed.*\)$%\1,$DATA_DIR%" $VIRT_INSTALATION_PATH/var/lib
 
 #start Virtuoso
 cd $VIRT_INSTALATION_PATH/var/lib/virtuoso/db
-$VIRT_INSTALATION_PATH/bin/virtuoso-t -f &
+$VIRT_INSTALATION_PATH/bin/virtuoso-t +wait
 
 sleep 60 #wait for Virtuoso to bootup
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_INSERT_DICT_CONTENT TO \"SPARQL\";"
