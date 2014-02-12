@@ -14,6 +14,9 @@ Behind the scenes this will create a VM Box which contains the 3 OPS platform su
 
 The default host ports can be changed from the Vagrantfile though the "config.vm.network" setting
 
+The machine settings of the VM can also be customized in the "config.vm.provider :virtualbox" section of the Vagrantfile.
+The default memory requirements for the VM are 1.5 GB RAM. The default CPU provided is 100%.  
+
 To check the system has been successfully set up, the following pages should provide interfaces to each subsystem:
 - http://localhost:4500
 - http://localhost:4501/QueryExpander/mapURI
