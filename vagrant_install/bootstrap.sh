@@ -21,6 +21,7 @@ sudo chmod 777 /var/www/html/logs
 sudo mkdir /var/www/html/cache
 sudo chmod 777 /var/www/html/cache
 sudo chown -R www-data:vagrant /var/www/html
+sudo chown -R vagrant:vagrant /var/www/html/.git
 sudo service apache2 restart
 
 #Install IMS
