@@ -73,7 +73,7 @@ echo "export VIRT_INSTALATION_PATH=$VIRT_INSTALATION_PATH" >>/vagrant/env.sh
 #set NumberOfBuffers and MaxDirtyBuffers parameters in Virtuoso.ini
 totalMem=$(cat /proc/meminfo | grep "MemTotal" | grep -o "[0-9]*")
 
-virtMemAlloc=$(($totalMem*585/1000))
+virtMemAlloc=$(($totalMem/2))
 nBuffers=$(($virtMemAlloc/9))
 dirtyBuffers=$(($nBuffers*3/4))
 
@@ -88,10 +88,11 @@ echo "export DATA_DIR=$DATA_DIR" >>/home/vagrant/.bashrc
 mkdir -p $DATA_DIR
 
 mkdir -p /home/www-data
-sudo chown www-data:vagrant /home/www-data
+sudo chown -R www-data:vagrant /home/www-data
 echo "export DATA_DIR=/home/www-data" >>/vagrant/env.sh
 
 sudo sed -i "s%^\(DirsAllowed.*\)$%\1,$DATA_DIR%" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
+sudo sed -i "s%^\(DirsAllowed.*\)$%\1,/home/www-data%" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
 
 #start Virtuoso
 cd $VIRT_INSTALATION_PATH/var/lib/virtuoso/db
