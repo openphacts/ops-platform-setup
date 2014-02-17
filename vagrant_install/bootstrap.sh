@@ -90,9 +90,11 @@ mkdir -p $DATA_DIR
 mkdir -p /home/www-data
 sudo chown -R www-data:vagrant /home/www-data
 echo "export DATA_DIR=/home/www-data" >>/vagrant/env.sh
+echo "export SCRIPTS_PATH=/var/www/html/scripts" >>/vagrant/env.sh
 
 sudo sed -i "s%^\(DirsAllowed.*\)$%\1,$DATA_DIR%" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
 sudo sed -i "s%^\(DirsAllowed.*\)$%\1,/home/www-data%" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
+
 
 #start Virtuoso
 cd $VIRT_INSTALATION_PATH/var/lib/virtuoso/db
