@@ -20,7 +20,7 @@ sudo mkdir /var/www/html/logs
 sudo chmod 777 /var/www/html/logs
 sudo mkdir /var/www/html/cache
 sudo chmod 777 /var/www/html/cache
-sudo chown -R vagrant:vagrant /var/www/html
+sudo chown -R www-data:vagrant /var/www/html
 sudo service apache2 restart
 
 #Install IMS
@@ -67,6 +67,9 @@ PATH=$PATH:"$VIRT_INSTALATION_PATH/bin"
 echo "export PATH=$PATH" >>/home/vagrant/.bashrc
 echo "export VIRT_INSTALATION_PATH=$VIRT_INSTALATION_PATH" >>/home/vagrant/.bashrc
 
+echo "export PATH=$PATH" >>/vagrant/env.sh #used by the loading script to setup env variables
+echo "export VIRT_INSTALATION_PATH=$VIRT_INSTALATION_PATH" >>/vagrant/env.sh
+
 #set NumberOfBuffers and MaxDirtyBuffers parameters in Virtuoso.ini
 totalMem=$(cat /proc/meminfo | grep "MemTotal" | grep -o "[0-9]*")
 
@@ -83,6 +86,10 @@ sudo sed -i "s/^\(MaxDirtyBuffers\s*= \)[0-9]*/\1$dirtyBuffers/" $VIRT_INSTALATI
 export DATA_DIR="$1"
 echo "export DATA_DIR=$DATA_DIR" >>/home/vagrant/.bashrc
 mkdir -p $DATA_DIR
+
+mkdir -p /home/www-data
+sudo chown www-data:vagrant /home/www-data
+echo "export DATA_DIR=/home/www-data" >>/vagrant/env.sh
 
 sudo sed -i "s%^\(DirsAllowed.*\)$%\1,$DATA_DIR%" $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
 
