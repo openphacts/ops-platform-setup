@@ -38,6 +38,10 @@ sudo chown tomcat7:tomcat7 /var/lib/tomcat7/webapps/QueryExpander.war
 mysql -uroot -ppassword test <./deployment/IMSandExpander/Ops1.3/mysqlConfig.sql
 mysql -uroot -ppassword ims <./deployment/IMSandExpander/Ops1.3.1/imsMin.sql
 
+IMS_JAR_PATH=/home/vagrant/deployment/IMSandExpander/Ops1.3.1
+echo "export IMS_JAR_PATH=$IMS_JAR_PATH" >>/home/vagrant/.bashrc
+echo "export IMS_JAR_PATH=$IMS_JAR_PATH" >>/vagrant/env.sh
+
 sudo service tomcat7 start
 
 #Install Virtuoso RDF Store
@@ -98,13 +102,14 @@ sudo sed -i "s%^\(DirsAllowed.*\)$%\1,/home/www-data%" $VIRT_INSTALATION_PATH/va
 
 
 #start Virtuoso
-cd $VIRT_INSTALATION_PATH/var/lib/virtuoso/db
-$VIRT_INSTALATION_PATH/bin/virtuoso-t +wait
+$VIRT_INSTALATION_PATH/bin/virtuoso-t +wait +configfile $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini
 
-sleep 60 #wait for Virtuoso to bootup
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_INSERT_DICT_CONTENT TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.L_O_LOOK TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARUL_RUN TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.SPARQL_DELETE_DICT_CONTENT TO \"SPARQL\";"
 isql 1111 dba dba VERBOSE=OFF BANNER=OFF PROMPT=OFF ECHO=OFF BLOBS=ON ERRORS=stdout "exec=GRANT EXECUTE  ON DB.DBA.RDF_OBJ_ADD_KEYWORD_FOR_GRAPH TO \"SPARQL\";"
+
+sed -i "s,exit 0,$VIRT_INSTALATION_PATH/bin/virtuoso-t +wait +configfile $VIRT_INSTALATION_PATH/var/lib/virtuoso/db/virtuoso.ini," /etc/rc.local
+echo "exit 0" >>/etc/rc.local
 
