@@ -86,7 +86,7 @@
 	void:exampleResource chembl_target_cmpt:CHEMBL_TC_583 ;
 	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_targetcmpt.ttl.gz> ;
 	void:triples "438945"^^xsd:int ;
-	void:subsets :chembl_targetcmpt_uniprot_linkset .
+	void:subset :chembl_targetcmpt_uniprot_linkset .
 
 :chembl_rdf_assay_dataset a void:Dataset ;
 	dcterms:title "The ChEMBL Assay Dataset" ;
