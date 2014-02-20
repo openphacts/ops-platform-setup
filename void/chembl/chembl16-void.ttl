@@ -174,5 +174,5 @@
 	pav:authoredOn "2013-05-11T15:04:32.000+01:00"^^xsd:dateTime ;
 	pav:createdBy <http://orcid.org/0000-0002-8011-0300> ;
 	pav:createdOn "2013-05-11T15:04:32.000+01:00"^^xsd:dateTime ;
-	dul:expresses <http://lsdis.cs.uga.edu/projects/glycomics/propreo#UNIPROT_accession_number> .
+	dul:expresses <http://semanticscience.org/resource/SIO_010043> .
 
