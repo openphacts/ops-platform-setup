@@ -39,7 +39,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-<http://rdf.ebi.ac.uk/dataset/chembl/chembl_16_targetcmpt_uniprot_ls.ttl> void:inDataset <https://raw.github.com/openphacts/ops-platform-setup/severVOIDs/void/chembl/chembl16-void.ttl#chembl_targetcmpt_uniprot_linkset> .
+<http://rdf.ebi.ac.uk/dataset/chembl/chembl_16_targetcmpt_uniprot_ls.ttl> void:inDataset <https://raw.github.com/openphacts/ops-platform-setup/severVOIDs/void/chembl/chembl16-void.ttl> .
 
 chembl_target_cmpt:CHEMBL_TC_3597 skos:exactMatch uniprot:A0JN73 .
 
