@@ -183,7 +183,7 @@
 	void:objectsTarget :uniprot_dataset ;
 	void:linkPredicate skos:exactMatch ;
 	void:triples "6244"^^xsd:long ;
-	void:dataDump <> ;
+	void:dataDump <https://raw.github.com/openphacts/ops-platform-setup/severVOIDs/void/chembl/chembl_16.2_molecule_chebi_ls.ttl> ;
 	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
 	pav:authoredBy <http://orcid.org/0000-0002-8011-0300> ;
 	pav:authoredOn "2013-05-11T15:04:32.000+01:00"^^xsd:dateTime ;
