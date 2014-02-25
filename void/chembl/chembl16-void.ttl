@@ -60,7 +60,7 @@
 	dcterms:description "The ChEMBL Molecules Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/molecule/> ;
 	void:exampleResource chembl_molecule:CHEMBL941 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_molecule.tt> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_molecule.ttl.gz> ;
 	void:triples "82003819"^^xsd:int .
 
 :chembl_rdf_biocmpt_dataset a void:Dataset ;
@@ -183,7 +183,7 @@
 	void:objectsTarget :uniprot_dataset ;
 	void:linkPredicate skos:exactMatch ;
 	void:triples "6244"^^xsd:long ;
-	void:dataDump <https://raw.github.com/openphacts/ops-platform-setup/severVOIDs/void/chembl/chembl_16_targetcmpt_uniprot_l> ;
+	void:dataDump <> ;
 	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
 	pav:authoredBy <http://orcid.org/0000-0002-8011-0300> ;
 	pav:authoredOn "2013-05-11T15:04:32.000+01:00"^^xsd:dateTime ;
