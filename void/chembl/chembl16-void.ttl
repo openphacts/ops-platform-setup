@@ -49,7 +49,7 @@
 	dcterms:publisher <http://rdf.ebi.ac.uk/resource/chembl/> ;
 	dcterms:created "2009-10-28T00:00:00.000Z"^^xsd:dateTime ;
 	dcterms:modified "2013-05-07T00:00:00.000+01:00"^^xsd:dateTime ;
-	void:subset :chembl_rdf_targetcmpt_dataset ;
+	void:subset :chembl_rdf_targetcmpt_dataset, :chembl_rdf_molecule_dataset ;
 	void:vocabulary <http://purl.org/ontology/bibo/> , <http://www.bioassayontology.org/bao#> , <http://purl.org/obo/owl/CHEBI#> , <http://rdf.ebi.ac.uk/resource/chembl/> , <http://semanticscience.org/resource/> , <http://purl.org/spar/cito/> , <http://purl.org/dc/terms/> , <http://www.w3.org/2002/07/owl#> , <http://purl.obolibrary.org/obo/> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#> , <http://www.w3.org/2000/01/rdf-schema#> , <http://www.w3.org/2004/02/skos/core#> , <http://www.w3.org/2001/XMLSchema#> ;
 	void:exampleResource <http://rdf.ebi.ac.uk/resource/chembl/molecule/CHEMBL941/> ;
 	void:sparqlEndpoint <http://rdf.ebi.ac.uk/dataset/chembl/sparql> ;
@@ -60,7 +60,7 @@
 	dcterms:description "The ChEMBL Molecules Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/molecule/> ;
 	void:exampleResource chembl_molecule:CHEMBL941 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_molecule.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_molecule.tt> ;
 	void:triples "82003819"^^xsd:int .
 
 :chembl_rdf_biocmpt_dataset a void:Dataset ;
@@ -86,7 +86,7 @@
 	void:exampleResource chembl_target_cmpt:CHEMBL_TC_583 ;
 	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_targetcmpt.ttl.gz> ;
 	void:triples "438945"^^xsd:int ;
-	void:subset :chembl_targetcmpt_uniprot_linkset .
+	void:subset :chembl_targetcmpt_uniprot_linkset, :dummy_targetcmpt_uniprot_linkset .
 
 :chembl_rdf_assay_dataset a void:Dataset ;
 	dcterms:title "The ChEMBL Assay Dataset" ;
@@ -169,6 +169,21 @@
 	void:linkPredicate skos:exactMatch ;
 	void:triples "6244"^^xsd:long ;
 	void:dataDump <https://raw.github.com/openphacts/ops-platform-setup/severVOIDs/void/chembl/chembl_16_targetcmpt_uniprot_ls.ttl> ;
+	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+	pav:authoredBy <http://orcid.org/0000-0002-8011-0300> ;
+	pav:authoredOn "2013-05-11T15:04:32.000+01:00"^^xsd:dateTime ;
+	pav:createdBy <http://orcid.org/0000-0002-8011-0300> ;
+	pav:createdOn "2013-05-11T15:04:32.000+01:00"^^xsd:dateTime ;
+	dul:expresses <http://semanticscience.org/resource/SIO_010043> .
+
+:dummy_targetcmpt_uniprot_linkset a void:Linkset ;
+	dcterms:title "The ChEMBL Dummy Component to UniProt Linkset" ;
+	dcterms:description "The ChEMBL Dummy Component to UniProt Linkset" ;
+	void:subjectsTarget :chembl_rdf_targetcmpt_dataset ;
+	void:objectsTarget :uniprot_dataset ;
+	void:linkPredicate skos:exactMatch ;
+	void:triples "6244"^^xsd:long ;
+	void:dataDump <https://raw.github.com/openphacts/ops-platform-setup/severVOIDs/void/chembl/chembl_16_targetcmpt_uniprot_l> ;
 	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
 	pav:authoredBy <http://orcid.org/0000-0002-8011-0300> ;
 	pav:authoredOn "2013-05-11T15:04:32.000+01:00"^^xsd:dateTime ;
