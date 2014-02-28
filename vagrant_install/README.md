@@ -48,10 +48,10 @@ Loading Data in the Virtual Machine
 #### Approach
 
 Generally, we used an asynchronous approach for loading datasets/linksets into the system. This means that the loading process is essentially made of 2 stages. 
-First, queue the datasets/linksets which we want to load, then trigger the actual loading process. This approach gives the API user the option of triggering 
+First, queue the datasets/linksets via their VOID headers, then trigger the actual loading process. This approach gives the API user the option of triggering 
 the loading process at a moment when network traffic is more convenient or when the load on the system is at a minimum. 
 
-And since the datasets and linksets go to different components of the system, the loading of datasets can be triggered separately from loading of linksets 
+Since the datasets and linksets go to different components of the system, the loading of datasets can be triggered separately from loading of linksets 
 (2 different API calls). 
 
 For checking the progress of the loading process, an additional API call is provided which shows the loading status of all the datasets and linksets in the system.
@@ -60,10 +60,15 @@ For checking the progress of the loading process, an additional API call is prov
 #### Loading Steps
 
 A concrete step-by-step workflow would look like this:
-1. Use the "/load" API call to *queue* the dataset and linkset dumps from a VOID header for loading. 
 
-The API call expects 2 parameters the VOID uri and the graph name where the datasets will be loaded in the triplestore.
+1. Use the "/load" API call to *queue* the dataset and linkset dumps from a VOID header for loading. The API call expects 2 parameters the VOID uri and the graph name where the datasets will be loaded in the triplestore. The VOID headers are expected to follow
+the minimal guidelines specified [here](http://www.openphacts.org/specs/2013/WD-datadesc-20130912/#dataset-model) . Important for this process is that you specify
+the data dumps with the void:dataDump predicate and that you link datasets to their subsets (which can also be linksets) via the void:subset predicate. In addition,
+we make the assumption that the dataset description URI appearing in the VOID header (void:DatasetDescription) is the same as the actual location of the VOID,
+which is also provided as a parameter to our API call.
+
 Example: 
+
     http://localhost/load?uri=https%3A%2F%2Fraw.github.com%2Fopenphacts%2Fops-platform-setup%2FseverVOIDs%2Fvoid%2Fchembl%2Fchembl16-void.ttl&graph=http%3A%2F%2Fwww.ebi.ac.uk%2Fchembl
 
 2. Repeat 1. for all the available VOID headers.
@@ -79,7 +84,7 @@ LOADING_ERROR (unsuccessfull loading attempt).
 
 #### Handling Loading Failures
 
-### Datasets
+##### Datasets
 
 During the loading process, we take checkpoints after loading in Virtuoso all the dataset dumps from a VOID header. So if one of the dumps is not successfully 
 loaded, we revert to the previous checkpoint and then move to the next VOID header. This means that if one of the data dumps in a VOID header fails to load,
@@ -87,7 +92,7 @@ all data dumps from that VOID header will get the status LOADING_ERROR. An error
 a reason for the loading failure. After fixing the problematic data dumps, the associated VOID headers have to be re-queued via the "/load" API call, then 
 the loading process can be triggered again. 
 
-### Linksets
+##### Linksets
 
 The IMS sequentially loads each linkset dump. If one of the linkset dumps fail, it will get a LOADING_ERROR status, with an associated error message. Then, the
 process continues loading the remaining linksets. After fixing the problematic linksets, their associated VOID headers have to be re-queued via the "/load" API
