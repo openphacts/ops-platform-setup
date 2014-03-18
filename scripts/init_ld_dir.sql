@@ -77,6 +77,8 @@ ld_dir('/media/SSD/current_data/disgenet', 'sio.owl', 'http://rdf.imim.es');
 -- ld_dir('/media/SSD/current_data/linkedct', 'linkedct-dump-2013-10-01.nt', 'http://linkedct.org');
 
 -- Nextprot
-
 ld_dir('/media/SSD/current_data/nx_np', '*.rdf', 'http://www.nextprot.org');
 ld_dir('/media/SSD/current_data/nx_np', '*.nquads', 'http://www.nextprot.org');
+
+-- Caloha
+ld_dir('/media/SSD/current_data/caloha', 'caloha.ttl', 'http://www.nexprot.org/caloha');
