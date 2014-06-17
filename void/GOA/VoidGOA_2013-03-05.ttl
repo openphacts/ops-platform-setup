@@ -1,0 +1,277 @@
+@prefix : <#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/2.0/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+
+<http://downloads.nbiceng.net/gene_associations/VoidGOA_2013-04-05.ttl> a void:DatasetDescription; 
+    dcterms:publisher <http://www.nbiceng.net>;
+    dcat:Distribution <http://downloads.nbiceng.net/gene_associations> ;
+    pav:createdBy <https://wiki.nbic.nl/index.php/User:Christine> ;
+	dcterms:description "A Void description for the GOA conversion to RDF Dataset"@en;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+    dcterms:issued "2013-04-05T10:23:56Z"^^xsd:dateTime;
+    dcterms:title "Void for GOA conversion to RDF"@en;
+    foaf:primaryTopic :GOA2RDF.
+
+:GOA2RDF
+	a void:Dataset;
+    dcterms:title "GOA to RDF March 5, 2013"@en;
+    dcterms:description "The NBIC conversion of GOA to RDF to be used by Open PHACTS"@en;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+    dcterms:publisher <http://www.nbic.nl> ;
+    void:uriSpace "http://downloads.nbiceng.net/gene_associations/"^^xsd:string ;
+    pav:derivedFrom <http://www.geneontology.org/GO.downloads.annotations.shtml>;
+    pav:importedFrom :GOA_dataset;
+    pav:importedBy <http://static.hooft.net/rob-foaf.rdf> ;
+    pav:importedOn "2013-04-05T10:23:56Z"^^xsd:dateTime;
+    pav:createdWith <https://trac.nbic.nl/nbiceng/changeset?old_path=/trunk/goa-rdf/goatordf.py&old=58&new_path=/trunk/goa-rdf/goatordf.py&new=58>;
+	void:subset :GOARDF_human, :GOARDF_zfin, :GOARDF_wb, :GOARDF_tair, :GOARDF_sgn, :GOARDF_sgd, :GOARDF_rgd, :GOARDF_reactome, :GOARDF_pseudocap, :GOARDF_pombase, :GOARDF_mgi, :GOARDF_jcvi, :GOARDF_gramene_oryza, :GOARDF_gonuts, :GOARDF_pig, :GOARDF_uniprot_noiea, :GOARDF_pdb,  :GOARDF_dog, :GOARDF_cow, :GOARDF_chicken, :GOARDF_fb, :GOARDF_ecocyc, :GOARDF_dictyBase, :GOARDF_cgd, :GOARDF_aspgd, :GOARDF_PAMGO_Oomycetes, :GOARDF_PAMGO_Mgrisea, :GOARDF_PAMGO_Ddadantii, :GOARDF_PAMGO_Atumefaciens, :GOARDF_GeneDB_Pfalciparum, :GOARDF_GeneDB_Tbrucei, :GOARDF_GeneDB_Lmajor, :GOARDF_UniProt.
+
+:GOA_dataset
+    dcterms:title "GOA"@en;
+    dcterms:description "GeneOntology annotations for proteins for various species"@en;
+    foaf:homepage <http://www.geneonotology.org/>;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+    dcterms:publisher <http://www.geneontology.org>;
+    dcterms:created "2013-03-05T00:00:00Z"^^xsd:dateTime;
+    dcterms:modified "2013-03-05T00:00:00Z"^^xsd:dateTime;
+    dcat:distribution [ dcat:downloadURL <http://www.geneontology.org/GO.downloads.annotations.shtml>];
+    a dctypes:Dataset.
+	
+:GOARDF_human
+    a void:Dataset;
+    dcterms:title "GOARDF for Homo sapiens"@en;
+    dcterms:description "The subset of GOA data for GO annotations for human proteins."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.goa_human00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_human00002.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_human00003.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_human00004.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_human00005.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_human00006.rdf.gz> .
+    
+:GOARDF_zfin
+	a void:Dataset ;
+    dcterms:title "GOARDF for Danio rerio"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Danio rerio."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.zfin00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.zfin00002.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.zfin00003.rdf.gz> .
+    
+:GOARDF_wb
+	a void:Dataset ;
+    dcterms:title "GOARDF for Caenorhabditis elegans"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Caenorhabditis elegans ."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.wb00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.wb00002.rdf.gz> .
+
+:GOARDF_tair
+	a void:Dataset ;
+    dcterms:title "GOARDF for Arabidopsis thaliana"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Arabidopsis thaliana."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.tair00001.rdf.gz>,  <http://downloads.nbiceng.net/gene_association/gene_association.tair00002.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.tair00003.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.tair00004.rdf.gz> .
+    
+:GOARDF_sgn
+	a void:Dataset ;
+    dcterms:title "GOARDF for Solanaceae"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Solanaceae."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.sgn00001.rdf.gz> .    
+
+:GOARDF_sgd
+	a void:Dataset ;
+    dcterms:title "GOARDF for Saccharomyces cerevisiae"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Saccharomyces cerevisiae."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.sgd00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.sgd00002.rdf.gz> .
+
+:GOARDF_rgd    
+	a void:Dataset ;
+    dcterms:title "GOARDF for Rattus norvegicus"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Rattus norvegicus."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.rgd00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.rgd00002.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.rgd00003.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.rgd00004.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.rgd00005.rdf.gz> .     
+
+:GOARDF_reactome
+	a void:Dataset ;
+    dcterms:title "GOARDF for Reactome [multispecies]"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Reactome [multispecies]."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.reactome00001.rdf.gz> .
+    
+:GOARDF_pseudocap
+	a void:Dataset ;
+    dcterms:title "GOARDF for Pseudomonas aeruginosa PAO1"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Pseudomonas aeruginosa PAO1."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.pseudocap00001.rdf.gz> .
+
+:GOARDF_pombase
+	a void:Dataset ;
+    dcterms:title "GOARDF for Pseudomonas aeruginosa PAO1"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Pseudomonas aeruginosa PAO1."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.pombase00001.rdf.gz>  .
+    
+:GOARDF_mgi
+	a void:Dataset ;
+    dcterms:title "GOARDF for Mus musculus"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Mus musculus."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.mgi00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.mgi00002.rdf.gz>,<http://downloads.nbiceng.net/gene_association/gene_association.mgi00003.rdf.gz>,<http://downloads.nbiceng.net/gene_association/gene_association.mgi00004.rdf.gz>,<http://downloads.nbiceng.net/gene_association/gene_association.mgi00005.rdf.gz>  .
+
+:GOARDF_jcvi
+	a void:Dataset ;
+    dcterms:title "GOARDF for Comprehensive Microbial Resource [multispecies]"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Comprehensive Microbial Resource [multispecies]."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.jcvi00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.jcvi00002.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.jcvi00003.rdf.gz>.
+    
+:GOARDF_gramene_oryza
+	a void:Dataset ;
+    dcterms:title "GOARDF for Oryza sativa"@en;
+    dcterms:description "The subset of GOA data for GO annotations for Oryza sativa."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.gramene_oryza00001.rdf.gz> .  
+    
+:GOARDF_gonuts
+	a void:Dataset ;
+    dcterms:title "GOARDF for Gene Ontology Normal Usage Tracking System "@en;
+    dcterms:description "The subset of GOA data for GO annotations for Gene Ontology Normal Usage Tracking System ."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.gonuts00001.rdf.gz> .    
+    
+:GOARDF_pig
+	a void:Dataset ;
+    dcterms:title "GOARDF for Sus scrofa "@en;
+    dcterms:description "The subset of GOA data for GO annotations for Sus scrofa."@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.goa_pig00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pig00002.rdf.gz> .
+    
+:GOARDF_uniprot_noiea
+	a void:Dataset ;
+    dcterms:title "GOARDF for UniProt with IEA removed"@en;
+    dcterms:description "The subset of GOA data for UniProt with IEA removed"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.goa_uniprot_noiea00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_uniprot_noiea00002.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_uniprot_noiea00003.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_uniprot_noiea00004.rdf.gz> . 
+    
+:GOARDF_pdb
+	a void:Dataset ;
+    dcterms:title "GOARDF for Protein Data Bank [multispecies]"@en;
+    dcterms:description "The subset of GOA data for Protein Data Bank [multispecies]"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00002.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00003.rdf.gz>,<http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00004.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00005.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00006.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00007.rdf.gz>,<http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00008.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00009.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00010.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00011.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00012.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00013.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00014.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00015.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00016.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00017.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_pdb00018.rdf.gz>.
+    
+:GOARDF_dog
+	a void:Dataset ;
+    dcterms:title "GOARDF for Canis lupus familiaris"@en;
+    dcterms:description "The subset of GOA data for Canis lupus familiaris"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.goa_dog00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_dog00002.rdf.gz> .
+
+:GOARDF_cow
+	a void:Dataset ;
+    dcterms:title "GOARDF for Bos taurus"@en;
+    dcterms:description "The subset of GOA data for Bos taurus"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.goa_cow00001.rdf.gz>,  <http://downloads.nbiceng.net/gene_association/gene_association.goa_cow00002.rdf.gz>.  
+    
+:GOARDF_chicken
+	a void:Dataset ;
+    dcterms:title "GOARDF for Gallus gallus"@en;
+    dcterms:description "The subset of GOA data for Gallus gallus "@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.goa_chicken00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.goa_chicken00002.rdf.gz> . 
+    
+:GOARDF_fb
+	a void:Dataset ;
+    dcterms:title "GOARDF for Drosophila melanogaster"@en;
+    dcterms:description "The subset of GOA data for Drosophila melanogaster "@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.fb00001.rdf.gz>,  <http://downloads.nbiceng.net/gene_association/gene_association.fb00002.rdf.gz>.  
+
+:GOARDF_ecocyc
+	a void:Dataset ;
+    dcterms:title "GOARDF for Escherichia coli"@en;
+    dcterms:description "The subset of GOA data for Escherichia coli "@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.ecocyc00001.rdf.gz>.   
+         
+:GOARDF_dictyBase
+	a void:Dataset ;
+    dcterms:title "GOARDF for Dictyostelium discoideum"@en;
+    dcterms:description "The subset of GOA data for Dictyostelium discoideum "@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.dictyBase00001.rdf.gz >.   
+
+:GOARDF_cgd
+	a void:Dataset ;
+    dcterms:title "GOARDF for Candida albicans"@en;
+    dcterms:description "The subset of GOA data for Candida albicans"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.cgd00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.cgd00002.rdf.gz> .
+       
+:GOARDF_aspgd
+	a void:Dataset ;
+    dcterms:title "GOARDF for Candida albicans"@en;
+    dcterms:description "The subset of GOA data for Candida albicans"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.aspgd00001.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.aspgd00002.rdf.gz>, <http://downloads.nbiceng.net/gene_association/gene_association.aspgd00003.rdf.gz>.
+    
+:GOARDF_PAMGO_Oomycetes
+	a void:Dataset ;
+    dcterms:title "GOARDF for Oomycetes"@en;
+    dcterms:description "The subset of GOA data for Oomycetes"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.PAMGO_Oomycetes00001.rdf.gz> .
+
+:GOARDF_PAMGO_Mgrisea
+	a void:Dataset ;
+    dcterms:title "GOARDF for Magnaporthe grisea"@en;
+    dcterms:description "The subset of GOA data for Magnaporthe grisea"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.PAMGO_Mgrisea00001.rdf.gz> .
+    
+:GOARDF_PAMGO_Ddadantii
+	a void:Dataset ;
+    dcterms:title "GOARDF for Dickeya dadantii"@en;
+    dcterms:description "The subset of GOA data for Dickeya dadantii"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.PAMGO_Ddadantii00001.rdf.gz> . 
+    
+:GOARDF_PAMGO_Atumefaciens
+	a void:Dataset ;
+    dcterms:title "GOARDF for Agrobacterium tumefaciensstr. C58"@en;
+    dcterms:description "The subset of GOA data for Agrobacterium tumefaciensstr. C58"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.PAMGO_Atumefaciens00001.rdf.gz> .  
+
+:GOARDF_GeneDB_Pfalciparum
+	a void:Dataset ;
+    dcterms:title "GOARDF for Plasmodium falciparum"@en;
+    dcterms:description "The subset of GOA data for Plasmodium falciparum"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.GeneDB_Pfalciparum00001.rdf.gz
+
+:GOARDF_GeneDB_Tbrucei
+	a void:Dataset ;
+    dcterms:title "GOARDF for Trypanosoma brucei"@en;
+    dcterms:description "The subset of GOA data for Trypanosoma brucei"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.GeneDB_Tbrucei00001.rdf.gz>.
+    
+:GOARDF_GeneDB_Lmajor
+	a void:Dataset ;
+    dcterms:title "GOARDF for Leishmania major"@en;
+    dcterms:description "The subset of GOA data for Leishmania major"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association/gene_association.GeneDB_Lmajor00001.rdf.gz >. 
+    
+:GOARDF_UniProt
+	a void:Dataset ;
+    dcterms:title "GOARDF for UniProt"@en;
+    dcterms:description "The subset of GOA data for UniProt"@en;
+    void:uriSpace "http://downloads.nbiceng.net/gene_association.goa_uniprot/"^^xsd:string ;	
+    void:dataDump <http://downloads.nbiceng.net/gene_association.goa_uniprot/>.   
+                     

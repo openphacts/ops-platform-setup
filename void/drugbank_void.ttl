@@ -1,3 +1,4 @@
+@base <https://raw.github.com/openphacts/ops-platform-setup/master/void/drugbank_void.ttl>
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -9,15 +10,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <#> .
 
-# VoID Header for the DrugBank RDF dataset
-<>
-	rdf:type void:DatasetDescription ;
+<>	rdf:type void:DatasetDescription ;
 	dcterms:title "DrugBank VoID Description"@en ;
 	dcterms:description "The VoID description for the RDF representation of the DrugBank dataset."@en ;
 	pav:createdBy <https://orcid.org/0000-0002-5711-4872> ;
 	pav:createdOn "2012-10-30T16:08:36Z"^^xsd:dateTime ;
 	pav:lastUpdateOn "2012-11-05T12:39:54Z"^^xsd:dateTime ;
-	foaf:primaryTopic :drugbank_rdf .
+	foaf:primaryTopic :drugbank-rdf .
 
 # Metadata about the original DrugBank dataset
 :drugbank rdf:type dcterms:Dataset ;
@@ -28,8 +27,7 @@
 	dcterms:license <http://www.drugbank.ca/about#cite> ;
 	pav:version "2.5" ;
 	dcterms:publisher <http://www.drugbank.ca/> ;
-	dcterms:created "2008-09-15T00:00:00Z"^^xsd:datetime ; 
-	. 
+	dcterms:created "2008-09-15T00:00:00Z"^^xsd:dateTime .
 
 # Metadata about the RDF representation of DrugBank
 :drugbank-rdf rdf:type void:Dataset ;
@@ -43,7 +41,7 @@
 	pav:version "2.5" ;
 	pav:importedFrom :drugbank ;
 	pav:importedBy <mailto:anja@anjeve.de> ;
-	pav:importedOn "2008-11-17T20:52:39"^^xsd:datetime ;
+	pav:importedOn "2008-11-17T20:52:39"^^xsd:dateTime ;
 	pav:createdWith <https://github.com/anjeve/lodd/tree/master/datasets/DrugBank> ;
 	void:triples "765936"^^xsd:integer ;
 	void:subset :db-drugs, :db-targets ; 

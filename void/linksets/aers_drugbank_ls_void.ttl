@@ -1,0 +1,80 @@
+@prefix : <http://rdf.wikipathways.org/void.ttl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<> a void:DatasetDescription ;
+dct:title "Drugbank-AERS VoID Description"@en ;
+dct:description "The VoID Description for a Drugbank-AERS dataset."@en ;
+pav:createdBy <http://orcid.org/0000-0001-8772-7904> ;
+pav:createdOn "2013-05-06T00:00:00Z"^^xsd:dateTime ;
+foaf:primaryTopic :Drugbank-AERS .
+
+<https://raw.github.com/openphacts/ops-platform-setup/master/linksets_dev/compounds/aers_drugbank_linkset.ttl> void:subset :Drugbank-AERS .
+
+:Drugbank-AERS a void:Linkset ;
+void:linkPredicate skos:closeMatch ;
+dct:title "Drugbank-AERS Linkset"@en ;
+dct:license <http://creativecommons.org/licenses/by-nd/3.0/> ;
+pav:createdBy <http://orcid.org/0000-0001-8772-7904> ;
+pav:createdOn "2013-05-06T00:00:00Z"^^xsd:dateTime ;
+dct:dataDump <https://raw.github.com/openphacts/ops-platform-setup/master/linksets_dev/compounds/aers_drugbank_linkset.ttl> ;
+dul:expresses <http://semanticscience.org/resource/SIO_010038> ;
+pav:version "2013_05";
+dct:description "Void linkset containing SKOS-exactMatch relations between Drugbank drug ids and AERS drug ids" ;
+pav:retrievedFrom <http://aers.data2semantics.org/> ;
+pav:retrievedBy <http://orcid.org/0000-0001-8772-7904> ;
+pav:createdWith :drugbank-aers-query;
+void:subjectsTarget :Drugbank ;
+void:objectsTarget :AERS ;
+void:triples "9767"^^xsd:integer .
+
+:drugbank-aers-query dct:title "UniProt WormBase linkset generation SPARQL query" ;
+dct:description """PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+CONSTRUCT {
+?drugbank_uri skos:closeMatch ?aers_uri
+} WHERE {
+?drugbank_uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> .
+ ?aers_uri skos:closeMatch ?drugbank_uri
+}""" ;
+dct:license <http://www.apache.org/licenses/LICENSE-2.0> .
+
+:Drugbank a dctypes:Dataset ;
+    pav:retrievedOn "2013-05-03T00:00:00Z"^^xsd:dateTime;
+    void:uriSpace <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/> ;
+    dct:source <http://wifo5-04.informatik.uni-mannheim.de/drugbank/> ;
+    dct:contributor :Univertat_Mannheim ;
+    dct:contributor :Drugbank ;
+    dct:license <http://www.drugbank.ca/about> ;
+    dct:title "Linked Data version of the DrugBank Database" ;
+    foaf:homepage <http://www.uni-mannheim.de/> ;
+    dct:description "Linked Data version of the DrugBank Database" .
+    
+
+
+
+:AERS a dctypes:Dataset ;
+    rdf:type rdfs:Class ;
+    pav:retrievedOn "2013-05-03T00:00:00Z"^^xsd:dateTime ;
+    void:uriSpace "http://aers.data2semantics.org/resource/drug" ;
+    dct:title "Linked Data version of adverse events reported to the Federal Drug Administration" ;
+    dct:source <http://aers.data2semantics.org/> ;
+    dct:contributor :VU_Amsterdam ;
+    foaf:homepage <http://aers.data2semantics.org/> ;
+    dct:license <http://creativecommons.org/licenses/by-nd/3.0/> ;
+    dct:contributor <http://www.fda.gov> .
+    
+:Univertat_Mannheim a foaf:Organization ;
+    rdfs:label "Universitat Mannheim" ;
+    foaf:homepage <http://www.uni-mannheim.de/> .
+    
+:VU_Amsterdam a foaf:Organization ;
+    rdfs:label "VU university Amsterdam" ;
+    foaf:homepage <http://www.vu.nl/> .

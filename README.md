@@ -36,68 +36,6 @@ For each hierarchy we have three named graphs
 2. the full closure - the named graph is denoted by /inference
 3. other info (e.g. rdfs:label) - the named graph without a suffix
 
-Environment Setup on ops.few.vu.nl (Debian 6.0)
------------------
-
-We use screen
-
-Directory setup
-
-    /var/www                  #lda is here
-    /var/www/api-config-files # sparql files for lda located here
-    ~/
-    ~/log/                    # logs are stored here
-    ~/production/             # contains OpsPlatform code for production
-    ~/develop/                # contains OpsPlatform code for develop
-    ~/coreGUI/                # contains core GUI code for running the explorer
-
-- One RDF store (sesame) running on 9090
-    - http://ops.few.vu.nl:9090/openrdf-workbench/
-- data is located at ~/develop/openphacts/datasets
-    - <https://github.com/openphacts/ops-platform-setup/tree/master/data-sources>
-- We are currently running all data off one endpoint
-
-#### Building Base Platform
-    OPS@ops:~/production/openphacts/ops-platform/scripts$ source  ExportOPSVariables.sh
-    OPS@ops:~/production/openphacts/ops-platform/scripts$ source BuildLarKC.sh 
-    OPS@ops:~/develop/openphacts/ops-platform/scripts$ source  ExportOPSVariables.sh
-    OPS@ops:~/develop/openphacts/ops-platform/scripts$ source BuildLarKC.sh 
-
-#### Core API LarKC instance
-     
-     OPS@ops:~$ screen
-     OPS@ops:~/production/openphacts/ops-platform/scripts$ source RunLarKC.sh &> ~/log/production.log
-     # exit out of screen
-     # and launch the workflow
-     OPS@ops:~/production/openphacts/ops-platform/scripts$ source  ExportOPSVariables.sh
-     OPS@ops:~/production/openphacts/ops-platform/scripts$ source LaunchOPSAPIWorkflow.sh
-
-Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/endpoint/opsapi/sparql/ contains the sparql queries being run by the core api. These are before expansion.
-
-
-#### Linked Data API LarKC instance
-
-    OPS@ops:~$ screen
-    OPS@ops:~/develop/openphacts/ops-platform/scripts$ source RunLarKC.sh &> ~/log/develop.log
-    # exit out of screen
-    # and launch the workflow
-    OPS@ops:~/develop/openphacts/ops-platform/scripts$ source  ExportOPSVariables.sh
-    OPS@ops:~/develop/openphacts/ops-platform/scripts$ source Launch_LDA_Workflow.sh
-
-###### LDA queries
-- all queries are in api-config-files
-- the difference between github and server is the port of where the lark endpoint is located
-- sparqlEndpoint  api:sparqlEndpoint <http://localhost:9183/sparql/> ;
-- to update the lda queries you just need to modify the queries
-- can test by checking out and using the ops machine
-- by convention, in the lda in sparql variables names ?ops_item are replaced by the uri of post variable
-- ops:input tells the expander what to expand on 
-
-#### Launch GUI
-  
-     OPS@ops:~/coreGUI$ screen 
-     rails s -e production  &> ~/log/gui.log
-
 ### Platform set-up on ops2 (CentOS 6.2), 10 Aug 2012
 
 #### Load data into Virtuoso
@@ -124,6 +62,8 @@ Note that ~/production/larkc-endpoints/endpoint.opsapi/src/main/java/eu/larkc/en
     </Directory>
 
     [antonis@ops2 ~]$ service httpd start
+
+Note: The ARC library harcodes the limit on the execution time of a function call. We had to change this limit to 0 (infinite) so that we can parse large responses. The change was done in lib/arc/parsers/ARC2_RDFXMLParser.php only, because this is where the response from the triple store is parsed.
 
 #### Steps to enable caching from RAM instead of disk
 1. Edit deployment.settings.php from the root of LDA and change:

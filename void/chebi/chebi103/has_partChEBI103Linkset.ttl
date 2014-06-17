@@ -1,0 +1,3279 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix : <http://purl.obolibrary.org/obo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix freq: <http://purl.org/cld/freq/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+obo:CHEBI_10003 skos:exactMatch obo:CHEBI_65028 .
+
+obo:CHEBI_10034 skos:exactMatch obo:CHEBI_50393 .
+
+obo:CHEBI_18379 skos:exactMatch obo:CHEBI_48819 .
+
+obo:CHEBI_10126 skos:exactMatch obo:CHEBI_10125 .
+
+obo:CHEBI_47901 skos:exactMatch obo:CHEBI_22323 .
+
+obo:CHEBI_37622 skos:exactMatch obo:CHEBI_23004 .
+
+obo:CHEBI_121741 skos:exactMatch obo:CHEBI_29036 .
+
+obo:CHEBI_33575 skos:exactMatch obo:CHEBI_46883 .
+
+obo:CHEBI_12777 skos:exactMatch obo:CHEBI_17336 , obo:CHEBI_17898 , obo:CHEBI_15367 , obo:CHEBI_63410 .
+
+obo:CHEBI_128458 skos:exactMatch obo:CHEBI_59039 .
+
+obo:CHEBI_133341 skos:exactMatch obo:CHEBI_15354 .
+
+obo:CHEBI_23114 skos:exactMatch obo:CHEBI_17996 .
+
+obo:CHEBI_35273 skos:exactMatch obo:CHEBI_35267 .
+
+obo:CHEBI_36080 skos:exactMatch obo:CHEBI_16541 .
+
+obo:CHEBI_33696 skos:exactMatch obo:CHEBI_33791 , obo:CHEBI_50297 .
+
+obo:CHEBI_140536 skos:exactMatch obo:CHEBI_59175 .
+
+obo:CHEBI_141644 skos:exactMatch obo:CHEBI_60268 .
+
+obo:CHEBI_18237 skos:exactMatch obo:CHEBI_50329 .
+
+obo:CHEBI_17478 skos:exactMatch obo:CHEBI_42485 .
+
+obo:CHEBI_15356 skos:exactMatch obo:CHEBI_50326 .
+
+obo:CHEBI_33252 skos:exactMatch obo:CHEBI_33253 .
+
+obo:CHEBI_25017 skos:exactMatch obo:CHEBI_30356 .
+
+obo:CHEBI_15719 skos:exactMatch obo:CHEBI_38574 .
+
+obo:CHEBI_15797 skos:exactMatch obo:CHEBI_72290 .
+
+obo:CHEBI_15804 skos:exactMatch obo:CHEBI_14919 .
+
+obo:CHEBI_29016 skos:exactMatch obo:CHEBI_50340 .
+
+obo:CHEBI_16670 skos:exactMatch obo:CHEBI_33708 .
+
+obo:CHEBI_5034 skos:exactMatch obo:CHEBI_17627 .
+
+obo:CHEBI_27570 skos:exactMatch obo:CHEBI_50338 .
+
+obo:CHEBI_15983 skos:exactMatch obo:CHEBI_38573 .
+
+obo:CHEBI_15986 skos:exactMatch obo:CHEBI_50319 .
+
+obo:CHEBI_15998 skos:exactMatch obo:CHEBI_68836 .
+
+obo:CHEBI_35715 skos:exactMatch obo:CHEBI_29785 .
+
+obo:CHEBI_5022 skos:exactMatch obo:CHEBI_36144 .
+
+obo:CHEBI_16194 skos:exactMatch obo:CHEBI_50746 .
+
+obo:CHEBI_27897 skos:exactMatch obo:CHEBI_50337 .
+
+obo:CHEBI_1639 skos:exactMatch obo:CHEBI_62816 .
+
+obo:CHEBI_26986 skos:exactMatch obo:CHEBI_50341 .
+
+obo:CHEBI_16412 skos:exactMatch obo:CHEBI_64637 .
+
+obo:CHEBI_27266 skos:exactMatch obo:CHEBI_30353 .
+
+obo:CHEBI_17822 skos:exactMatch obo:CHEBI_24712 .
+
+obo:CHEBI_16541 skos:exactMatch obo:CHEBI_33700 .
+
+obo:CHEBI_9093 skos:exactMatch obo:CHEBI_50327 .
+
+obo:CHEBI_16726 skos:exactMatch obo:CHEBI_28064 .
+
+obo:CHEBI_25094 skos:exactMatch obo:CHEBI_50339 .
+
+obo:CHEBI_29256 skos:exactMatch obo:CHEBI_29917 .
+
+obo:CHEBI_16882 skos:exactMatch obo:CHEBI_14949 .
+
+obo:CHEBI_60974 skos:exactMatch obo:CHEBI_48819 .
+
+obo:CHEBI_55380 skos:exactMatch obo:CHEBI_43176 .
+
+obo:CHEBI_16986 skos:exactMatch obo:CHEBI_57975 .
+
+obo:CHEBI_16991 skos:exactMatch obo:CHEBI_33793 , obo:CHEBI_50298 .
+
+obo:CHEBI_28044 skos:exactMatch obo:CHEBI_22744 .
+
+obo:CHEBI_22660 skos:exactMatch obo:CHEBI_41402 .
+
+obo:CHEBI_28300 skos:exactMatch obo:CHEBI_50331 .
+
+obo:CHEBI_36586 skos:exactMatch obo:CHEBI_23019 .
+
+obo:CHEBI_17093 skos:exactMatch obo:CHEBI_40574 .
+
+obo:CHEBI_24898 skos:exactMatch obo:CHEBI_45557 .
+
+obo:CHEBI_22653 skos:exactMatch obo:CHEBI_50330 .
+
+obo:CHEBI_17330 skos:exactMatch obo:CHEBI_50650 .
+
+obo:CHEBI_33551 skos:exactMatch obo:CHEBI_33249 , obo:CHEBI_29922 .
+
+obo:CHEBI_33697 skos:exactMatch obo:CHEBI_50299 , obo:CHEBI_33792 .
+
+obo:CHEBI_23117 skos:exactMatch obo:CHEBI_23116 .
+
+obo:CHEBI_18186 skos:exactMatch obo:CHEBI_50336 .
+
+obo:CHEBI_179557 skos:exactMatch obo:CHEBI_7514 .
+
+obo:CHEBI_22925 skos:exactMatch obo:CHEBI_15858 .
+
+obo:CHEBI_26835 skos:exactMatch obo:CHEBI_26833 .
+
+obo:CHEBI_50860 skos:exactMatch obo:CHEBI_27594 .
+
+obo:CHEBI_33555 skos:exactMatch obo:CHEBI_33338 .
+
+obo:CHEBI_18290 skos:exactMatch obo:CHEBI_63048 , obo:CHEBI_9532 .
+
+obo:CHEBI_28193 skos:exactMatch obo:CHEBI_52910 .
+
+obo:CHEBI_18338 skos:exactMatch obo:CHEBI_9533 .
+
+obo:CHEBI_184644 skos:exactMatch obo:CHEBI_4318 .
+
+obo:CHEBI_35505 skos:exactMatch obo:CHEBI_15377 .
+
+obo:CHEBI_4318 skos:exactMatch obo:CHEBI_59697 .
+
+obo:CHEBI_21182 skos:exactMatch obo:CHEBI_37595 .
+
+obo:CHEBI_21183 skos:exactMatch obo:CHEBI_37594 .
+
+obo:CHEBI_21184 skos:exactMatch obo:CHEBI_51070 .
+
+obo:CHEBI_35800 skos:exactMatch obo:CHEBI_35801 .
+
+obo:CHEBI_26628 skos:exactMatch obo:CHEBI_27568 .
+
+obo:CHEBI_24433 skos:exactMatch obo:CHEBI_33250 .
+
+obo:CHEBI_22632 skos:exactMatch obo:CHEBI_27563 .
+
+obo:CHEBI_33302 skos:exactMatch obo:CHEBI_33300 .
+
+obo:CHEBI_51143 skos:exactMatch obo:CHEBI_25555 .
+
+obo:CHEBI_37533 skos:exactMatch obo:CHEBI_30106 .
+
+obo:CHEBI_228275 skos:exactMatch obo:CHEBI_52787 .
+
+obo:CHEBI_22916 skos:exactMatch obo:CHEBI_27560 .
+
+obo:CHEBI_33581 skos:exactMatch obo:CHEBI_33317 .
+
+obo:CHEBI_22923 skos:exactMatch obo:CHEBI_29223 .
+
+obo:CHEBI_22928 skos:exactMatch obo:CHEBI_22927 .
+
+obo:CHEBI_33958 skos:exactMatch obo:CHEBI_16042 .
+
+obo:CHEBI_24471 skos:exactMatch obo:CHEBI_24473 .
+
+obo:CHEBI_22978 skos:exactMatch obo:CHEBI_22977 .
+
+obo:CHEBI_33673 skos:exactMatch obo:CHEBI_33340 .
+
+obo:CHEBI_22985 skos:exactMatch obo:CHEBI_22984 .
+
+obo:CHEBI_33299 skos:exactMatch obo:CHEBI_22313 .
+
+obo:CHEBI_23169 skos:exactMatch obo:CHEBI_29747 .
+
+obo:CHEBI_23237 skos:exactMatch obo:CHEBI_28073 .
+
+obo:CHEBI_33741 skos:exactMatch obo:CHEBI_33350 .
+
+obo:CHEBI_23316 skos:exactMatch obo:CHEBI_16980 , obo:CHEBI_29020 .
+
+obo:CHEBI_23377 skos:exactMatch obo:CHEBI_28694 .
+
+obo:CHEBI_33745 skos:exactMatch obo:CHEBI_33366 .
+
+obo:CHEBI_23414 skos:exactMatch obo:CHEBI_29036 .
+
+obo:CHEBI_2369 skos:exactMatch obo:CHEBI_26248 .
+
+obo:CHEBI_2380 skos:exactMatch obo:CHEBI_62101 .
+
+obo:CHEBI_2393 skos:exactMatch obo:CHEBI_48051 .
+
+obo:CHEBI_2402 skos:exactMatch obo:CHEBI_2401 .
+
+obo:CHEBI_24060 skos:exactMatch obo:CHEBI_17051 .
+
+obo:CHEBI_24062 skos:exactMatch obo:CHEBI_24061 .
+
+obo:CHEBI_2417 skos:exactMatch obo:CHEBI_15355 .
+
+obo:CHEBI_33250 skos:exactMatch obo:CHEBI_10545 , obo:CHEBI_33252 .
+
+obo:CHEBI_33675 skos:exactMatch obo:CHEBI_33560 .
+
+obo:CHEBI_24624 skos:exactMatch obo:CHEBI_67141 .
+
+obo:CHEBI_24651 skos:exactMatch obo:CHEBI_43176 .
+
+obo:CHEBI_25806 skos:exactMatch obo:CHEBI_25805 .
+
+obo:CHEBI_33608 skos:exactMatch obo:CHEBI_49637 .
+
+obo:CHEBI_25940 skos:exactMatch obo:CHEBI_29369 .
+
+obo:CHEBI_24866 skos:exactMatch obo:CHEBI_22563 , obo:CHEBI_36916 .
+
+obo:CHEBI_2485 skos:exactMatch obo:CHEBI_29923 .
+
+obo:CHEBI_24858 skos:exactMatch obo:CHEBI_16382 .
+
+obo:CHEBI_24860 skos:exactMatch obo:CHEBI_24859 .
+
+obo:CHEBI_24873 skos:exactMatch obo:CHEBI_18248 .
+
+obo:CHEBI_33744 skos:exactMatch obo:CHEBI_33356 .
+
+obo:CHEBI_25108 skos:exactMatch obo:CHEBI_25107 .
+
+obo:CHEBI_25154 skos:exactMatch obo:CHEBI_18291 .
+
+obo:CHEBI_33743 skos:exactMatch obo:CHEBI_33352 .
+
+obo:CHEBI_25196 skos:exactMatch obo:CHEBI_25195 .
+
+obo:CHEBI_36357 skos:exactMatch obo:CHEBI_24433 .
+
+obo:CHEBI_25370 skos:exactMatch obo:CHEBI_28685 .
+
+obo:CHEBI_61445 skos:exactMatch obo:CHEBI_53224 .
+
+obo:CHEBI_2566 skos:exactMatch obo:CHEBI_50647 .
+
+obo:CHEBI_26082 skos:exactMatch obo:CHEBI_28659 .
+
+obo:CHEBI_26677 skos:exactMatch obo:CHEBI_27573 .
+
+obo:CHEBI_27008 skos:exactMatch obo:CHEBI_27007 .
+
+obo:CHEBI_33304 skos:exactMatch obo:CHEBI_33303 .
+
+obo:CHEBI_2619 skos:exactMatch obo:CHEBI_48320 .
+
+obo:CHEBI_51388 skos:exactMatch obo:CHEBI_51425 .
+
+obo:CHEBI_26217 skos:exactMatch obo:CHEBI_26216 .
+
+obo:CHEBI_33296 skos:exactMatch obo:CHEBI_22314 .
+
+obo:CHEBI_26218 skos:exactMatch obo:CHEBI_29103 .
+
+obo:CHEBI_2638 skos:exactMatch obo:CHEBI_2637 .
+
+obo:CHEBI_2640 skos:exactMatch obo:CHEBI_2639 .
+
+obo:CHEBI_26469 skos:exactMatch obo:CHEBI_35267 .
+
+obo:CHEBI_2659 skos:exactMatch obo:CHEBI_28177 , obo:CHEBI_30347 .
+
+obo:CHEBI_64729 skos:exactMatch obo:CHEBI_29775 .
+
+obo:CHEBI_33582 skos:exactMatch obo:CHEBI_33306 .
+
+obo:CHEBI_2669 skos:exactMatch obo:CHEBI_2668 .
+
+obo:CHEBI_26709 skos:exactMatch obo:CHEBI_17137 .
+
+obo:CHEBI_26712 skos:exactMatch obo:CHEBI_26708 .
+
+obo:CHEBI_26714 skos:exactMatch obo:CHEBI_29101 .
+
+obo:CHEBI_26865 skos:exactMatch obo:CHEBI_33353 .
+
+obo:CHEBI_27275 skos:exactMatch obo:CHEBI_27698 .
+
+obo:CHEBI_33746 skos:exactMatch obo:CHEBI_33347 .
+
+obo:CHEBI_27364 skos:exactMatch obo:CHEBI_27363 .
+
+obo:CHEBI_2789 skos:exactMatch obo:CHEBI_2788 .
+
+obo:CHEBI_28017 skos:exactMatch obo:CHEBI_28102 , obo:CHEBI_28057 .
+
+obo:CHEBI_28199 skos:exactMatch obo:CHEBI_38150 .
+
+obo:CHEBI_282662 skos:exactMatch obo:CHEBI_41378 .
+
+obo:CHEBI_28384 skos:exactMatch obo:CHEBI_16374 , obo:CHEBI_18067 , obo:CHEBI_28869 .
+
+obo:CHEBI_28389 skos:exactMatch obo:CHEBI_46738 .
+
+obo:CHEBI_28510 skos:exactMatch obo:CHEBI_25863 .
+
+obo:CHEBI_28669 skos:exactMatch obo:CHEBI_35862 .
+
+obo:CHEBI_28786 skos:exactMatch obo:CHEBI_34905 .
+
+obo:CHEBI_60027 skos:exactMatch obo:CHEBI_33839 .
+
+obo:CHEBI_2911 skos:exactMatch obo:CHEBI_50686 .
+
+obo:CHEBI_50686 skos:exactMatch obo:CHEBI_50690 .
+
+obo:CHEBI_2915 skos:exactMatch obo:CHEBI_2914 .
+
+obo:CHEBI_29236 skos:exactMatch obo:CHEBI_24636 .
+
+obo:CHEBI_29237 skos:exactMatch obo:CHEBI_29233 .
+
+obo:CHEBI_29238 skos:exactMatch obo:CHEBI_29234 .
+
+obo:CHEBI_50096 skos:exactMatch obo:CHEBI_29822 .
+
+obo:CHEBI_29321 skos:exactMatch obo:CHEBI_7596 .
+
+obo:CHEBI_50492 skos:exactMatch obo:CHEBI_30256 .
+
+obo:CHEBI_46721 skos:exactMatch obo:CHEBI_41609 .
+
+obo:CHEBI_2947 skos:exactMatch obo:CHEBI_2946 .
+
+obo:CHEBI_2951 skos:exactMatch obo:CHEBI_2950 .
+
+obo:CHEBI_295756 skos:exactMatch obo:CHEBI_55325 .
+
+obo:CHEBI_2969 skos:exactMatch obo:CHEBI_2968 .
+
+obo:CHEBI_29699 skos:exactMatch obo:CHEBI_64248 , obo:CHEBI_64256 , obo:CHEBI_64246 , obo:CHEBI_64245 , obo:CHEBI_64250 , obo:CHEBI_64272 , obo:CHEBI_64271 , obo:CHEBI_64228 , obo:CHEBI_64257 , obo:CHEBI_64255 .
+
+obo:CHEBI_60201 skos:exactMatch obo:CHEBI_60200 .
+
+obo:CHEBI_30057 skos:exactMatch obo:CHEBI_49491 .
+
+obo:CHEBI_30058 skos:exactMatch obo:CHEBI_49491 .
+
+obo:CHEBI_36294 skos:exactMatch obo:CHEBI_5032 .
+
+obo:CHEBI_36296 skos:exactMatch obo:CHEBI_5020 .
+
+obo:CHEBI_47704 skos:exactMatch obo:CHEBI_28938 .
+
+obo:CHEBI_30070 skos:exactMatch obo:CHEBI_30368 .
+
+obo:CHEBI_30071 skos:exactMatch obo:CHEBI_49928 .
+
+obo:CHEBI_30115 skos:exactMatch obo:CHEBI_30114 .
+
+obo:CHEBI_30178 skos:exactMatch obo:CHEBI_30175 .
+
+obo:CHEBI_30213 skos:exactMatch obo:CHEBI_10545 , obo:CHEBI_30214 .
+
+obo:CHEBI_30215 skos:exactMatch obo:CHEBI_10545 , obo:CHEBI_30214 .
+
+obo:CHEBI_30218 skos:exactMatch obo:CHEBI_30220 .
+
+obo:CHEBI_30219 skos:exactMatch obo:CHEBI_30216 .
+
+obo:CHEBI_30224 skos:exactMatch obo:CHEBI_10545 , obo:CHEBI_30225 .
+
+obo:CHEBI_30409 skos:exactMatch obo:CHEBI_48796 .
+
+obo:CHEBI_37138 skos:exactMatch obo:CHEBI_30415 .
+
+obo:CHEBI_37111 skos:exactMatch obo:CHEBI_49631 .
+
+obo:CHEBI_37112 skos:exactMatch obo:CHEBI_30430 .
+
+obo:CHEBI_37110 skos:exactMatch obo:CHEBI_30440 .
+
+obo:CHEBI_36917 skos:exactMatch obo:CHEBI_33313 .
+
+obo:CHEBI_3049 skos:exactMatch obo:CHEBI_3048 .
+
+obo:CHEBI_3078 skos:exactMatch obo:CHEBI_68604 .
+
+obo:CHEBI_3085 skos:exactMatch obo:CHEBI_3084 .
+
+obo:CHEBI_30951 skos:exactMatch obo:CHEBI_18022 .
+
+obo:CHEBI_30952 skos:exactMatch obo:CHEBI_18022 .
+
+obo:CHEBI_310388 skos:exactMatch obo:CHEBI_100241 .
+
+obo:CHEBI_31163 skos:exactMatch obo:CHEBI_27690 , obo:CHEBI_50634 .
+
+obo:CHEBI_31185 skos:exactMatch obo:CHEBI_55313 .
+
+obo:CHEBI_31191 skos:exactMatch obo:CHEBI_51211 .
+
+obo:CHEBI_31204 skos:exactMatch obo:CHEBI_64703 .
+
+obo:CHEBI_31209 skos:exactMatch obo:CHEBI_28971 .
+
+obo:CHEBI_31228 skos:exactMatch obo:CHEBI_48538 .
+
+obo:CHEBI_31243 skos:exactMatch obo:CHEBI_37924 .
+
+obo:CHEBI_31260 skos:exactMatch obo:CHEBI_309594 .
+
+obo:CHEBI_31262 skos:exactMatch obo:CHEBI_64190 .
+
+obo:CHEBI_3128 skos:exactMatch obo:CHEBI_3127 .
+
+obo:CHEBI_31280 skos:exactMatch obo:CHEBI_59170 .
+
+obo:CHEBI_31282 skos:exactMatch obo:CHEBI_238698 .
+
+obo:CHEBI_31300 skos:exactMatch obo:CHEBI_51450 .
+
+obo:CHEBI_31322 skos:exactMatch obo:CHEBI_3215 .
+
+obo:CHEBI_31325 skos:exactMatch obo:CHEBI_3238 .
+
+obo:CHEBI_31332 skos:exactMatch obo:CHEBI_27732 .
+
+obo:CHEBI_31336 skos:exactMatch obo:CHEBI_58083 .
+
+obo:CHEBI_35156 skos:exactMatch obo:CHEBI_29108 .
+
+obo:CHEBI_3134 skos:exactMatch obo:CHEBI_3133 .
+
+obo:CHEBI_31353 skos:exactMatch obo:CHEBI_3398 .
+
+obo:CHEBI_31358 skos:exactMatch obo:CHEBI_52016 .
+
+obo:CHEBI_31363 skos:exactMatch obo:CHEBI_55492 .
+
+obo:CHEBI_31368 skos:exactMatch obo:CHEBI_59349 .
+
+obo:CHEBI_31370 skos:exactMatch obo:CHEBI_55490 .
+
+obo:CHEBI_31373 skos:exactMatch obo:CHEBI_59211 .
+
+obo:CHEBI_31374 skos:exactMatch obo:CHEBI_355510 .
+
+obo:CHEBI_31377 skos:exactMatch obo:CHEBI_59214 .
+
+obo:CHEBI_31384 skos:exactMatch obo:CHEBI_55494 .
+
+obo:CHEBI_31387 skos:exactMatch obo:CHEBI_59224 .
+
+obo:CHEBI_31398 skos:exactMatch obo:CHEBI_57603 , obo:CHEBI_453011 .
+
+obo:CHEBI_31410 skos:exactMatch obo:CHEBI_61153 .
+
+obo:CHEBI_31430 skos:exactMatch obo:CHEBI_681850 .
+
+obo:CHEBI_31440 skos:exactMatch obo:CHEBI_121741 , obo:CHEBI_23414 .
+
+obo:CHEBI_31455 skos:exactMatch obo:CHEBI_391960 .
+
+obo:CHEBI_31460 skos:exactMatch obo:CHEBI_4356 .
+
+obo:CHEBI_31472 skos:exactMatch obo:CHEBI_4466 .
+
+obo:CHEBI_48557 skos:exactMatch obo:CHEBI_48555 .
+
+obo:CHEBI_31487 skos:exactMatch obo:CHEBI_59919 .
+
+obo:CHEBI_31490 skos:exactMatch obo:CHEBI_59912 .
+
+obo:CHEBI_31508 skos:exactMatch obo:CHEBI_59788 .
+
+obo:CHEBI_31519 skos:exactMatch obo:CHEBI_36798 .
+
+obo:CHEBI_31520 skos:exactMatch obo:CHEBI_59837 .
+
+obo:CHEBI_59837 skos:exactMatch obo:CHEBI_681848 .
+
+obo:CHEBI_31526 skos:exactMatch obo:CHEBI_36795 .
+
+obo:CHEBI_36808 skos:exactMatch obo:CHEBI_36796 .
+
+obo:CHEBI_31554 skos:exactMatch obo:CHEBI_4822 .
+
+obo:CHEBI_31562 skos:exactMatch obo:CHEBI_68644 .
+
+obo:CHEBI_31568 skos:exactMatch obo:CHEBI_313639 .
+
+obo:CHEBI_31601 skos:exactMatch obo:CHEBI_149226 .
+
+obo:CHEBI_31602 skos:exactMatch obo:CHEBI_119915 .
+
+obo:CHEBI_31604 skos:exactMatch obo:CHEBI_16947 , obo:CHEBI_28938 , obo:CHEBI_29034 .
+
+obo:CHEBI_31615 skos:exactMatch obo:CHEBI_52037 .
+
+obo:CHEBI_31632 skos:exactMatch obo:CHEBI_61038 .
+
+obo:CHEBI_31633 skos:exactMatch obo:CHEBI_63108 , obo:CHEBI_63109 , obo:CHEBI_63111 .
+
+obo:CHEBI_63108 skos:exactMatch obo:CHEBI_63107 .
+
+obo:CHEBI_63109 skos:exactMatch obo:CHEBI_63110 .
+
+obo:CHEBI_31635 skos:exactMatch obo:CHEBI_53636 , obo:CHEBI_53637 , obo:CHEBI_53635 .
+
+obo:CHEBI_53636 skos:exactMatch obo:CHEBI_7508 .
+
+obo:CHEBI_53637 skos:exactMatch obo:CHEBI_53634 .
+
+obo:CHEBI_53635 skos:exactMatch obo:CHEBI_7489 .
+
+obo:CHEBI_31642 skos:exactMatch obo:CHEBI_37333 .
+
+obo:CHEBI_31647 skos:exactMatch obo:CHEBI_175901 .
+
+obo:CHEBI_31672 skos:exactMatch obo:CHEBI_5775 .
+
+obo:CHEBI_31680 skos:exactMatch obo:CHEBI_5818 , obo:CHEBI_50187 .
+
+obo:CHEBI_31690 skos:exactMatch obo:CHEBI_45783 .
+
+obo:CHEBI_3173 skos:exactMatch obo:CHEBI_3172 .
+
+obo:CHEBI_31767 skos:exactMatch obo:CHEBI_49807 .
+
+obo:CHEBI_31772 skos:exactMatch obo:CHEBI_6149 .
+
+obo:CHEBI_31776 skos:exactMatch obo:CHEBI_51164 .
+
+obo:CHEBI_31780 skos:exactMatch obo:CHEBI_47782 .
+
+obo:CHEBI_31795 skos:exactMatch obo:CHEBI_32599 .
+
+obo:CHEBI_31797 skos:exactMatch obo:CHEBI_35778 .
+
+obo:CHEBI_31812 skos:exactMatch obo:CHEBI_59731 , obo:CHEBI_59732 .
+
+obo:CHEBI_3182 skos:exactMatch obo:CHEBI_3181 .
+
+obo:CHEBI_31822 skos:exactMatch obo:CHEBI_50667 .
+
+obo:CHEBI_31836 skos:exactMatch obo:CHEBI_51856 .
+
+obo:CHEBI_3184 skos:exactMatch obo:CHEBI_3183 .
+
+obo:CHEBI_31843 skos:exactMatch obo:CHEBI_51137 .
+
+obo:CHEBI_31847 skos:exactMatch obo:CHEBI_73243 .
+
+obo:CHEBI_31899 skos:exactMatch obo:CHEBI_64218 , obo:CHEBI_64219 .
+
+obo:CHEBI_31973 skos:exactMatch obo:CHEBI_51355 .
+
+obo:CHEBI_51347 skos:exactMatch obo:CHEBI_51345 .
+
+obo:CHEBI_31987 skos:exactMatch obo:CHEBI_52428 .
+
+obo:CHEBI_32014 skos:exactMatch obo:CHEBI_8247 .
+
+obo:CHEBI_32038 skos:exactMatch obo:CHEBI_8354 .
+
+obo:CHEBI_32053 skos:exactMatch obo:CHEBI_8404 .
+
+obo:CHEBI_32062 skos:exactMatch obo:CHEBI_52435 .
+
+obo:CHEBI_32091 skos:exactMatch obo:CHEBI_8802 .
+
+obo:CHEBI_37126 skos:exactMatch obo:CHEBI_33322 .
+
+obo:CHEBI_32120 skos:exactMatch obo:CHEBI_59560 .
+
+obo:CHEBI_32124 skos:exactMatch obo:CHEBI_60810 .
+
+obo:CHEBI_32129 skos:exactMatch obo:CHEBI_33049 .
+
+obo:CHEBI_32138 skos:exactMatch obo:CHEBI_32954 .
+
+obo:CHEBI_32954 skos:exactMatch obo:CHEBI_30089 .
+
+obo:CHEBI_32139 skos:exactMatch obo:CHEBI_17544 .
+
+obo:CHEBI_32142 skos:exactMatch obo:CHEBI_53258 .
+
+obo:CHEBI_53258 skos:exactMatch obo:CHEBI_16947 .
+
+obo:CHEBI_32160 skos:exactMatch obo:CHEBI_52436 .
+
+obo:CHEBI_32170 skos:exactMatch obo:CHEBI_51770 .
+
+obo:CHEBI_32213 skos:exactMatch obo:CHEBI_37804 .
+
+obo:CHEBI_32216 skos:exactMatch obo:CHEBI_9544 .
+
+obo:CHEBI_37217 skos:exactMatch obo:CHEBI_33341 .
+
+obo:CHEBI_3224 skos:exactMatch obo:CHEBI_3223 .
+
+obo:CHEBI_32245 skos:exactMatch obo:CHEBI_9622 .
+
+obo:CHEBI_32259 skos:exactMatch obo:CHEBI_45951 .
+
+obo:CHEBI_32286 skos:exactMatch obo:CHEBI_51141 .
+
+obo:CHEBI_32293 skos:exactMatch obo:CHEBI_60779 , obo:CHEBI_60776 , obo:CHEBI_60775 , obo:CHEBI_60778 .
+
+obo:CHEBI_32296 skos:exactMatch obo:CHEBI_480999 .
+
+obo:CHEBI_32301 skos:exactMatch obo:CHEBI_50393 .
+
+obo:CHEBI_32312 skos:exactMatch obo:CHEBI_35176 .
+
+obo:CHEBI_32314 skos:exactMatch obo:CHEBI_10119 .
+
+obo:CHEBI_3241 skos:exactMatch obo:CHEBI_61263 .
+
+obo:CHEBI_3243 skos:exactMatch obo:CHEBI_3242 .
+
+obo:CHEBI_32583 skos:exactMatch obo:CHEBI_31346 .
+
+obo:CHEBI_32586 skos:exactMatch obo:CHEBI_32149 .
+
+obo:CHEBI_32598 skos:exactMatch obo:CHEBI_18361 .
+
+obo:CHEBI_32735 skos:exactMatch obo:CHEBI_30087 .
+
+obo:CHEBI_32915 skos:exactMatch obo:CHEBI_32914 .
+
+obo:CHEBI_33025 skos:exactMatch obo:CHEBI_33027 .
+
+obo:CHEBI_33026 skos:exactMatch obo:CHEBI_37593 .
+
+obo:CHEBI_3310 skos:exactMatch obo:CHEBI_30089 .
+
+obo:CHEBI_33112 skos:exactMatch obo:CHEBI_31767 .
+
+obo:CHEBI_3314 skos:exactMatch obo:CHEBI_59200 .
+
+obo:CHEBI_331697 skos:exactMatch obo:CHEBI_127342 .
+
+obo:CHEBI_36572 skos:exactMatch obo:CHEBI_17514 .
+
+obo:CHEBI_33234 skos:exactMatch obo:CHEBI_27013 .
+
+obo:CHEBI_33283 skos:exactMatch obo:CHEBI_18385 .
+
+obo:CHEBI_33290 skos:exactMatch obo:CHEBI_33229 , obo:CHEBI_33284 .
+
+obo:CHEBI_33674 skos:exactMatch obo:CHEBI_33559 .
+
+obo:CHEBI_33298 skos:exactMatch obo:CHEBI_30145 .
+
+obo:CHEBI_33305 skos:exactMatch obo:CHEBI_30452 .
+
+obo:CHEBI_33418 skos:exactMatch obo:CHEBI_36973 .
+
+obo:CHEBI_33497 skos:exactMatch obo:CHEBI_27081 .
+
+obo:CHEBI_33498 skos:exactMatch obo:CHEBI_33320 .
+
+obo:CHEBI_33677 skos:exactMatch obo:CHEBI_33562 .
+
+obo:CHEBI_33499 skos:exactMatch obo:CHEBI_27214 .
+
+obo:CHEBI_37129 skos:exactMatch obo:CHEBI_33323 .
+
+obo:CHEBI_33579 skos:exactMatch obo:CHEBI_33318 .
+
+obo:CHEBI_33583 skos:exactMatch obo:CHEBI_33309 .
+
+obo:CHEBI_33584 skos:exactMatch obo:CHEBI_30441 .
+
+obo:CHEBI_33585 skos:exactMatch obo:CHEBI_25016 .
+
+obo:CHEBI_33620 skos:exactMatch obo:CHEBI_28984 .
+
+obo:CHEBI_33676 skos:exactMatch obo:CHEBI_33561 .
+
+obo:CHEBI_33679 skos:exactMatch obo:CHEBI_30217 .
+
+obo:CHEBI_33742 skos:exactMatch obo:CHEBI_27998 .
+
+obo:CHEBI_33747 skos:exactMatch obo:CHEBI_33362 .
+
+obo:CHEBI_33748 skos:exactMatch obo:CHEBI_28112 .
+
+obo:CHEBI_33749 skos:exactMatch obo:CHEBI_33364 .
+
+obo:CHEBI_33767 skos:exactMatch obo:CHEBI_33358 .
+
+obo:CHEBI_33768 skos:exactMatch obo:CHEBI_33345 .
+
+obo:CHEBI_33773 skos:exactMatch obo:CHEBI_33335 .
+
+obo:CHEBI_33775 skos:exactMatch obo:CHEBI_33319 .
+
+obo:CHEBI_33780 skos:exactMatch obo:CHEBI_30501 .
+
+obo:CHEBI_33813 skos:exactMatch obo:CHEBI_33815 .
+
+obo:CHEBI_33887 skos:exactMatch obo:CHEBI_33359 .
+
+obo:CHEBI_33888 skos:exactMatch obo:CHEBI_27638 .
+
+obo:CHEBI_3395 skos:exactMatch obo:CHEBI_39585 .
+
+obo:CHEBI_33964 skos:exactMatch obo:CHEBI_30512 .
+
+obo:CHEBI_33969 skos:exactMatch obo:CHEBI_29287 .
+
+obo:CHEBI_37128 skos:exactMatch obo:CHEBI_30514 .
+
+obo:CHEBI_3404 skos:exactMatch obo:CHEBI_59205 , obo:CHEBI_46097 .
+
+obo:CHEBI_51456 skos:exactMatch obo:CHEBI_30364 .
+
+obo:CHEBI_3438 skos:exactMatch obo:CHEBI_61202 .
+
+obo:CHEBI_39444 skos:exactMatch obo:CHEBI_30105 .
+
+obo:CHEBI_34502 skos:exactMatch obo:CHEBI_59909 .
+
+obo:CHEBI_34535 skos:exactMatch obo:CHEBI_50658 .
+
+obo:CHEBI_34546 skos:exactMatch obo:CHEBI_2955 .
+
+obo:CHEBI_34609 skos:exactMatch obo:CHEBI_51897 .
+
+obo:CHEBI_34612 skos:exactMatch obo:CHEBI_51906 .
+
+obo:CHEBI_34617 skos:exactMatch obo:CHEBI_59358 .
+
+obo:CHEBI_34618 skos:exactMatch obo:CHEBI_3510 .
+
+obo:CHEBI_34650 skos:exactMatch obo:CHEBI_59661 , obo:CHEBI_59663 , obo:CHEBI_59664 .
+
+obo:CHEBI_37943 skos:exactMatch obo:CHEBI_59064 , obo:CHEBI_59673 .
+
+obo:CHEBI_59661 skos:exactMatch obo:CHEBI_59666 , obo:CHEBI_59667 .
+
+obo:CHEBI_59663 skos:exactMatch obo:CHEBI_59666 .
+
+obo:CHEBI_59664 skos:exactMatch obo:CHEBI_59667 .
+
+obo:CHEBI_34653 skos:exactMatch obo:CHEBI_38216 .
+
+obo:CHEBI_34659 skos:exactMatch obo:CHEBI_38895 .
+
+obo:CHEBI_34691 skos:exactMatch obo:CHEBI_52017 .
+
+obo:CHEBI_346954 skos:exactMatch obo:CHEBI_55321 .
+
+obo:CHEBI_34704 skos:exactMatch obo:CHEBI_59925 .
+
+obo:CHEBI_34706 skos:exactMatch obo:CHEBI_31487 , obo:CHEBI_31490 , obo:CHEBI_34502 , obo:CHEBI_34704 .
+
+obo:CHEBI_34720 skos:exactMatch obo:CHEBI_30762 , obo:CHEBI_4636 .
+
+obo:CHEBI_34730 skos:exactMatch obo:CHEBI_16236 , obo:CHEBI_652992 .
+
+obo:CHEBI_652992 skos:exactMatch obo:CHEBI_50845 .
+
+obo:CHEBI_347401 skos:exactMatch obo:CHEBI_52145 .
+
+obo:CHEBI_34789 skos:exactMatch obo:CHEBI_52059 .
+
+obo:CHEBI_3481 skos:exactMatch obo:CHEBI_73088 .
+
+obo:CHEBI_3483 skos:exactMatch obo:CHEBI_53657 .
+
+obo:CHEBI_34836 skos:exactMatch obo:CHEBI_52065 .
+
+obo:CHEBI_52065 skos:exactMatch obo:CHEBI_52064 .
+
+obo:CHEBI_3490 skos:exactMatch obo:CHEBI_52439 .
+
+obo:CHEBI_34912 skos:exactMatch obo:CHEBI_8028 .
+
+obo:CHEBI_3492 skos:exactMatch obo:CHEBI_52441 .
+
+obo:CHEBI_34932 skos:exactMatch obo:CHEBI_8435 .
+
+obo:CHEBI_34954 skos:exactMatch obo:CHEBI_60803 .
+
+obo:CHEBI_60803 skos:exactMatch obo:CHEBI_8890 .
+
+obo:CHEBI_34978 skos:exactMatch obo:CHEBI_51357 .
+
+obo:CHEBI_51357 skos:exactMatch obo:CHEBI_51350 .
+
+obo:CHEBI_3498 skos:exactMatch obo:CHEBI_53670 .
+
+obo:CHEBI_35017 skos:exactMatch obo:CHEBI_51811 .
+
+obo:CHEBI_35030 skos:exactMatch obo:CHEBI_30780 , obo:CHEBI_9738 .
+
+obo:CHEBI_3509 skos:exactMatch obo:CHEBI_3508 .
+
+obo:CHEBI_35095 skos:exactMatch obo:CHEBI_38898 .
+
+obo:CHEBI_61351 skos:exactMatch obo:CHEBI_38899 .
+
+obo:CHEBI_3512 skos:exactMatch obo:CHEBI_55498 .
+
+obo:CHEBI_35135 skos:exactMatch obo:CHEBI_30408 .
+
+obo:CHEBI_35137 skos:exactMatch obo:CHEBI_30413 .
+
+obo:CHEBI_37131 skos:exactMatch obo:CHEBI_33324 .
+
+obo:CHEBI_35204 skos:exactMatch obo:CHEBI_35209 .
+
+obo:CHEBI_35207 skos:exactMatch obo:CHEBI_35211 .
+
+obo:CHEBI_35276 skos:exactMatch obo:CHEBI_35274 .
+
+obo:CHEBI_35277 skos:exactMatch obo:CHEBI_35286 .
+
+obo:CHEBI_3535 skos:exactMatch obo:CHEBI_3534 .
+
+obo:CHEBI_3542 skos:exactMatch obo:CHEBI_124991 .
+
+obo:CHEBI_3545 skos:exactMatch obo:CHEBI_59217 .
+
+obo:CHEBI_354984 skos:exactMatch obo:CHEBI_3349 .
+
+obo:CHEBI_35511 skos:exactMatch obo:CHEBI_15571 .
+
+obo:CHEBI_3559 skos:exactMatch obo:CHEBI_406059 .
+
+obo:CHEBI_35607 skos:exactMatch obo:CHEBI_46442 .
+
+obo:CHEBI_35657 skos:exactMatch obo:CHEBI_35656 .
+
+obo:CHEBI_35659 skos:exactMatch obo:CHEBI_35658 .
+
+obo:CHEBI_51533 skos:exactMatch obo:CHEBI_51520 .
+
+obo:CHEBI_3566 skos:exactMatch obo:CHEBI_32915 .
+
+obo:CHEBI_3567 skos:exactMatch obo:CHEBI_39561 .
+
+obo:CHEBI_35696 skos:exactMatch obo:CHEBI_48828 .
+
+obo:CHEBI_35729 skos:exactMatch obo:CHEBI_33375 .
+
+obo:CHEBI_35732 skos:exactMatch obo:CHEBI_30687 .
+
+obo:CHEBI_35734 skos:exactMatch obo:CHEBI_30682 .
+
+obo:CHEBI_35864 skos:exactMatch obo:CHEBI_68613 .
+
+obo:CHEBI_35923 skos:exactMatch obo:CHEBI_29792 .
+
+obo:CHEBI_36049 skos:exactMatch obo:CHEBI_36048 .
+
+obo:CHEBI_36074 skos:exactMatch obo:CHEBI_36073 .
+
+obo:CHEBI_3612 skos:exactMatch obo:CHEBI_3611 .
+
+obo:CHEBI_36122 skos:exactMatch obo:CHEBI_31967 .
+
+obo:CHEBI_36273 skos:exactMatch obo:CHEBI_29746 .
+
+obo:CHEBI_36276 skos:exactMatch obo:CHEBI_36257 .
+
+obo:CHEBI_3637 skos:exactMatch obo:CHEBI_3636 .
+
+obo:CHEBI_36385 skos:exactMatch obo:CHEBI_36383 .
+
+obo:CHEBI_3649 skos:exactMatch obo:CHEBI_3647 .
+
+obo:CHEBI_365445 skos:exactMatch obo:CHEBI_60527 .
+
+obo:CHEBI_36587 skos:exactMatch obo:CHEBI_46629 .
+
+obo:CHEBI_51704 skos:exactMatch obo:CHEBI_51703 .
+
+obo:CHEBI_36804 skos:exactMatch obo:CHEBI_36802 .
+
+obo:CHEBI_36805 skos:exactMatch obo:CHEBI_36803 .
+
+obo:CHEBI_36806 skos:exactMatch obo:CHEBI_36797 .
+
+obo:CHEBI_36831 skos:exactMatch obo:CHEBI_29195 .
+
+obo:CHEBI_36907 skos:exactMatch obo:CHEBI_33310 .
+
+obo:CHEBI_36908 skos:exactMatch obo:CHEBI_49475 .
+
+obo:CHEBI_36909 skos:exactMatch obo:CHEBI_49696 .
+
+obo:CHEBI_36910 skos:exactMatch obo:CHEBI_49957 .
+
+obo:CHEBI_36911 skos:exactMatch obo:CHEBI_33314 .
+
+obo:CHEBI_36919 skos:exactMatch obo:CHEBI_30513 .
+
+obo:CHEBI_37133 skos:exactMatch obo:CHEBI_32594 .
+
+obo:CHEBI_37192 skos:exactMatch obo:CHEBI_37189 .
+
+obo:CHEBI_37196 skos:exactMatch obo:CHEBI_33301 .
+
+obo:CHEBI_37201 skos:exactMatch obo:CHEBI_33325 .
+
+obo:CHEBI_37202 skos:exactMatch obo:CHEBI_33330 .
+
+obo:CHEBI_37203 skos:exactMatch obo:CHEBI_33331 .
+
+obo:CHEBI_37215 skos:exactMatch obo:CHEBI_33336 .
+
+obo:CHEBI_37216 skos:exactMatch obo:CHEBI_33337 .
+
+obo:CHEBI_37218 skos:exactMatch obo:CHEBI_33342 .
+
+obo:CHEBI_37219 skos:exactMatch obo:CHEBI_33343 .
+
+obo:CHEBI_37220 skos:exactMatch obo:CHEBI_33346 .
+
+obo:CHEBI_37221 skos:exactMatch obo:CHEBI_33344 .
+
+obo:CHEBI_37222 skos:exactMatch obo:CHEBI_33348 .
+
+obo:CHEBI_37223 skos:exactMatch obo:CHEBI_33349 .
+
+obo:CHEBI_37224 skos:exactMatch obo:CHEBI_33351 .
+
+obo:CHEBI_37225 skos:exactMatch obo:CHEBI_49882 .
+
+obo:CHEBI_37226 skos:exactMatch obo:CHEBI_33355 .
+
+obo:CHEBI_37227 skos:exactMatch obo:CHEBI_33357 .
+
+obo:CHEBI_37228 skos:exactMatch obo:CHEBI_49666 .
+
+obo:CHEBI_37229 skos:exactMatch obo:CHEBI_33361 .
+
+obo:CHEBI_37230 skos:exactMatch obo:CHEBI_33363 .
+
+obo:CHEBI_37231 skos:exactMatch obo:CHEBI_33367 .
+
+obo:CHEBI_37232 skos:exactMatch obo:CHEBI_33368 .
+
+obo:CHEBI_37233 skos:exactMatch obo:CHEBI_33517 .
+
+obo:CHEBI_3724 skos:exactMatch obo:CHEBI_3723 .
+
+obo:CHEBI_37261 skos:exactMatch obo:CHEBI_33369 .
+
+obo:CHEBI_37266 skos:exactMatch obo:CHEBI_32999 .
+
+obo:CHEBI_37279 skos:exactMatch obo:CHEBI_49828 .
+
+obo:CHEBI_37280 skos:exactMatch obo:CHEBI_33372 .
+
+obo:CHEBI_37281 skos:exactMatch obo:CHEBI_33373 .
+
+obo:CHEBI_37282 skos:exactMatch obo:CHEBI_33374 .
+
+obo:CHEBI_37284 skos:exactMatch obo:CHEBI_33376 .
+
+obo:CHEBI_37295 skos:exactMatch obo:CHEBI_33377 .
+
+obo:CHEBI_37297 skos:exactMatch obo:CHEBI_49648 .
+
+obo:CHEBI_37298 skos:exactMatch obo:CHEBI_33379 .
+
+obo:CHEBI_37299 skos:exactMatch obo:CHEBI_33380 .
+
+obo:CHEBI_37300 skos:exactMatch obo:CHEBI_33381 .
+
+obo:CHEBI_37301 skos:exactMatch obo:CHEBI_33382 .
+
+obo:CHEBI_37302 skos:exactMatch obo:CHEBI_33385 .
+
+obo:CHEBI_37303 skos:exactMatch obo:CHEBI_33386 .
+
+obo:CHEBI_37305 skos:exactMatch obo:CHEBI_33387 .
+
+obo:CHEBI_37306 skos:exactMatch obo:CHEBI_33388 .
+
+obo:CHEBI_37307 skos:exactMatch obo:CHEBI_33389 .
+
+obo:CHEBI_37308 skos:exactMatch obo:CHEBI_33390 .
+
+obo:CHEBI_37309 skos:exactMatch obo:CHEBI_33391 .
+
+obo:CHEBI_37310 skos:exactMatch obo:CHEBI_33392 .
+
+obo:CHEBI_37311 skos:exactMatch obo:CHEBI_33393 .
+
+obo:CHEBI_37312 skos:exactMatch obo:CHEBI_33394 .
+
+obo:CHEBI_37313 skos:exactMatch obo:CHEBI_33395 .
+
+obo:CHEBI_37314 skos:exactMatch obo:CHEBI_33396 .
+
+obo:CHEBI_37315 skos:exactMatch obo:CHEBI_33397 .
+
+obo:CHEBI_3739 skos:exactMatch obo:CHEBI_3738 .
+
+obo:CHEBI_37402 skos:exactMatch obo:CHEBI_37401 .
+
+obo:CHEBI_3744 skos:exactMatch obo:CHEBI_3743 .
+
+obo:CHEBI_3753 skos:exactMatch obo:CHEBI_3752 .
+
+obo:CHEBI_3755 skos:exactMatch obo:CHEBI_64209 .
+
+obo:CHEBI_3759 skos:exactMatch obo:CHEBI_37941 .
+
+obo:CHEBI_3762 skos:exactMatch obo:CHEBI_59591 .
+
+obo:CHEBI_59591 skos:exactMatch obo:CHEBI_59590 .
+
+obo:CHEBI_37648 skos:exactMatch obo:CHEBI_6584 .
+
+obo:CHEBI_37664 skos:exactMatch obo:CHEBI_27475 .
+
+obo:CHEBI_3770 skos:exactMatch obo:CHEBI_9332 , obo:CHEBI_45924 .
+
+obo:CHEBI_37867 skos:exactMatch obo:CHEBI_231588 , obo:CHEBI_25629 .
+
+obo:CHEBI_38003 skos:exactMatch obo:CHEBI_37994 .
+
+obo:CHEBI_37995 skos:exactMatch obo:CHEBI_38006 .
+
+obo:CHEBI_38007 skos:exactMatch obo:CHEBI_38008 .
+
+obo:CHEBI_38021 skos:exactMatch obo:CHEBI_3978 .
+
+obo:CHEBI_38076 skos:exactMatch obo:CHEBI_37401 .
+
+obo:CHEBI_383703 skos:exactMatch obo:CHEBI_60585 .
+
+obo:CHEBI_38569 skos:exactMatch obo:CHEBI_38893 , obo:CHEBI_38894 .
+
+obo:CHEBI_38695 skos:exactMatch obo:CHEBI_16366 .
+
+obo:CHEBI_38697 skos:exactMatch obo:CHEBI_35218 .
+
+obo:CHEBI_38699 skos:exactMatch obo:CHEBI_18172 .
+
+obo:CHEBI_38701 skos:exactMatch obo:CHEBI_28436 .
+
+obo:CHEBI_38888 skos:exactMatch obo:CHEBI_38892 .
+
+obo:CHEBI_38892 skos:exactMatch obo:CHEBI_38889 .
+
+obo:CHEBI_39025 skos:exactMatch obo:CHEBI_47775 .
+
+obo:CHEBI_6495 skos:exactMatch obo:CHEBI_39015 .
+
+obo:CHEBI_39026 skos:exactMatch obo:CHEBI_47774 .
+
+obo:CHEBI_39027 skos:exactMatch obo:CHEBI_47773 , obo:CHEBI_47776 .
+
+obo:CHEBI_39077 skos:exactMatch obo:CHEBI_68617 .
+
+obo:CHEBI_39211 skos:exactMatch obo:CHEBI_9230 , obo:CHEBI_9232 .
+
+obo:CHEBI_39214 skos:exactMatch obo:CHEBI_29534 , obo:CHEBI_29537 .
+
+obo:CHEBI_39225 skos:exactMatch obo:CHEBI_39228 , obo:CHEBI_39229 .
+
+obo:CHEBI_39230 skos:exactMatch obo:CHEBI_39231 , obo:CHEBI_39232 .
+
+obo:CHEBI_39233 skos:exactMatch obo:CHEBI_39230 .
+
+obo:CHEBI_39289 skos:exactMatch obo:CHEBI_39288 .
+
+obo:CHEBI_51531 skos:exactMatch obo:CHEBI_51528 .
+
+obo:CHEBI_39314 skos:exactMatch obo:CHEBI_39309 , obo:CHEBI_39313 , obo:CHEBI_39310 , obo:CHEBI_39312 .
+
+obo:CHEBI_39325 skos:exactMatch obo:CHEBI_39323 , obo:CHEBI_39327 .
+
+obo:CHEBI_39331 skos:exactMatch obo:CHEBI_39335 , obo:CHEBI_39336 .
+
+obo:CHEBI_39332 skos:exactMatch obo:CHEBI_39335 , obo:CHEBI_39336 , obo:CHEBI_39337 , obo:CHEBI_39338 .
+
+obo:CHEBI_39333 skos:exactMatch obo:CHEBI_39337 , obo:CHEBI_39338 .
+
+obo:CHEBI_39334 skos:exactMatch obo:CHEBI_39336 , obo:CHEBI_39338 , obo:CHEBI_39340 , obo:CHEBI_39339 .
+
+obo:CHEBI_39389 skos:exactMatch obo:CHEBI_39372 , obo:CHEBI_39373 .
+
+obo:CHEBI_39440 skos:exactMatch obo:CHEBI_33534 .
+
+obo:CHEBI_39470 skos:exactMatch obo:CHEBI_39473 .
+
+obo:CHEBI_39483 skos:exactMatch obo:CHEBI_33141 .
+
+obo:CHEBI_3997 skos:exactMatch obo:CHEBI_3996 .
+
+obo:CHEBI_4025 skos:exactMatch obo:CHEBI_4024 .
+
+obo:CHEBI_4026 skos:exactMatch obo:CHEBI_4027 .
+
+obo:CHEBI_42719 skos:exactMatch obo:CHEBI_53702 .
+
+obo:CHEBI_433 skos:exactMatch obo:CHEBI_32434 .
+
+obo:CHEBI_4349 skos:exactMatch obo:CHEBI_23574 .
+
+obo:CHEBI_43755 skos:exactMatch obo:CHEBI_29967 , obo:CHEBI_32866 .
+
+obo:CHEBI_4379 skos:exactMatch obo:CHEBI_119573 .
+
+obo:CHEBI_4391 skos:exactMatch obo:CHEBI_59719 .
+
+obo:CHEBI_4449 skos:exactMatch obo:CHEBI_47781 .
+
+obo:CHEBI_4462 skos:exactMatch obo:CHEBI_68638 .
+
+obo:CHEBI_4508 skos:exactMatch obo:CHEBI_48311 .
+
+obo:CHEBI_4509 skos:exactMatch obo:CHEBI_48311 .
+
+obo:CHEBI_4515 skos:exactMatch obo:CHEBI_4514 .
+
+obo:CHEBI_4604 skos:exactMatch obo:CHEBI_4636 , obo:CHEBI_59778 .
+
+obo:CHEBI_4637 skos:exactMatch obo:CHEBI_4636 .
+
+obo:CHEBI_4647 skos:exactMatch obo:CHEBI_4646 .
+
+obo:CHEBI_46648 skos:exactMatch obo:CHEBI_16301 .
+
+obo:CHEBI_46659 skos:exactMatch obo:CHEBI_5956 .
+
+obo:CHEBI_4667 skos:exactMatch obo:CHEBI_39867 , obo:CHEBI_9925 .
+
+obo:CHEBI_9925 skos:exactMatch obo:CHEBI_60654 .
+
+obo:CHEBI_46692 skos:exactMatch obo:CHEBI_68611 .
+
+obo:CHEBI_4671 skos:exactMatch obo:CHEBI_4670 .
+
+obo:CHEBI_46758 skos:exactMatch obo:CHEBI_46757 .
+
+obo:CHEBI_46819 skos:exactMatch obo:CHEBI_46818 .
+
+obo:CHEBI_4696 skos:exactMatch obo:CHEBI_53289 .
+
+obo:CHEBI_4703 skos:exactMatch obo:CHEBI_4702 .
+
+obo:CHEBI_4706 skos:exactMatch obo:CHEBI_59818 , obo:CHEBI_59820 , obo:CHEBI_59822 .
+
+obo:CHEBI_4707 skos:exactMatch obo:CHEBI_4706 , obo:CHEBI_59823 , obo:CHEBI_59821 , obo:CHEBI_59819 .
+
+obo:CHEBI_4709 skos:exactMatch obo:CHEBI_4708 .
+
+obo:CHEBI_4725 skos:exactMatch obo:CHEBI_4724 .
+
+obo:CHEBI_4759 skos:exactMatch obo:CHEBI_251408 .
+
+obo:CHEBI_4785 skos:exactMatch obo:CHEBI_4784 .
+
+obo:CHEBI_48010 skos:exactMatch obo:CHEBI_48011 .
+
+obo:CHEBI_48296 skos:exactMatch obo:CHEBI_48311 , obo:CHEBI_48312 .
+
+obo:CHEBI_48340 skos:exactMatch obo:CHEBI_24366 .
+
+obo:CHEBI_48409 skos:exactMatch obo:CHEBI_4814 .
+
+obo:CHEBI_48454 skos:exactMatch obo:CHEBI_48596 .
+
+obo:CHEBI_48456 skos:exactMatch obo:CHEBI_48596 .
+
+obo:CHEBI_48457 skos:exactMatch obo:CHEBI_48598 .
+
+obo:CHEBI_48459 skos:exactMatch obo:CHEBI_48625 .
+
+obo:CHEBI_4846 skos:exactMatch obo:CHEBI_48913 .
+
+obo:CHEBI_48463 skos:exactMatch obo:CHEBI_48625 .
+
+obo:CHEBI_48478 skos:exactMatch obo:CHEBI_48625 .
+
+obo:CHEBI_48479 skos:exactMatch obo:CHEBI_48625 .
+
+obo:CHEBI_48485 skos:exactMatch obo:CHEBI_48510 .
+
+obo:CHEBI_48487 skos:exactMatch obo:CHEBI_48508 .
+
+obo:CHEBI_48488 skos:exactMatch obo:CHEBI_48508 .
+
+obo:CHEBI_48491 skos:exactMatch obo:CHEBI_48502 .
+
+obo:CHEBI_48492 skos:exactMatch obo:CHEBI_48499 .
+
+obo:CHEBI_48516 skos:exactMatch obo:CHEBI_48480 .
+
+obo:CHEBI_48523 skos:exactMatch obo:CHEBI_48625 .
+
+obo:CHEBI_48566 skos:exactMatch obo:CHEBI_9566 .
+
+obo:CHEBI_9566 skos:exactMatch obo:CHEBI_48563 .
+
+obo:CHEBI_4857 skos:exactMatch obo:CHEBI_4856 .
+
+obo:CHEBI_48601 skos:exactMatch obo:CHEBI_48604 .
+
+obo:CHEBI_48602 skos:exactMatch obo:CHEBI_17159 .
+
+obo:CHEBI_48603 skos:exactMatch obo:CHEBI_50447 .
+
+obo:CHEBI_48662 skos:exactMatch obo:CHEBI_48508 .
+
+obo:CHEBI_48665 skos:exactMatch obo:CHEBI_48508 .
+
+obo:CHEBI_48682 skos:exactMatch obo:CHEBI_48885 .
+
+obo:CHEBI_48685 skos:exactMatch obo:CHEBI_48885 .
+
+obo:CHEBI_48692 skos:exactMatch obo:CHEBI_48885 .
+
+obo:CHEBI_48693 skos:exactMatch obo:CHEBI_48885 .
+
+obo:CHEBI_48696 skos:exactMatch obo:CHEBI_48885 .
+
+obo:CHEBI_48699 skos:exactMatch obo:CHEBI_48885 .
+
+obo:CHEBI_4878 skos:exactMatch obo:CHEBI_4877 .
+
+obo:CHEBI_4883 skos:exactMatch obo:CHEBI_42478 .
+
+obo:CHEBI_488385 skos:exactMatch obo:CHEBI_55313 .
+
+obo:CHEBI_48883 skos:exactMatch obo:CHEBI_27953 .
+
+obo:CHEBI_48884 skos:exactMatch obo:CHEBI_30762 .
+
+obo:CHEBI_49105 skos:exactMatch obo:CHEBI_49107 .
+
+obo:CHEBI_49118 skos:exactMatch obo:CHEBI_21273 .
+
+obo:CHEBI_49119 skos:exactMatch obo:CHEBI_21386 .
+
+obo:CHEBI_49123 skos:exactMatch obo:CHEBI_21392 .
+
+obo:CHEBI_49133 skos:exactMatch obo:CHEBI_36939 .
+
+obo:CHEBI_49260 skos:exactMatch obo:CHEBI_32474 .
+
+obo:CHEBI_49553 skos:exactMatch obo:CHEBI_29036 .
+
+obo:CHEBI_50001 skos:exactMatch obo:CHEBI_50000 , obo:CHEBI_50002 .
+
+obo:CHEBI_50003 skos:exactMatch obo:CHEBI_32499 .
+
+obo:CHEBI_50011 skos:exactMatch obo:CHEBI_50012 .
+
+obo:CHEBI_5005 skos:exactMatch obo:CHEBI_5010 .
+
+obo:CHEBI_5010 skos:exactMatch obo:CHEBI_60566 .
+
+obo:CHEBI_50140 skos:exactMatch obo:CHEBI_6807 .
+
+obo:CHEBI_50142 skos:exactMatch obo:CHEBI_6804 .
+
+obo:CHEBI_50144 skos:exactMatch obo:CHEBI_15361 .
+
+obo:CHEBI_50162 skos:exactMatch obo:CHEBI_50161 .
+
+obo:CHEBI_50178 skos:exactMatch obo:CHEBI_3638 .
+
+obo:CHEBI_50190 skos:exactMatch obo:CHEBI_50189 .
+
+obo:CHEBI_50194 skos:exactMatch obo:CHEBI_50199 .
+
+obo:CHEBI_50213 skos:exactMatch obo:CHEBI_50318 .
+
+obo:CHEBI_50214 skos:exactMatch obo:CHEBI_50318 .
+
+obo:CHEBI_50224 skos:exactMatch obo:CHEBI_50223 .
+
+obo:CHEBI_50240 skos:exactMatch obo:CHEBI_8354 .
+
+obo:CHEBI_50270 skos:exactMatch obo:CHEBI_50358 .
+
+obo:CHEBI_50309 skos:exactMatch obo:CHEBI_50275 .
+
+obo:CHEBI_50362 skos:exactMatch obo:CHEBI_3699 .
+
+obo:CHEBI_50377 skos:exactMatch obo:CHEBI_4975 .
+
+obo:CHEBI_50386 skos:exactMatch obo:CHEBI_15193 .
+
+obo:CHEBI_50506 skos:exactMatch obo:CHEBI_8080 .
+
+obo:CHEBI_50512 skos:exactMatch obo:CHEBI_6456 .
+
+obo:CHEBI_50651 skos:exactMatch obo:CHEBI_25456 .
+
+obo:CHEBI_50652 skos:exactMatch obo:CHEBI_2674 .
+
+obo:CHEBI_50679 skos:exactMatch obo:CHEBI_50681 .
+
+obo:CHEBI_50682 skos:exactMatch obo:CHEBI_50680 .
+
+obo:CHEBI_50687 skos:exactMatch obo:CHEBI_64682 .
+
+obo:CHEBI_50697 skos:exactMatch obo:CHEBI_50694 .
+
+obo:CHEBI_50727 skos:exactMatch obo:CHEBI_50729 .
+
+obo:CHEBI_50731 skos:exactMatch obo:CHEBI_17303 .
+
+obo:CHEBI_50732 skos:exactMatch obo:CHEBI_15422 , obo:CHEBI_237958 .
+
+obo:CHEBI_50740 skos:exactMatch obo:CHEBI_8772 .
+
+obo:CHEBI_50806 skos:exactMatch obo:CHEBI_50594 .
+
+obo:CHEBI_50807 skos:exactMatch obo:CHEBI_50594 .
+
+obo:CHEBI_50813 skos:exactMatch obo:CHEBI_50594 .
+
+obo:CHEBI_5086 skos:exactMatch obo:CHEBI_30527 .
+
+obo:CHEBI_50863 skos:exactMatch obo:CHEBI_50861 .
+
+obo:CHEBI_5089 skos:exactMatch obo:CHEBI_61236 .
+
+obo:CHEBI_50928 skos:exactMatch obo:CHEBI_50924 .
+
+obo:CHEBI_50937 skos:exactMatch obo:CHEBI_50939 .
+
+obo:CHEBI_50986 skos:exactMatch obo:CHEBI_30157 .
+
+obo:CHEBI_51016 skos:exactMatch obo:CHEBI_5557 .
+
+obo:CHEBI_51017 skos:exactMatch obo:CHEBI_51016 .
+
+obo:CHEBI_51025 skos:exactMatch obo:CHEBI_51024 .
+
+obo:CHEBI_51030 skos:exactMatch obo:CHEBI_51029 .
+
+obo:CHEBI_51037 skos:exactMatch obo:CHEBI_51032 .
+
+obo:CHEBI_51040 skos:exactMatch obo:CHEBI_51038 .
+
+obo:CHEBI_51042 skos:exactMatch obo:CHEBI_51128 .
+
+obo:CHEBI_51044 skos:exactMatch obo:CHEBI_51043 .
+
+obo:CHEBI_51045 skos:exactMatch obo:CHEBI_3994 .
+
+obo:CHEBI_51063 skos:exactMatch obo:CHEBI_2679 .
+
+obo:CHEBI_51064 skos:exactMatch obo:CHEBI_4469 .
+
+obo:CHEBI_51082 skos:exactMatch obo:CHEBI_17632 .
+
+obo:CHEBI_51147 skos:exactMatch obo:CHEBI_51148 , obo:CHEBI_63218 .
+
+obo:CHEBI_51148 skos:exactMatch obo:CHEBI_63218 .
+
+obo:CHEBI_51157 skos:exactMatch obo:CHEBI_3175 .
+
+obo:CHEBI_51161 skos:exactMatch obo:CHEBI_8736 .
+
+obo:CHEBI_51176 skos:exactMatch obo:CHEBI_51174 .
+
+obo:CHEBI_51178 skos:exactMatch obo:CHEBI_51174 .
+
+obo:CHEBI_51179 skos:exactMatch obo:CHEBI_51173 .
+
+obo:CHEBI_51193 skos:exactMatch obo:CHEBI_18295 .
+
+obo:CHEBI_51198 skos:exactMatch obo:CHEBI_35449 .
+
+obo:CHEBI_51203 skos:exactMatch obo:CHEBI_35449 .
+
+obo:CHEBI_51213 skos:exactMatch obo:CHEBI_51210 .
+
+obo:CHEBI_51222 skos:exactMatch obo:CHEBI_52948 .
+
+obo:CHEBI_51224 skos:exactMatch obo:CHEBI_52947 .
+
+obo:CHEBI_51225 skos:exactMatch obo:CHEBI_52936 .
+
+obo:CHEBI_51240 skos:exactMatch obo:CHEBI_51246 .
+
+obo:CHEBI_51241 skos:exactMatch obo:CHEBI_51235 .
+
+obo:CHEBI_51254 skos:exactMatch obo:CHEBI_2676 .
+
+obo:CHEBI_51255 skos:exactMatch obo:CHEBI_51256 .
+
+obo:CHEBI_51330 skos:exactMatch obo:CHEBI_51329 .
+
+obo:CHEBI_51342 skos:exactMatch obo:CHEBI_50658 .
+
+obo:CHEBI_51343 skos:exactMatch obo:CHEBI_50658 .
+
+obo:CHEBI_51351 skos:exactMatch obo:CHEBI_51350 .
+
+obo:CHEBI_51352 skos:exactMatch obo:CHEBI_51354 .
+
+obo:CHEBI_51404 skos:exactMatch obo:CHEBI_51428 .
+
+obo:CHEBI_51416 skos:exactMatch obo:CHEBI_51421 .
+
+obo:CHEBI_51431 skos:exactMatch obo:CHEBI_51448 .
+
+obo:CHEBI_51436 skos:exactMatch obo:CHEBI_31941 , obo:CHEBI_51434 .
+
+obo:CHEBI_51441 skos:exactMatch obo:CHEBI_51435 , obo:CHEBI_51439 .
+
+obo:CHEBI_5147 skos:exactMatch obo:CHEBI_408174 , obo:CHEBI_63081 .
+
+obo:CHEBI_63111 skos:exactMatch obo:CHEBI_63107 , obo:CHEBI_63110 .
+
+obo:CHEBI_51484 skos:exactMatch obo:CHEBI_45791 , obo:CHEBI_52791 .
+
+obo:CHEBI_51502 skos:exactMatch obo:CHEBI_52786 .
+
+obo:CHEBI_51529 skos:exactMatch obo:CHEBI_51518 .
+
+obo:CHEBI_51530 skos:exactMatch obo:CHEBI_51519 .
+
+obo:CHEBI_51532 skos:exactMatch obo:CHEBI_51527 .
+
+obo:CHEBI_51534 skos:exactMatch obo:CHEBI_51521 .
+
+obo:CHEBI_51535 skos:exactMatch obo:CHEBI_51526 .
+
+obo:CHEBI_51536 skos:exactMatch obo:CHEBI_51525 .
+
+obo:CHEBI_51537 skos:exactMatch obo:CHEBI_51523 .
+
+obo:CHEBI_51538 skos:exactMatch obo:CHEBI_51524 .
+
+obo:CHEBI_51556 skos:exactMatch obo:CHEBI_33037 .
+
+obo:CHEBI_51557 skos:exactMatch obo:CHEBI_30329 .
+
+obo:CHEBI_51558 skos:exactMatch obo:CHEBI_30329 .
+
+obo:CHEBI_51559 skos:exactMatch obo:CHEBI_30329 .
+
+obo:CHEBI_51561 skos:exactMatch obo:CHEBI_30329 .
+
+obo:CHEBI_51563 skos:exactMatch obo:CHEBI_30056 .
+
+obo:CHEBI_51564 skos:exactMatch obo:CHEBI_30056 .
+
+obo:CHEBI_51565 skos:exactMatch obo:CHEBI_30056 .
+
+obo:CHEBI_51566 skos:exactMatch obo:CHEBI_30056 .
+
+obo:CHEBI_51567 skos:exactMatch obo:CHEBI_36569 .
+
+obo:CHEBI_51568 skos:exactMatch obo:CHEBI_36576 .
+
+obo:CHEBI_51600 skos:exactMatch obo:CHEBI_52783 .
+
+obo:CHEBI_51607 skos:exactMatch obo:CHEBI_52946 .
+
+obo:CHEBI_51619 skos:exactMatch obo:CHEBI_59678 , obo:CHEBI_59677 .
+
+obo:CHEBI_51639 skos:exactMatch obo:CHEBI_45791 , obo:CHEBI_51638 .
+
+obo:CHEBI_5164 skos:exactMatch obo:CHEBI_59125 .
+
+obo:CHEBI_51697 skos:exactMatch obo:CHEBI_51699 .
+
+obo:CHEBI_51700 skos:exactMatch obo:CHEBI_51699 .
+
+obo:CHEBI_51739 skos:exactMatch obo:CHEBI_52788 .
+
+obo:CHEBI_51742 skos:exactMatch obo:CHEBI_52789 .
+
+obo:CHEBI_51746 skos:exactMatch obo:CHEBI_45791 , obo:CHEBI_63290 .
+
+obo:CHEBI_51753 skos:exactMatch obo:CHEBI_52790 .
+
+obo:CHEBI_51761 skos:exactMatch obo:CHEBI_51762 .
+
+obo:CHEBI_51765 skos:exactMatch obo:CHEBI_51354 .
+
+obo:CHEBI_51787 skos:exactMatch obo:CHEBI_52792 .
+
+obo:CHEBI_51799 skos:exactMatch obo:CHEBI_471744 .
+
+obo:CHEBI_51801 skos:exactMatch obo:CHEBI_52793 .
+
+obo:CHEBI_51812 skos:exactMatch obo:CHEBI_52795 .
+
+obo:CHEBI_51816 skos:exactMatch obo:CHEBI_52796 .
+
+obo:CHEBI_51818 skos:exactMatch obo:CHEBI_52797 .
+
+obo:CHEBI_51821 skos:exactMatch obo:CHEBI_52799 .
+
+obo:CHEBI_51823 skos:exactMatch obo:CHEBI_52798 .
+
+obo:CHEBI_51825 skos:exactMatch obo:CHEBI_52800 .
+
+obo:CHEBI_51829 skos:exactMatch obo:CHEBI_52801 .
+
+obo:CHEBI_51864 skos:exactMatch obo:CHEBI_51863 .
+
+obo:CHEBI_51876 skos:exactMatch obo:CHEBI_51874 .
+
+obo:CHEBI_51878 skos:exactMatch obo:CHEBI_52802 .
+
+obo:CHEBI_51882 skos:exactMatch obo:CHEBI_52803 .
+
+obo:CHEBI_51895 skos:exactMatch obo:CHEBI_52806 .
+
+obo:CHEBI_51898 skos:exactMatch obo:CHEBI_52807 .
+
+obo:CHEBI_51899 skos:exactMatch obo:CHEBI_52805 .
+
+obo:CHEBI_51901 skos:exactMatch obo:CHEBI_52813 .
+
+obo:CHEBI_51902 skos:exactMatch obo:CHEBI_52814 .
+
+obo:CHEBI_51919 skos:exactMatch obo:CHEBI_7448 .
+
+obo:CHEBI_7448 skos:exactMatch obo:CHEBI_51918 .
+
+obo:CHEBI_51943 skos:exactMatch obo:CHEBI_52815 .
+
+obo:CHEBI_51946 skos:exactMatch obo:CHEBI_52821 .
+
+obo:CHEBI_51947 skos:exactMatch obo:CHEBI_63291 .
+
+obo:CHEBI_51948 skos:exactMatch obo:CHEBI_52822 .
+
+obo:CHEBI_51949 skos:exactMatch obo:CHEBI_63292 .
+
+obo:CHEBI_51952 skos:exactMatch obo:CHEBI_52823 .
+
+obo:CHEBI_51956 skos:exactMatch obo:CHEBI_52824 .
+
+obo:CHEBI_51957 skos:exactMatch obo:CHEBI_63293 .
+
+obo:CHEBI_51966 skos:exactMatch obo:CHEBI_52825 .
+
+obo:CHEBI_51968 skos:exactMatch obo:CHEBI_63294 .
+
+obo:CHEBI_51969 skos:exactMatch obo:CHEBI_63295 .
+
+obo:CHEBI_51974 skos:exactMatch obo:CHEBI_52827 .
+
+obo:CHEBI_51977 skos:exactMatch obo:CHEBI_52830 .
+
+obo:CHEBI_51980 skos:exactMatch obo:CHEBI_52833 .
+
+obo:CHEBI_51981 skos:exactMatch obo:CHEBI_63246 .
+
+obo:CHEBI_51982 skos:exactMatch obo:CHEBI_63297 .
+
+obo:CHEBI_51984 skos:exactMatch obo:CHEBI_52834 .
+
+obo:CHEBI_51986 skos:exactMatch obo:CHEBI_52835 .
+
+obo:CHEBI_51992 skos:exactMatch obo:CHEBI_45825 .
+
+obo:CHEBI_52019 skos:exactMatch obo:CHEBI_34691 .
+
+obo:CHEBI_52024 skos:exactMatch obo:CHEBI_52816 .
+
+obo:CHEBI_52027 skos:exactMatch obo:CHEBI_52817 .
+
+obo:CHEBI_52029 skos:exactMatch obo:CHEBI_52818 .
+
+obo:CHEBI_52032 skos:exactMatch obo:CHEBI_52819 .
+
+obo:CHEBI_52033 skos:exactMatch obo:CHEBI_52820 .
+
+obo:CHEBI_52040 skos:exactMatch obo:CHEBI_31615 .
+
+obo:CHEBI_52053 skos:exactMatch obo:CHEBI_52836 .
+
+obo:CHEBI_52055 skos:exactMatch obo:CHEBI_52843 .
+
+obo:CHEBI_52063 skos:exactMatch obo:CHEBI_52062 .
+
+obo:CHEBI_52067 skos:exactMatch obo:CHEBI_52066 .
+
+obo:CHEBI_52068 skos:exactMatch obo:CHEBI_52067 .
+
+obo:CHEBI_52072 skos:exactMatch obo:CHEBI_52844 .
+
+obo:CHEBI_52077 skos:exactMatch obo:CHEBI_52850 .
+
+obo:CHEBI_52078 skos:exactMatch obo:CHEBI_52856 .
+
+obo:CHEBI_52081 skos:exactMatch obo:CHEBI_52860 .
+
+obo:CHEBI_52083 skos:exactMatch obo:CHEBI_52861 .
+
+obo:CHEBI_52096 skos:exactMatch obo:CHEBI_52092 .
+
+obo:CHEBI_52097 skos:exactMatch obo:CHEBI_52862 .
+
+obo:CHEBI_52098 skos:exactMatch obo:CHEBI_52863 .
+
+obo:CHEBI_52099 skos:exactMatch obo:CHEBI_52864 .
+
+obo:CHEBI_52100 skos:exactMatch obo:CHEBI_52865 .
+
+obo:CHEBI_52101 skos:exactMatch obo:CHEBI_52866 .
+
+obo:CHEBI_52102 skos:exactMatch obo:CHEBI_22885 .
+
+obo:CHEBI_52103 skos:exactMatch obo:CHEBI_52867 .
+
+obo:CHEBI_52104 skos:exactMatch obo:CHEBI_52868 .
+
+obo:CHEBI_52106 skos:exactMatch obo:CHEBI_63298 .
+
+obo:CHEBI_52115 skos:exactMatch obo:CHEBI_52114 .
+
+obo:CHEBI_52122 skos:exactMatch obo:CHEBI_52870 .
+
+obo:CHEBI_52129 skos:exactMatch obo:CHEBI_52872 .
+
+obo:CHEBI_52134 skos:exactMatch obo:CHEBI_52132 .
+
+obo:CHEBI_52139 skos:exactMatch obo:CHEBI_51354 .
+
+obo:CHEBI_52147 skos:exactMatch obo:CHEBI_52146 .
+
+obo:CHEBI_52150 skos:exactMatch obo:CHEBI_52149 .
+
+obo:CHEBI_52151 skos:exactMatch obo:CHEBI_51354 .
+
+obo:CHEBI_52154 skos:exactMatch obo:CHEBI_51354 .
+
+obo:CHEBI_52161 skos:exactMatch obo:CHEBI_52160 .
+
+obo:CHEBI_52155 skos:exactMatch obo:CHEBI_9494 .
+
+obo:CHEBI_52163 skos:exactMatch obo:CHEBI_52168 .
+
+obo:CHEBI_52164 skos:exactMatch obo:CHEBI_52168 .
+
+obo:CHEBI_52167 skos:exactMatch obo:CHEBI_52166 .
+
+obo:CHEBI_52173 skos:exactMatch obo:CHEBI_51355 .
+
+obo:CHEBI_52174 skos:exactMatch obo:CHEBI_52171 .
+
+obo:CHEBI_52175 skos:exactMatch obo:CHEBI_52873 .
+
+obo:CHEBI_52176 skos:exactMatch obo:CHEBI_52874 .
+
+obo:CHEBI_52177 skos:exactMatch obo:CHEBI_52875 .
+
+obo:CHEBI_52179 skos:exactMatch obo:CHEBI_52876 .
+
+obo:CHEBI_52191 skos:exactMatch obo:CHEBI_52186 .
+
+obo:CHEBI_52195 skos:exactMatch obo:CHEBI_52878 .
+
+obo:CHEBI_52218 skos:exactMatch obo:CHEBI_52877 .
+
+obo:CHEBI_52219 skos:exactMatch obo:CHEBI_52887 .
+
+obo:CHEBI_52237 skos:exactMatch obo:CHEBI_52885 .
+
+obo:CHEBI_52238 skos:exactMatch obo:CHEBI_52886 .
+
+obo:CHEBI_52250 skos:exactMatch obo:CHEBI_137041 , obo:CHEBI_15854 .
+
+obo:CHEBI_52251 skos:exactMatch obo:CHEBI_52250 .
+
+obo:CHEBI_52252 skos:exactMatch obo:CHEBI_52889 .
+
+obo:CHEBI_52256 skos:exactMatch obo:CHEBI_52890 .
+
+obo:CHEBI_52259 skos:exactMatch obo:CHEBI_52891 .
+
+obo:CHEBI_52260 skos:exactMatch obo:CHEBI_52892 .
+
+obo:CHEBI_52261 skos:exactMatch obo:CHEBI_52904 .
+
+obo:CHEBI_52263 skos:exactMatch obo:CHEBI_52905 .
+
+obo:CHEBI_52264 skos:exactMatch obo:CHEBI_52906 .
+
+obo:CHEBI_52266 skos:exactMatch obo:CHEBI_52907 .
+
+obo:CHEBI_52273 skos:exactMatch obo:CHEBI_52919 .
+
+obo:CHEBI_52275 skos:exactMatch obo:CHEBI_52921 .
+
+obo:CHEBI_52281 skos:exactMatch obo:CHEBI_52282 .
+
+obo:CHEBI_52291 skos:exactMatch obo:CHEBI_52923 .
+
+obo:CHEBI_52293 skos:exactMatch obo:CHEBI_52924 .
+
+obo:CHEBI_52294 skos:exactMatch obo:CHEBI_52926 .
+
+obo:CHEBI_52295 skos:exactMatch obo:CHEBI_52926 .
+
+obo:CHEBI_52296 skos:exactMatch obo:CHEBI_52927 .
+
+obo:CHEBI_52297 skos:exactMatch obo:CHEBI_52928 .
+
+obo:CHEBI_52298 skos:exactMatch obo:CHEBI_52929 .
+
+obo:CHEBI_52299 skos:exactMatch obo:CHEBI_52930 .
+
+obo:CHEBI_52311 skos:exactMatch obo:CHEBI_52312 .
+
+obo:CHEBI_52315 skos:exactMatch obo:CHEBI_52893 .
+
+obo:CHEBI_52334 skos:exactMatch obo:CHEBI_52896 .
+
+obo:CHEBI_52336 skos:exactMatch obo:CHEBI_52933 .
+
+obo:CHEBI_52358 skos:exactMatch obo:CHEBI_30351 , obo:CHEBI_52931 .
+
+obo:CHEBI_52931 skos:exactMatch obo:CHEBI_30351 .
+
+obo:CHEBI_52359 skos:exactMatch obo:CHEBI_52932 .
+
+obo:CHEBI_52363 skos:exactMatch obo:CHEBI_51140 .
+
+obo:CHEBI_52434 skos:exactMatch obo:CHEBI_52438 .
+
+obo:CHEBI_52446 skos:exactMatch obo:CHEBI_52527 , obo:CHEBI_52525 .
+
+obo:CHEBI_52662 skos:exactMatch obo:CHEBI_52953 .
+
+obo:CHEBI_52663 skos:exactMatch obo:CHEBI_52954 .
+
+obo:CHEBI_52677 skos:exactMatch obo:CHEBI_45791 , obo:CHEBI_52955 .
+
+obo:CHEBI_52694 skos:exactMatch obo:CHEBI_52804 .
+
+obo:CHEBI_52695 skos:exactMatch obo:CHEBI_52958 .
+
+obo:CHEBI_52723 skos:exactMatch obo:CHEBI_36409 .
+
+obo:CHEBI_52725 skos:exactMatch obo:CHEBI_52740 .
+
+obo:CHEBI_52727 skos:exactMatch obo:CHEBI_52728 .
+
+obo:CHEBI_52751 skos:exactMatch obo:CHEBI_52967 .
+
+obo:CHEBI_52771 skos:exactMatch obo:CHEBI_52920 .
+
+obo:CHEBI_52780 skos:exactMatch obo:CHEBI_52935 .
+
+obo:CHEBI_52781 skos:exactMatch obo:CHEBI_52812 .
+
+obo:CHEBI_53001 skos:exactMatch obo:CHEBI_49786 .
+
+obo:CHEBI_53078 skos:exactMatch obo:CHEBI_50339 .
+
+obo:CHEBI_53083 skos:exactMatch obo:CHEBI_24712 .
+
+obo:CHEBI_53084 skos:exactMatch obo:CHEBI_24712 .
+
+obo:CHEBI_53188 skos:exactMatch obo:CHEBI_9948 .
+
+obo:CHEBI_53233 skos:exactMatch obo:CHEBI_53238 .
+
+obo:CHEBI_53269 skos:exactMatch obo:CHEBI_68632 .
+
+obo:CHEBI_53286 skos:exactMatch obo:CHEBI_68620 .
+
+obo:CHEBI_53311 skos:exactMatch obo:CHEBI_58187 .
+
+obo:CHEBI_53350 skos:exactMatch obo:CHEBI_53069 .
+
+obo:CHEBI_53367 skos:exactMatch obo:CHEBI_53432 .
+
+obo:CHEBI_53437 skos:exactMatch obo:CHEBI_53001 .
+
+obo:CHEBI_53438 skos:exactMatch obo:CHEBI_29034 .
+
+obo:CHEBI_53442 skos:exactMatch obo:CHEBI_53351 .
+
+obo:CHEBI_53444 skos:exactMatch obo:CHEBI_33141 .
+
+obo:CHEBI_53452 skos:exactMatch obo:CHEBI_53510 .
+
+obo:CHEBI_53466 skos:exactMatch obo:CHEBI_24281 .
+
+obo:CHEBI_53470 skos:exactMatch obo:CHEBI_48828 .
+
+obo:CHEBI_53471 skos:exactMatch obo:CHEBI_49544 .
+
+obo:CHEBI_53472 skos:exactMatch obo:CHEBI_49552 .
+
+obo:CHEBI_53473 skos:exactMatch obo:CHEBI_30502 .
+
+obo:CHEBI_53474 skos:exactMatch obo:CHEBI_49713 .
+
+obo:CHEBI_53502 skos:exactMatch obo:CHEBI_53473 .
+
+obo:CHEBI_53503 skos:exactMatch obo:CHEBI_35696 .
+
+obo:CHEBI_53504 skos:exactMatch obo:CHEBI_53001 .
+
+obo:CHEBI_53509 skos:exactMatch obo:CHEBI_114785 .
+
+obo:CHEBI_53542 skos:exactMatch obo:CHEBI_34887 .
+
+obo:CHEBI_53553 skos:exactMatch obo:CHEBI_53552 .
+
+obo:CHEBI_53558 skos:exactMatch obo:CHEBI_16855 .
+
+obo:CHEBI_53581 skos:exactMatch obo:CHEBI_39561 .
+
+obo:CHEBI_53622 skos:exactMatch obo:CHEBI_53623 .
+
+obo:CHEBI_53633 skos:exactMatch obo:CHEBI_18019 .
+
+obo:CHEBI_53667 skos:exactMatch obo:CHEBI_3479 .
+
+obo:CHEBI_53675 skos:exactMatch obo:CHEBI_3508 .
+
+obo:CHEBI_53692 skos:exactMatch obo:CHEBI_59731 .
+
+obo:CHEBI_53696 skos:exactMatch obo:CHEBI_32761 .
+
+obo:CHEBI_53730 skos:exactMatch obo:CHEBI_53733 .
+
+obo:CHEBI_53731 skos:exactMatch obo:CHEBI_53734 .
+
+obo:CHEBI_53749 skos:exactMatch obo:CHEBI_101853 .
+
+obo:CHEBI_53750 skos:exactMatch obo:CHEBI_480999 .
+
+obo:CHEBI_53757 skos:exactMatch obo:CHEBI_10119 .
+
+obo:CHEBI_53767 skos:exactMatch obo:CHEBI_53787 .
+
+obo:CHEBI_53777 skos:exactMatch obo:CHEBI_601027 .
+
+obo:CHEBI_53779 skos:exactMatch obo:CHEBI_53778 .
+
+obo:CHEBI_53781 skos:exactMatch obo:CHEBI_520985 .
+
+obo:CHEBI_53783 skos:exactMatch obo:CHEBI_253342 .
+
+obo:CHEBI_53785 skos:exactMatch obo:CHEBI_64320 .
+
+obo:CHEBI_53786 skos:exactMatch obo:CHEBI_64320 .
+
+obo:CHEBI_5516 skos:exactMatch obo:CHEBI_35863 , obo:CHEBI_35864 .
+
+obo:CHEBI_55316 skos:exactMatch obo:CHEBI_15355 .
+
+obo:CHEBI_55317 skos:exactMatch obo:CHEBI_46020 .
+
+obo:CHEBI_55318 skos:exactMatch obo:CHEBI_55319 .
+
+obo:CHEBI_55326 skos:exactMatch obo:CHEBI_347401 .
+
+obo:CHEBI_55340 skos:exactMatch obo:CHEBI_17303 .
+
+obo:CHEBI_55341 skos:exactMatch obo:CHEBI_53793 .
+
+obo:CHEBI_55343 skos:exactMatch obo:CHEBI_53797 .
+
+obo:CHEBI_55345 skos:exactMatch obo:CHEBI_142290 .
+
+obo:CHEBI_55348 skos:exactMatch obo:CHEBI_55340 .
+
+obo:CHEBI_553542 skos:exactMatch obo:CHEBI_5956 .
+
+obo:CHEBI_55368 skos:exactMatch obo:CHEBI_28925 .
+
+obo:CHEBI_55387 skos:exactMatch obo:CHEBI_55390 .
+
+obo:CHEBI_55388 skos:exactMatch obo:CHEBI_30081 .
+
+obo:CHEBI_55440 skos:exactMatch obo:CHEBI_53705 .
+
+obo:CHEBI_55442 skos:exactMatch obo:CHEBI_55441 .
+
+obo:CHEBI_55445 skos:exactMatch obo:CHEBI_37603 .
+
+obo:CHEBI_55473 skos:exactMatch obo:CHEBI_53704 .
+
+obo:CHEBI_55524 skos:exactMatch obo:CHEBI_222828 .
+
+obo:CHEBI_55539 skos:exactMatch obo:CHEBI_357241 .
+
+obo:CHEBI_5556 skos:exactMatch obo:CHEBI_72602 .
+
+obo:CHEBI_5697 skos:exactMatch obo:CHEBI_45021 .
+
+obo:CHEBI_61469 skos:exactMatch obo:CHEBI_53309 .
+
+obo:CHEBI_5780 skos:exactMatch obo:CHEBI_5779 .
+
+obo:CHEBI_5781 skos:exactMatch obo:CHEBI_68633 .
+
+obo:CHEBI_5791 skos:exactMatch obo:CHEBI_5790 .
+
+obo:CHEBI_60164 skos:exactMatch obo:CHEBI_53368 .
+
+obo:CHEBI_5819 skos:exactMatch obo:CHEBI_5818 .
+
+obo:CHEBI_5882 skos:exactMatch obo:CHEBI_47499 .
+
+obo:CHEBI_58987 skos:exactMatch obo:CHEBI_9139 .
+
+obo:CHEBI_58994 skos:exactMatch obo:CHEBI_15600 .
+
+obo:CHEBI_59008 skos:exactMatch obo:CHEBI_57603 , obo:CHEBI_59009 .
+
+obo:CHEBI_59033 skos:exactMatch obo:CHEBI_62086 .
+
+obo:CHEBI_59043 skos:exactMatch obo:CHEBI_29967 .
+
+obo:CHEBI_59067 skos:exactMatch obo:CHEBI_59068 .
+
+obo:CHEBI_59164 skos:exactMatch obo:CHEBI_59165 .
+
+obo:CHEBI_59167 skos:exactMatch obo:CHEBI_553827 .
+
+obo:CHEBI_59169 skos:exactMatch obo:CHEBI_3044 .
+
+obo:CHEBI_59171 skos:exactMatch obo:CHEBI_3112 .
+
+obo:CHEBI_59176 skos:exactMatch obo:CHEBI_59175 .
+
+obo:CHEBI_59177 skos:exactMatch obo:CHEBI_59178 .
+
+obo:CHEBI_59199 skos:exactMatch obo:CHEBI_3310 .
+
+obo:CHEBI_59223 skos:exactMatch obo:CHEBI_59219 .
+
+obo:CHEBI_59247 skos:exactMatch obo:CHEBI_59248 .
+
+obo:CHEBI_643228 skos:exactMatch obo:CHEBI_3082 .
+
+obo:CHEBI_59273 skos:exactMatch obo:CHEBI_59269 .
+
+obo:CHEBI_59330 skos:exactMatch obo:CHEBI_59329 .
+
+obo:CHEBI_59337 skos:exactMatch obo:CHEBI_59338 .
+
+obo:CHEBI_59390 skos:exactMatch obo:CHEBI_59392 .
+
+obo:CHEBI_59495 skos:exactMatch obo:CHEBI_3696 .
+
+obo:CHEBI_59511 skos:exactMatch obo:CHEBI_59512 .
+
+obo:CHEBI_59522 skos:exactMatch obo:CHEBI_59520 .
+
+obo:CHEBI_59523 skos:exactMatch obo:CHEBI_59521 .
+
+obo:CHEBI_59556 skos:exactMatch obo:CHEBI_52910 .
+
+obo:CHEBI_5957 skos:exactMatch obo:CHEBI_46659 .
+
+obo:CHEBI_59586 skos:exactMatch obo:CHEBI_59585 .
+
+obo:CHEBI_59587 skos:exactMatch obo:CHEBI_59586 .
+
+obo:CHEBI_59599 skos:exactMatch obo:CHEBI_59594 .
+
+obo:CHEBI_59602 skos:exactMatch obo:CHEBI_3814 .
+
+obo:CHEBI_59604 skos:exactMatch obo:CHEBI_30119 .
+
+obo:CHEBI_59606 skos:exactMatch obo:CHEBI_30119 .
+
+obo:CHEBI_59608 skos:exactMatch obo:CHEBI_30118 .
+
+obo:CHEBI_59649 skos:exactMatch obo:CHEBI_599440 .
+
+obo:CHEBI_59658 skos:exactMatch obo:CHEBI_59657 .
+
+obo:CHEBI_59662 skos:exactMatch obo:CHEBI_59669 , obo:CHEBI_59671 .
+
+obo:CHEBI_59690 skos:exactMatch obo:CHEBI_59688 .
+
+obo:CHEBI_59691 skos:exactMatch obo:CHEBI_59689 .
+
+obo:CHEBI_59693 skos:exactMatch obo:CHEBI_59692 .
+
+obo:CHEBI_59695 skos:exactMatch obo:CHEBI_4046 .
+
+obo:CHEBI_59709 skos:exactMatch obo:CHEBI_59706 .
+
+obo:CHEBI_59710 skos:exactMatch obo:CHEBI_59707 .
+
+obo:CHEBI_59715 skos:exactMatch obo:CHEBI_59712 .
+
+obo:CHEBI_59716 skos:exactMatch obo:CHEBI_59712 .
+
+obo:CHEBI_59725 skos:exactMatch obo:CHEBI_4392 .
+
+obo:CHEBI_59726 skos:exactMatch obo:CHEBI_4450 .
+
+obo:CHEBI_59728 skos:exactMatch obo:CHEBI_59726 .
+
+obo:CHEBI_59729 skos:exactMatch obo:CHEBI_5000 .
+
+obo:CHEBI_59730 skos:exactMatch obo:CHEBI_439329 .
+
+obo:CHEBI_59733 skos:exactMatch obo:CHEBI_53691 .
+
+obo:CHEBI_59735 skos:exactMatch obo:CHEBI_247956 .
+
+obo:CHEBI_59756 skos:exactMatch obo:CHEBI_4562 .
+
+obo:CHEBI_59757 skos:exactMatch obo:CHEBI_4562 .
+
+obo:CHEBI_59784 skos:exactMatch obo:CHEBI_4639 .
+
+obo:CHEBI_59790 skos:exactMatch obo:CHEBI_4534 .
+
+obo:CHEBI_59809 skos:exactMatch obo:CHEBI_4672 .
+
+obo:CHEBI_59812 skos:exactMatch obo:CHEBI_30780 , obo:CHEBI_31515 .
+
+obo:CHEBI_59849 skos:exactMatch obo:CHEBI_4753 .
+
+obo:CHEBI_59862 skos:exactMatch obo:CHEBI_59860 .
+
+obo:CHEBI_59865 skos:exactMatch obo:CHEBI_4779 .
+
+obo:CHEBI_59877 skos:exactMatch obo:CHEBI_4786 .
+
+obo:CHEBI_59880 skos:exactMatch obo:CHEBI_4788 .
+
+obo:CHEBI_59900 skos:exactMatch obo:CHEBI_474180 .
+
+obo:CHEBI_59902 skos:exactMatch obo:CHEBI_473990 .
+
+obo:CHEBI_59936 skos:exactMatch obo:CHEBI_310388 .
+
+obo:CHEBI_59938 skos:exactMatch obo:CHEBI_310388 .
+
+obo:CHEBI_59960 skos:exactMatch obo:CHEBI_63203 , obo:CHEBI_63205 .
+
+obo:CHEBI_60029 skos:exactMatch obo:CHEBI_37997 .
+
+obo:CHEBI_60030 skos:exactMatch obo:CHEBI_17246 .
+
+obo:CHEBI_60034 skos:exactMatch obo:CHEBI_53226 .
+
+obo:CHEBI_60031 skos:exactMatch obo:CHEBI_53225 .
+
+obo:CHEBI_60036 skos:exactMatch obo:CHEBI_55315 .
+
+obo:CHEBI_60070 skos:exactMatch obo:CHEBI_60071 .
+
+obo:CHEBI_60096 skos:exactMatch obo:CHEBI_15943 .
+
+obo:CHEBI_60124 skos:exactMatch obo:CHEBI_60127 .
+
+obo:CHEBI_60128 skos:exactMatch obo:CHEBI_60130 .
+
+obo:CHEBI_60132 skos:exactMatch obo:CHEBI_60133 .
+
+obo:CHEBI_60134 skos:exactMatch obo:CHEBI_60138 .
+
+obo:CHEBI_60135 skos:exactMatch obo:CHEBI_53707 .
+
+obo:CHEBI_60137 skos:exactMatch obo:CHEBI_53714 .
+
+obo:CHEBI_60139 skos:exactMatch obo:CHEBI_53708 .
+
+obo:CHEBI_60140 skos:exactMatch obo:CHEBI_53672 .
+
+obo:CHEBI_60141 skos:exactMatch obo:CHEBI_53588 .
+
+obo:CHEBI_60143 skos:exactMatch obo:CHEBI_51349 .
+
+obo:CHEBI_60142 skos:exactMatch obo:CHEBI_60146 .
+
+obo:CHEBI_60144 skos:exactMatch obo:CHEBI_53589 .
+
+obo:CHEBI_60145 skos:exactMatch obo:CHEBI_53573 .
+
+obo:CHEBI_60147 skos:exactMatch obo:CHEBI_30118 .
+
+obo:CHEBI_60148 skos:exactMatch obo:CHEBI_53567 .
+
+obo:CHEBI_60149 skos:exactMatch obo:CHEBI_60150 .
+
+obo:CHEBI_60153 skos:exactMatch obo:CHEBI_17696 , obo:CHEBI_27915 .
+
+obo:CHEBI_60154 skos:exactMatch obo:CHEBI_53570 .
+
+obo:CHEBI_60155 skos:exactMatch obo:CHEBI_53568 .
+
+obo:CHEBI_60157 skos:exactMatch obo:CHEBI_53569 .
+
+obo:CHEBI_60159 skos:exactMatch obo:CHEBI_53407 .
+
+obo:CHEBI_60160 skos:exactMatch obo:CHEBI_26178 .
+
+obo:CHEBI_60161 skos:exactMatch obo:CHEBI_53403 .
+
+obo:CHEBI_60163 skos:exactMatch obo:CHEBI_53428 .
+
+obo:CHEBI_60165 skos:exactMatch obo:CHEBI_53414 .
+
+obo:CHEBI_60166 skos:exactMatch obo:CHEBI_53415 .
+
+obo:CHEBI_60183 skos:exactMatch obo:CHEBI_53404 .
+
+obo:CHEBI_60184 skos:exactMatch obo:CHEBI_53418 .
+
+obo:CHEBI_60185 skos:exactMatch obo:CHEBI_53405 .
+
+obo:CHEBI_60269 skos:exactMatch obo:CHEBI_141644 .
+
+obo:CHEBI_60505 skos:exactMatch obo:CHEBI_53724 .
+
+obo:CHEBI_60506 skos:exactMatch obo:CHEBI_53591 .
+
+obo:CHEBI_60507 skos:exactMatch obo:CHEBI_53599 .
+
+obo:CHEBI_60508 skos:exactMatch obo:CHEBI_53596 .
+
+obo:CHEBI_60509 skos:exactMatch obo:CHEBI_53592 .
+
+obo:CHEBI_60510 skos:exactMatch obo:CHEBI_53593 .
+
+obo:CHEBI_60511 skos:exactMatch obo:CHEBI_53597 .
+
+obo:CHEBI_60512 skos:exactMatch obo:CHEBI_53601 .
+
+obo:CHEBI_60513 skos:exactMatch obo:CHEBI_53598 .
+
+obo:CHEBI_60516 skos:exactMatch obo:CHEBI_53594 .
+
+obo:CHEBI_60517 skos:exactMatch obo:CHEBI_53595 .
+
+obo:CHEBI_60526 skos:exactMatch obo:CHEBI_53373 .
+
+obo:CHEBI_60533 skos:exactMatch obo:CHEBI_53374 .
+
+obo:CHEBI_60534 skos:exactMatch obo:CHEBI_53375 .
+
+obo:CHEBI_60550 skos:exactMatch obo:CHEBI_53223 .
+
+obo:CHEBI_60551 skos:exactMatch obo:CHEBI_53372 .
+
+obo:CHEBI_60552 skos:exactMatch obo:CHEBI_53331 .
+
+obo:CHEBI_60553 skos:exactMatch obo:CHEBI_53540 .
+
+obo:CHEBI_60554 skos:exactMatch obo:CHEBI_53332 .
+
+obo:CHEBI_60555 skos:exactMatch obo:CHEBI_53344 .
+
+obo:CHEBI_60556 skos:exactMatch obo:CHEBI_55309 .
+
+obo:CHEBI_60577 skos:exactMatch obo:CHEBI_53260 .
+
+obo:CHEBI_60578 skos:exactMatch obo:CHEBI_53357 .
+
+obo:CHEBI_60579 skos:exactMatch obo:CHEBI_30623 .
+
+obo:CHEBI_60580 skos:exactMatch obo:CHEBI_53356 .
+
+obo:CHEBI_60581 skos:exactMatch obo:CHEBI_53261 .
+
+obo:CHEBI_60582 skos:exactMatch obo:CHEBI_53314 .
+
+obo:CHEBI_60586 skos:exactMatch obo:CHEBI_53718 .
+
+obo:CHEBI_60588 skos:exactMatch obo:CHEBI_53315 .
+
+obo:CHEBI_60590 skos:exactMatch obo:CHEBI_53347 .
+
+obo:CHEBI_60591 skos:exactMatch obo:CHEBI_53603 .
+
+obo:CHEBI_60592 skos:exactMatch obo:CHEBI_53316 .
+
+obo:CHEBI_60594 skos:exactMatch obo:CHEBI_53371 .
+
+obo:CHEBI_60595 skos:exactMatch obo:CHEBI_53355 .
+
+obo:CHEBI_60612 skos:exactMatch obo:CHEBI_53342 .
+
+obo:CHEBI_60613 skos:exactMatch obo:CHEBI_53288 .
+
+obo:CHEBI_60614 skos:exactMatch obo:CHEBI_53266 .
+
+obo:CHEBI_60616 skos:exactMatch obo:CHEBI_53222 .
+
+obo:CHEBI_60617 skos:exactMatch obo:CHEBI_53446 .
+
+obo:CHEBI_60618 skos:exactMatch obo:CHEBI_53602 .
+
+obo:CHEBI_60619 skos:exactMatch obo:CHEBI_53386 .
+
+obo:CHEBI_60620 skos:exactMatch obo:CHEBI_53229 .
+
+obo:CHEBI_60621 skos:exactMatch obo:CHEBI_53308 .
+
+obo:CHEBI_60622 skos:exactMatch obo:CHEBI_53228 .
+
+obo:CHEBI_60641 skos:exactMatch obo:CHEBI_724125 .
+
+obo:CHEBI_60648 skos:exactMatch obo:CHEBI_50845 .
+
+obo:CHEBI_60651 skos:exactMatch obo:CHEBI_63488 .
+
+obo:CHEBI_60667 skos:exactMatch obo:CHEBI_53322 .
+
+obo:CHEBI_60678 skos:exactMatch obo:CHEBI_53297 .
+
+obo:CHEBI_60680 skos:exactMatch obo:CHEBI_53302 .
+
+obo:CHEBI_60681 skos:exactMatch obo:CHEBI_53304 .
+
+obo:CHEBI_60682 skos:exactMatch obo:CHEBI_53303 .
+
+obo:CHEBI_60683 skos:exactMatch obo:CHEBI_53359 .
+
+obo:CHEBI_60684 skos:exactMatch obo:CHEBI_53323 .
+
+obo:CHEBI_60685 skos:exactMatch obo:CHEBI_53318 .
+
+obo:CHEBI_60686 skos:exactMatch obo:CHEBI_53319 .
+
+obo:CHEBI_60708 skos:exactMatch obo:CHEBI_53564 .
+
+obo:CHEBI_60709 skos:exactMatch obo:CHEBI_53320 .
+
+obo:CHEBI_60710 skos:exactMatch obo:CHEBI_53312 .
+
+obo:CHEBI_60711 skos:exactMatch obo:CHEBI_53313 .
+
+obo:CHEBI_60712 skos:exactMatch obo:CHEBI_53296 .
+
+obo:CHEBI_60713 skos:exactMatch obo:CHEBI_53267 .
+
+obo:CHEBI_60720 skos:exactMatch obo:CHEBI_48123 .
+
+obo:CHEBI_60734 skos:exactMatch obo:CHEBI_53264 .
+
+obo:CHEBI_60735 skos:exactMatch obo:CHEBI_53265 .
+
+obo:CHEBI_60736 skos:exactMatch obo:CHEBI_53200 .
+
+obo:CHEBI_60737 skos:exactMatch obo:CHEBI_53284 .
+
+obo:CHEBI_60740 skos:exactMatch obo:CHEBI_53281 .
+
+obo:CHEBI_60741 skos:exactMatch obo:CHEBI_53283 .
+
+obo:CHEBI_60742 skos:exactMatch obo:CHEBI_53282 .
+
+obo:CHEBI_60743 skos:exactMatch obo:CHEBI_53255 .
+
+obo:CHEBI_60744 skos:exactMatch obo:CHEBI_53256 .
+
+obo:CHEBI_60746 skos:exactMatch obo:CHEBI_51134 .
+
+obo:CHEBI_60753 skos:exactMatch obo:CHEBI_53253 .
+
+obo:CHEBI_60754 skos:exactMatch obo:CHEBI_53254 .
+
+obo:CHEBI_60755 skos:exactMatch obo:CHEBI_53780 .
+
+obo:CHEBI_60756 skos:exactMatch obo:CHEBI_53671 .
+
+obo:CHEBI_60757 skos:exactMatch obo:CHEBI_53566 .
+
+obo:CHEBI_60758 skos:exactMatch obo:CHEBI_53537 .
+
+obo:CHEBI_60759 skos:exactMatch obo:CHEBI_53429 .
+
+obo:CHEBI_60764 skos:exactMatch obo:CHEBI_53416 .
+
+obo:CHEBI_60765 skos:exactMatch obo:CHEBI_53410 .
+
+obo:CHEBI_60766 skos:exactMatch obo:CHEBI_53656 .
+
+obo:CHEBI_60773 skos:exactMatch obo:CHEBI_60774 .
+
+obo:CHEBI_6078 skos:exactMatch obo:CHEBI_63941 , obo:CHEBI_63943 .
+
+obo:CHEBI_60787 skos:exactMatch obo:CHEBI_9599 .
+
+obo:CHEBI_60789 skos:exactMatch obo:CHEBI_31322 .
+
+obo:CHEBI_60791 skos:exactMatch obo:CHEBI_50512 .
+
+obo:CHEBI_60800 skos:exactMatch obo:CHEBI_60799 .
+
+obo:CHEBI_650657 skos:exactMatch obo:CHEBI_6121 .
+
+obo:CHEBI_60804 skos:exactMatch obo:CHEBI_53310 .
+
+obo:CHEBI_60808 skos:exactMatch obo:CHEBI_60589 .
+
+obo:CHEBI_60814 skos:exactMatch obo:CHEBI_60587 .
+
+obo:CHEBI_60850 skos:exactMatch obo:CHEBI_60840 , obo:CHEBI_60842 .
+
+obo:CHEBI_60852 skos:exactMatch obo:CHEBI_60845 , obo:CHEBI_60846 .
+
+obo:CHEBI_60851 skos:exactMatch obo:CHEBI_60843 , obo:CHEBI_60844 .
+
+obo:CHEBI_60853 skos:exactMatch obo:CHEBI_60848 , obo:CHEBI_60849 .
+
+obo:CHEBI_60864 skos:exactMatch obo:CHEBI_60859 , obo:CHEBI_60861 .
+
+obo:CHEBI_60865 skos:exactMatch obo:CHEBI_60855 , obo:CHEBI_60856 .
+
+obo:CHEBI_60866 skos:exactMatch obo:CHEBI_60857 , obo:CHEBI_60858 .
+
+obo:CHEBI_60867 skos:exactMatch obo:CHEBI_60862 , obo:CHEBI_60863 .
+
+obo:CHEBI_60868 skos:exactMatch obo:CHEBI_27110 .
+
+obo:CHEBI_60881 skos:exactMatch obo:CHEBI_53719 .
+
+obo:CHEBI_60882 skos:exactMatch obo:CHEBI_51135 .
+
+obo:CHEBI_60883 skos:exactMatch obo:CHEBI_53234 .
+
+obo:CHEBI_60884 skos:exactMatch obo:CHEBI_53301 .
+
+obo:CHEBI_60891 skos:exactMatch obo:CHEBI_53300 .
+
+obo:CHEBI_60896 skos:exactMatch obo:CHEBI_53381 .
+
+obo:CHEBI_60902 skos:exactMatch obo:CHEBI_7789 .
+
+obo:CHEBI_60906 skos:exactMatch obo:CHEBI_61172 , obo:CHEBI_6899 .
+
+obo:CHEBI_6899 skos:exactMatch obo:CHEBI_61170 .
+
+obo:CHEBI_60937 skos:exactMatch obo:CHEBI_6997 .
+
+obo:CHEBI_61005 skos:exactMatch obo:CHEBI_61162 .
+
+obo:CHEBI_61039 skos:exactMatch obo:CHEBI_61041 .
+
+obo:CHEBI_6104 skos:exactMatch obo:CHEBI_17630 , obo:CHEBI_28098 , obo:CHEBI_28185 , obo:CHEBI_72797 , obo:CHEBI_73079 .
+
+obo:CHEBI_61040 skos:exactMatch obo:CHEBI_17996 , obo:CHEBI_18132 .
+
+obo:CHEBI_61045 skos:exactMatch obo:CHEBI_61046 .
+
+obo:CHEBI_61052 skos:exactMatch obo:CHEBI_61054 .
+
+obo:CHEBI_61057 skos:exactMatch obo:CHEBI_61049 .
+
+obo:CHEBI_6109 skos:exactMatch obo:CHEBI_17630 .
+
+obo:CHEBI_61151 skos:exactMatch obo:CHEBI_16960 .
+
+obo:CHEBI_61176 skos:exactMatch obo:CHEBI_61177 .
+
+obo:CHEBI_61178 skos:exactMatch obo:CHEBI_53402 .
+
+obo:CHEBI_61180 skos:exactMatch obo:CHEBI_53736 .
+
+obo:CHEBI_61181 skos:exactMatch obo:CHEBI_53739 .
+
+obo:CHEBI_61182 skos:exactMatch obo:CHEBI_53738 .
+
+obo:CHEBI_61183 skos:exactMatch obo:CHEBI_53737 .
+
+obo:CHEBI_61184 skos:exactMatch obo:CHEBI_53585 .
+
+obo:CHEBI_61193 skos:exactMatch obo:CHEBI_61192 .
+
+obo:CHEBI_61208 skos:exactMatch obo:CHEBI_61207 .
+
+obo:CHEBI_61217 skos:exactMatch obo:CHEBI_61220 .
+
+obo:CHEBI_61219 skos:exactMatch obo:CHEBI_45652 .
+
+obo:CHEBI_61223 skos:exactMatch obo:CHEBI_53584 .
+
+obo:CHEBI_61225 skos:exactMatch obo:CHEBI_61219 .
+
+obo:CHEBI_61226 skos:exactMatch obo:CHEBI_61228 .
+
+obo:CHEBI_61239 skos:exactMatch obo:CHEBI_53497 .
+
+obo:CHEBI_61241 skos:exactMatch obo:CHEBI_53625 .
+
+obo:CHEBI_61242 skos:exactMatch obo:CHEBI_53583 .
+
+obo:CHEBI_61244 skos:exactMatch obo:CHEBI_53377 .
+
+obo:CHEBI_61245 skos:exactMatch obo:CHEBI_53361 .
+
+obo:CHEBI_61256 skos:exactMatch obo:CHEBI_53363 .
+
+obo:CHEBI_61257 skos:exactMatch obo:CHEBI_53362 .
+
+obo:CHEBI_61259 skos:exactMatch obo:CHEBI_53382 .
+
+obo:CHEBI_61260 skos:exactMatch obo:CHEBI_53346 .
+
+obo:CHEBI_61271 skos:exactMatch obo:CHEBI_61269 .
+
+obo:CHEBI_61272 skos:exactMatch obo:CHEBI_61271 .
+
+obo:CHEBI_613010 skos:exactMatch obo:CHEBI_60056 .
+
+obo:CHEBI_61324 skos:exactMatch obo:CHEBI_61322 .
+
+obo:CHEBI_61327 skos:exactMatch obo:CHEBI_61326 .
+
+obo:CHEBI_61335 skos:exactMatch obo:CHEBI_61333 .
+
+obo:CHEBI_61340 skos:exactMatch obo:CHEBI_61337 .
+
+obo:CHEBI_61342 skos:exactMatch obo:CHEBI_61341 .
+
+obo:CHEBI_61348 skos:exactMatch obo:CHEBI_61347 .
+
+obo:CHEBI_61350 skos:exactMatch obo:CHEBI_61349 .
+
+obo:CHEBI_61353 skos:exactMatch obo:CHEBI_53345 .
+
+obo:CHEBI_61354 skos:exactMatch obo:CHEBI_53343 .
+
+obo:CHEBI_61358 skos:exactMatch obo:CHEBI_53298 .
+
+obo:CHEBI_61359 skos:exactMatch obo:CHEBI_53241 .
+
+obo:CHEBI_61361 skos:exactMatch obo:CHEBI_53321 .
+
+obo:CHEBI_61363 skos:exactMatch obo:CHEBI_53317 .
+
+obo:CHEBI_61364 skos:exactMatch obo:CHEBI_53299 .
+
+obo:CHEBI_61365 skos:exactMatch obo:CHEBI_53269 .
+
+obo:CHEBI_61369 skos:exactMatch obo:CHEBI_53205 .
+
+obo:CHEBI_61370 skos:exactMatch obo:CHEBI_53287 .
+
+obo:CHEBI_61371 skos:exactMatch obo:CHEBI_53221 .
+
+obo:CHEBI_61372 skos:exactMatch obo:CHEBI_51133 .
+
+obo:CHEBI_61373 skos:exactMatch obo:CHEBI_53804 .
+
+obo:CHEBI_61374 skos:exactMatch obo:CHEBI_53805 .
+
+obo:CHEBI_61376 skos:exactMatch obo:CHEBI_53803 .
+
+obo:CHEBI_61408 skos:exactMatch obo:CHEBI_53673 .
+
+obo:CHEBI_61412 skos:exactMatch obo:CHEBI_53522 .
+
+obo:CHEBI_61415 skos:exactMatch obo:CHEBI_53518 .
+
+obo:CHEBI_61416 skos:exactMatch obo:CHEBI_53401 .
+
+obo:CHEBI_61418 skos:exactMatch obo:CHEBI_53720 .
+
+obo:CHEBI_61419 skos:exactMatch obo:CHEBI_53689 .
+
+obo:CHEBI_61420 skos:exactMatch obo:CHEBI_53590 .
+
+obo:CHEBI_61421 skos:exactMatch obo:CHEBI_27602 .
+
+obo:CHEBI_61422 skos:exactMatch obo:CHEBI_53710 .
+
+obo:CHEBI_61423 skos:exactMatch obo:CHEBI_53683 .
+
+obo:CHEBI_61424 skos:exactMatch obo:CHEBI_53684 .
+
+obo:CHEBI_61427 skos:exactMatch obo:CHEBI_53681 .
+
+obo:CHEBI_61428 skos:exactMatch obo:CHEBI_53682 .
+
+obo:CHEBI_61431 skos:exactMatch obo:CHEBI_53393 .
+
+obo:CHEBI_61432 skos:exactMatch obo:CHEBI_53394 .
+
+obo:CHEBI_61433 skos:exactMatch obo:CHEBI_53201 .
+
+obo:CHEBI_61434 skos:exactMatch obo:CHEBI_53202 .
+
+obo:CHEBI_61435 skos:exactMatch obo:CHEBI_53364 .
+
+obo:CHEBI_61436 skos:exactMatch obo:CHEBI_55307 .
+
+obo:CHEBI_61438 skos:exactMatch obo:CHEBI_55308 .
+
+obo:CHEBI_61439 skos:exactMatch obo:CHEBI_53365 .
+
+obo:CHEBI_61441 skos:exactMatch obo:CHEBI_53366 .
+
+obo:CHEBI_61442 skos:exactMatch obo:CHEBI_58580 .
+
+obo:CHEBI_61443 skos:exactMatch obo:CHEBI_60473 .
+
+obo:CHEBI_61444 skos:exactMatch obo:CHEBI_53376 .
+
+obo:CHEBI_61446 skos:exactMatch obo:CHEBI_53369 .
+
+obo:CHEBI_61452 skos:exactMatch obo:CHEBI_53259 .
+
+obo:CHEBI_61453 skos:exactMatch obo:CHEBI_53257 .
+
+obo:CHEBI_61458 skos:exactMatch obo:CHEBI_59830 .
+
+obo:CHEBI_61459 skos:exactMatch obo:CHEBI_48140 .
+
+obo:CHEBI_61461 skos:exactMatch obo:CHEBI_53565 .
+
+obo:CHEBI_61464 skos:exactMatch obo:CHEBI_53333 .
+
+obo:CHEBI_61465 skos:exactMatch obo:CHEBI_53334 .
+
+obo:CHEBI_61466 skos:exactMatch obo:CHEBI_48137 .
+
+obo:CHEBI_61468 skos:exactMatch obo:CHEBI_31498 .
+
+obo:CHEBI_61474 skos:exactMatch obo:CHEBI_53194 .
+
+obo:CHEBI_61475 skos:exactMatch obo:CHEBI_53723 .
+
+obo:CHEBI_61476 skos:exactMatch obo:CHEBI_53197 .
+
+obo:CHEBI_61477 skos:exactMatch obo:CHEBI_53198 .
+
+obo:CHEBI_61479 skos:exactMatch obo:CHEBI_53196 .
+
+obo:CHEBI_61480 skos:exactMatch obo:CHEBI_53195 .
+
+obo:CHEBI_61482 skos:exactMatch obo:CHEBI_51167 .
+
+obo:CHEBI_61483 skos:exactMatch obo:CHEBI_51338 .
+
+obo:CHEBI_61484 skos:exactMatch obo:CHEBI_53232 .
+
+obo:CHEBI_61486 skos:exactMatch obo:CHEBI_53417 .
+
+obo:CHEBI_61487 skos:exactMatch obo:CHEBI_53538 .
+
+obo:CHEBI_61488 skos:exactMatch obo:CHEBI_53411 .
+
+obo:CHEBI_61489 skos:exactMatch obo:CHEBI_53413 .
+
+obo:CHEBI_61490 skos:exactMatch obo:CHEBI_53412 .
+
+obo:CHEBI_61491 skos:exactMatch obo:CHEBI_53535 .
+
+obo:CHEBI_61492 skos:exactMatch obo:CHEBI_53534 .
+
+obo:CHEBI_61497 skos:exactMatch obo:CHEBI_53624 .
+
+obo:CHEBI_61499 skos:exactMatch obo:CHEBI_53385 .
+
+obo:CHEBI_61500 skos:exactMatch obo:CHEBI_53383 .
+
+obo:CHEBI_61501 skos:exactMatch obo:CHEBI_53384 .
+
+obo:CHEBI_61503 skos:exactMatch obo:CHEBI_53536 .
+
+obo:CHEBI_61504 skos:exactMatch obo:CHEBI_53630 .
+
+obo:CHEBI_61532 skos:exactMatch obo:CHEBI_53632 .
+
+obo:CHEBI_61535 skos:exactMatch obo:CHEBI_53631 .
+
+obo:CHEBI_61536 skos:exactMatch obo:CHEBI_53421 .
+
+obo:CHEBI_61538 skos:exactMatch obo:CHEBI_31962 .
+
+obo:CHEBI_61603 skos:exactMatch obo:CHEBI_53450 .
+
+obo:CHEBI_61604 skos:exactMatch obo:CHEBI_53544 .
+
+obo:CHEBI_61605 skos:exactMatch obo:CHEBI_53543 .
+
+obo:CHEBI_61607 skos:exactMatch obo:CHEBI_53354 .
+
+obo:CHEBI_61608 skos:exactMatch obo:CHEBI_53252 .
+
+obo:CHEBI_61614 skos:exactMatch obo:CHEBI_53242 .
+
+obo:CHEBI_61615 skos:exactMatch obo:CHEBI_53262 .
+
+obo:CHEBI_61617 skos:exactMatch obo:CHEBI_53380 .
+
+obo:CHEBI_61619 skos:exactMatch obo:CHEBI_53370 .
+
+obo:CHEBI_61638 skos:exactMatch obo:CHEBI_53572 .
+
+obo:CHEBI_61639 skos:exactMatch obo:CHEBI_53571 .
+
+obo:CHEBI_61640 skos:exactMatch obo:CHEBI_53427 .
+
+obo:CHEBI_61641 skos:exactMatch obo:CHEBI_53420 .
+
+obo:CHEBI_61642 skos:exactMatch obo:CHEBI_53270 .
+
+obo:CHEBI_61848 skos:exactMatch obo:CHEBI_61849 .
+
+obo:CHEBI_61857 skos:exactMatch obo:CHEBI_61852 , obo:CHEBI_61853 , obo:CHEBI_61854 .
+
+obo:CHEBI_61995 skos:exactMatch obo:CHEBI_17754 , obo:CHEBI_35366 .
+
+obo:CHEBI_6213 skos:exactMatch obo:CHEBI_28918 .
+
+obo:CHEBI_62952 skos:exactMatch obo:CHEBI_46882 .
+
+obo:CHEBI_62953 skos:exactMatch obo:CHEBI_62954 .
+
+obo:CHEBI_62955 skos:exactMatch obo:CHEBI_39006 .
+
+obo:CHEBI_62956 skos:exactMatch obo:CHEBI_16223 .
+
+obo:CHEBI_62965 skos:exactMatch obo:CHEBI_15740 .
+
+obo:CHEBI_62982 skos:exactMatch obo:CHEBI_39745 .
+
+obo:CHEBI_62983 skos:exactMatch obo:CHEBI_15792 .
+
+obo:CHEBI_63017 skos:exactMatch obo:CHEBI_30924 .
+
+obo:CHEBI_63018 skos:exactMatch obo:CHEBI_30924 .
+
+obo:CHEBI_63019 skos:exactMatch obo:CHEBI_30924 .
+
+obo:CHEBI_63021 skos:exactMatch obo:CHEBI_30027 .
+
+obo:CHEBI_63045 skos:exactMatch obo:CHEBI_30089 .
+
+obo:CHEBI_63055 skos:exactMatch obo:CHEBI_39034 .
+
+obo:CHEBI_63075 skos:exactMatch obo:CHEBI_30924 .
+
+obo:CHEBI_63077 skos:exactMatch obo:CHEBI_39034 .
+
+obo:CHEBI_63112 skos:exactMatch obo:CHEBI_63113 .
+
+obo:CHEBI_63125 skos:exactMatch obo:CHEBI_63131 .
+
+obo:CHEBI_63333 skos:exactMatch obo:CHEBI_63357 .
+
+obo:CHEBI_63530 skos:exactMatch obo:CHEBI_5739 .
+
+obo:CHEBI_63554 skos:exactMatch obo:CHEBI_63555 .
+
+obo:CHEBI_63556 skos:exactMatch obo:CHEBI_53620 , obo:CHEBI_53621 .
+
+obo:CHEBI_63570 skos:exactMatch obo:CHEBI_28010 .
+
+obo:CHEBI_63597 skos:exactMatch obo:CHEBI_6427 .
+
+obo:CHEBI_63609 skos:exactMatch obo:CHEBI_63687 , obo:CHEBI_63684 .
+
+obo:CHEBI_63610 skos:exactMatch obo:CHEBI_63698 , obo:CHEBI_63700 , obo:CHEBI_63705 , obo:CHEBI_63695 .
+
+obo:CHEBI_63614 skos:exactMatch obo:CHEBI_63719 .
+
+obo:CHEBI_63639 skos:exactMatch obo:CHEBI_68630 .
+
+obo:CHEBI_63675 skos:exactMatch obo:CHEBI_30031 .
+
+obo:CHEBI_63686 skos:exactMatch obo:CHEBI_63675 .
+
+obo:CHEBI_63716 skos:exactMatch obo:CHEBI_63625 .
+
+obo:CHEBI_63718 skos:exactMatch obo:CHEBI_63717 .
+
+obo:CHEBI_63722 skos:exactMatch obo:CHEBI_63724 .
+
+obo:CHEBI_63723 skos:exactMatch obo:CHEBI_63722 .
+
+obo:CHEBI_63766 skos:exactMatch obo:CHEBI_32554 .
+
+obo:CHEBI_63827 skos:exactMatch obo:CHEBI_63832 .
+
+obo:CHEBI_7772 skos:exactMatch obo:CHEBI_50275 .
+
+obo:CHEBI_63858 skos:exactMatch obo:CHEBI_9327 .
+
+obo:CHEBI_9327 skos:exactMatch obo:CHEBI_63857 .
+
+obo:CHEBI_63877 skos:exactMatch obo:CHEBI_17632 .
+
+obo:CHEBI_63878 skos:exactMatch obo:CHEBI_17632 .
+
+obo:CHEBI_63879 skos:exactMatch obo:CHEBI_30089 , obo:CHEBI_566789 .
+
+obo:CHEBI_63880 skos:exactMatch obo:CHEBI_15740 , obo:CHEBI_566789 .
+
+obo:CHEBI_63881 skos:exactMatch obo:CHEBI_566789 .
+
+obo:CHEBI_63882 skos:exactMatch obo:CHEBI_566789 , obo:CHEBI_17632 .
+
+obo:CHEBI_63883 skos:exactMatch obo:CHEBI_566789 , obo:CHEBI_63894 .
+
+obo:CHEBI_63884 skos:exactMatch obo:CHEBI_17272 , obo:CHEBI_566789 .
+
+obo:CHEBI_63885 skos:exactMatch obo:CHEBI_566789 , obo:CHEBI_27110 .
+
+obo:CHEBI_63909 skos:exactMatch obo:CHEBI_63907 .
+
+obo:CHEBI_63928 skos:exactMatch obo:CHEBI_63929 .
+
+obo:CHEBI_63933 skos:exactMatch obo:CHEBI_53156 .
+
+obo:CHEBI_63935 skos:exactMatch obo:CHEBI_63937 .
+
+obo:CHEBI_63938 skos:exactMatch obo:CHEBI_35456 .
+
+obo:CHEBI_63939 skos:exactMatch obo:CHEBI_63940 .
+
+obo:CHEBI_63940 skos:exactMatch obo:CHEBI_46502 .
+
+obo:CHEBI_63942 skos:exactMatch obo:CHEBI_63945 .
+
+obo:CHEBI_63960 skos:exactMatch obo:CHEBI_17632 .
+
+obo:CHEBI_63964 skos:exactMatch obo:CHEBI_63968 .
+
+obo:CHEBI_63978 skos:exactMatch obo:CHEBI_63987 .
+
+obo:CHEBI_63996 skos:exactMatch obo:CHEBI_64000 .
+
+obo:CHEBI_64002 skos:exactMatch obo:CHEBI_64003 .
+
+obo:CHEBI_64022 skos:exactMatch obo:CHEBI_64020 , obo:CHEBI_64021 .
+
+obo:CHEBI_64053 skos:exactMatch obo:CHEBI_64055 .
+
+obo:CHEBI_64057 skos:exactMatch obo:CHEBI_64059 .
+
+obo:CHEBI_64061 skos:exactMatch obo:CHEBI_64066 .
+
+obo:CHEBI_64067 skos:exactMatch obo:CHEBI_64071 .
+
+obo:CHEBI_64078 skos:exactMatch obo:CHEBI_64079 .
+
+obo:CHEBI_64081 skos:exactMatch obo:CHEBI_64082 .
+
+obo:CHEBI_64086 skos:exactMatch obo:CHEBI_64087 .
+
+obo:CHEBI_64091 skos:exactMatch obo:CHEBI_64092 .
+
+obo:CHEBI_64094 skos:exactMatch obo:CHEBI_64097 .
+
+obo:CHEBI_64099 skos:exactMatch obo:CHEBI_64100 .
+
+obo:CHEBI_64103 skos:exactMatch obo:CHEBI_17968 .
+
+obo:CHEBI_64104 skos:exactMatch obo:CHEBI_64107 .
+
+obo:CHEBI_64111 skos:exactMatch obo:CHEBI_64113 .
+
+obo:CHEBI_64115 skos:exactMatch obo:CHEBI_64118 .
+
+obo:CHEBI_64123 skos:exactMatch obo:CHEBI_64132 .
+
+obo:CHEBI_64134 skos:exactMatch obo:CHEBI_64138 .
+
+obo:CHEBI_64139 skos:exactMatch obo:CHEBI_64140 .
+
+obo:CHEBI_64144 skos:exactMatch obo:CHEBI_64146 .
+
+obo:CHEBI_64147 skos:exactMatch obo:CHEBI_64150 .
+
+obo:CHEBI_64151 skos:exactMatch obo:CHEBI_64157 .
+
+obo:CHEBI_64158 skos:exactMatch obo:CHEBI_64160 .
+
+obo:CHEBI_64162 skos:exactMatch obo:CHEBI_64164 .
+
+obo:CHEBI_64165 skos:exactMatch obo:CHEBI_64193 .
+
+obo:CHEBI_64194 skos:exactMatch obo:CHEBI_64197 .
+
+obo:CHEBI_64199 skos:exactMatch obo:CHEBI_64201 .
+
+obo:CHEBI_64202 skos:exactMatch obo:CHEBI_64204 .
+
+obo:CHEBI_64205 skos:exactMatch obo:CHEBI_29108 .
+
+obo:CHEBI_64220 skos:exactMatch obo:CHEBI_14321 .
+
+obo:CHEBI_64243 skos:exactMatch obo:CHEBI_29985 .
+
+obo:CHEBI_64244 skos:exactMatch obo:CHEBI_29986 .
+
+obo:CHEBI_64288 skos:exactMatch obo:CHEBI_48551 .
+
+obo:CHEBI_64301 skos:exactMatch obo:CHEBI_64302 .
+
+obo:CHEBI_64311 skos:exactMatch obo:CHEBI_64322 .
+
+obo:CHEBI_64319 skos:exactMatch obo:CHEBI_64035 , obo:CHEBI_64316 .
+
+obo:CHEBI_64323 skos:exactMatch obo:CHEBI_64325 .
+
+obo:CHEBI_64358 skos:exactMatch obo:CHEBI_64363 .
+
+obo:CHEBI_64359 skos:exactMatch obo:CHEBI_64364 .
+
+obo:CHEBI_643703 skos:exactMatch obo:CHEBI_4530 .
+
+obo:CHEBI_64384 skos:exactMatch obo:CHEBI_64385 .
+
+obo:CHEBI_64386 skos:exactMatch obo:CHEBI_64387 .
+
+obo:CHEBI_64393 skos:exactMatch obo:CHEBI_30563 .
+
+obo:CHEBI_6439 skos:exactMatch obo:CHEBI_72567 .
+
+obo:CHEBI_6446 skos:exactMatch obo:CHEBI_60302 .
+
+obo:CHEBI_645509 skos:exactMatch obo:CHEBI_101278 .
+
+obo:CHEBI_64700 skos:exactMatch obo:CHEBI_58389 .
+
+obo:CHEBI_64701 skos:exactMatch obo:CHEBI_58384 .
+
+obo:CHEBI_64733 skos:exactMatch obo:CHEBI_16947 .
+
+obo:CHEBI_64734 skos:exactMatch obo:CHEBI_64755 .
+
+obo:CHEBI_64735 skos:exactMatch obo:CHEBI_16947 .
+
+obo:CHEBI_64746 skos:exactMatch obo:CHEBI_64733 .
+
+obo:CHEBI_64754 skos:exactMatch obo:CHEBI_64735 .
+
+obo:CHEBI_64758 skos:exactMatch obo:CHEBI_64734 .
+
+obo:CHEBI_6484 skos:exactMatch obo:CHEBI_60308 .
+
+obo:CHEBI_64896 skos:exactMatch obo:CHEBI_47982 .
+
+obo:CHEBI_6503 skos:exactMatch obo:CHEBI_43755 .
+
+obo:CHEBI_65050 skos:exactMatch obo:CHEBI_65049 .
+
+obo:CHEBI_650917 skos:exactMatch obo:CHEBI_59695 .
+
+obo:CHEBI_6518 skos:exactMatch obo:CHEBI_116278 .
+
+obo:CHEBI_652822 skos:exactMatch obo:CHEBI_3216 .
+
+obo:CHEBI_6549 skos:exactMatch obo:CHEBI_50841 .
+
+obo:CHEBI_6770 skos:exactMatch obo:CHEBI_43968 .
+
+obo:CHEBI_6781 skos:exactMatch obo:CHEBI_6780 .
+
+obo:CHEBI_6834 skos:exactMatch obo:CHEBI_60792 .
+
+obo:CHEBI_6872 skos:exactMatch obo:CHEBI_43830 .
+
+obo:CHEBI_6917 skos:exactMatch obo:CHEBI_6916 .
+
+obo:CHEBI_6993 skos:exactMatch obo:CHEBI_49165 .
+
+obo:CHEBI_7003 skos:exactMatch obo:CHEBI_17303 .
+
+obo:CHEBI_7008 skos:exactMatch obo:CHEBI_63699 .
+
+obo:CHEBI_7444 skos:exactMatch obo:CHEBI_60917 , obo:CHEBI_60918 , obo:CHEBI_60920 , obo:CHEBI_60922 .
+
+obo:CHEBI_7455 skos:exactMatch obo:CHEBI_7454 .
+
+obo:CHEBI_7477 skos:exactMatch obo:CHEBI_59527 .
+
+obo:CHEBI_7479 skos:exactMatch obo:CHEBI_7478 .
+
+obo:CHEBI_7493 skos:exactMatch obo:CHEBI_51029 .
+
+obo:CHEBI_7495 skos:exactMatch obo:CHEBI_7494 .
+
+obo:CHEBI_7507 skos:exactMatch obo:CHEBI_53634 , obo:CHEBI_7489 , obo:CHEBI_7508 .
+
+obo:CHEBI_7725 skos:exactMatch obo:CHEBI_25650 .
+
+obo:CHEBI_7790 skos:exactMatch obo:CHEBI_7789 .
+
+obo:CHEBI_7799 skos:exactMatch obo:CHEBI_7798 .
+
+obo:CHEBI_7810 skos:exactMatch obo:CHEBI_52134 .
+
+obo:CHEBI_7824 skos:exactMatch obo:CHEBI_23004 .
+
+obo:CHEBI_7857 skos:exactMatch obo:CHEBI_7856 .
+
+obo:CHEBI_7859 skos:exactMatch obo:CHEBI_7852 .
+
+obo:CHEBI_7908 skos:exactMatch obo:CHEBI_7907 .
+
+obo:CHEBI_7963 skos:exactMatch obo:CHEBI_51354 .
+
+obo:CHEBI_7967 skos:exactMatch obo:CHEBI_51355 .
+
+obo:CHEBI_7977 skos:exactMatch obo:CHEBI_64383 .
+
+obo:CHEBI_8021 skos:exactMatch obo:CHEBI_63706 .
+
+obo:CHEBI_8025 skos:exactMatch obo:CHEBI_44639 , obo:CHEBI_8024 .
+
+obo:CHEBI_8070 skos:exactMatch obo:CHEBI_8069 .
+
+obo:CHEBI_8094 skos:exactMatch obo:CHEBI_8093 .
+
+obo:CHEBI_8233 skos:exactMatch obo:CHEBI_52433 .
+
+obo:CHEBI_8355 skos:exactMatch obo:CHEBI_8354 .
+
+obo:CHEBI_8361 skos:exactMatch obo:CHEBI_63660 .
+
+obo:CHEBI_8365 skos:exactMatch obo:CHEBI_8364 .
+
+obo:CHEBI_8429 skos:exactMatch obo:CHEBI_8428 .
+
+obo:CHEBI_8436 skos:exactMatch obo:CHEBI_8435 .
+
+obo:CHEBI_8449 skos:exactMatch obo:CHEBI_8448 .
+
+obo:CHEBI_8460 skos:exactMatch obo:CHEBI_8459 .
+
+obo:CHEBI_8462 skos:exactMatch obo:CHEBI_61214 .
+
+obo:CHEBI_8466 skos:exactMatch obo:CHEBI_63650 .
+
+obo:CHEBI_8492 skos:exactMatch obo:CHEBI_8491 .
+
+obo:CHEBI_8498 skos:exactMatch obo:CHEBI_51173 .
+
+obo:CHEBI_8500 skos:exactMatch obo:CHEBI_8499 .
+
+obo:CHEBI_8598 skos:exactMatch obo:CHEBI_8597 .
+
+obo:CHEBI_8604 skos:exactMatch obo:CHEBI_51209 .
+
+obo:CHEBI_8708 skos:exactMatch obo:CHEBI_8707 .
+
+obo:CHEBI_8714 skos:exactMatch obo:CHEBI_8713 .
+
+obo:CHEBI_8769 skos:exactMatch obo:CHEBI_49199 .
+
+obo:CHEBI_8777 skos:exactMatch obo:CHEBI_8776 .
+
+obo:CHEBI_8828 skos:exactMatch obo:CHEBI_52894 .
+
+obo:CHEBI_8885 skos:exactMatch obo:CHEBI_8884 .
+
+obo:CHEBI_8892 skos:exactMatch obo:CHEBI_50122 .
+
+obo:CHEBI_8984 skos:exactMatch obo:CHEBI_23872 .
+
+obo:CHEBI_9011 skos:exactMatch obo:CHEBI_64062 , obo:CHEBI_64063 .
+
+obo:CHEBI_9016 skos:exactMatch obo:CHEBI_50958 .
+
+obo:CHEBI_9087 skos:exactMatch obo:CHEBI_50350 .
+
+obo:CHEBI_9124 skos:exactMatch obo:CHEBI_64214 .
+
+obo:CHEBI_9142 skos:exactMatch obo:CHEBI_33127 .
+
+obo:CHEBI_9179 skos:exactMatch obo:CHEBI_29321 .
+
+obo:CHEBI_9207 skos:exactMatch obo:CHEBI_63647 .
+
+obo:CHEBI_9397 skos:exactMatch obo:CHEBI_41774 .
+
+obo:CHEBI_9399 skos:exactMatch obo:CHEBI_9398 .
+
+obo:CHEBI_9405 skos:exactMatch obo:CHEBI_68628 .
+
+obo:CHEBI_9430 skos:exactMatch obo:CHEBI_39395 , obo:CHEBI_39396 .
+
+obo:CHEBI_9446 skos:exactMatch obo:CHEBI_9445 .
+
+obo:CHEBI_9467 skos:exactMatch obo:CHEBI_64029 , obo:CHEBI_64030 .
+
+obo:CHEBI_9505 skos:exactMatch obo:CHEBI_7586 .
+
+obo:CHEBI_9546 skos:exactMatch obo:CHEBI_33215 .
+
+obo:CHEBI_9561 skos:exactMatch obo:CHEBI_61485 .
+
+obo:CHEBI_9589 skos:exactMatch obo:CHEBI_9588 .
+
+obo:CHEBI_9600 skos:exactMatch obo:CHEBI_9599 .
+
+obo:CHEBI_9606 skos:exactMatch obo:CHEBI_9605 .
+
+obo:CHEBI_9642 skos:exactMatch obo:CHEBI_32496 .
+
+obo:CHEBI_9655 skos:exactMatch obo:CHEBI_9654 .
+
+obo:CHEBI_9702 skos:exactMatch obo:CHEBI_9701 .
+
+obo:CHEBI_9703 skos:exactMatch obo:CHEBI_9701 .
+
+obo:CHEBI_9704 skos:exactMatch obo:CHEBI_9701 .
+
+obo:CHEBI_9710 skos:exactMatch obo:CHEBI_45951 .
+
+obo:CHEBI_9712 skos:exactMatch obo:CHEBI_9711 .
+
+obo:CHEBI_9729 skos:exactMatch obo:CHEBI_55407 , obo:CHEBI_9728 .
+
+obo:CHEBI_9940 skos:exactMatch obo:CHEBI_9939 .
+
+obo:CHEBI_9944 skos:exactMatch obo:CHEBI_9943 .
+
+obo:CHEBI_29681 skos:exactMatch obo:CHEBI_71976 , obo:CHEBI_71978 , obo:CHEBI_71977 , obo:CHEBI_71979 .
+
+obo:CHEBI_31281 skos:exactMatch obo:CHEBI_71202 .
+
+obo:CHEBI_65133 skos:exactMatch obo:CHEBI_72542 .
+
+obo:CHEBI_65138 skos:exactMatch obo:CHEBI_65208 .
+
+obo:CHEBI_65242 skos:exactMatch obo:CHEBI_49709 .
+
+obo:CHEBI_65319 skos:exactMatch obo:CHEBI_65318 .
+
+obo:CHEBI_65344 skos:exactMatch obo:CHEBI_65346 .
+
+obo:CHEBI_65350 skos:exactMatch obo:CHEBI_65351 .
+
+obo:CHEBI_65464 skos:exactMatch obo:CHEBI_71183 .
+
+obo:CHEBI_65567 skos:exactMatch obo:CHEBI_71326 .
+
+obo:CHEBI_65640 skos:exactMatch obo:CHEBI_68597 .
+
+obo:CHEBI_65888 skos:exactMatch obo:CHEBI_68592 .
+
+obo:CHEBI_65889 skos:exactMatch obo:CHEBI_68593 .
+
+obo:CHEBI_65917 skos:exactMatch obo:CHEBI_68659 .
+
+obo:CHEBI_65969 skos:exactMatch obo:CHEBI_72300 .
+
+obo:CHEBI_65970 skos:exactMatch obo:CHEBI_72303 .
+
+obo:CHEBI_65971 skos:exactMatch obo:CHEBI_72306 .
+
+obo:CHEBI_65972 skos:exactMatch obo:CHEBI_72309 .
+
+obo:CHEBI_65996 skos:exactMatch obo:CHEBI_72476 .
+
+obo:CHEBI_65997 skos:exactMatch obo:CHEBI_72478 .
+
+obo:CHEBI_66004 skos:exactMatch obo:CHEBI_72480 .
+
+obo:CHEBI_66069 skos:exactMatch obo:CHEBI_72635 .
+
+obo:CHEBI_66548 skos:exactMatch obo:CHEBI_72791 .
+
+obo:CHEBI_66659 skos:exactMatch obo:CHEBI_73099 , obo:CHEBI_73098 .
+
+obo:CHEBI_66852 skos:exactMatch obo:CHEBI_65350 .
+
+obo:CHEBI_66869 skos:exactMatch obo:CHEBI_46097 .
+
+obo:CHEBI_66870 skos:exactMatch obo:CHEBI_42160 .
+
+obo:CHEBI_66895 skos:exactMatch obo:CHEBI_66897 .
+
+obo:CHEBI_66917 skos:exactMatch obo:CHEBI_66919 .
+
+obo:CHEBI_67096 skos:exactMatch obo:CHEBI_49980 .
+
+obo:CHEBI_67098 skos:exactMatch obo:CHEBI_46097 .
+
+obo:CHEBI_67099 skos:exactMatch obo:CHEBI_39006 .
+
+obo:CHEBI_67100 skos:exactMatch obo:CHEBI_46097 .
+
+obo:CHEBI_67155 skos:exactMatch obo:CHEBI_62932 .
+
+obo:CHEBI_67202 skos:exactMatch obo:CHEBI_67203 .
+
+obo:CHEBI_67206 skos:exactMatch obo:CHEBI_24224 .
+
+obo:CHEBI_67217 skos:exactMatch obo:CHEBI_67216 .
+
+obo:CHEBI_67222 skos:exactMatch obo:CHEBI_67224 , obo:CHEBI_67226 .
+
+obo:CHEBI_67229 skos:exactMatch obo:CHEBI_67234 , obo:CHEBI_67233 .
+
+obo:CHEBI_67252 skos:exactMatch obo:CHEBI_36535 .
+
+obo:CHEBI_68511 skos:exactMatch obo:CHEBI_68469 .
+
+obo:CHEBI_68515 skos:exactMatch obo:CHEBI_28624 .
+
+obo:CHEBI_68533 skos:exactMatch obo:CHEBI_39112 .
+
+obo:CHEBI_68564 skos:exactMatch obo:CHEBI_68556 .
+
+obo:CHEBI_68573 skos:exactMatch obo:CHEBI_68574 .
+
+obo:CHEBI_68602 skos:exactMatch obo:CHEBI_68605 .
+
+obo:CHEBI_68635 skos:exactMatch obo:CHEBI_70836 .
+
+obo:CHEBI_68646 skos:exactMatch obo:CHEBI_68647 .
+
+obo:CHEBI_68664 skos:exactMatch obo:CHEBI_4886 , obo:CHEBI_68663 .
+
+obo:CHEBI_68847 skos:exactMatch obo:CHEBI_68849 .
+
+obo:CHEBI_70705 skos:exactMatch obo:CHEBI_70706 .
+
+obo:CHEBI_70710 skos:exactMatch obo:CHEBI_70711 .
+
+obo:CHEBI_70714 skos:exactMatch obo:CHEBI_70715 .
+
+obo:CHEBI_70715 skos:exactMatch obo:CHEBI_70718 .
+
+obo:CHEBI_70732 skos:exactMatch obo:CHEBI_70734 .
+
+obo:CHEBI_70743 skos:exactMatch obo:CHEBI_70751 .
+
+obo:CHEBI_70839 skos:exactMatch obo:CHEBI_49375 .
+
+obo:CHEBI_71015 skos:exactMatch obo:CHEBI_71013 .
+
+obo:CHEBI_71197 skos:exactMatch obo:CHEBI_71200 .
+
+obo:CHEBI_71217 skos:exactMatch obo:CHEBI_71218 .
+
+obo:CHEBI_71226 skos:exactMatch obo:CHEBI_71229 .
+
+obo:CHEBI_71240 skos:exactMatch obo:CHEBI_18361 .
+
+obo:CHEBI_71245 skos:exactMatch obo:CHEBI_71248 , obo:CHEBI_71246 , obo:CHEBI_71249 .
+
+obo:CHEBI_71248 skos:exactMatch obo:CHEBI_71252 .
+
+obo:CHEBI_71246 skos:exactMatch obo:CHEBI_71251 .
+
+obo:CHEBI_71249 skos:exactMatch obo:CHEBI_71251 , obo:CHEBI_71252 .
+
+obo:CHEBI_71253 skos:exactMatch obo:CHEBI_71256 , obo:CHEBI_71257 .
+
+obo:CHEBI_71258 skos:exactMatch obo:CHEBI_71260 .
+
+obo:CHEBI_71271 skos:exactMatch obo:CHEBI_71272 .
+
+obo:CHEBI_71419 skos:exactMatch obo:CHEBI_71420 .
+
+obo:CHEBI_71428 skos:exactMatch obo:CHEBI_71431 .
+
+obo:CHEBI_71947 skos:exactMatch obo:CHEBI_29701 , obo:CHEBI_71950 , obo:CHEBI_71948 , obo:CHEBI_71949 .
+
+obo:CHEBI_71953 skos:exactMatch obo:CHEBI_71966 .
+
+obo:CHEBI_71956 skos:exactMatch obo:CHEBI_71974 .
+
+obo:CHEBI_72014 skos:exactMatch obo:CHEBI_9619 .
+
+obo:CHEBI_9619 skos:exactMatch obo:CHEBI_72213 .
+
+obo:CHEBI_72295 skos:exactMatch obo:CHEBI_72706 .
+
+obo:CHEBI_72299 skos:exactMatch obo:CHEBI_72302 .
+
+obo:CHEBI_72307 skos:exactMatch obo:CHEBI_45558 .
+
+obo:CHEBI_72313 skos:exactMatch obo:CHEBI_72315 .
+
+obo:CHEBI_72319 skos:exactMatch obo:CHEBI_72317 .
+
+obo:CHEBI_72321 skos:exactMatch obo:CHEBI_72322 .
+
+obo:CHEBI_72324 skos:exactMatch obo:CHEBI_72326 .
+
+obo:CHEBI_72443 skos:exactMatch obo:CHEBI_45358 .
+
+obo:CHEBI_72449 skos:exactMatch obo:CHEBI_44107 .
+
+obo:CHEBI_72482 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72484 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72486 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72487 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72488 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72489 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72491 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72492 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72493 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72494 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72495 skos:exactMatch obo:CHEBI_53067 .
+
+obo:CHEBI_72498 skos:exactMatch obo:CHEBI_53018 .
+
+obo:CHEBI_72702 skos:exactMatch obo:CHEBI_72717 .
+
+obo:CHEBI_72750 skos:exactMatch obo:CHEBI_26248 .
+
+obo:CHEBI_73083 skos:exactMatch obo:CHEBI_68836 .
+
+obo:CHEBI_73111 skos:exactMatch obo:CHEBI_4853 .
+
+obo:CHEBI_73272 skos:exactMatch obo:CHEBI_73274 .
+
+obo:CHEBI_73276 skos:exactMatch obo:CHEBI_50323 , obo:CHEBI_53099 , obo:CHEBI_53113 .
+
+obo:CHEBI_73277 skos:exactMatch obo:CHEBI_50321 , obo:CHEBI_53104 , obo:CHEBI_53119 .
+
+obo:CHEBI_73278 skos:exactMatch obo:CHEBI_17345 , obo:CHEBI_53100 , obo:CHEBI_53114 .
+
+obo:CHEBI_73279 skos:exactMatch obo:CHEBI_46470 , obo:CHEBI_53105 , obo:CHEBI_53120 .
+
+obo:CHEBI_73280 skos:exactMatch obo:CHEBI_73308 .
+
+obo:CHEBI_73300 skos:exactMatch obo:CHEBI_50300 , obo:CHEBI_53102 , obo:CHEBI_53118 .
+
+obo:CHEBI_73302 skos:exactMatch obo:CHEBI_50300 , obo:CHEBI_53102 , obo:CHEBI_53118 .
+
+obo:CHEBI_73304 skos:exactMatch obo:CHEBI_50300 , obo:CHEBI_53102 , obo:CHEBI_53118 .
+
+obo:CHEBI_73306 skos:exactMatch obo:CHEBI_50300 , obo:CHEBI_53102 , obo:CHEBI_53118 .
+
+<http://www.openphacts.org/void/has_partChEBI103Linkset.ttl> void:inDataset <http://www.openphacts.org/void/void103.ttl#has_partLinkset> .
