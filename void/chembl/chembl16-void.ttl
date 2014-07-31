@@ -1,4 +1,4 @@
-@base <https://github.com/openphacts/ops-platform-setup/raw/master/void/chembl-16.ttl>
+@base <https://raw.github.com/openphacts/ops-platform-setup/master/void/chembl/chembl16-void.ttl>
 @prefix : <#> .
 @prefix cco: <http://rdf.ebi.ac.uk/terms/chembl#> .
 @prefix chembl: <http://rdf.ebi.ac.uk/resource/chembl/> .
@@ -60,7 +60,7 @@
 	dcterms:description "The ChEMBL Molecules Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/molecule/> ;
 	void:exampleResource chembl_molecule:CHEMBL941 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_molecule.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_molecule.ttl.gz> ;
 	void:triples "82003819"^^xsd:int .
 
 :chembl_rdf_biocmpt_dataset a void:Dataset ;
@@ -68,7 +68,7 @@
 	dcterms:description "The ChEMBL Biotherapeutic Component Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/biocomponent/> ;
 	void:exampleResource chembl_bio_cmpt:CHEMBL_BC_6717 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_biocmpt.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_biocmpt.ttl.gz> ;
 	void:triples "2740"^^xsd:int .
 
 :chembl_rdf_target_dataset a void:Dataset ;
@@ -76,7 +76,7 @@
 	dcterms:description "The ChEMBL Target Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/target/> ;
 	void:exampleResource chembl_target:CHEMBL2242 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_target.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_target.ttl.gz> ;
 	void:triples "92473"^^xsd:int .
 
 :chembl_rdf_targetcmpt_dataset a void:Dataset ;
@@ -84,16 +84,16 @@
 	dcterms:description "The ChEMBL Target Component Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/targetcomponent/> ;
 	void:exampleResource chembl_target_cmpt:CHEMBL_TC_583 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_targetcmpt.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_targetcmpt.ttl.gz> ;
 	void:triples "438945"^^xsd:int ;
-	void:subsets :chembl_targetcmpt_uniprot_linkset .
+	void:subset :chembl_targetcmpt_uniprot_linkset .
 
 :chembl_rdf_assay_dataset a void:Dataset ;
 	dcterms:title "The ChEMBL Assay Dataset" ;
 	dcterms:description "The ChEMBL Assay Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/assay/> ;
 	void:exampleResource chembl_assay:CHEMBL615155 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_assay.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_assay.ttl.gz> ;
 	void:triples "34571481"^^xsd:int .
 
 :chembl_rdf_activity_dataset a void:Dataset ;
@@ -101,7 +101,7 @@
 	dcterms:description "The ChEMBL Activity Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/activity/> ;
 	void:exampleResource chembl_activity:CHEMBL_ACT_99399 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_activity.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_activity.ttl.gz> ;
 	void:triples "184257585"^^xsd:int .
 
 :chembl_rdf_document_dataset a void:Dataset ;
@@ -109,7 +109,7 @@
 	dcterms:description "The ChEMBL Document Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/document/> ;
 	void:exampleResource chembl_document:CHEMBL1123868 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_document.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_document.ttl.gz> ;
 	void:triples "556707"^^xsd:int .
 
 :chembl_rdf_journal_dataset a void:Dataset ;
@@ -117,7 +117,7 @@
 	dcterms:description "The ChEMBL Journal Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/journal/> ;
 	void:exampleResource chembl_journal:CHEMBL_JRN_631 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_journal.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_journal.ttl.gz> ;
 	void:triples "932"^^xsd:int .
 
 :chembl_rdf_protclass_dataset a void:Dataset ;
@@ -125,7 +125,7 @@
 	dcterms:description "The ChEMBL Protein Classification Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/protclass/> ;
 	void:exampleResource chembl_protclass:CHEMBL_PC_148 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_protclass.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_protclass.ttl.gz> ;
 	void:triples "103021"^^xsd:int .
 
 :chembl_rdf_source_dataset a void:Dataset ;
@@ -133,7 +133,7 @@
 	dcterms:description "The ChEMBL Source Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/source/> ;
 	void:exampleResource chembl_source:CHEMBL_SRC_4 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_source.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_source.ttl.gz> ;
 	void:triples "72"^^xsd:int .
 
 :chembl_rdf_unichem_dataset a void:Dataset ;
@@ -141,7 +141,7 @@
 	dcterms:description "The ChEMBL UniChem Dataset" ;
 	void:uriSpace <http://rdf.ebi.ac.uk/resource/chembl/molecule/> ;
 	void:exampleResource chembl_molecule:CHEMBL941 ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_unichem.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_unichem.ttl.gz> ;
 	void:triples "2392906"^^xsd:int .
 
 :chembl_rdf_dataset void:triples "304420681"^^xsd:int .
@@ -168,7 +168,7 @@
 	void:objectsTarget :uniprot_dataset ;
 	void:linkPredicate skos:exactMatch ;
 	void:triples "6244"^^xsd:long ;
-	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16/chembl_16_targetcmpt_uniprot_ls.ttl.gz> ;
+	void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/chembl_16_targetcmpt_uniprot_ls.ttl.gz> ;
 	dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
 	pav:authoredBy <http://orcid.org/0000-0002-8011-0300> ;
 	pav:authoredOn "2013-05-11T15:04:32.000+01:00"^^xsd:dateTime ;

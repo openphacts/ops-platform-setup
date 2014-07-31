@@ -29,10 +29,13 @@
 
 :uniprot_enzyme a void:Dataset ;
 	dcterms:title "Enzyme"@en ;
+	dcterms:description "enzyme data as provided by the UniProt consortium for UniProt release 2013_12"@en ;
 	dcterms:publisher <http://www.uniprot.org/> ;
-	dcat:landingPage <http://www.uniprot.org/> ;
+	dcat:landingPage <http://www.uniprot.org/browse/uniprot/by/ec/?query=enzyme> ;
+	dcterms:license <http://creativecommons.org/licenses/by-nd/3.0/> ;
+	dcterms:issued "2013-12-11T00:00:00Z"^^xsd:dateTime ;
 	void:dataDump <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/enzyme.rdf.gz> ;
-	void:triples "47661"^^xsd:integer .
+	void:triples "58952"^^xsd:integer .
 
 :uniprotkb_rdf a void:Dataset ;
 	     dcterms:title "UniProt Knowledgebase"@en ;

@@ -6,7 +6,7 @@ ld_dir('/media/SSD/current_data/CW', 'inverted_CW_ChEMBL_TC_via_Uniprot.ttl', 'h
 -- Enzyme
 ld_dir('/media/SSD/current_data/enzyme' , 'inference.ttl' , 'http://purl.uniprot.org/enzyme/inference' );
 ld_dir('/media/SSD/current_data/enzyme' , 'direct.ttl' , 'http://purl.uniprot.org/enzyme/direct' );
-ld_dir('/media/SSD/current_data/enzyme' , 'enzyme_names_comments.ttl' , 'http://purl.uniprot.org/enzyme' );
+ld_dir('/media/SSD/current_data/enzyme' , 'enzyme.rdf' , 'http://purl.uniprot.org/enzyme' );
 
 -- Drugbank
 ld_dir('/media/SSD/current_data/drugbank' , 'drugbank_dump.nt' , 'http://linkedlifedata.com/resource/drugbank' );
@@ -41,7 +41,7 @@ ld_dir('/media/SSD/current_data/GOA' , '*.rdf' , 'http://www.openphacts.org/goa'
 ld_dir('/media/SSD/current_data/void' , '*.ttl' , 'http://www.openphacts.org/api/datasetDescriptors' );
 
 -- FDA Adverse Events
-ld_dir('/media/SSD/current_data/aers' , 'faers-of-2012-generated-on-2012-07-09.nt', 'http://aers.data2semantics.org/');
+-- ld_dir('/media/SSD/current_data/aers' , 'faers-of-2012-generated-on-2012-07-09.nt', 'http://aers.data2semantics.org/');
 
 -- ChEMBL v16
 ld_dir('/media/SSD/current_data/chembl16', '*.ttl', 'http://www.ebi.ac.uk/chembl');
@@ -74,9 +74,11 @@ ld_dir('/media/SSD/current_data/disgenet', 'sio.owl', 'http://rdf.imim.es');
 
 -- linkedct.org
 
-ld_dir('/media/SSD/current_data/linkedct', 'linkedct-dump-2013-10-01.nt', 'http://linkedct.org');
+-- ld_dir('/media/SSD/current_data/linkedct', 'linkedct-dump-2013-10-01.nt', 'http://linkedct.org');
 
 -- Nextprot
-
 ld_dir('/media/SSD/current_data/nx_np', '*.rdf', 'http://www.nextprot.org');
 ld_dir('/media/SSD/current_data/nx_np', '*.nquads', 'http://www.nextprot.org');
+
+-- Caloha
+ld_dir('/media/SSD/current_data/caloha', 'caloha.ttl', 'http://www.nexprot.org/caloha');
