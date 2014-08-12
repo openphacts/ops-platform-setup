@@ -72,7 +72,7 @@ Note: The ARC library harcodes the limit on the execution time of a function cal
 
 to
 
-  define('PUELIA_SERVE_FROM_CACHE', true);
+  define('PUELIA_SERVE_FROM_CACHE', false);
 
 2. yum install php-pecl-memcache
 
