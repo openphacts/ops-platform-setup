@@ -44,6 +44,7 @@ Graph URI: <http://www.conceptwiki.org>
 ## Uniprot on 24 May 2013 12.00EST
 
 Obtained from <http://www.uniprot.org> on 24 May 2013 by running:
+(develop updated on 28012015)
 
     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_24052013.rdf.xml
     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_24052013.rdf.xml
