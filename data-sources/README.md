@@ -57,6 +57,9 @@ Graph URI: <http://purl.uniprot.org>
 - uniref_24052013.rdf.xml (171842257 triples)
 - TOTAL: 533394147 triples
 
+Develop
+- swissprot_28012015.rdf.xml (261071139 triples)
+
 ##Enzyme
 
 Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/enzyme.rdf.gz> on 10 Jan 2014
