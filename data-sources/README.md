@@ -60,6 +60,8 @@ Graph URI: <http://purl.uniprot.org>
 Develop
 - swissprot_28012015.rdf.xml (261071139 triples)
 - uniparc_28012015.rdf.xml (518254270 triples)
+- uniref_28012015.rdf.xml (477586860 triples)
+- TOTAL: 1 256 912 269
 
 ##Enzyme
 
