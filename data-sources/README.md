@@ -142,6 +142,23 @@ Replaced Enzyme prefixes in chembl_16_targetcmpt.ttl from <http://identifiers.or
 For ChEMBL 19, the prefix was added using the SPARQL query :
 (TODO: add query replacing object of cco:targetCmptXref and subject of  a cco:EnzymeClassRef )
 
+     PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+     INSERT {
+     	GRAPH <http://www.ebi.ac.uk/chembl> {
+     		?chembl_uri cco:targetCmptXref ?enzyme_uri . 
+     		?enzyme_uri a cco:EnzymeClassRef ;
+     			rdfs:label ?label .
+     	}
+     }
+     WHERE {
+     	GRAPH <http://www.ebi.ac.uk/chembl> {
+     		?chembl_uri cco:targetCmptXref ?ec_uri . 
+     		?ec_uri a cco:EnzymeClassRef ;
+     			rdfs:label ?label .
+     		BIND(IRI(CONCAT('http://purl.uniprot.org/enzyme/', STRAFTER(STR(?ec_uri), 'http://identifiers.org/ec-code/'))) AS ?enzyme_uri )
+     	}
+     } 
+
 Created file for activity types and units:
 
      CONSTRUCT {
