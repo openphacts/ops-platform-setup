@@ -61,7 +61,7 @@ Develop
 - swissprot_28012015.rdf.xml (261071139 triples)
 - uniparc_28012015.rdf.xml (518254270 triples)
 - uniref_28012015.rdf.xml (477586860 triples)
-- TOTAL: 1 256 912 269
+- TOTAL: 979928936 triples
 
 ##Enzyme
 
