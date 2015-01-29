@@ -211,7 +211,21 @@ Graph URI <http://www.ebi.ac.uk/chembl/target/direct>
      		?subclass rdfs:subClassOf ?superclass ;
      			rdfs:subClassOf* chembl_protclass:CHEMBL_PC_0 .
      	}
-     }    
+     }
+     
+Graph URI <http://www.ebi.ac.uk/chembl/target/direct>
+     
+     INSERT { 
+     	GRAPH <http://www.ebi.ac.uk/chembl/target/inference> {
+     		?subclass rdfs:subClassOf ?superclass 
+     	}
+     }
+     WHERE {
+         GRAPH <http://www.ebi.ac.uk/chembl/target/direct> {
+             ?subclass rdfs:subClassOf* ?superclass ;
+             	rdfs:subClassOf [] 
+         }
+     }
 
 ## Chebi
 
