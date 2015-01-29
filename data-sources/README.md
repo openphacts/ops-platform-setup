@@ -140,6 +140,7 @@ Doesn't affect ChEMBL 19
 Replaced Enzyme prefixes in chembl_16_targetcmpt.ttl from <http://identifiers.org/ec-code/*> to <http://purl.uniprot.org/enzyme/*> .
 
 For ChEMBL 19, the prefix was added using the SPARQL query :
+(TODO: add query replacing object of cco:targetCmptXref and subject of  a cco:EnzymeClassRef )
 
 Created file for activity types and units:
 
