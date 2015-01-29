@@ -196,6 +196,22 @@ ChEMBL 19
      	}
      }  
 
+ChEMBL 19 Protein Classification
+
+Graph URI <http://www.ebi.ac.uk/chembl/target/direct>
+
+     PREFIX chembl_protclass: <http://rdf.ebi.ac.uk/resource/chembl/protclass/>
+     INSERT {
+     	GRAPH <http://www.ebi.ac.uk/chembl/target/direct> {
+     		?subclass rdfs:subClassOf ?superclass .
+     	}
+     }
+     WHERE {
+     	GRAPH <http://www.ebi.ac.uk/chembl>  {
+     		?subclass rdfs:subClassOf ?superclass ;
+     			rdfs:subClassOf* chembl_protclass:CHEMBL_PC_0 .
+     	}
+     }    
 
 ## Chebi
 
