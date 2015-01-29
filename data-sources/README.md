@@ -118,6 +118,8 @@ Graph URI: <http://linkedlifedata.com/resource/drugbank>
 
 Obtained by downloading all the files from <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/> on 25 June 2013 
 
+Develop on ChEMBL 19
+
 Graph URI <http://www.ebi.ac.uk/chembl>
 - chembl_16_activity.ttl
 - chembl_16_assay.ttl
@@ -133,8 +135,11 @@ Graph URI <http://www.ebi.ac.uk/chembl>
 - chembl_16_unichem.ttl
 
 Replaced Chebi prefixes in chembl_16_molecule.ttl from <http://purl.org/obo/owl/CHEBI#*> to <http://purl.obolibrary.org/obo/CHEBI_*> . 
+Doesn't affect ChEMBL 19
 
 Replaced Enzyme prefixes in chembl_16_targetcmpt.ttl from <http://identifiers.org/ec-code/*> to <http://purl.uniprot.org/enzyme/*> .
+
+For ChEMBL 19, the prefix was added using the SPARQL query :
 
 Created file for activity types and units:
 
