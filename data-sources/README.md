@@ -146,8 +146,7 @@ For ChEMBL 19, the prefix was added using the SPARQL query :
      INSERT {
      	GRAPH <http://www.ebi.ac.uk/chembl> {
      		?chembl_uri cco:targetCmptXref ?enzyme_uri . 
-     		?enzyme_uri a cco:EnzymeClassRef ;
-     			rdfs:label ?label .
+     		?enzyme_uri a cco:EnzymeClassRef .
      	}
      }
      WHERE {
