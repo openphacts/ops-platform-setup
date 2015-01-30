@@ -225,6 +225,10 @@ Graph URI <http://www.ebi.ac.uk/chembl/target/direct>
              	rdfs:subClassOf [] 
          }
      }
+    
+Issue: ChEMBL 19 has multiple labels for each enzyme class like:
+
+     CHEMBL_TC_5268 EC Reference: 2.-.-.-
 
 ## Chebi
 
