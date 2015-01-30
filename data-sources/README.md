@@ -228,7 +228,7 @@ Graph URI <http://www.ebi.ac.uk/chembl/target/direct>
     
 Issue: ChEMBL 19 has multiple labels for each enzyme class like:
 
-     <http://identifiers.org/ec-code/2.-.-.-> rdfs:label CHEMBL_TC_5268 EC Reference: 2.-.-.-
+     <http://identifiers.org/ec-code/2.-.-.-> rdfs:label "CHEMBL_TC_5268 EC Reference: 2.-.-.-"
 
 ## Chebi
 
