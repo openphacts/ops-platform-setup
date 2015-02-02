@@ -85,16 +85,16 @@ Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/curren
 
 	Develop: graph generated using the query: 
 	
-		INSERT {
-     			GRAPH <http://purl.uniprot.org/enzyme/direct> {
-     				?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass
-     			}	
+	INSERT {
+     		GRAPH <http://purl.uniprot.org/enzyme/direct> {
+     			?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass
+     		}	
+     	}
+     	WHERE {
+     		GRAPH <http://purl.uniprot.org/enzyme> {
+     			?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass 
      		}
-     		WHERE {
-     			GRAPH <http://purl.uniprot.org/enzyme> {
-     				?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass 
-     			}
-     		}
+     	}
      			
 
 - inference.ttl 
