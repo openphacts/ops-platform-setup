@@ -44,7 +44,7 @@ Graph URI: <http://www.conceptwiki.org>
 ## Uniprot on 24 May 2013 12.00EST
 
 Obtained from <http://www.uniprot.org> on 24 May 2013 by running:
-(develop updated on 28012015)
+(develop updated on 28012015, release 2015_1)
 
     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_24052013.rdf.xml
     curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_24052013.rdf.xml
@@ -66,6 +66,7 @@ Develop
 ##Enzyme
 
 Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/enzyme.rdf.gz> on 10 Jan 2014
+(develop updated on 02022015, release 2015_1)
 
 - enzyme.rdf
 
@@ -80,6 +81,21 @@ Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/curren
 		construct{?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass .  } 
 		WHERE {graph <http://purl.uniprot.org/enzyme> 
 		{?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass .}}
+		
+
+	Develop: graph generated using the query: 
+	
+		INSERT {
+     			GRAPH <http://purl.uniprot.org/enzyme/direct> {
+     				?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass
+     			}	
+     		}
+     		WHERE {
+     			GRAPH <http://purl.uniprot.org/enzyme> {
+     				?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass 
+     			}
+     		}
+     			
 
 - inference.ttl 
 
