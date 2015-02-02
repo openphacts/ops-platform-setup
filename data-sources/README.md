@@ -123,6 +123,7 @@ Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/curren
 			?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf>+ ?superclass ;
 				[] []
      		}
+     	}
 
 ##Drugbank
 
