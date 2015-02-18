@@ -149,7 +149,7 @@ Graph URI: <http://linkedlifedata.com/resource/drugbank>
 
 Obtained by downloading all the files from <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/16.0/> on 25 June 2013 
 
-Develop on ChEMBL 19
+Develop on ChEMBL 20
 
 Graph URI <http://www.ebi.ac.uk/chembl>
 - chembl_16_activity.ttl
@@ -166,12 +166,11 @@ Graph URI <http://www.ebi.ac.uk/chembl>
 - chembl_16_unichem.ttl
 
 Replaced Chebi prefixes in chembl_16_molecule.ttl from <http://purl.org/obo/owl/CHEBI#*> to <http://purl.obolibrary.org/obo/CHEBI_*> . 
-Doesn't affect ChEMBL 19
+Doesn't affect ChEMBL 20
 
 Replaced Enzyme prefixes in chembl_16_targetcmpt.ttl from <http://identifiers.org/ec-code/*> to <http://purl.uniprot.org/enzyme/*> .
 
-For ChEMBL 19, the prefix was added using the SPARQL query :
-(TODO: add query replacing object of cco:targetCmptXref and subject of  a cco:EnzymeClassRef )
+For ChEMBL 20, the prefix was added using the SPARQL query :
 
      PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
      INSERT {
@@ -206,7 +205,7 @@ Created file for activity types and units:
        BIND( IRI (CONCAT("http://www.openphacts.org/terms/chembl#", ENCODE_FOR_URI(?standard_type))) AS ?type_uri)
       } } 
 
-ChEMBL 19
+ChEMBL 20
 
      INSERT {
      	GRAPH <http://www.ebi.ac.uk/chembl>  {
@@ -226,7 +225,7 @@ ChEMBL 19
      	}
      }  
 
-ChEMBL 19 Protein Classification
+ChEMBL 20 Protein Classification
 
 Graph URI <http://www.ebi.ac.uk/chembl/target/direct>
 
@@ -243,7 +242,7 @@ Graph URI <http://www.ebi.ac.uk/chembl/target/direct>
      	}
      }
      
-Graph URI <http://www.ebi.ac.uk/chembl/target/direct>
+Graph URI <http://www.ebi.ac.uk/chembl/target/inference>
      
      INSERT { 
      	GRAPH <http://www.ebi.ac.uk/chembl/target/inference> {
