@@ -249,28 +249,28 @@ Obtained from <ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl> on 19
 Downloaded from: ftp://ftp.rsc-us.org/OPS/20131111/ 
 
 Graph URI: <http://ops.rsc-us.org>
-
-	- PROPERTIES_CHEMBL20131111ttl
-	- SYNONYMS_CHEMBL20131111.ttl
-	- LINKSET_EXACT_CHEMBL20131111.ttl
-	- PROPERTIES_CHEBI20131111.ttl
-	- SYNONYMS_CHEBI20131111.ttl
-	- LINKSET_EXACT_CHEBI20131111.ttl
-	- PROPERTIES_DRUGBANK20131111.ttl
-	- LINKSET_EXACT_DRUGBANK20131111.ttl
-	- PROPERTIES_PDB20131111.ttl
-	- SYNONYMS_PDB20131111.ttl
-	- PROPERTIES_MESH20131111.ttl
-	- SYNONYMS_MESH20131111.ttl
+- PROPERTIES_CHEMBL20131111ttl
+- SYNONYMS_CHEMBL20131111.ttl
+- LINKSET_EXACT_CHEMBL20131111.ttl
+- PROPERTIES_CHEBI20131111.ttl
+- SYNONYMS_CHEBI20131111.ttl
+- LINKSET_EXACT_CHEBI20131111.ttl
+- PROPERTIES_DRUGBANK20131111.ttl
+- LINKSET_EXACT_DRUGBANK20131111.ttl
+- PROPERTIES_PDB20131111.ttl
+- SYNONYMS_PDB20131111.ttl
+- PROPERTIES_MESH20131111.ttl
+- SYNONYMS_MESH20131111.ttl
 
 ## FDA Adverse Events
-	- http://aers.data2semantics.org/data/dump-of-2012-generated-on-2012-07-09.nt.gz
+
+- http://aers.data2semantics.org/data/dump-of-2012-generated-on-2012-07-09.nt.gz
 
 ## GO
 
 Downloaded from http://purl.obolibrary.org/obo/go.owl on 04 Mar 2015
 
-	- go.owl 
+- go.owl 
 
 ## GOA 
 
