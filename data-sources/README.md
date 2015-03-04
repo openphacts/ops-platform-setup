@@ -267,12 +267,9 @@ Graph URI: <http://ops.rsc-us.org>
 	- http://aers.data2semantics.org/data/dump-of-2012-generated-on-2012-07-09.nt.gz
 
 ## GO
-	- go_daily-termdb.owl
-		* Downloaded from , Jan 21 2013
-	- go_daily-termdb.rdf-xml
-		* Downloaded from , Jan 21 2013
-	- goTreeInference.ttl
-		* Generated manually, rdfs:subClassOf inference
+
+Downloaded from http://purl.obolibrary.org/obo/go.owl on 04 Mar 2015
+	- go.owl 
 
 ## GOA 
 
