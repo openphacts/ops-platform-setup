@@ -248,7 +248,8 @@ Obtained from <ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl> on 04
 	    }
 	    WHERE {
 	    	GRAPH <http://www.ebi.ac.uk/chebi/direct> {
-	    		?subclass rdfs:subClassOf* ?superclass 
+	    		?subclass rdfs:subClassOf* ?superclass ;
+	    			rdfs:subClassOf [] 
 	    	}
 	    }
 
