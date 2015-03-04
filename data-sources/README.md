@@ -278,7 +278,7 @@ Graph URI: <http://ops.rsc-us.org>
 
 Downloaded source from : http://geneontology.org/gene-associations/ on 17 Feb 2015
 
-Generated RDF using https://github.com/openphacts/ops-platform-setup/blob/1.4.9/scripts/goa/goatordf.py on 17 Feb 2015 (finished on )
+Generated RDF using https://github.com/openphacts/ops-platform-setup/blob/1.4.9/scripts/goa/goatordf.py on 17 Feb 2015 (finished on 26 Feb 2015)
 
 ## Wikipathways
 
