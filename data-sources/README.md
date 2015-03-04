@@ -107,18 +107,6 @@ Graph URI: <http://www.openphacts.org/bio2rdf/drugbank>
 
 - drugbank.nt 
 
-        Fixed invalid URL :
-
-            sed -i 's,<www,<http://www,' drugbank_dump.nt
-
-- drug_type_labels.ttl
-
-	Generated manually, 8 elements (The suffix of all drug type URLs)
-
-- drug_category_labels.ttl 
-
-	Generated manually 553 elements (The suffix of all drug category URLs)
-
 ##Chembl 20
 
 Obtained by downloading all the files from <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/20.0/> on 18 Feb 2015 
