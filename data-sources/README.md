@@ -305,4 +305,4 @@ Generated RDF using https://github.com/openphacts/ops-platform-setup/blob/1.4.9/
 
 ## Wikipathways
 
-Downloaded from : http://openphactsdata.bigcat.maastrichtuniversity.nl/v1.3/wpContent_v0.0.69675_20130710.ttl
+Downloaded from : http://rdf.wikipathways.org/ on March 20 2015 (v20150312)
