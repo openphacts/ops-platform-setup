@@ -303,6 +303,36 @@ Downloaded source from : http://geneontology.org/gene-associations/ on 17 Feb 20
 
 Generated RDF using https://github.com/openphacts/ops-platform-setup/blob/1.4.9/scripts/goa/goatordf.py on 17 Feb 2015 (finished on 26 Feb 2015)
 
+Graph URI : http://www.openphacts.org/goa
+
 ## Wikipathways
 
 Downloaded from : http://rdf.wikipathways.org/ on March 20 2015 (v20150312)
+
+Outstanding issue : https://github.com/openphacts/GLOBAL/issues/210
+
+Graph URI : http://www.wikipathways.org
+
+## DisGeNet
+
+Propriatory version with OMIM data
+
+Downloaded on 31 Mar 2015, v2.1.0, generated on 2014-05-08
+
+Graph URI : http://rdf.imim.es
+
+Generated Association type labels by : 
+
+	    PREFIX sio: <http://semanticscience.org/resource/>
+	    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	    INSERT {
+	    	GRAPH <http://rdf.imim.es> {
+	    		sio:SIO_001119 rdfs:label "gene-disease association linked with causal mutation" .
+	    		sio:SIO_001120 rdfs:label "therapeutic gene-disease association" .
+	    		sio:SIO_001121 rdfs:label "gene-disease biomarker association" .
+	    		sio:SIO_001122 rdfs:label "gene-disease association linked with genetic variation" .
+	    		sio:SIO_001123 rdfs:label "gene-disease association linked with altered gene expression" .
+	    		sio:SIO_001124 rdfs:label "gene-disease association linked with post-translational modification" .
+	    	}
+	    }
+	    WHERE { }
