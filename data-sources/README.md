@@ -336,3 +336,15 @@ Generated Association type labels by :
 	    	}
 	    }
 	    WHERE { }
+	    
+## Nextprot
+
+Downloaded all NextProt nanopubs from http://nanopub-server.ops.labs.vu.nl/ on 08 Apr. 2015
+
+## Caloha
+
+Downloaded from :
+ftp://ftp.nextprot.org/pub/current_release/controlled_vocabularies/caloha.obo
+on 08 Apr. 2015 .
+
+Converted to RDF using WebProtege.
