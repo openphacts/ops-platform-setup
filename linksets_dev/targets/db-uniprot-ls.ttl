@@ -3890,3 +3890,8 @@ ns1:BE0004584	skos:exactMatch	ns2:Q16613 .
 ns1:BE0004586	skos:exactMatch	ns2:Q86VU5 .
 ns1:BE0004597	skos:exactMatch	ns2:Q99873 .
 ns1:BE0005863	skos:exactMatch	ns2:Q16552 .
+
+
+@prefix void: <http://rdfs.org/ns/void#> .
+<> void:inDataset <../../void/linksets/db-uniprot-ls-void.ttl#DrugBank-Uniprot> . 
+
