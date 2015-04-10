@@ -342,8 +342,11 @@ Generated Association type labels by :
 Downloaded all NextProt nanopubs from http://nanopub-server.ops.labs.vu.nl/ on 08 Apr. 2015
 
 Issue: Nextprot protein & tissue URIs not in IMS
+
 Issue: Nanopubs use different tissue URIs to CALOHA
+
 Issue: Less assertions than 1.4
+
 Issue: non-existent EFO code in wasDerivedFrom
 
 Reverted to 1.4 version (Feb 2014)
