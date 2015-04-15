@@ -1,1 +1,63 @@
+@base <http://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/drugbank_4.1_void.ttl> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <#> .
 
+# VoID Header for the DrugBank RDF dataset
+<>
+	rdf:type void:DatasetDescription ;
+	dcterms:title "DrugBank VoID Description"@en ;
+	dcterms:description "The VoID description for the RDF representation of the DrugBank dataset."@en ;
+	pav:createdBy <https://orcid.org/0000-0002-5711-4872> ;
+	pav:createdOn "2015-02-19T00:00:00Z"^^xsd:dateTime ;
+	pav:lastUpdateOn "2015-02-19T12:39:54Z"^^xsd:dateTime ;
+	foaf:primaryTopic :drugbank-rdf .
+
+# Metadata about the original DrugBank dataset
+:drugbank rdf:type dcterms:Dataset ;
+	dcterms:title "DrugBank dataset"@en ;
+	dcterms:description "DrugBank dataset published as web pages."@en ;
+	foaf:homepage <http://www.drugbank.ca/> ;
+	foaf:page <http://thedatahub.org/dataset/drugbank> ;
+	dcterms:license <http://www.drugbank.ca/about#cite> ;
+	pav:version "4.1" ;
+	dcterms:publisher <http://www.drugbank.ca/> .
+
+# Metadata about the RDF representation of DrugBank
+:drugbank-rdf rdf:type void:Dataset ;
+	dcterms:title "DrugBank RDF"@en;
+	dcterms:description "RDF representation of DrugBank"@en;
+	foaf:homepage <http://www.drugbank.ca/> ;
+	dcterms:license <http://www.drugbank.ca/about#cite> ;
+	void:uriSpace "http://bio2rdf.org/drugbank:"^^xsd:string ;
+	pav:version "4.1" ;
+	pav:importedFrom :drugbank ;
+	pav:importedBy <mailto:a.loizou@vu.nl> ;
+	pav:importedOn "2015-02-19T00:00:00Z"^^xsd:dateTime ;
+	pav:createdWith <http://raw.githubusercontent.com/bio2rdf/bio2rdf-scripts/master/drugbank/drugbank.php> ;
+	void:subset :db-drugs, :db-targets ; 
+	void:vocabulary <http://www.w3.org/1999/02/22-rdf-syntax-ns#>,
+		<http://www.w3.org/2002/07/owl#>,
+		<http://xmlns.com/foaf/0.1/>,
+		<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/>,
+		<http://www.w3.org/2000/01/rdf-schema#>;
+	void:dataDump <http://data.openphacts.org/1.5/rdf/drugbank/drugbank.nt> .
+
+# Subset containing drug compound information
+:db-drugs rdf:type void:Dataset ;
+	void:uriSpace "http://bio2rdf.org/drugbank:DB"^^xsd:string ;
+	dcterms:subject <http://dbpedia.org/resource/Pharmaceutical_drug> ;
+	void:exampleResource <http://bio2rdf.org/drugbank:DB00001> .
+
+# Subset containing target information
+:db-targets rdf:type void:Dataset ;
+	void:uriSpace "http://bio2rdf.org/drugbank:BE"^^xsd:string ;
+	dcterms:subject <http://dbpedia.org/resource/Drug_target> ;
+	void:exampleResource <http://bio2rdf.org/drugbank:BE0005863> .
