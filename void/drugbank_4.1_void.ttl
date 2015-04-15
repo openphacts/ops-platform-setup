@@ -15,7 +15,7 @@
 	rdf:type void:DatasetDescription ;
 	dcterms:title "DrugBank VoID Description"@en ;
 	dcterms:description "The VoID description for the RDF representation of the DrugBank dataset."@en ;
-	pav:createdBy <https://orcid.org/0000-0002-1303-2189> ;
+	pav:createdBy <https://orcid.org/0000-0002-5711-4872> ;
 	pav:createdOn "2015-02-19T00:00:00Z"^^xsd:dateTime ;
 	pav:lastUpdateOn "2015-02-19T12:39:54Z"^^xsd:dateTime ;
 	foaf:primaryTopic :drugbank-rdf .

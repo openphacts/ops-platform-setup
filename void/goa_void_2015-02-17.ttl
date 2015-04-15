@@ -1,1 +1,43 @@
+@base <https://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/goa_void_2015-02-17.ttl>
+@prefix : <#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/2.0/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 
+<https://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/goa_void_2015-02-17.ttl> a void:DatasetDescription; 
+    dcterms:publisher <http://geneontology.org/>;
+    dcat:Distribution <http://geneontology.org/gene-associations/> ;
+    pav:createdBy <http://orcid.org/0000-0002-1303-2189> ;
+    dcterms:description "A Void description for the GOA conversion to RDF Dataset"@en;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+    dcterms:issued "2015-02-17T10:23:56Z"^^xsd:dateTime;
+    dcterms:title "Void for GOA conversion to RDF"@en;
+    foaf:primaryTopic :GOA2RDF.
+
+:GOA2RDF
+	a void:Dataset;
+    dcterms:title "GOA to RDF Feb. 17, 2015"@en;
+    dcterms:description "The NBIC conversion of GOA to RDF to be used by Open PHACTS"@en;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+    dcterms:publisher <http://www.openphacts.org> ;
+    void:uriSpace "http://downloads.nbiceng.net/gene_associations/"^^xsd:string ;
+    pav:derivedFrom <http://www.geneontology.org/GO.downloads.annotations.shtml>;
+    pav:importedFrom :GOA_dataset;
+    pav:importedBy <http://orcid.org/0000-0002-1303-2189> ;
+    pav:importedOn "2015-02-17T10:23:56Z"^^xsd:dateTime;
+    pav:createdWith <https://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/scripts/goa/goatordf.py> .
+
+:GOA_dataset
+    dcterms:title "GOA"@en;
+    dcterms:description "GeneOntology annotations for proteins for various species"@en;
+    foaf:homepage <http://www.geneonotology.org/>;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+    dcterms:publisher <http://www.geneontology.org>;
+    dcat:distribution [ dcat:downloadURL <http://www.geneontology.org/GO.downloads.annotations.shtml>];
+    a dctypes:Dataset.
