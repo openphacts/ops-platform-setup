@@ -1,1 +1,42 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> 
+@prefix : <http://purl.obolibrary.org/obo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix freq: <http://purl.org/cld/freq/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
+<http://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/chebi_125_void.ttl> a void:DatasetDescription ;
+        pav:authoredBy <https://orcid.org/0000-0002-1303-2189> ;
+        pav:authoredOn "2015-04-15T10:40:12Z"^^xsd:dateTime ;
+        foaf:primaryTopic <http://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/chebi_125_void.ttl#chebi> ;
+        dcterms:title "ChEBI 104 VoID Description" ;
+        dcterms:description "The VoID description for the ChEBI 125 Ontology." ;
+        pav:createdOn "2015-04-15T10:40:12Z"^^xsd:dateTime ;
+        pav:lastUpdateOn "2015-04-15T10:40:12Z"^^xsd:dateTime ;
+        pav:createdBy <https://orcid.org/0000-0002-1303-2189> .
+
+<http://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/chebi_125_void.ttl#chebi> a void:Dataset ;
+        pav:createdWith <http://owlapi.sourceforge.net> ;
+        dcterms:title "Chemical Entities of Biological Interest (ChEBI)"@en ;
+        dcterms:description "Chemical Entities of Biological Interest (ChEBI) is a freely available dictionary of molecular entities focused on &#39;small&#39; chemical compounds."@en ;
+        foaf:homepage <http://www.ebi.ac.uk/chebi/> ;
+        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+        void:uriSpace "http://purl.obolibrary.org/obo/"^^xsd:string ;
+        dcterms:publisher <http://www.ebi.ac.uk/chebi/> ;
+        dcterms:subject obo:CHEBI_25367 , <http://dbpedia.org/resource/Molecule> ;
+        void:vocabulary <http://purl.obolibrary.org/obo#> , <http://purl.org/dc/elements/1.1/> , <http://www.w3.org/2000/01/rdf-schema#> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#> , <http://www.w3.org/2002/07/owl#> ;
+        void:exampleResource obo:CHEBI_100 ;
+        voag:frequencyOfChange freq:monthly ;
+        pav:version "125" ;
+        void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl> ;
+        dcterms:created "2015-01-01T02:25:00.000+01:00"^^xsd:dateTime ;
+        dcterms:modified "2015-01-01T02:25:00.000+01:00"^^xsd:dateTime .
