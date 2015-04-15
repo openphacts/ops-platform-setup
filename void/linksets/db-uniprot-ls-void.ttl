@@ -30,8 +30,8 @@
 	pav:retrievedFrom <http://localhost:8890/sparql/> ;
 	pav:retrievedBy <http://orcid.org/0000-0002-1303-2189> ;
 	pav:createdWith :drugbank-uniprot-query ;
-	void:subjectsTarget <http://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/drugbank_4.1_void.ttl> ;
-	void:objectsTarget <https://raw.github.com/openphacts/ops-platform-setup/master/void/uniprot/uniprot_2015_01_void.ttl#uniprotkb_rdf> ;
+	void:subjectsTarget <http://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/drugbank_4.1_void.ttl#drugbank-rdf> ;
+	void:objectsTarget <https://github.com/openphacts/ops-platform-setup/raw/1.5.0/void/uniprot_2015_01_void.ttl#uniprotkb_rdf> ;
 	void:triples "3889"^^xsd:integer .
 
 
