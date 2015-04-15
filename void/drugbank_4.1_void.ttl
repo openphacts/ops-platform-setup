@@ -60,4 +60,4 @@
 :db-targets rdf:type void:Dataset ;
 	void:uriSpace "http://bio2rdf.org/drugbank:BE"^^xsd:string ;
 	dcterms:subject <http://dbpedia.org/resource/Drug_target> ;
-	void:exampleResource <http://bio2rdf.org/drugbank:BE0005863>  .
+	void:exampleResource <http://bio2rdf.org/drugbank:BE0005863> .
