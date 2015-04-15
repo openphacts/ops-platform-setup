@@ -1,0 +1,1365 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dctype: <http://purl.org/dc/dcmitype/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix freq: <http://purl.org/cld/freq/>.
+@prefix pav: <http://purl.org/pav/>.
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix obo2: <http://purl.obolibrary.org/obo#>.
+@prefix cheminf: <http://semanticscience.org/resource/>.
+@prefix : <ftp://ftp.rsc-us.org/OPS/20131111/void_2013-11-11.ttl#>.
+
+<ftp://ftp.rsc-us.org/OPS/20131111/void_2013-11-11.ttl> dcterms:description "OpenPhacts Dataset"@en;
+                                                        dcterms:title "A VoID Description of the OpenPhacts Dataset"@en;
+                                                        pav:createdBy <http://ops.rsc.org/>;
+                                                        pav:createdOn "2012-10-24T10:49:00Z"^^xsd:dateTime;
+                                                        pav:lastUpdateOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                        pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl>;
+                                                        a void:DatasetDescription;
+                                                        foaf:primaryTopic :openphactsDataset.
+:chebi pav:retrievedBy <http://www.chemspider.com/UserProfile.aspx?username=Karen%20Karapetyan>;
+       pav:retrievedFrom <ftp://ftp.ebi.ac.uk/pub/databases/chebi/SDF/ChEBI_complete_3star.sdf.gz>;
+       pav:retrievedOn "2013-06-15T00:00:00Z"^^xsd:dateTime;
+       pav:version "104"^^xsd:string;
+       a dctype:Dataset;
+       foaf:homepage <http://www.ebi.ac.uk/chebi/>.
+:chebi_exactMatch dcterms:description "ChEBI linkset of compounds deposited into OpenPhacts that match exactly with OpenPhacts compounds."@en;
+                  dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                  dcterms:title "OpenPhacts ChEBI exact match Linkset"@en;
+                  pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                  pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                  pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                  pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                  pav:createdWith <http://ops.rsc.org/>;
+                  pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_exactMatch>;
+                  void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_EXACT_CHEBI20131111.ttl.gz>;
+                  void:linkPredicate skos:exactMatch;
+                  void:objectsTarget <https://github.com/openphacts/ops-platform-setup/blob/master/void/chebi/chebi104_void.ttl#chebi>;
+                  void:subjectsTarget :openphacts-chebi;
+                  void:triples 22560 ;
+                  dul:expresses cheminf:CHEMINF_000059;
+                  a void:Linkset.
+:chebi_ops_chemspider_exactMatch dcterms:description "ChEBI linkset of compounds deposited into OpenPhacts that match exactly with ChemSpider compounds."@en;
+                                 dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                 dcterms:title "OpenPhacts ChEBI OPS-ChemSpider Linkset"@en;
+                                 pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                 pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                 pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                 pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                 pav:createdWith <http://ops.rsc.org/>;
+                                 pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_ops_chemspider_exactMatch>;
+                                 void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_EXACT_OPS_CHEMSPIDER_CHEBI20131111.ttl.gz>;
+                                 void:linkPredicate skos:exactMatch;
+                                 void:objectsTarget <http://rdf.chemspider.com/void.rdf>;
+                                 void:subjectsTarget :openphactsDataset;
+                                 void:triples 22560 ;
+                                 dul:expresses cheminf:CHEMINF_000059;
+                                 a void:Linkset.
+:chebi_parent_child_charge_unsensitive_parent_closeMatch dcterms:description "Charge Unsensitive Parent: this parent is generated when it is possible to unambiguosly neutralize charge, e.g. metal cation to metal or carboxylate to carboxylic acid"@en;
+                                                         dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                         dcterms:title "OpenPhacts ChEBI Charge Unsensitive Parent Parent-Child Linkset"@en;
+                                                         pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                         pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                         pav:createdWith <http://ops.rsc.org/>;
+                                                         pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_parent_child_charge_unsensitive_parent_closeMatch>;
+                                                         void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_CLOSE_PARENT_CHILD_CHARGE_UNSENSITIVE_PARENT_CHEBI20131111.ttl.gz>;
+                                                         void:linkPredicate skos:closeMatch;
+                                                         void:objectsTarget :openphactsDataset;
+                                                         void:subjectsTarget :openphactsDataset;
+                                                         void:triples 5198 ;
+                                                         dul:expresses cheminf:CHEMINF_000460;
+                                                         a void:Linkset.
+:chebi_parent_child_fragment_relatedMatch dcterms:description "Fragment: fragment relationships are for dealing with mixtures or ion/counter ion couples. It will connect each distinct chemical in the mixture or couple to the parent"@en;
+                                          dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                          dcterms:title "OpenPhacts ChEBI Fragment Parent-Child Linkset"@en;
+                                          pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                          pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                          pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                          pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                          pav:createdWith <http://ops.rsc.org/>;
+                                          pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_parent_child_fragment_relatedMatch>;
+                                          void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_RELATED_PARENT_CHILD_FRAGMENT_CHEBI20131111.ttl.gz>;
+                                          void:linkPredicate skos:relatedMatch;
+                                          void:objectsTarget :openphactsDataset;
+                                          void:subjectsTarget :openphactsDataset;
+                                          void:triples 80733 ;
+                                          dul:expresses obo2:has_part;
+                                          a void:Linkset.
+:chebi_parent_child_fragment_unsensitive_parent_closeMatch dcterms:description "Fragment Unsensitive Parent: this parent is produced when there is a mixture or ion-counter ion couple. It is the heaviest component of the mixture"@en;
+                                                           dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                           dcterms:title "OpenPhacts ChEBI Fragment Unsensitive Parent Parent-Child Linkset"@en;
+                                                           pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                           pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                           pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                           pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                           pav:createdWith <http://ops.rsc.org/>;
+                                                           pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_parent_child_fragment_unsensitive_parent_closeMatch>;
+                                                           void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_CLOSE_PARENT_CHILD_FRAGMENT_UNSENSITIVE_PARENT_CHEBI20131111.ttl.gz>;
+                                                           void:linkPredicate skos:closeMatch;
+                                                           void:objectsTarget :openphactsDataset;
+                                                           void:subjectsTarget :openphactsDataset;
+                                                           void:triples 0 ;
+                                                           dul:expresses cheminf:CHEMINF_000480;
+                                                           a void:Linkset.
+:chebi_parent_child_isotope_unsensitive_parent_closeMatch dcterms:description "Isotope Unsensitive Parent: this parent replaces all isotopes with average mass"@en;
+                                                          dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                          dcterms:title "OpenPhacts ChEBI Isotope Unsensitive Parent Parent-Child Linkset"@en;
+                                                          pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                          pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                          pav:createdWith <http://ops.rsc.org/>;
+                                                          pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_parent_child_isotope_unsensitive_parent_closeMatch>;
+                                                          void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_CLOSE_PARENT_CHILD_ISOTOPE_UNSENSITIVE_PARENT_CHEBI20131111.ttl.gz>;
+                                                          void:linkPredicate skos:closeMatch;
+                                                          void:objectsTarget :openphactsDataset;
+                                                          void:subjectsTarget :openphactsDataset;
+                                                          void:triples 256 ;
+                                                          dul:expresses cheminf:CHEMINF_000459;
+                                                          a void:Linkset.
+:chebi_parent_child_stereo_unsensitive_parent_closeMatch dcterms:description "Stereo Unsensitive Parent: this parent completely strips out stereo (both SP3 and double bond)"@en;
+                                                         dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                         dcterms:title "OpenPhacts ChEBI Stereo Unsensitive Parent Parent-Child Linkset"@en;
+                                                         pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                         pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                         pav:createdWith <http://ops.rsc.org/>;
+                                                         pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_parent_child_stereo_unsensitive_parent_closeMatch>;
+                                                         void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_CLOSE_PARENT_CHILD_STEREO_UNSENSITIVE_PARENT_CHEBI20131111.ttl.gz>;
+                                                         void:linkPredicate skos:closeMatch;
+                                                         void:objectsTarget :openphactsDataset;
+                                                         void:subjectsTarget :openphactsDataset;
+                                                         void:triples 12872 ;
+                                                         dul:expresses cheminf:CHEMINF_000456;
+                                                         a void:Linkset.
+:chebi_parent_child_super_unsensitive_parent_closeMatch dcterms:description "Super Unsensitive Parent: this parent pruced by sequential application of molecular modifications needed to produce stereo unsensitive, charge unsensitive, isotop unsensitive"@en;
+                                                        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                        dcterms:title "OpenPhacts ChEBI Super Unsensitive Parent Parent-Child Linkset"@en;
+                                                        pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                        pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                        pav:createdWith <http://ops.rsc.org/>;
+                                                        pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_parent_child_super_unsensitive_parent_closeMatch>;
+                                                        void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_CLOSE_PARENT_CHILD_SUPER_UNSENSITIVE_PARENT_CHEBI20131111.ttl.gz>;
+                                                        void:linkPredicate skos:closeMatch;
+                                                        void:objectsTarget :openphactsDataset;
+                                                        void:subjectsTarget :openphactsDataset;
+                                                        void:triples 16054 ;
+                                                        dul:expresses cheminf:CHEMINF_000458;
+                                                        a void:Linkset.
+:chebi_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch dcterms:description "Tautomer Unsensitive Parent at 7.4 pH: this parent represents canonicalized tautomer at pH 7.4"@en;
+                                                                     dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                     dcterms:title "OpenPhacts ChEBI Tautomer Unsensitive Parent at 7.4 pH Parent-Child Linkset"@en;
+                                                                     pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                     pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                     pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                     pav:createdWith <http://ops.rsc.org/>;
+                                                                     pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch>;
+                                                                     void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_AT_7_4_PH_CHEBI20131111.ttl.gz>;
+                                                                     void:linkPredicate skos:closeMatch;
+                                                                     void:objectsTarget :openphactsDataset;
+                                                                     void:subjectsTarget :openphactsDataset;
+                                                                     void:triples 0 ;
+                                                                     dul:expresses cheminf:CHEMINF_000486;
+                                                                     a void:Linkset.
+:chebi_parent_child_tautomer_unsensitive_parent_closeMatch dcterms:description "Tautomer Unsensitive Parent: this parent represents canonicalized tautomer"@en;
+                                                           dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                           dcterms:title "OpenPhacts ChEBI Tautomer Unsensitive Parent Parent-Child Linkset"@en;
+                                                           pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                           pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                           pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                           pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                           pav:createdWith <http://ops.rsc.org/>;
+                                                           pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chebi_parent_child_tautomer_unsensitive_parent_closeMatch>;
+                                                           void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEBI/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_CHEBI20131111.ttl.gz>;
+                                                           void:linkPredicate skos:closeMatch;
+                                                           void:objectsTarget :openphactsDataset;
+                                                           void:subjectsTarget :openphactsDataset;
+                                                           void:triples 2212 ;
+                                                           dul:expresses obo2:is_tautomer_of;
+                                                           a void:Linkset.
+:chembl pav:retrievedBy <http://www.chemspider.com/UserProfile.aspx?username=Karen%20Karapetyan>;
+        pav:retrievedFrom <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_16/chembl_16.sdf.gz>;
+        pav:retrievedOn "2013-06-15T00:00:00Z"^^xsd:dateTime;
+        pav:version "16"^^xsd:string;
+        a dctype:Dataset;
+        foaf:homepage <https://www.ebi.ac.uk/chembl/>.
+:chembl_exactMatch dcterms:description "ChEMBL linkset of compounds deposited into OpenPhacts that match exactly with OpenPhacts compounds."@en;
+                   dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                   dcterms:title "OpenPhacts ChEMBL exact match Linkset"@en;
+                   pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                   pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                   pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                   pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                   pav:createdWith <http://ops.rsc.org/>;
+                   pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_exactMatch>;
+                   void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_EXACT_CHEMBL20131111.ttl.gz>;
+                   void:linkPredicate skos:exactMatch;
+                   void:objectsTarget <http://linkedchemistry.info/void.ttl#chemblrdf_compounds>;
+                   void:subjectsTarget :openphacts-chembl;
+                   void:triples 1315604 ;
+                   dul:expresses cheminf:CHEMINF_000059;
+                   a void:Linkset.
+:chembl_ops_chemspider_exactMatch dcterms:description "ChEMBL linkset of compounds deposited into OpenPhacts that match exactly with ChemSpider compounds."@en;
+                                  dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                  dcterms:title "OpenPhacts ChEMBL OPS-ChemSpider Linkset"@en;
+                                  pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                  pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                  pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                  pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                  pav:createdWith <http://ops.rsc.org/>;
+                                  pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_ops_chemspider_exactMatch>;
+                                  void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_EXACT_OPS_CHEMSPIDER_CHEMBL20131111.ttl.gz>;
+                                  void:linkPredicate skos:exactMatch;
+                                  void:objectsTarget <http://rdf.chemspider.com/void.rdf>;
+                                  void:subjectsTarget :openphactsDataset;
+                                  void:triples 1315604 ;
+                                  dul:expresses cheminf:CHEMINF_000059;
+                                  a void:Linkset.
+:chembl_parent_child_charge_unsensitive_parent_closeMatch dcterms:description "Charge Unsensitive Parent: this parent is generated when it is possible to unambiguosly neutralize charge, e.g. metal cation to metal or carboxylate to carboxylic acid"@en;
+                                                          dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                          dcterms:title "OpenPhacts ChEMBL Charge Unsensitive Parent Parent-Child Linkset"@en;
+                                                          pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                          pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                          pav:createdWith <http://ops.rsc.org/>;
+                                                          pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_parent_child_charge_unsensitive_parent_closeMatch>;
+                                                          void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_CLOSE_PARENT_CHILD_CHARGE_UNSENSITIVE_PARENT_CHEMBL20131111.ttl.gz>;
+                                                          void:linkPredicate skos:closeMatch;
+                                                          void:objectsTarget :openphactsDataset;
+                                                          void:subjectsTarget :openphactsDataset;
+                                                          void:triples 23125 ;
+                                                          dul:expresses cheminf:CHEMINF_000460;
+                                                          a void:Linkset.
+:chembl_parent_child_fragment_relatedMatch dcterms:description "Fragment: fragment relationships are for dealing with mixtures or ion/counter ion couples. It will connect each distinct chemical in the mixture or couple to the parent"@en;
+                                           dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                           dcterms:title "OpenPhacts ChEMBL Fragment Parent-Child Linkset"@en;
+                                           pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                           pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                           pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                           pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                           pav:createdWith <http://ops.rsc.org/>;
+                                           pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_parent_child_fragment_relatedMatch>;
+                                           void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_RELATED_PARENT_CHILD_FRAGMENT_CHEMBL20131111.ttl.gz>;
+                                           void:linkPredicate skos:relatedMatch;
+                                           void:objectsTarget :openphactsDataset;
+                                           void:subjectsTarget :openphactsDataset;
+                                           void:triples 149433 ;
+                                           dul:expresses obo2:has_part;
+                                           a void:Linkset.
+:chembl_parent_child_fragment_unsensitive_parent_closeMatch dcterms:description "Fragment Unsensitive Parent: this parent is produced when there is a mixture or ion-counter ion couple. It is the heaviest component of the mixture"@en;
+                                                            dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                            dcterms:title "OpenPhacts ChEMBL Fragment Unsensitive Parent Parent-Child Linkset"@en;
+                                                            pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                            pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                            pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                            pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                            pav:createdWith <http://ops.rsc.org/>;
+                                                            pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_parent_child_fragment_unsensitive_parent_closeMatch>;
+                                                            void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_CLOSE_PARENT_CHILD_FRAGMENT_UNSENSITIVE_PARENT_CHEMBL20131111.ttl.gz>;
+                                                            void:linkPredicate skos:closeMatch;
+                                                            void:objectsTarget :openphactsDataset;
+                                                            void:subjectsTarget :openphactsDataset;
+                                                            void:triples 0 ;
+                                                            dul:expresses cheminf:CHEMINF_000480;
+                                                            a void:Linkset.
+:chembl_parent_child_isotope_unsensitive_parent_closeMatch dcterms:description "Isotope Unsensitive Parent: this parent replaces all isotopes with average mass"@en;
+                                                           dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                           dcterms:title "OpenPhacts ChEMBL Isotope Unsensitive Parent Parent-Child Linkset"@en;
+                                                           pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                           pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                           pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                           pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                           pav:createdWith <http://ops.rsc.org/>;
+                                                           pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_parent_child_isotope_unsensitive_parent_closeMatch>;
+                                                           void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_CLOSE_PARENT_CHILD_ISOTOPE_UNSENSITIVE_PARENT_CHEMBL20131111.ttl.gz>;
+                                                           void:linkPredicate skos:closeMatch;
+                                                           void:objectsTarget :openphactsDataset;
+                                                           void:subjectsTarget :openphactsDataset;
+                                                           void:triples 1355 ;
+                                                           dul:expresses cheminf:CHEMINF_000459;
+                                                           a void:Linkset.
+:chembl_parent_child_stereo_unsensitive_parent_closeMatch dcterms:description "Stereo Unsensitive Parent: this parent completely strips out stereo (both SP3 and double bond)"@en;
+                                                          dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                          dcterms:title "OpenPhacts ChEMBL Stereo Unsensitive Parent Parent-Child Linkset"@en;
+                                                          pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                          pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                          pav:createdWith <http://ops.rsc.org/>;
+                                                          pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_parent_child_stereo_unsensitive_parent_closeMatch>;
+                                                          void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_CLOSE_PARENT_CHILD_STEREO_UNSENSITIVE_PARENT_CHEMBL20131111.ttl.gz>;
+                                                          void:linkPredicate skos:closeMatch;
+                                                          void:objectsTarget :openphactsDataset;
+                                                          void:subjectsTarget :openphactsDataset;
+                                                          void:triples 402488 ;
+                                                          dul:expresses cheminf:CHEMINF_000456;
+                                                          a void:Linkset.
+:chembl_parent_child_super_unsensitive_parent_closeMatch dcterms:description "Super Unsensitive Parent: this parent pruced by sequential application of molecular modifications needed to produce stereo unsensitive, charge unsensitive, isotop unsensitive"@en;
+                                                         dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                         dcterms:title "OpenPhacts ChEMBL Super Unsensitive Parent Parent-Child Linkset"@en;
+                                                         pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                         pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                         pav:createdWith <http://ops.rsc.org/>;
+                                                         pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_parent_child_super_unsensitive_parent_closeMatch>;
+                                                         void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_CLOSE_PARENT_CHILD_SUPER_UNSENSITIVE_PARENT_CHEMBL20131111.ttl.gz>;
+                                                         void:linkPredicate skos:closeMatch;
+                                                         void:objectsTarget :openphactsDataset;
+                                                         void:subjectsTarget :openphactsDataset;
+                                                         void:triples 457726 ;
+                                                         dul:expresses cheminf:CHEMINF_000458;
+                                                         a void:Linkset.
+:chembl_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch dcterms:description "Tautomer Unsensitive Parent at 7.4 pH: this parent represents canonicalized tautomer at pH 7.4"@en;
+                                                                      dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                      dcterms:title "OpenPhacts ChEMBL Tautomer Unsensitive Parent at 7.4 pH Parent-Child Linkset"@en;
+                                                                      pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                      pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                      pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                      pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                      pav:createdWith <http://ops.rsc.org/>;
+                                                                      pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch>;
+                                                                      void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_AT_7_4_PH_CHEMBL20131111.ttl.gz>;
+                                                                      void:linkPredicate skos:closeMatch;
+                                                                      void:objectsTarget :openphactsDataset;
+                                                                      void:subjectsTarget :openphactsDataset;
+                                                                      void:triples 0 ;
+                                                                      dul:expresses cheminf:CHEMINF_000486;
+                                                                      a void:Linkset.
+:chembl_parent_child_tautomer_unsensitive_parent_closeMatch dcterms:description "Tautomer Unsensitive Parent: this parent represents canonicalized tautomer"@en;
+                                                            dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                            dcterms:title "OpenPhacts ChEMBL Tautomer Unsensitive Parent Parent-Child Linkset"@en;
+                                                            pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                            pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                            pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                            pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                            pav:createdWith <http://ops.rsc.org/>;
+                                                            pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#chembl_parent_child_tautomer_unsensitive_parent_closeMatch>;
+                                                            void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/CHEMBL/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_CHEMBL20131111.ttl.gz>;
+                                                            void:linkPredicate skos:closeMatch;
+                                                            void:objectsTarget :openphactsDataset;
+                                                            void:subjectsTarget :openphactsDataset;
+                                                            void:triples 70661 ;
+                                                            dul:expresses obo2:is_tautomer_of;
+                                                            a void:Linkset.
+:drugbank pav:retrievedBy <http://www.chemspider.com/UserProfile.aspx?username=Karen%20Karapetyan>;
+          pav:retrievedFrom <http://www.drugbank.ca/system/downloads/current/structures/all.sdf.zip>;
+          pav:retrievedOn "2013-06-15T00:00:00Z"^^xsd:dateTime;
+          pav:version "3"^^xsd:string;
+          a dctype:Dataset;
+          foaf:homepage <http://www.drugbank.com/>.
+:drugbank_exactMatch dcterms:description "DrugBank linkset of compounds deposited into OpenPhacts that match exactly with OpenPhacts compounds."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                     dcterms:title "OpenPhacts DrugBank exact match Linkset"@en;
+                     pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                     pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                     pav:createdWith <http://ops.rsc.org/>;
+                     pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_exactMatch>;
+                     void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_EXACT_DRUGBANK20131111.ttl.gz>;
+                     void:linkPredicate skos:exactMatch;
+                     void:objectsTarget <https://github.com/openphacts/ops-platform-setup/blob/master/void/drugbank_void.ttl#db-drugs>;
+                     void:subjectsTarget :openphacts-drugbank;
+                     void:triples 6508 ;
+                     dul:expresses cheminf:CHEMINF_000059;
+                     a void:Linkset.
+:drugbank_ops_chemspider_exactMatch dcterms:description "DrugBank linkset of compounds deposited into OpenPhacts that match exactly with ChemSpider compounds."@en;
+                                    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                    dcterms:title "OpenPhacts DrugBank OPS-ChemSpider Linkset"@en;
+                                    pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                    pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                    pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                    pav:createdWith <http://ops.rsc.org/>;
+                                    pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_ops_chemspider_exactMatch>;
+                                    void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_EXACT_OPS_CHEMSPIDER_DRUGBANK20131111.ttl.gz>;
+                                    void:linkPredicate skos:exactMatch;
+                                    void:objectsTarget <http://rdf.chemspider.com/void.rdf>;
+                                    void:subjectsTarget :openphactsDataset;
+                                    void:triples 6508 ;
+                                    dul:expresses cheminf:CHEMINF_000059;
+                                    a void:Linkset.
+:drugbank_parent_child_charge_unsensitive_parent_closeMatch dcterms:description "Charge Unsensitive Parent: this parent is generated when it is possible to unambiguosly neutralize charge, e.g. metal cation to metal or carboxylate to carboxylic acid"@en;
+                                                            dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                            dcterms:title "OpenPhacts DrugBank Charge Unsensitive Parent Parent-Child Linkset"@en;
+                                                            pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                            pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                            pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                            pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                            pav:createdWith <http://ops.rsc.org/>;
+                                                            pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_parent_child_charge_unsensitive_parent_closeMatch>;
+                                                            void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_CLOSE_PARENT_CHILD_CHARGE_UNSENSITIVE_PARENT_DRUGBANK20131111.ttl.gz>;
+                                                            void:linkPredicate skos:closeMatch;
+                                                            void:objectsTarget :openphactsDataset;
+                                                            void:subjectsTarget :openphactsDataset;
+                                                            void:triples 1205 ;
+                                                            dul:expresses cheminf:CHEMINF_000460;
+                                                            a void:Linkset.
+:drugbank_parent_child_fragment_relatedMatch dcterms:description "Fragment: fragment relationships are for dealing with mixtures or ion/counter ion couples. It will connect each distinct chemical in the mixture or couple to the parent"@en;
+                                             dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                             dcterms:title "OpenPhacts DrugBank Fragment Parent-Child Linkset"@en;
+                                             pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                             pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                             pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                             pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                             pav:createdWith <http://ops.rsc.org/>;
+                                             pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_parent_child_fragment_relatedMatch>;
+                                             void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_RELATED_PARENT_CHILD_FRAGMENT_DRUGBANK20131111.ttl.gz>;
+                                             void:linkPredicate skos:relatedMatch;
+                                             void:objectsTarget :openphactsDataset;
+                                             void:subjectsTarget :openphactsDataset;
+                                             void:triples 8981 ;
+                                             dul:expresses obo2:has_part;
+                                             a void:Linkset.
+:drugbank_parent_child_fragment_unsensitive_parent_closeMatch dcterms:description "Fragment Unsensitive Parent: this parent is produced when there is a mixture or ion-counter ion couple. It is the heaviest component of the mixture"@en;
+                                                              dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                              dcterms:title "OpenPhacts DrugBank Fragment Unsensitive Parent Parent-Child Linkset"@en;
+                                                              pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                              pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                              pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                              pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                              pav:createdWith <http://ops.rsc.org/>;
+                                                              pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_parent_child_fragment_unsensitive_parent_closeMatch>;
+                                                              void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_CLOSE_PARENT_CHILD_FRAGMENT_UNSENSITIVE_PARENT_DRUGBANK20131111.ttl.gz>;
+                                                              void:linkPredicate skos:closeMatch;
+                                                              void:objectsTarget :openphactsDataset;
+                                                              void:subjectsTarget :openphactsDataset;
+                                                              void:triples 0 ;
+                                                              dul:expresses cheminf:CHEMINF_000480;
+                                                              a void:Linkset.
+:drugbank_parent_child_isotope_unsensitive_parent_closeMatch dcterms:description "Isotope Unsensitive Parent: this parent replaces all isotopes with average mass"@en;
+                                                             dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                             dcterms:title "OpenPhacts DrugBank Isotope Unsensitive Parent Parent-Child Linkset"@en;
+                                                             pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                             pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                             pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                             pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                             pav:createdWith <http://ops.rsc.org/>;
+                                                             pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_parent_child_isotope_unsensitive_parent_closeMatch>;
+                                                             void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_CLOSE_PARENT_CHILD_ISOTOPE_UNSENSITIVE_PARENT_DRUGBANK20131111.ttl.gz>;
+                                                             void:linkPredicate skos:closeMatch;
+                                                             void:objectsTarget :openphactsDataset;
+                                                             void:subjectsTarget :openphactsDataset;
+                                                             void:triples 67 ;
+                                                             dul:expresses cheminf:CHEMINF_000459;
+                                                             a void:Linkset.
+:drugbank_parent_child_stereo_unsensitive_parent_closeMatch dcterms:description "Stereo Unsensitive Parent: this parent completely strips out stereo (both SP3 and double bond)"@en;
+                                                            dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                            dcterms:title "OpenPhacts DrugBank Stereo Unsensitive Parent Parent-Child Linkset"@en;
+                                                            pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                            pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                            pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                            pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                            pav:createdWith <http://ops.rsc.org/>;
+                                                            pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_parent_child_stereo_unsensitive_parent_closeMatch>;
+                                                            void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_CLOSE_PARENT_CHILD_STEREO_UNSENSITIVE_PARENT_DRUGBANK20131111.ttl.gz>;
+                                                            void:linkPredicate skos:closeMatch;
+                                                            void:objectsTarget :openphactsDataset;
+                                                            void:subjectsTarget :openphactsDataset;
+                                                            void:triples 3915 ;
+                                                            dul:expresses cheminf:CHEMINF_000456;
+                                                            a void:Linkset.
+:drugbank_parent_child_super_unsensitive_parent_closeMatch dcterms:description "Super Unsensitive Parent: this parent pruced by sequential application of molecular modifications needed to produce stereo unsensitive, charge unsensitive, isotop unsensitive"@en;
+                                                           dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                           dcterms:title "OpenPhacts DrugBank Super Unsensitive Parent Parent-Child Linkset"@en;
+                                                           pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                           pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                           pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                           pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                           pav:createdWith <http://ops.rsc.org/>;
+                                                           pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_parent_child_super_unsensitive_parent_closeMatch>;
+                                                           void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_CLOSE_PARENT_CHILD_SUPER_UNSENSITIVE_PARENT_DRUGBANK20131111.ttl.gz>;
+                                                           void:linkPredicate skos:closeMatch;
+                                                           void:objectsTarget :openphactsDataset;
+                                                           void:subjectsTarget :openphactsDataset;
+                                                           void:triples 5014 ;
+                                                           dul:expresses cheminf:CHEMINF_000458;
+                                                           a void:Linkset.
+:drugbank_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch dcterms:description "Tautomer Unsensitive Parent at 7.4 pH: this parent represents canonicalized tautomer at pH 7.4"@en;
+                                                                        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                        dcterms:title "OpenPhacts DrugBank Tautomer Unsensitive Parent at 7.4 pH Parent-Child Linkset"@en;
+                                                                        pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                        pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                        pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                        pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                        pav:createdWith <http://ops.rsc.org/>;
+                                                                        pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch>;
+                                                                        void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_AT_7_4_PH_DRUGBANK20131111.ttl.gz>;
+                                                                        void:linkPredicate skos:closeMatch;
+                                                                        void:objectsTarget :openphactsDataset;
+                                                                        void:subjectsTarget :openphactsDataset;
+                                                                        void:triples 0 ;
+                                                                        dul:expresses cheminf:CHEMINF_000486;
+                                                                        a void:Linkset.
+:drugbank_parent_child_tautomer_unsensitive_parent_closeMatch dcterms:description "Tautomer Unsensitive Parent: this parent represents canonicalized tautomer"@en;
+                                                              dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                              dcterms:title "OpenPhacts DrugBank Tautomer Unsensitive Parent Parent-Child Linkset"@en;
+                                                              pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                              pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                              pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                              pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                              pav:createdWith <http://ops.rsc.org/>;
+                                                              pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#drugbank_parent_child_tautomer_unsensitive_parent_closeMatch>;
+                                                              void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/DRUGBANK/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_DRUGBANK20131111.ttl.gz>;
+                                                              void:linkPredicate skos:closeMatch;
+                                                              void:objectsTarget :openphactsDataset;
+                                                              void:subjectsTarget :openphactsDataset;
+                                                              void:triples 920 ;
+                                                              dul:expresses obo2:is_tautomer_of;
+                                                              a void:Linkset.
+:hmdb pav:retrievedBy <http://www.chemspider.com/UserProfile.aspx?username=Karen%20Karapetyan>;
+      pav:retrievedFrom <http://www.hmdb.ca/downloads/structures.zip>;
+      pav:retrievedOn "2013-07-05T00:00:00Z"^^xsd:dateTime;
+      pav:version "3.5"^^xsd:string;
+      a dctype:Dataset;
+      foaf:homepage <http://www.hmdb.ca/>.
+:hmdb_exactMatch dcterms:description "HMDB linkset of compounds deposited into OpenPhacts that match exactly with OpenPhacts compounds."@en;
+                 dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                 dcterms:title "OpenPhacts HMDB exact match Linkset"@en;
+                 pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                 pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                 pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                 pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                 pav:createdWith <http://ops.rsc.org/>;
+                 pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_exactMatch>;
+                 void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_EXACT_HMDB20131111.ttl.gz>;
+                 void:linkPredicate skos:exactMatch;
+                 void:objectsTarget <http://hmdb_unknown_void/#compounds>;
+                 void:subjectsTarget :openphacts-hmdb;
+                 void:triples 40507 ;
+                 dul:expresses cheminf:CHEMINF_000059;
+                 a void:Linkset.
+:hmdb_ops_chemspider_exactMatch dcterms:description "HMDB linkset of compounds deposited into OpenPhacts that match exactly with ChemSpider compounds."@en;
+                                dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                dcterms:title "OpenPhacts HMDB OPS-ChemSpider Linkset"@en;
+                                pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                pav:createdWith <http://ops.rsc.org/>;
+                                pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_ops_chemspider_exactMatch>;
+                                void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_EXACT_OPS_CHEMSPIDER_HMDB20131111.ttl.gz>;
+                                void:linkPredicate skos:exactMatch;
+                                void:objectsTarget <http://rdf.chemspider.com/void.rdf>;
+                                void:subjectsTarget :openphactsDataset;
+                                void:triples 40507 ;
+                                dul:expresses cheminf:CHEMINF_000059;
+                                a void:Linkset.
+:hmdb_parent_child_charge_unsensitive_parent_closeMatch dcterms:description "Charge Unsensitive Parent: this parent is generated when it is possible to unambiguosly neutralize charge, e.g. metal cation to metal or carboxylate to carboxylic acid"@en;
+                                                        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                        dcterms:title "OpenPhacts HMDB Charge Unsensitive Parent Parent-Child Linkset"@en;
+                                                        pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                        pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                        pav:createdWith <http://ops.rsc.org/>;
+                                                        pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_parent_child_charge_unsensitive_parent_closeMatch>;
+                                                        void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_CLOSE_PARENT_CHILD_CHARGE_UNSENSITIVE_PARENT_HMDB20131111.ttl.gz>;
+                                                        void:linkPredicate skos:closeMatch;
+                                                        void:objectsTarget :openphactsDataset;
+                                                        void:subjectsTarget :openphactsDataset;
+                                                        void:triples 3356 ;
+                                                        dul:expresses cheminf:CHEMINF_000460;
+                                                        a void:Linkset.
+:hmdb_parent_child_fragment_relatedMatch dcterms:description "Fragment: fragment relationships are for dealing with mixtures or ion/counter ion couples. It will connect each distinct chemical in the mixture or couple to the parent"@en;
+                                         dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                         dcterms:title "OpenPhacts HMDB Fragment Parent-Child Linkset"@en;
+                                         pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                         pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                         pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                         pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                         pav:createdWith <http://ops.rsc.org/>;
+                                         pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_parent_child_fragment_relatedMatch>;
+                                         void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_RELATED_PARENT_CHILD_FRAGMENT_HMDB20131111.ttl.gz>;
+                                         void:linkPredicate skos:relatedMatch;
+                                         void:objectsTarget :openphactsDataset;
+                                         void:subjectsTarget :openphactsDataset;
+                                         void:triples 72901 ;
+                                         dul:expresses obo2:has_part;
+                                         a void:Linkset.
+:hmdb_parent_child_fragment_unsensitive_parent_closeMatch dcterms:description "Fragment Unsensitive Parent: this parent is produced when there is a mixture or ion-counter ion couple. It is the heaviest component of the mixture"@en;
+                                                          dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                          dcterms:title "OpenPhacts HMDB Fragment Unsensitive Parent Parent-Child Linkset"@en;
+                                                          pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                          pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                          pav:createdWith <http://ops.rsc.org/>;
+                                                          pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_parent_child_fragment_unsensitive_parent_closeMatch>;
+                                                          void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_CLOSE_PARENT_CHILD_FRAGMENT_UNSENSITIVE_PARENT_HMDB20131111.ttl.gz>;
+                                                          void:linkPredicate skos:closeMatch;
+                                                          void:objectsTarget :openphactsDataset;
+                                                          void:subjectsTarget :openphactsDataset;
+                                                          void:triples 0 ;
+                                                          dul:expresses cheminf:CHEMINF_000480;
+                                                          a void:Linkset.
+:hmdb_parent_child_isotope_unsensitive_parent_closeMatch dcterms:description "Isotope Unsensitive Parent: this parent replaces all isotopes with average mass"@en;
+                                                         dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                         dcterms:title "OpenPhacts HMDB Isotope Unsensitive Parent Parent-Child Linkset"@en;
+                                                         pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                         pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                         pav:createdWith <http://ops.rsc.org/>;
+                                                         pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_parent_child_isotope_unsensitive_parent_closeMatch>;
+                                                         void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_CLOSE_PARENT_CHILD_ISOTOPE_UNSENSITIVE_PARENT_HMDB20131111.ttl.gz>;
+                                                         void:linkPredicate skos:closeMatch;
+                                                         void:objectsTarget :openphactsDataset;
+                                                         void:subjectsTarget :openphactsDataset;
+                                                         void:triples 111 ;
+                                                         dul:expresses cheminf:CHEMINF_000459;
+                                                         a void:Linkset.
+:hmdb_parent_child_stereo_unsensitive_parent_closeMatch dcterms:description "Stereo Unsensitive Parent: this parent completely strips out stereo (both SP3 and double bond)"@en;
+                                                        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                        dcterms:title "OpenPhacts HMDB Stereo Unsensitive Parent Parent-Child Linkset"@en;
+                                                        pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                        pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                        pav:createdWith <http://ops.rsc.org/>;
+                                                        pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_parent_child_stereo_unsensitive_parent_closeMatch>;
+                                                        void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_CLOSE_PARENT_CHILD_STEREO_UNSENSITIVE_PARENT_HMDB20131111.ttl.gz>;
+                                                        void:linkPredicate skos:closeMatch;
+                                                        void:objectsTarget :openphactsDataset;
+                                                        void:subjectsTarget :openphactsDataset;
+                                                        void:triples 31345 ;
+                                                        dul:expresses cheminf:CHEMINF_000456;
+                                                        a void:Linkset.
+:hmdb_parent_child_super_unsensitive_parent_closeMatch dcterms:description "Super Unsensitive Parent: this parent pruced by sequential application of molecular modifications needed to produce stereo unsensitive, charge unsensitive, isotop unsensitive"@en;
+                                                       dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                       dcterms:title "OpenPhacts HMDB Super Unsensitive Parent Parent-Child Linkset"@en;
+                                                       pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                       pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                       pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                       pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                       pav:createdWith <http://ops.rsc.org/>;
+                                                       pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_parent_child_super_unsensitive_parent_closeMatch>;
+                                                       void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_CLOSE_PARENT_CHILD_SUPER_UNSENSITIVE_PARENT_HMDB20131111.ttl.gz>;
+                                                       void:linkPredicate skos:closeMatch;
+                                                       void:objectsTarget :openphactsDataset;
+                                                       void:subjectsTarget :openphactsDataset;
+                                                       void:triples 33579 ;
+                                                       dul:expresses cheminf:CHEMINF_000458;
+                                                       a void:Linkset.
+:hmdb_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch dcterms:description "Tautomer Unsensitive Parent at 7.4 pH: this parent represents canonicalized tautomer at pH 7.4"@en;
+                                                                    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                    dcterms:title "OpenPhacts HMDB Tautomer Unsensitive Parent at 7.4 pH Parent-Child Linkset"@en;
+                                                                    pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                    pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                    pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                    pav:createdWith <http://ops.rsc.org/>;
+                                                                    pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch>;
+                                                                    void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_AT_7_4_PH_HMDB20131111.ttl.gz>;
+                                                                    void:linkPredicate skos:closeMatch;
+                                                                    void:objectsTarget :openphactsDataset;
+                                                                    void:subjectsTarget :openphactsDataset;
+                                                                    void:triples 0 ;
+                                                                    dul:expresses cheminf:CHEMINF_000486;
+                                                                    a void:Linkset.
+:hmdb_parent_child_tautomer_unsensitive_parent_closeMatch dcterms:description "Tautomer Unsensitive Parent: this parent represents canonicalized tautomer"@en;
+                                                          dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                          dcterms:title "OpenPhacts HMDB Tautomer Unsensitive Parent Parent-Child Linkset"@en;
+                                                          pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                          pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                          pav:createdWith <http://ops.rsc.org/>;
+                                                          pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#hmdb_parent_child_tautomer_unsensitive_parent_closeMatch>;
+                                                          void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/HMDB/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_HMDB20131111.ttl.gz>;
+                                                          void:linkPredicate skos:closeMatch;
+                                                          void:objectsTarget :openphactsDataset;
+                                                          void:subjectsTarget :openphactsDataset;
+                                                          void:triples 1528 ;
+                                                          dul:expresses obo2:is_tautomer_of;
+                                                          a void:Linkset.
+:mesh pav:retrievedBy <http://www.chemspider.com/UserProfile.aspx?username=Karen%20Karapetyan>;
+      pav:retrievedFrom <http://www.nlm.nih.gov/mesh/filelist.html>;
+      pav:retrievedOn "2013-07-10T00:00:00Z"^^xsd:dateTime;
+      pav:version "1.0"^^xsd:string;
+      a dctype:Dataset;
+      foaf:homepage <http://www.nlm.nih.gov/mesh/>.
+:mesh_exactMatch dcterms:description "MESH linkset of compounds deposited into OpenPhacts that match exactly with OpenPhacts compounds."@en;
+                 dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                 dcterms:title "OpenPhacts MESH exact match Linkset"@en;
+                 pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                 pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                 pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                 pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                 pav:createdWith <http://ops.rsc.org/>;
+                 pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_exactMatch>;
+                 void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_EXACT_MESH20131111.ttl.gz>;
+                 void:linkPredicate skos:exactMatch;
+                 void:objectsTarget <http://mesh_unknown_void/#compounds>;
+                 void:subjectsTarget :openphacts-mesh;
+                 void:triples 28955 ;
+                 dul:expresses cheminf:CHEMINF_000059;
+                 a void:Linkset.
+:mesh_ops_chemspider_exactMatch dcterms:description "MESH linkset of compounds deposited into OpenPhacts that match exactly with ChemSpider compounds."@en;
+                                dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                dcterms:title "OpenPhacts MESH OPS-ChemSpider Linkset"@en;
+                                pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                pav:createdWith <http://ops.rsc.org/>;
+                                pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_ops_chemspider_exactMatch>;
+                                void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_EXACT_OPS_CHEMSPIDER_MESH20131111.ttl.gz>;
+                                void:linkPredicate skos:exactMatch;
+                                void:objectsTarget <http://rdf.chemspider.com/void.rdf>;
+                                void:subjectsTarget :openphactsDataset;
+                                void:triples 28955 ;
+                                dul:expresses cheminf:CHEMINF_000059;
+                                a void:Linkset.
+:mesh_parent_child_charge_unsensitive_parent_closeMatch dcterms:description "Charge Unsensitive Parent: this parent is generated when it is possible to unambiguosly neutralize charge, e.g. metal cation to metal or carboxylate to carboxylic acid"@en;
+                                                        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                        dcterms:title "OpenPhacts MESH Charge Unsensitive Parent Parent-Child Linkset"@en;
+                                                        pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                        pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                        pav:createdWith <http://ops.rsc.org/>;
+                                                        pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_parent_child_charge_unsensitive_parent_closeMatch>;
+                                                        void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_CLOSE_PARENT_CHILD_CHARGE_UNSENSITIVE_PARENT_MESH20131111.ttl.gz>;
+                                                        void:linkPredicate skos:closeMatch;
+                                                        void:objectsTarget :openphactsDataset;
+                                                        void:subjectsTarget :openphactsDataset;
+                                                        void:triples 2285 ;
+                                                        dul:expresses cheminf:CHEMINF_000460;
+                                                        a void:Linkset.
+:mesh_parent_child_fragment_relatedMatch dcterms:description "Fragment: fragment relationships are for dealing with mixtures or ion/counter ion couples. It will connect each distinct chemical in the mixture or couple to the parent"@en;
+                                         dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                         dcterms:title "OpenPhacts MESH Fragment Parent-Child Linkset"@en;
+                                         pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                         pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                         pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                         pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                         pav:createdWith <http://ops.rsc.org/>;
+                                         pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_parent_child_fragment_relatedMatch>;
+                                         void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_RELATED_PARENT_CHILD_FRAGMENT_MESH20131111.ttl.gz>;
+                                         void:linkPredicate skos:relatedMatch;
+                                         void:objectsTarget :openphactsDataset;
+                                         void:subjectsTarget :openphactsDataset;
+                                         void:triples 24952 ;
+                                         dul:expresses obo2:has_part;
+                                         a void:Linkset.
+:mesh_parent_child_fragment_unsensitive_parent_closeMatch dcterms:description "Fragment Unsensitive Parent: this parent is produced when there is a mixture or ion-counter ion couple. It is the heaviest component of the mixture"@en;
+                                                          dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                          dcterms:title "OpenPhacts MESH Fragment Unsensitive Parent Parent-Child Linkset"@en;
+                                                          pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                          pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                          pav:createdWith <http://ops.rsc.org/>;
+                                                          pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_parent_child_fragment_unsensitive_parent_closeMatch>;
+                                                          void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_CLOSE_PARENT_CHILD_FRAGMENT_UNSENSITIVE_PARENT_MESH20131111.ttl.gz>;
+                                                          void:linkPredicate skos:closeMatch;
+                                                          void:objectsTarget :openphactsDataset;
+                                                          void:subjectsTarget :openphactsDataset;
+                                                          void:triples 0 ;
+                                                          dul:expresses cheminf:CHEMINF_000480;
+                                                          a void:Linkset.
+:mesh_parent_child_isotope_unsensitive_parent_closeMatch dcterms:description "Isotope Unsensitive Parent: this parent replaces all isotopes with average mass"@en;
+                                                         dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                         dcterms:title "OpenPhacts MESH Isotope Unsensitive Parent Parent-Child Linkset"@en;
+                                                         pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                         pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                         pav:createdWith <http://ops.rsc.org/>;
+                                                         pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_parent_child_isotope_unsensitive_parent_closeMatch>;
+                                                         void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_CLOSE_PARENT_CHILD_ISOTOPE_UNSENSITIVE_PARENT_MESH20131111.ttl.gz>;
+                                                         void:linkPredicate skos:closeMatch;
+                                                         void:objectsTarget :openphactsDataset;
+                                                         void:subjectsTarget :openphactsDataset;
+                                                         void:triples 182 ;
+                                                         dul:expresses cheminf:CHEMINF_000459;
+                                                         a void:Linkset.
+:mesh_parent_child_stereo_unsensitive_parent_closeMatch dcterms:description "Stereo Unsensitive Parent: this parent completely strips out stereo (both SP3 and double bond)"@en;
+                                                        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                        dcterms:title "OpenPhacts MESH Stereo Unsensitive Parent Parent-Child Linkset"@en;
+                                                        pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                        pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                        pav:createdWith <http://ops.rsc.org/>;
+                                                        pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_parent_child_stereo_unsensitive_parent_closeMatch>;
+                                                        void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_CLOSE_PARENT_CHILD_STEREO_UNSENSITIVE_PARENT_MESH20131111.ttl.gz>;
+                                                        void:linkPredicate skos:closeMatch;
+                                                        void:objectsTarget :openphactsDataset;
+                                                        void:subjectsTarget :openphactsDataset;
+                                                        void:triples 11916 ;
+                                                        dul:expresses cheminf:CHEMINF_000456;
+                                                        a void:Linkset.
+:mesh_parent_child_super_unsensitive_parent_closeMatch dcterms:description "Super Unsensitive Parent: this parent pruced by sequential application of molecular modifications needed to produce stereo unsensitive, charge unsensitive, isotop unsensitive"@en;
+                                                       dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                       dcterms:title "OpenPhacts MESH Super Unsensitive Parent Parent-Child Linkset"@en;
+                                                       pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                       pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                       pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                       pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                       pav:createdWith <http://ops.rsc.org/>;
+                                                       pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_parent_child_super_unsensitive_parent_closeMatch>;
+                                                       void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_CLOSE_PARENT_CHILD_SUPER_UNSENSITIVE_PARENT_MESH20131111.ttl.gz>;
+                                                       void:linkPredicate skos:closeMatch;
+                                                       void:objectsTarget :openphactsDataset;
+                                                       void:subjectsTarget :openphactsDataset;
+                                                       void:triples 15578 ;
+                                                       dul:expresses cheminf:CHEMINF_000458;
+                                                       a void:Linkset.
+:mesh_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch dcterms:description "Tautomer Unsensitive Parent at 7.4 pH: this parent represents canonicalized tautomer at pH 7.4"@en;
+                                                                    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                    dcterms:title "OpenPhacts MESH Tautomer Unsensitive Parent at 7.4 pH Parent-Child Linkset"@en;
+                                                                    pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                    pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                    pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                    pav:createdWith <http://ops.rsc.org/>;
+                                                                    pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch>;
+                                                                    void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_AT_7_4_PH_MESH20131111.ttl.gz>;
+                                                                    void:linkPredicate skos:closeMatch;
+                                                                    void:objectsTarget :openphactsDataset;
+                                                                    void:subjectsTarget :openphactsDataset;
+                                                                    void:triples 0 ;
+                                                                    dul:expresses cheminf:CHEMINF_000486;
+                                                                    a void:Linkset.
+:mesh_parent_child_tautomer_unsensitive_parent_closeMatch dcterms:description "Tautomer Unsensitive Parent: this parent represents canonicalized tautomer"@en;
+                                                          dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                          dcterms:title "OpenPhacts MESH Tautomer Unsensitive Parent Parent-Child Linkset"@en;
+                                                          pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                          pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                          pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                          pav:createdWith <http://ops.rsc.org/>;
+                                                          pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#mesh_parent_child_tautomer_unsensitive_parent_closeMatch>;
+                                                          void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/MESH/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_MESH20131111.ttl.gz>;
+                                                          void:linkPredicate skos:closeMatch;
+                                                          void:objectsTarget :openphactsDataset;
+                                                          void:subjectsTarget :openphactsDataset;
+                                                          void:triples 2788 ;
+                                                          dul:expresses obo2:is_tautomer_of;
+                                                          a void:Linkset.
+:openphacts-chebi dcterms:description "The subset of OpenPhacts that contains ChEBI data."@en;
+                  dcterms:title "OpenPhacts ChEBI Subset"@en;
+                  void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/ISSUES_CHEBI20131111.ttl.gz>,
+                                <ftp://ftp.rsc-us.org/OPS/20131111/PROPERTIES_CHEBI20131111.ttl.gz>,
+                                <ftp://ftp.rsc-us.org/OPS/20131111/SYNONYMS_CHEBI20131111.ttl.gz>;
+                  void:subset :chebi_exactMatch,
+                              :chebi_ops_chemspider_exactMatch,
+                              :chebi_parent_child_charge_unsensitive_parent_closeMatch,
+                              :chebi_parent_child_fragment_relatedMatch,
+                              :chebi_parent_child_fragment_unsensitive_parent_closeMatch,
+                              :chebi_parent_child_isotope_unsensitive_parent_closeMatch,
+                              :chebi_parent_child_stereo_unsensitive_parent_closeMatch,
+                              :chebi_parent_child_super_unsensitive_parent_closeMatch,
+                              :chebi_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch,
+                              :chebi_parent_child_tautomer_unsensitive_parent_closeMatch;
+                  a void:Dataset;
+                  prov:wasDerivedFrom :chebi;
+                  foaf:page <http://www.ebi.ac.uk/chebi/>.
+:openphacts-chembl dcterms:description "The subset of OpenPhacts that contains ChEMBL data."@en;
+                   dcterms:title "OpenPhacts ChEMBL Subset"@en;
+                   void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/ISSUES_CHEMBL20131111.ttl.gz>,
+                                 <ftp://ftp.rsc-us.org/OPS/20131111/PROPERTIES_CHEMBL20131111.ttl.gz>,
+                                 <ftp://ftp.rsc-us.org/OPS/20131111/SYNONYMS_CHEMBL20131111.ttl.gz>;
+                   void:subset :chembl_exactMatch,
+                               :chembl_ops_chemspider_exactMatch,
+                               :chembl_parent_child_charge_unsensitive_parent_closeMatch,
+                               :chembl_parent_child_fragment_relatedMatch,
+                               :chembl_parent_child_fragment_unsensitive_parent_closeMatch,
+                               :chembl_parent_child_isotope_unsensitive_parent_closeMatch,
+                               :chembl_parent_child_stereo_unsensitive_parent_closeMatch,
+                               :chembl_parent_child_super_unsensitive_parent_closeMatch,
+                               :chembl_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch,
+                               :chembl_parent_child_tautomer_unsensitive_parent_closeMatch;
+                   a void:Dataset;
+                   prov:wasDerivedFrom :chembl;
+                   foaf:page <https://www.ebi.ac.uk/chembl/>.
+:openphacts-drugbank dcterms:description "The subset of OpenPhacts that contains DrugBank data."@en;
+                     dcterms:title "OpenPhacts DrugBank Subset"@en;
+                     void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/ISSUES_DRUGBANK20131111.ttl.gz>,
+                                   <ftp://ftp.rsc-us.org/OPS/20131111/PROPERTIES_DRUGBANK20131111.ttl.gz>,
+                                   <ftp://ftp.rsc-us.org/OPS/20131111/SYNONYMS_DRUGBANK20131111.ttl.gz>;
+                     void:subset :drugbank_exactMatch,
+                                 :drugbank_ops_chemspider_exactMatch,
+                                 :drugbank_parent_child_charge_unsensitive_parent_closeMatch,
+                                 :drugbank_parent_child_fragment_relatedMatch,
+                                 :drugbank_parent_child_fragment_unsensitive_parent_closeMatch,
+                                 :drugbank_parent_child_isotope_unsensitive_parent_closeMatch,
+                                 :drugbank_parent_child_stereo_unsensitive_parent_closeMatch,
+                                 :drugbank_parent_child_super_unsensitive_parent_closeMatch,
+                                 :drugbank_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch,
+                                 :drugbank_parent_child_tautomer_unsensitive_parent_closeMatch;
+                     a void:Dataset;
+                     prov:wasDerivedFrom :drugbank;
+                     foaf:page <http://www.drugbank.com/>.
+:openphacts-hmdb dcterms:description "The subset of OpenPhacts that contains HMDB data."@en;
+                 dcterms:title "OpenPhacts HMDB Subset"@en;
+                 void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/ISSUES_HMDB20131111.ttl.gz>,
+                               <ftp://ftp.rsc-us.org/OPS/20131111/PROPERTIES_HMDB20131111.ttl.gz>,
+                               <ftp://ftp.rsc-us.org/OPS/20131111/SYNONYMS_HMDB20131111.ttl.gz>;
+                 void:subset :hmdb_exactMatch,
+                             :hmdb_ops_chemspider_exactMatch,
+                             :hmdb_parent_child_charge_unsensitive_parent_closeMatch,
+                             :hmdb_parent_child_fragment_relatedMatch,
+                             :hmdb_parent_child_fragment_unsensitive_parent_closeMatch,
+                             :hmdb_parent_child_isotope_unsensitive_parent_closeMatch,
+                             :hmdb_parent_child_stereo_unsensitive_parent_closeMatch,
+                             :hmdb_parent_child_super_unsensitive_parent_closeMatch,
+                             :hmdb_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch,
+                             :hmdb_parent_child_tautomer_unsensitive_parent_closeMatch;
+                 a void:Dataset;
+                 prov:wasDerivedFrom :hmdb;
+                 foaf:page <http://www.hmdb.ca/>.
+:openphacts-mesh dcterms:description "The subset of OpenPhacts that contains MESH data."@en;
+                 dcterms:title "OpenPhacts MESH Subset"@en;
+                 void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/ISSUES_MESH20131111.ttl.gz>,
+                               <ftp://ftp.rsc-us.org/OPS/20131111/PROPERTIES_MESH20131111.ttl.gz>,
+                               <ftp://ftp.rsc-us.org/OPS/20131111/SYNONYMS_MESH20131111.ttl.gz>;
+                 void:subset :mesh_exactMatch,
+                             :mesh_ops_chemspider_exactMatch,
+                             :mesh_parent_child_charge_unsensitive_parent_closeMatch,
+                             :mesh_parent_child_fragment_relatedMatch,
+                             :mesh_parent_child_fragment_unsensitive_parent_closeMatch,
+                             :mesh_parent_child_isotope_unsensitive_parent_closeMatch,
+                             :mesh_parent_child_stereo_unsensitive_parent_closeMatch,
+                             :mesh_parent_child_super_unsensitive_parent_closeMatch,
+                             :mesh_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch,
+                             :mesh_parent_child_tautomer_unsensitive_parent_closeMatch;
+                 a void:Dataset;
+                 prov:wasDerivedFrom :mesh;
+                 foaf:page <http://www.nlm.nih.gov/mesh/>.
+:openphacts-pdb dcterms:description "The subset of OpenPhacts that contains PDB data."@en;
+                dcterms:title "OpenPhacts PDB Subset"@en;
+                void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/ISSUES_PDB20131111.ttl.gz>,
+                              <ftp://ftp.rsc-us.org/OPS/20131111/PROPERTIES_PDB20131111.ttl.gz>,
+                              <ftp://ftp.rsc-us.org/OPS/20131111/SYNONYMS_PDB20131111.ttl.gz>;
+                void:subset :pdb_exactMatch,
+                            :pdb_ops_chemspider_exactMatch,
+                            :pdb_parent_child_charge_unsensitive_parent_closeMatch,
+                            :pdb_parent_child_fragment_relatedMatch,
+                            :pdb_parent_child_fragment_unsensitive_parent_closeMatch,
+                            :pdb_parent_child_isotope_unsensitive_parent_closeMatch,
+                            :pdb_parent_child_stereo_unsensitive_parent_closeMatch,
+                            :pdb_parent_child_super_unsensitive_parent_closeMatch,
+                            :pdb_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch,
+                            :pdb_parent_child_tautomer_unsensitive_parent_closeMatch,
+                            :pdb_relatedMatch;
+                a void:Dataset;
+                prov:wasDerivedFrom :pdb;
+                foaf:page <http://www.wwpdb.org/>.
+:openphacts-thomson_reuters dcterms:description "The subset of OpenPhacts that contains Thomson Reuters data."@en;
+                            dcterms:title "OpenPhacts Thomson Reuters Subset"@en;
+                            void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/ISSUES_THOMSON_REUTERS20131111.ttl.gz>,
+                                          <ftp://ftp.rsc-us.org/OPS/20131111/PROPERTIES_THOMSON_REUTERS20131111.ttl.gz>,
+                                          <ftp://ftp.rsc-us.org/OPS/20131111/SYNONYMS_THOMSON_REUTERS20131111.ttl.gz>;
+                            void:subset :thomson_reuters_exactMatch,
+                                        :thomson_reuters_ops_chemspider_exactMatch,
+                                        :thomson_reuters_parent_child_charge_unsensitive_parent_closeMatch,
+                                        :thomson_reuters_parent_child_fragment_relatedMatch,
+                                        :thomson_reuters_parent_child_fragment_unsensitive_parent_closeMatch,
+                                        :thomson_reuters_parent_child_isotope_unsensitive_parent_closeMatch,
+                                        :thomson_reuters_parent_child_stereo_unsensitive_parent_closeMatch,
+                                        :thomson_reuters_parent_child_super_unsensitive_parent_closeMatch,
+                                        :thomson_reuters_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch,
+                                        :thomson_reuters_parent_child_tautomer_unsensitive_parent_closeMatch;
+                            a void:Dataset;
+                            prov:wasDerivedFrom :thomson_reuters;
+                            foaf:page <http://thomsonreuters.com/>.
+:openphactsDataset dcterms:created "2007-03-01T00:00:00Z"^^xsd:dateTime;
+                   dcterms:description "OpenPhacts Dataset"@en;
+                   dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                   dcterms:modified "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                   dcterms:publisher <http://ops.rsc.org/>;
+                   dcterms:subject <http://dbpedia.org/resource/Molecule>;
+                   dcterms:title "OpenPhacts Dataset"@en;
+                   void:example_resource <http://ops.rsc.org/2157>;
+                   void:feature <http://www.w3.org/ns/formats/data/Turtle>;
+                   void:subset :openphacts-chebi,
+                               :openphacts-chembl,
+                               :openphacts-drugbank,
+                               :openphacts-hmdb,
+                               :openphacts-mesh,
+                               :openphacts-pdb,
+                               :openphacts-thomson_reuters;
+                   void:uriSpace "http://ops.rsc.org"^^xsd:string;
+                   void:vocabulary obo2:,
+                                   <http://purl.obolibrary.org/obo/>,
+                                   dctype:,
+                                   dcterms:,
+                                   pav:,
+                                   <http://qudt.org/1.1/schema/qudt#>,
+                                   void:,
+                                   cheminf:,
+                                   <http://www.obofoundry.org/ro/ro.owl#>,
+                                   dul:,
+                                   rdf:,
+                                   xsd:,
+                                   <http://www.w3.org/2002/07/owl#>,
+                                   skos:,
+                                   foaf:;
+                   voag:frequencyOfChange freq:monthly;
+                   a void:Dataset;
+                   foaf:homepage <http://ops.rsc.org/>.
+:pdb pav:retrievedBy <http://www.chemspider.com/UserProfile.aspx?username=Karen%20Karapetyan>;
+     pav:retrievedFrom <http://ligand-expo.rcsb.org/dictionaries/Components-pub.sdf.gz>;
+     pav:retrievedOn "2013-07-10T00:00:00Z"^^xsd:dateTime;
+     pav:version "1.0"^^xsd:string;
+     a dctype:Dataset;
+     foaf:homepage <http://www.wwpdb.org/>.
+:pdb_exactMatch dcterms:description "PDB linkset of compounds deposited into OpenPhacts that match exactly with OpenPhacts compounds."@en;
+                dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                dcterms:title "OpenPhacts PDB exact match Linkset"@en;
+                pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                pav:createdWith <http://ops.rsc.org/>;
+                pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_exactMatch>;
+                void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_EXACT_PDB20131111.ttl.gz>;
+                void:linkPredicate skos:exactMatch;
+                void:objectsTarget <http://pdb_unknown_void/#compounds>;
+                void:subjectsTarget :openphacts-pdb;
+                void:triples 16062 ;
+                dul:expresses cheminf:CHEMINF_000454;
+                a void:Linkset.
+:pdb_ops_chemspider_exactMatch dcterms:description "PDB linkset of compounds deposited into OpenPhacts that match exactly with ChemSpider compounds."@en;
+                               dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                               dcterms:title "OpenPhacts PDB OPS-ChemSpider Linkset"@en;
+                               pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                               pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                               pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                               pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                               pav:createdWith <http://ops.rsc.org/>;
+                               pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_ops_chemspider_exactMatch>;
+                               void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_EXACT_OPS_CHEMSPIDER_PDB20131111.ttl.gz>;
+                               void:linkPredicate skos:exactMatch;
+                               void:objectsTarget <http://rdf.chemspider.com/void.rdf>;
+                               void:subjectsTarget :openphactsDataset;
+                               void:triples 16062 ;
+                               dul:expresses cheminf:CHEMINF_000454;
+                               a void:Linkset.
+:pdb_parent_child_charge_unsensitive_parent_closeMatch dcterms:description "Charge Unsensitive Parent: this parent is generated when it is possible to unambiguosly neutralize charge, e.g. metal cation to metal or carboxylate to carboxylic acid"@en;
+                                                       dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                       dcterms:title "OpenPhacts PDB Charge Unsensitive Parent Parent-Child Linkset"@en;
+                                                       pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                       pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                       pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                       pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                       pav:createdWith <http://ops.rsc.org/>;
+                                                       pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_parent_child_charge_unsensitive_parent_closeMatch>;
+                                                       void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_CLOSE_PARENT_CHILD_CHARGE_UNSENSITIVE_PARENT_PDB20131111.ttl.gz>;
+                                                       void:linkPredicate skos:closeMatch;
+                                                       void:objectsTarget :openphactsDataset;
+                                                       void:subjectsTarget :openphactsDataset;
+                                                       void:triples 2350 ;
+                                                       dul:expresses cheminf:CHEMINF_000460;
+                                                       a void:Linkset.
+:pdb_parent_child_fragment_relatedMatch dcterms:description "Fragment: fragment relationships are for dealing with mixtures or ion/counter ion couples. It will connect each distinct chemical in the mixture or couple to the parent"@en;
+                                        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                        dcterms:title "OpenPhacts PDB Fragment Parent-Child Linkset"@en;
+                                        pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                        pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                        pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                        pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                        pav:createdWith <http://ops.rsc.org/>;
+                                        pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_parent_child_fragment_relatedMatch>;
+                                        void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_RELATED_PARENT_CHILD_FRAGMENT_PDB20131111.ttl.gz>;
+                                        void:linkPredicate skos:relatedMatch;
+                                        void:objectsTarget :openphactsDataset;
+                                        void:subjectsTarget :openphactsDataset;
+                                        void:triples 74580 ;
+                                        dul:expresses obo2:has_part;
+                                        a void:Linkset.
+:pdb_parent_child_fragment_unsensitive_parent_closeMatch dcterms:description "Fragment Unsensitive Parent: this parent is produced when there is a mixture or ion-counter ion couple. It is the heaviest component of the mixture"@en;
+                                                         dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                         dcterms:title "OpenPhacts PDB Fragment Unsensitive Parent Parent-Child Linkset"@en;
+                                                         pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                         pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                         pav:createdWith <http://ops.rsc.org/>;
+                                                         pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_parent_child_fragment_unsensitive_parent_closeMatch>;
+                                                         void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_CLOSE_PARENT_CHILD_FRAGMENT_UNSENSITIVE_PARENT_PDB20131111.ttl.gz>;
+                                                         void:linkPredicate skos:closeMatch;
+                                                         void:objectsTarget :openphactsDataset;
+                                                         void:subjectsTarget :openphactsDataset;
+                                                         void:triples 0 ;
+                                                         dul:expresses cheminf:CHEMINF_000480;
+                                                         a void:Linkset.
+:pdb_parent_child_isotope_unsensitive_parent_closeMatch dcterms:description "Isotope Unsensitive Parent: this parent replaces all isotopes with average mass"@en;
+                                                        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                        dcterms:title "OpenPhacts PDB Isotope Unsensitive Parent Parent-Child Linkset"@en;
+                                                        pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                        pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                        pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                        pav:createdWith <http://ops.rsc.org/>;
+                                                        pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_parent_child_isotope_unsensitive_parent_closeMatch>;
+                                                        void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_CLOSE_PARENT_CHILD_ISOTOPE_UNSENSITIVE_PARENT_PDB20131111.ttl.gz>;
+                                                        void:linkPredicate skos:closeMatch;
+                                                        void:objectsTarget :openphactsDataset;
+                                                        void:subjectsTarget :openphactsDataset;
+                                                        void:triples 89 ;
+                                                        dul:expresses cheminf:CHEMINF_000459;
+                                                        a void:Linkset.
+:pdb_parent_child_stereo_unsensitive_parent_closeMatch dcterms:description "Stereo Unsensitive Parent: this parent completely strips out stereo (both SP3 and double bond)"@en;
+                                                       dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                       dcterms:title "OpenPhacts PDB Stereo Unsensitive Parent Parent-Child Linkset"@en;
+                                                       pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                       pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                       pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                       pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                       pav:createdWith <http://ops.rsc.org/>;
+                                                       pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_parent_child_stereo_unsensitive_parent_closeMatch>;
+                                                       void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_CLOSE_PARENT_CHILD_STEREO_UNSENSITIVE_PARENT_PDB20131111.ttl.gz>;
+                                                       void:linkPredicate skos:closeMatch;
+                                                       void:objectsTarget :openphactsDataset;
+                                                       void:subjectsTarget :openphactsDataset;
+                                                       void:triples 10000 ;
+                                                       dul:expresses cheminf:CHEMINF_000456;
+                                                       a void:Linkset.
+:pdb_parent_child_super_unsensitive_parent_closeMatch dcterms:description "Super Unsensitive Parent: this parent pruced by sequential application of molecular modifications needed to produce stereo unsensitive, charge unsensitive, isotop unsensitive"@en;
+                                                      dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                      dcterms:title "OpenPhacts PDB Super Unsensitive Parent Parent-Child Linkset"@en;
+                                                      pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                      pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                      pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                      pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                      pav:createdWith <http://ops.rsc.org/>;
+                                                      pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_parent_child_super_unsensitive_parent_closeMatch>;
+                                                      void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_CLOSE_PARENT_CHILD_SUPER_UNSENSITIVE_PARENT_PDB20131111.ttl.gz>;
+                                                      void:linkPredicate skos:closeMatch;
+                                                      void:objectsTarget :openphactsDataset;
+                                                      void:subjectsTarget :openphactsDataset;
+                                                      void:triples 11711 ;
+                                                      dul:expresses cheminf:CHEMINF_000458;
+                                                      a void:Linkset.
+:pdb_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch dcterms:description "Tautomer Unsensitive Parent at 7.4 pH: this parent represents canonicalized tautomer at pH 7.4"@en;
+                                                                   dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                   dcterms:title "OpenPhacts PDB Tautomer Unsensitive Parent at 7.4 pH Parent-Child Linkset"@en;
+                                                                   pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                   pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                   pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                   pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                   pav:createdWith <http://ops.rsc.org/>;
+                                                                   pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch>;
+                                                                   void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_AT_7_4_PH_PDB20131111.ttl.gz>;
+                                                                   void:linkPredicate skos:closeMatch;
+                                                                   void:objectsTarget :openphactsDataset;
+                                                                   void:subjectsTarget :openphactsDataset;
+                                                                   void:triples 0 ;
+                                                                   dul:expresses cheminf:CHEMINF_000486;
+                                                                   a void:Linkset.
+:pdb_parent_child_tautomer_unsensitive_parent_closeMatch dcterms:description "Tautomer Unsensitive Parent: this parent represents canonicalized tautomer"@en;
+                                                         dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                         dcterms:title "OpenPhacts PDB Tautomer Unsensitive Parent Parent-Child Linkset"@en;
+                                                         pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                         pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                         pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                         pav:createdWith <http://ops.rsc.org/>;
+                                                         pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_parent_child_tautomer_unsensitive_parent_closeMatch>;
+                                                         void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_PDB20131111.ttl.gz>;
+                                                         void:linkPredicate skos:closeMatch;
+                                                         void:objectsTarget :openphactsDataset;
+                                                         void:subjectsTarget :openphactsDataset;
+                                                         void:triples 2097 ;
+                                                         dul:expresses obo2:is_tautomer_of;
+                                                         a void:Linkset.
+:pdb_relatedMatch dcterms:description "PDB linkset of compounds deposited into OpenPhacts that are related to OpenPhacts compounds."@en;
+                  dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                  dcterms:title "OpenPhacts PDB related match Linkset"@en;
+                  pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                  pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                  pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                  pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                  pav:createdWith <http://ops.rsc.org/>;
+                  pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#pdb_relatedMatch>;
+                  void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/PDB/LINKSET_RELATED_PDB20131111.ttl.gz>;
+                  void:linkPredicate skos:relatedMatch;
+                  void:objectsTarget <http://pdb_unknown_void/#compounds>;
+                  void:subjectsTarget :openphacts-pdb;
+                  void:triples 0 ;
+                  dul:expresses cheminf:CHEMINF_000454;
+                  a void:Linkset.
+:thomson_reuters pav:retrievedBy <http://www.chemspider.com/UserProfile.aspx?username=Karen%20Karapetyan>;
+                 pav:retrievedFrom <http://www.thomsonreuters.com/UNKNOWN_DOWNLOAD_URL>;
+                 pav:retrievedOn "2013-06-15T00:00:00Z"^^xsd:dateTime;
+                 pav:version "1"^^xsd:string;
+                 a dctype:Dataset;
+                 foaf:homepage <http://thomsonreuters.com/>.
+:thomson_reuters_exactMatch dcterms:description "Thomson Reuters linkset of compounds deposited into OpenPhacts that match exactly with OpenPhacts compounds."@en;
+                            dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                            dcterms:title "OpenPhacts Thomson Reuters exact match Linkset"@en;
+                            pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                            pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                            pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                            pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                            pav:createdWith <http://ops.rsc.org/>;
+                            pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_exactMatch>;
+                            void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_EXACT_THOMSON_REUTERS20131111.ttl.gz>;
+                            void:linkPredicate skos:exactMatch;
+                            void:objectsTarget <http://www.bigcat.unimaas.nl/~egonw/cd/2013-11-06/TR/void.ttl>;
+                            void:subjectsTarget :openphacts-thomson_reuters;
+                            void:triples 1899 ;
+                            dul:expresses cheminf:CHEMINF_000059;
+                            a void:Linkset.
+:thomson_reuters_ops_chemspider_exactMatch dcterms:description "Thomson Reuters linkset of compounds deposited into OpenPhacts that match exactly with ChemSpider compounds."@en;
+                                           dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                           dcterms:title "OpenPhacts Thomson Reuters OPS-ChemSpider Linkset"@en;
+                                           pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                           pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                           pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                           pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                           pav:createdWith <http://ops.rsc.org/>;
+                                           pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_ops_chemspider_exactMatch>;
+                                           void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_EXACT_OPS_CHEMSPIDER_THOMSON_REUTERS20131111.ttl.gz>;
+                                           void:linkPredicate skos:exactMatch;
+                                           void:objectsTarget <http://rdf.chemspider.com/void.rdf>;
+                                           void:subjectsTarget :openphactsDataset;
+                                           void:triples 1899 ;
+                                           dul:expresses cheminf:CHEMINF_000059;
+                                           a void:Linkset.
+:thomson_reuters_parent_child_charge_unsensitive_parent_closeMatch dcterms:description "Charge Unsensitive Parent: this parent is generated when it is possible to unambiguosly neutralize charge, e.g. metal cation to metal or carboxylate to carboxylic acid"@en;
+                                                                   dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                   dcterms:title "OpenPhacts Thomson Reuters Charge Unsensitive Parent Parent-Child Linkset"@en;
+                                                                   pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                   pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                   pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                   pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                   pav:createdWith <http://ops.rsc.org/>;
+                                                                   pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_parent_child_charge_unsensitive_parent_closeMatch>;
+                                                                   void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_CLOSE_PARENT_CHILD_CHARGE_UNSENSITIVE_PARENT_THOMSON_REUTERS20131111.ttl.gz>;
+                                                                   void:linkPredicate skos:closeMatch;
+                                                                   void:objectsTarget :openphactsDataset;
+                                                                   void:subjectsTarget :openphactsDataset;
+                                                                   void:triples 61 ;
+                                                                   dul:expresses cheminf:CHEMINF_000460;
+                                                                   a void:Linkset.
+:thomson_reuters_parent_child_fragment_relatedMatch dcterms:description "Fragment: fragment relationships are for dealing with mixtures or ion/counter ion couples. It will connect each distinct chemical in the mixture or couple to the parent"@en;
+                                                    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                    dcterms:title "OpenPhacts Thomson Reuters Fragment Parent-Child Linkset"@en;
+                                                    pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                    pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                    pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                    pav:createdWith <http://ops.rsc.org/>;
+                                                    pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_parent_child_fragment_relatedMatch>;
+                                                    void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_RELATED_PARENT_CHILD_FRAGMENT_THOMSON_REUTERS20131111.ttl.gz>;
+                                                    void:linkPredicate skos:relatedMatch;
+                                                    void:objectsTarget :openphactsDataset;
+                                                    void:subjectsTarget :openphactsDataset;
+                                                    void:triples 1246 ;
+                                                    dul:expresses obo2:has_part;
+                                                    a void:Linkset.
+:thomson_reuters_parent_child_fragment_unsensitive_parent_closeMatch dcterms:description "Fragment Unsensitive Parent: this parent is produced when there is a mixture or ion-counter ion couple. It is the heaviest component of the mixture"@en;
+                                                                     dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                     dcterms:title "OpenPhacts Thomson Reuters Fragment Unsensitive Parent Parent-Child Linkset"@en;
+                                                                     pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                     pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                     pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                     pav:createdWith <http://ops.rsc.org/>;
+                                                                     pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_parent_child_fragment_unsensitive_parent_closeMatch>;
+                                                                     void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_CLOSE_PARENT_CHILD_FRAGMENT_UNSENSITIVE_PARENT_THOMSON_REUTERS20131111.ttl.gz>;
+                                                                     void:linkPredicate skos:closeMatch;
+                                                                     void:objectsTarget :openphactsDataset;
+                                                                     void:subjectsTarget :openphactsDataset;
+                                                                     void:triples 0 ;
+                                                                     dul:expresses cheminf:CHEMINF_000480;
+                                                                     a void:Linkset.
+:thomson_reuters_parent_child_isotope_unsensitive_parent_closeMatch dcterms:description "Isotope Unsensitive Parent: this parent replaces all isotopes with average mass"@en;
+                                                                    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                    dcterms:title "OpenPhacts Thomson Reuters Isotope Unsensitive Parent Parent-Child Linkset"@en;
+                                                                    pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                    pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                    pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                    pav:createdWith <http://ops.rsc.org/>;
+                                                                    pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_parent_child_isotope_unsensitive_parent_closeMatch>;
+                                                                    void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_CLOSE_PARENT_CHILD_ISOTOPE_UNSENSITIVE_PARENT_THOMSON_REUTERS20131111.ttl.gz>;
+                                                                    void:linkPredicate skos:closeMatch;
+                                                                    void:objectsTarget :openphactsDataset;
+                                                                    void:subjectsTarget :openphactsDataset;
+                                                                    void:triples 33 ;
+                                                                    dul:expresses cheminf:CHEMINF_000459;
+                                                                    a void:Linkset.
+:thomson_reuters_parent_child_stereo_unsensitive_parent_closeMatch dcterms:description "Stereo Unsensitive Parent: this parent completely strips out stereo (both SP3 and double bond)"@en;
+                                                                   dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                   dcterms:title "OpenPhacts Thomson Reuters Stereo Unsensitive Parent Parent-Child Linkset"@en;
+                                                                   pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                   pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                   pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                   pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                   pav:createdWith <http://ops.rsc.org/>;
+                                                                   pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_parent_child_stereo_unsensitive_parent_closeMatch>;
+                                                                   void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_CLOSE_PARENT_CHILD_STEREO_UNSENSITIVE_PARENT_THOMSON_REUTERS20131111.ttl.gz>;
+                                                                   void:linkPredicate skos:closeMatch;
+                                                                   void:objectsTarget :openphactsDataset;
+                                                                   void:subjectsTarget :openphactsDataset;
+                                                                   void:triples 658 ;
+                                                                   dul:expresses cheminf:CHEMINF_000456;
+                                                                   a void:Linkset.
+:thomson_reuters_parent_child_super_unsensitive_parent_closeMatch dcterms:description "Super Unsensitive Parent: this parent pruced by sequential application of molecular modifications needed to produce stereo unsensitive, charge unsensitive, isotop unsensitive"@en;
+                                                                  dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                  dcterms:title "OpenPhacts Thomson Reuters Super Unsensitive Parent Parent-Child Linkset"@en;
+                                                                  pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                  pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                  pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                  pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                  pav:createdWith <http://ops.rsc.org/>;
+                                                                  pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_parent_child_super_unsensitive_parent_closeMatch>;
+                                                                  void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_CLOSE_PARENT_CHILD_SUPER_UNSENSITIVE_PARENT_THOMSON_REUTERS20131111.ttl.gz>;
+                                                                  void:linkPredicate skos:closeMatch;
+                                                                  void:objectsTarget :openphactsDataset;
+                                                                  void:subjectsTarget :openphactsDataset;
+                                                                  void:triples 784 ;
+                                                                  dul:expresses cheminf:CHEMINF_000458;
+                                                                  a void:Linkset.
+:thomson_reuters_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch dcterms:description "Tautomer Unsensitive Parent at 7.4 pH: this parent represents canonicalized tautomer at pH 7.4"@en;
+                                                                               dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                               dcterms:title "OpenPhacts Thomson Reuters Tautomer Unsensitive Parent at 7.4 pH Parent-Child Linkset"@en;
+                                                                               pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                               pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                               pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                               pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                               pav:createdWith <http://ops.rsc.org/>;
+                                                                               pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_parent_child_tautomer_unsensitive_parent_at_7_4_ph_closeMatch>;
+                                                                               void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_AT_7_4_PH_THOMSON_REUTERS20131111.ttl.gz>;
+                                                                               void:linkPredicate skos:closeMatch;
+                                                                               void:objectsTarget :openphactsDataset;
+                                                                               void:subjectsTarget :openphactsDataset;
+                                                                               void:triples 0 ;
+                                                                               dul:expresses cheminf:CHEMINF_000486;
+                                                                               a void:Linkset.
+:thomson_reuters_parent_child_tautomer_unsensitive_parent_closeMatch dcterms:description "Tautomer Unsensitive Parent: this parent represents canonicalized tautomer"@en;
+                                                                     dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                     dcterms:title "OpenPhacts Thomson Reuters Tautomer Unsensitive Parent Parent-Child Linkset"@en;
+                                                                     pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                     pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                     pav:createdOn "2013-11-11T13:28:01Z"^^xsd:dateTime;
+                                                                     pav:createdWith <http://ops.rsc.org/>;
+                                                                     pav:previousVersion <ftp://ftp.rsc-us.org/OPS/20130724/void_2013-07-24.ttl#thomson_reuters_parent_child_tautomer_unsensitive_parent_closeMatch>;
+                                                                     void:dataDump <ftp://ftp.rsc-us.org/OPS/20131111/THOMSON_REUTERS/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_UNSENSITIVE_PARENT_THOMSON_REUTERS20131111.ttl.gz>;
+                                                                     void:linkPredicate skos:closeMatch;
+                                                                     void:objectsTarget :openphactsDataset;
+                                                                     void:subjectsTarget :openphactsDataset;
+                                                                     void:triples 109 ;
+                                                                     dul:expresses obo2:is_tautomer_of;
+                                                                     a void:Linkset.

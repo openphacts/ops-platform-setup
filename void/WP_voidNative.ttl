@@ -1,0 +1,52 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix cas:     <http://identifiers.org/cas/> .
+@prefix wprdf:   <http://rdf.wikipathways.org/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix hmdb:    <http://identifiers.org/hmdb/> .
+@prefix freq:    <http://purl.org/cld/freq/> .
+@prefix pubmed:  <http://www.ncbi.nlm.nih.gov/pubmed/> .
+@prefix wp:      <http://vocabularies.wikipathways.org/wp#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix biopax:  <http://www.biopax.org/release/biopax-level3.owl#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pav:     <http://purl.org/pav/> .
+@prefix ncbigene:  <http://identifiers.org/ncbigene/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gpml:    <http://vocabularies.wikipathways.org/gpml#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+<http://rdf.wikipathways.org/curated/>
+      a       void:Dataset ;
+      dcterms:accuralPeriodicity
+              freq:irregular ;
+      dcterms:description "This is the VoID description for a WikiPathways-RDF (Curated) dataset."@en ;
+      dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+      dcterms:subject <http://identifiers.org/taxonomy/4530> , <http://identifiers.org/taxonomy/1773> , <http://identifiers.org/taxonomy/3694> , <http://identifiers.org/taxonomy/9598> , <http://identifiers.org/taxonomy/10116> , <http://identifiers.org/taxonomy/4577> , <http://identifiers.org/taxonomy/3847> , <http://identifiers.org/taxonomy/9615> , <http://identifiers.org/taxonomy/3702> , <http://identifiers.org/taxonomy/6239> , <http://identifiers.org/taxonomy/1423> , <http://identifiers.org/taxonomy/9796> , <http://identifiers.org/taxonomy/4932> , <http://identifiers.org/taxonomy/9031> , <http://identifiers.org/taxonomy/161934> , <http://identifiers.org/taxonomy/29760> , <http://identifiers.org/taxonomy/4513> , <http://identifiers.org/taxonomy/7227> , <http://identifiers.org/taxonomy/9606> , <http://identifiers.org/taxonomy/562> , <http://identifiers.org/taxonomy/9913> , <http://identifiers.org/taxonomy/10090> , <http://identifiers.org/taxonomy/8364> , <http://identifiers.org/taxonomy/4081> , <http://identifiers.org/taxonomy/5518> , <http://identifiers.org/taxonomy/9823> , <http://identifiers.org/taxonomy/7955> , <http://identifiers.org/taxonomy/1515> , <http://identifiers.org/taxonomy/7165> , biopax:Pathway ;
+      dcterms:title "WikiPathways-RDF (Curated) VoID Description"@en ;
+      pav:createdAt <http://www.wikidata.org/entity/Q1137652> ;
+      pav:createdBy <http://jenkins.bigcat.unimaas.nl/job/WikiPathways%20RDF/> ;
+      pav:createdOn "2015-03-12T18:57:09.779Z"^^xsd:dateTime ;
+      pav:importedBy <http://jenkins.bigcat.unimaas.nl/job/WikiPathways%20RDF/> ;
+      pav:importedFrom <http://www.wikipathways.org/wpi/webservice/webservice.php> ;
+      pav:importedOn "2015-03-12T18:57:09.779Z"^^xsd:dateTime ;
+      void:exampleResource
+              <http://identifiers.org/ncbigene/2678> , <http://identifiers.org/pubmed/15215856> , wprdf:WP15 , <http://identifiers.org/obo.chebi/17242> , hmdb:HMDB02005 ;
+      void:uriSpace "http://identifiers.org"^^xsd:string , "http://rdf.wikipathways.org/curated/"^^xsd:string ;
+      void:vocabulary foaf: , gpml: , pav: , biopax: , wp: ;
+      <http://www.w3.org/ns/dcat#distribution>
+              <http://rdf.wikipathways.org/curated/distribution> ;
+      <http://www.w3.org/ns/dcat#landingPage>
+              <http://www.wikipathways.org/> ;
+      <http://www.w3.org/ns/dcat#theme>
+              <http://semanticscience.org/resource/SIO_001107> ;
+      foaf:homepage <http://www.wikipathways.org/> .
+
+<http://rdf.wikipathways.org/curated/distribution>
+      a       <http://www.w3.org/ns/dcat#Distribution> ;
+      <http://www.w3.org/ns/dcat#downloadURL>
+              <https://jenkins.bigcat.unimaas.nl/job/WikiPathways%20RDF/ws/OPSWPRDF/*zip*/OPSWPRDF.zip> ;
+      <http://www.w3.org/ns/dcat#mediaType>
+              "application/zip"^^xsd:string .

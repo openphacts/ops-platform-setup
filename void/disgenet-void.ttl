@@ -1,0 +1,757 @@
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix freq:    <http://purl.org/cld/freq/> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix voag:    <http://voag.linkedmodel.org/schema/voag#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pav:     <http://purl.org/pav/2.0/> .
+@prefix ncit:    <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix sio:     <http://semanticscience.org/resource/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <http://rdf.disgenet.org/v2.1.0/void.ttl#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix bdb: <http://vocabularies.bridgedb.org/ops#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix wi: <http://purl.org/ontology/wi/core#> .
+@prefix eco: <http://purl.obolibrary.org/obo/eco.owl#> .
+
+
+# Metadata about this file
+<http://rdf.disgenet.org/v2.1.0/void.ttl>
+      a       void:DatasetDescription ;
+      dcterms:title "DisGeNET RDF Dataset VoID Description."^^xsd:string ;
+      dcterms:description "This is the VoID description for a DisGeNET RDF Linked dataset."^^xsd:string ;
+      pav:createdBy <http://orcid.org/0000-0003-0169-8159> ;
+      pav:createdOn "2014-05-08"^^xsd:date ;
+      pav:lastUpdateOn "2014-09-15"^^xsd:date ;
+      dcterms:issued "2014-09-16T00:00:00Z"^^xsd:dateTime ;
+      foaf:primaryTopic <http://rdf.disgenet.org/v2.1.0/void.ttl#disgenetrdf> .
+      
+# Description of the RDF dataset of DiSGeNET
+<http://rdf.disgenet.org/v2.1.0/void.ttl#disgenetrdf>
+      a       void:Dataset ;
+      rdfs:label "DisGeNET in RDF [disgenet:disgenetrdf]"^^xsd:string ;
+      dcterms:identifier "disgenet:disgenetrdf"^^xsd:string ;
+      dcterms:title "DisGeNET in RDF"^^xsd:string ;
+      dcterms:description "This is the RDF dataset of the DisGeNET database. It is developed and maintained at the IBI group at GRIB/IMIM/UPF, Barcelona (Spain)."^^xsd:string ;
+      dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+      dcterms:publisher <http://www.disgenet.org/> ;
+      pav:authoredBy	<http://orcid.org/0000-0003-0169-8159>, <http://orcid.org/0000-0003-1244-7654>,  <http://orcid.org/0000-0001-5999-6269>, <http://orcid.org/0000-0002-7534-7661>, <http://orcid.org/0000-0002-9383-528X> ;
+      pav:createdBy <http://orcid.org/0000-0003-0169-8159> ;
+      pav:createdWith <http://rdf.disgenet.org/v2.1.0/void.ttl#d2rq> ;
+      pav:importedBy <http://orcid.org/0000-0003-0169-8159> ;
+      pav:importedFrom <http://rdf.disgenet.org/v2.1.0/void.ttl#disgenet> ;
+      dcterms:issued "2014-05-30T00:00:00Z"^^xsd:dateTime ;
+      pav:importedOn "2014-05-08"^^xsd:date ;
+      pav:version "v2.1.0"^^xsd:string ;
+      pav:previousVersion <http://rdf.disgenet.org/v1.0/void.ttl#disgenetrdf> ;
+      void:feature <http://www.w3.org/ns/formats/Turtle> ;
+      void:rootResource sio:SIO_000983 ;
+      void:sparqlEndpoint <http://rdf.disgenet.org/sparql/> ;
+      void:subset <http://rdf.disgenet.org/v2.1.0/void.ttl#gene> , <http://rdf.disgenet.org/v2.1.0/void.ttl#diseaseClass> , <http://rdf.disgenet.org/v2.1.0/void.ttl#pathway> , <http://rdf.disgenet.org/v2.1.0/void.ttl#geneDiseaseAssociation> , <http://rdf.disgenet.org/v2.1.0/void.ttl#umlsSTY> , <http://rdf.disgenet.org/v2.1.0/void.ttl#disease> , <http://rdf.disgenet.org/v2.1.0/void.ttl#pantherClass> ;
+      void:uriSpace "http://rdf.disgenet.org/"^^xsd:string ;
+      void:exampleResource <http://rdf.disgenet.org/gene-disease-association.ttl#DGN3fb8b6f65af44f2105576853f03fd79f> ;
+      void:vocabulary "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"^^xsd:string , "http://semanticscience.org/resource/"^^xsd:string , "http://xmlns.com/foaf/0.1/"^^xsd:string , "http://purl.org/dc/terms/"^^xsd:string , "http://vocabularies.wikipathways.org/wp#"^^xsd:string ;
+      voag:frequencyOfChange
+              freq:annual ;
+      foaf:page <http://rdf.disgenet.org/download/v2.1.0/> ;
+      dcat:landingPage <http://rdf.disgenet.org/> .
+
+# Description of the RDF DisGeNET subsets
+<http://rdf.disgenet.org/v2.1.0/void.ttl#geneDiseaseAssociation>
+      a       void:Dataset ;
+      dcterms:description "This is the gene-disease Association Subset of the DisGeNET RDF dataset."^^xsd:string ;
+      dcterms:subject sio:SIO_000983 ;
+      dcterms:title "DisGeNET gene-disease Association Subset"^^xsd:string ;
+      void:dataDump <http://rdf.disgenet.org/download/v2.1.0/gene-disease-association.ttl.gz> .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#gene>
+      a       void:Dataset ;
+      dcterms:description "This is the Gene Subset of the DisGeNET RDF dataset."^^xsd:string ;
+      dcterms:subject sio:SIO_010035 ;
+      dcterms:title "DisGeNET Gene Subset"^^xsd:string ;
+      void:subset :hgnc , :Uniprot ;
+      void:dataDump <http://rdf.disgenet.org/download/v2.1.0/gene.ttl.gz> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#pantherClass>
+      a       void:Dataset ;
+      dcterms:description "This is the PANTHER Class Subset of the DisGeNET RDF dataset."^^xsd:string ;
+      dcterms:subject ncit:C25161 , <http://neurolex.org/wiki/Category:Resource:PANTHER> ;
+      dcterms:title "DisGeNET PANTHER Class Subset"^^xsd:string ;
+      void:dataDump <http://rdf.disgenet.org/download/v2.1.0/pantherClass.ttl.gz> .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#pathway>
+      a       void:Dataset ;
+      dcterms:description "This is the Pathway Subset of the DisGeNET RDF dataset."^^xsd:string ;
+      dcterms:subject sio:SIO_001107 ;
+      dcterms:title "DisGeNET Pathway Subset"^^xsd:string ;
+      void:dataDump <http://rdf.disgenet.org/download/v2.1.0/pathway.ttl.gz> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#disease>
+      a       void:Dataset ;
+      dcterms:description "This is the Disease Subset of the DisGeNET RDF dataset."^^xsd:string ;
+      dcterms:subject sio:SIO_010299 ;
+      dcterms:title "DisGeNET Disease Subset"^^xsd:string ;
+      void:subset :mesh , :omim , :doid , :hpo , :icd9cm ;
+      void:dataDump <http://rdf.disgenet.org/download/v2.1.0/disease.ttl.gz> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#diseaseClass>
+      a       void:Dataset ;
+      dcterms:description "This is the Disease Class Subset of the DisGeNET RDF dataset."^^xsd:string ;
+      dcterms:subject ncit:C82845 , ncit:C25161 ;
+      dcterms:title "DisGeNET Disease Class Subset"^^xsd:string ;
+      void:dataDump <http://rdf.disgenet.org/download/v2.1.0/diseaseClass.ttl.gz> .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#umlsSTY>
+      a       void:Dataset ;
+      dcterms:description "This is the UMLS STY Subset of the DisGeNET RDF dataset."^^xsd:string ;
+      dcterms:subject ncit:C43817 , ncit:C25161 ;
+      dcterms:title "DisGeNET UMLS STY Subset"^^xsd:string ;
+      void:dataDump <http://rdf.disgenet.org/download/v2.1.0/umlsSTY.ttl.gz> .
+      
+# Description of the DisGeNET database (original data)
+<http://rdf.disgenet.org/v2.1.0/void.ttl#disgenet>
+      a       dctypes:Dataset ;
+      rdfs:label "DisGeNET [disgenet:disgenet]"^^xsd:string ;
+      dcterms:identifier "disgenet:disgenet"^^xsd:string ;
+      dcterms:created "2010-09-21"^^xsd:date ;
+      dcterms:description "DisGeNET is a derivative database that integrates gene-disease associations from different data sources and the literature such as CTD, UNIPROT, MGD, RGD, GAD, LHGDN and BeFree. It is developed and maintained at the IBI group at GRIB/IMIM/UPF, Barcelona (Spain)."^^xsd:string ;
+      dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+      pav:authoredBy	<http://orcid.org/0000-0003-1244-7654>, <http://orcid.org/0000-0001-5999-6269>, <http://orcid.org/0000-0002-7534-7661>, <http://orcid.org/0000-0002-9383-528X> ;
+      pav:createdBy <http://orcid.org/0000-0003-1244-7654> ;
+      dcterms:modified "2014-05-05"^^xsd:date ;
+      dcterms:publisher <http://rdf.disgenet.org/v2.1.0/void.ttl#IBIGroup> ;
+      dcterms:title "DisGeNET"^^xsd:string ;
+      pav:previousVersion "v2.0"^^xsd:string ;
+      pav:version "v2.1"^^xsd:string ;
+      voag:frequencyOfChange
+              freq:annual ;
+      prov:hadPrimarySource
+              <http://rdf.disgenet.org/v2.1.0/void.ttl#lhgdn-20090331> , <http://rdf.disgenet.org/v2.1.0/void.ttl#rgd-20130729> , <http://rdf.disgenet.org/v2.1.0/void.ttl#befree-20140225> , <http://rdf.disgenet.org/v2.1.0/void.ttl#ctd_rat-20130708> , <http://rdf.disgenet.org/v2.1.0/void.ttl#mgd-20130712> , <http://rdf.disgenet.org/v2.1.0/void.ttl#uniprot-20130724> , <http://rdf.disgenet.org/v2.1.0/void.ttl#gad-20130706> , <http://rdf.disgenet.org/v2.1.0/void.ttl#ctd_human-20130708> , <http://rdf.disgenet.org/v2.1.0/void.ttl#ctd_mouse-20130708> ;
+      dcat:landingPage <http://www.disgenet.org/> .
+      
+# Description of the primary sources of DisGeNET database
+<http://rdf.disgenet.org/v2.1.0/void.ttl#omim-20130711>
+      a       dctypes:Dataset ;
+      rdfs:comment "CURATED" ;
+      rdfs:label "OMIM, DisGeNET primary data source [disgenet:omim-20130711]" ;
+      dcterms:description "DisGeNET database v2.1 contains OMIM version: omim-20130711. Data was downloaded on request from http://www.omim.org/downloads, on July 11, 2013. Gene-disease associations entries in the morbidmap file were filtered out with the information contained in the genemap file. Only those MIM terms annotated as phenotype or phenotype/gene in the genemap file were kept. OMIM is a database containing curated information about human genes, genetic phenotypes and genotype-phenotype relationships." ;
+      dcterms:identifier "omim-20130711"^^xsd:string ;
+      dcterms:license <http://www.omim.org/help/copyright> ;
+      dcterms:title "OMIM, DisGeNET primary data source" ;
+      dcat:downloadURL <http://www.omim.org/downloads> ;
+      pav:importedOn "2013-07-11"^^xsd:date ;
+      prov:wasGeneratedBy eco:ECO_0000218 ;
+      wi:evidence :source_evidence_curated ;
+      dcat:landingPage <http://www.omim.org/> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#uniprot-20130724>
+      a       dctypes:Dataset ;
+      rdfs:comment "CURATED" ;
+      rdfs:label "UniProt, DisGeNET primary data source [disgenet:uniprot-20130724]" ;
+      dcterms:description "DisGeNET database v2.1 contains UniProt version: uniprot-20130724. Data was downloaded from the file http://www.uniprot.org/docs/humsavar, file corresponding to version 2013_08,on July 24, 2013. Only disease-associated entries and the variants associated to disease were kept. UniProt/SwissProt is a database containing curated information about protein sequence, structure and function (Apweiler, et al., 2004)." ;
+      dcterms:identifier "uniprot-20130724"^^xsd:string ;
+      dcterms:license <http://www.uniprot.org/help/license> ;
+      dcterms:title "UniProt, DisGeNET primary data source" ;
+      dcat:downloadURL <http://www.uniprot.org/docs/humsavar> ;
+      pav:importedOn "2013-07-24"^^xsd:date ;
+      prov:wasGeneratedBy eco:ECO_0000218 ;
+      wi:evidence :source_evidence_curated ;
+      dcat:landingPage <http://www.uniprot.org/> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#ctd_human-20130708>
+      a       dctypes:Dataset ;
+      rdfs:comment "CURATED" ;
+      rdfs:label "CTD_human, DisGeNET primary data source [disgenet:ctd_human-20130708]" ;
+      dcterms:description "DisGeNET database v2.1 contains CTD_human version: ctd_human-20130708. We downloaded the file http://ctdbase.org/reports/CTD_genes_diseases.tsv.gz, corresponding to update of July 08 2013, on July 24, 2013. CTD_human is a subset of the CTD database which includes all available gene-disease associations from CTD corresponding to Homo sapiens genes. The Comparative Toxicogenomics Database (CTD) contains manually curated information about gene-disease relationships with focus on understanding the effects of environmental chemicals on human health (Mattingly, et al., 2006)." ;
+      dcterms:identifier "ctd_human-20130708"^^xsd:string ;
+      dcterms:license <http://ctdbase.org/about/legal.jsp> ;
+      dcterms:title "CTD_human, DisGeNET primary data source" ;
+      dcat:downloadURL <http://ctdbase.org/reports/> ;
+      pav:importedOn "2013-07-24"^^xsd:date ;
+      prov:wasGeneratedBy eco:ECO_0000218 ;
+      wi:evidence :source_evidence_curated ;       
+      dcat:landingPage <http://ctdbase.org/detail.go?type=taxon&acc=9606> .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#mgd-20130712>
+      a       dctypes:Dataset ;
+      rdfs:comment "PREDICTED" ;
+      rdfs:label "MGD, DisGeNET primary data source [disgenet:mgd-20130712]" ;
+      dcterms:description "DisGeNET database v2.1 contains MGD version: mgd-20130712. The file of Associations of Mouse Genes with OMIM® Diseases was downloaded from ftp://ftp.informatics.jax.org/pub/reports/MGI_OMIM.rpt on July 12, 2013. Only the associations labeled as 'Both' or 'Mouse only'. The Mouse Genome Database (MGD) is the international community resource for integrated genetic, genomic and biological data about the laboratory mouse (Eppig, et al., 2006). MGD provides full annotation of phenotypes and human disease associations for mouse models (genotypes)." ;
+      dcterms:identifier "mgd-20130712"^^xsd:string ;
+      dcterms:license <http://www.informatics.jax.org/mgihome/other/copyright.shtml> ;
+      dcterms:title "MGD, DisGeNET primary data source" ;
+      dcat:downloadURL <ftp://ftp.informatics.jax.org/pub/reports/MGI_OMIM.rpt> ;
+      pav:importedOn "2013-07-12"^^xsd:date ;
+      prov:wasGeneratedBy eco:ECO_0000218 ;
+      wi:evidence :source_evidence_predicted ;
+      dcat:landingPage <http://www.informatics.jax.org/> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#ctd_mouse-20130708>
+      a       dctypes:Dataset ;
+      rdfs:comment "PREDICTED" ;
+      rdfs:label "CTD_mouse, DisGeNET primary data source [disgenet:ctd_mouse-20130708]" ;
+      dcterms:description "DisGeNET database v2.1 contains CTD_mouse version: ctd_mouse-20130708. We downloaded the file http://ctdbase.org/reports/CTD_genes_diseases.tsv.gz, corresponding to update of July 08 2013, on July 24, 2013. CTD_mouse is a subset of the CTD database which includes all available gene-disease associations from CTD corresponding to Mus musculus genes. CTD or the Comparative Toxicogenomics Database contains manually curated information about gene-disease relationships with focus on understanding the effects of environmental chemicals on human health (Mattingly, et al., 2006)." ;
+      dcterms:identifier "ctd_mouse-20130708"^^xsd:string ;
+      dcterms:license <http://ctdbase.org/about/legal.jsp> ;
+      dcterms:title "CTD_mouse, DisGeNET primary data source" ;
+      dcat:downloadURL <http://ctdbase.org/reports/> ;
+      pav:importedOn "2013-07-24"^^xsd:date ;
+      prov:wasGeneratedBy eco:ECO_0000218 ;
+      wi:evidence :source_evidence_predicted ;
+      dcat:landingPage <http://ctdbase.org/detail.go?type=taxon&acc=10090> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#rgd-20130729>
+      a       dctypes:Dataset ;
+      rdfs:comment "PREDICTED" ;
+      rdfs:label "RGD, DisGeNET primary data source [disgenet:rgd-20130729]" ;
+      dcterms:description "DisGeNET database v2.1 contains RGD version: rgd-20130729. The file of Associations of Rat Genes with Diseases was downloaded from ftp://rgd.mcw.edu/pub/data_release/annotated_rgd_objects_by_ontology/with_terms/rattus_terms_rdo on July 29, 2013. We did not considered the associations labelled as 'resistance', 'induced', or 'no association', neither the ones annotated with the following evidence codes 'inferred from electronic annotation', 'Inferred from Sequence or Structural Similarity' and 'Non-traceable Author Statement'. The Rat Genome Database (RGD) is a collaborative effort between leading research institutions involved in rat genetic and genomic research (Laulederkind et al., 2013)." ;
+      dcterms:identifier "rgd-20130729"^^xsd:string ;
+      dcterms:license <http://rgd.mcw.edu/> ;
+      dcterms:title "RGD, DisGeNET primary data source" ;
+      dcat:downloadURL <ftp://rgd.mcw.edu/pub/data_release/annotated_rgd_objects_by_ontology/with_terms/rattus_terms_rdo> ;
+      pav:importedOn "2013-07-29"^^xsd:date ;
+      prov:wasGeneratedBy eco:ECO_0000218 ;
+      wi:evidence :source_evidence_predicted ;
+      dcat:landingPage <http://rgd.mcw.edu/> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#ctd_rat-20130708>
+      a       dctypes:Dataset ;
+      rdfs:comment "PREDICTED" ;
+      rdfs:label "CTD_rat, DisGeNET primary data source [disgenet:ctd_rat-20130708]" ;
+      dcterms:description "DisGeNET database v2.1 contains CTD_rat version: ctd_rat-20130708. We downloaded the file http://ctdbase.org/reports/CTD_genes_diseases.tsv.gz, corresponding to update of July 08 2013, on July 24, 2013. CTD_rat is a subset of the CTD database which includes all available gene-disease associations from CTD corresponding to Rattus norvegicus genes. CTD or the Comparative Toxicogenomics Database contains manually curated information about gene-disease relationships with focus on understanding the effects of environmental chemicals on human health (Mattingly, et al., 2006)." ;
+      dcterms:identifier "ctd_rat-20130708"^^xsd:string ;
+      dcterms:license <http://ctdbase.org/about/legal.jsp> ;
+      dcterms:title "CTD_rat, DisGeNET primary data source" ;
+      dcat:downloadURL <http://ctdbase.org/reports/> ;
+      pav:importedOn "2013-07-24"^^xsd:date ;
+      prov:wasGeneratedBy eco:ECO_0000218 ;
+      wi:evidence :source_evidence_predicted ;
+      dcat:landingPage <http://ctdbase.org/detail.go?type=taxon&acc=10116> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#gad-20130706>
+      a       dctypes:Dataset ;
+      rdfs:comment "LITERATURE" ;
+      rdfs:label "GAD, DisGeNET primary data source [disgenet:gad-20130706]" ;
+      dcterms:description "DisGeNET database v2.1 contains GAD version: gad-20130706. We downloaded the file http://geneticassociationdb.nih.gov/all.zip/, corresponding to the update from 2013-07-06, on July 06, 2013. The Genetic Association Database (GAD) is an archive of human genetic association studies of complex diseases. GAD is primarily focused on archiving information on common complex human disease rather than rare Mendelian disorders as found in the OMIM® (Becker, et al., 2004). It includes curated summary data extracted from published papers in peer reviewed journals on candidate gene and Genome Wide Association Studies (GWAS)." ;
+      dcterms:identifier "gad-20130706"^^xsd:string ;
+      dcterms:license <http://geneticassociationdb.nih.gov/disclaimer.html> ;
+      dcterms:title "GAD, DisGeNET primary data source" ;
+      dcat:downloadURL <http://geneticassociationdb.nih.gov/all.zip> ;
+      pav:importedOn "2013-07-06"^^xsd:date ;
+      prov:wasGeneratedBy eco:ECO_0000203 ;
+      wi:evidence :source_evidence_literature ;
+      dcat:landingPage <http://geneticassociationdb.nih.gov/> .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#lhgdn-20090331>
+      a       dcat:Dataset ;
+      rdfs:comment "LITERATURE" ;
+      rdfs:label "LHGDN, DisGeNET primary data source [disgenet:lhgdn-20090331]" ;
+      dcterms:description "DisGeNET database v2.1 contains LHGDN static version: lhgdn-20090331. LHGDN was created based on a GeneRIF version from March 31st, 2009, consisting of 414241 phrases. These phrases were further restricted to the organism Homo sapiens, which resulted in a total of 178004 phrases. The literature-derived human gene-disease network (LHGDN) is a text mining derived database with focus on extracting and classifying gene-disease associations with respect to several biomolecular conditions. It uses a machine learning based algorithm to extract semantic gene-disease relations from a textual source of interest. The semantic gene-disease relations were extracted with F-measures of 78 (see (Bundschus et al, 2008) for further details)." ;
+      dcterms:identifier "lhgdn-20090331"^^xsd:string ;
+      dcterms:license <http://linkedlifedata.com/about> ;
+      dcterms:title "LHGDN, DisGeNET primary data source" ;
+      dcat:downloadURL <ftp://ftp.ncbi.nih.gov/gene/GeneRIF/> ;
+      pav:importedOn "2009-03-31"^^xsd:date ;
+      prov:wasGeneratedBy eco:ECO_0000203 ;
+      wi:evidence :source_evidence_literature ;
+      dcat:landingPage <http://linkedlifedata.com/sources/lhgdn> .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#befree-20140225>
+      a       dcat:Dataset ;
+      rdfs:comment "LITERATURE" ;
+      rdfs:label "BeFree, DisGeNET primary data source [disgenet:befree-20140225]" ;
+      dcterms:description "DisGeNET database v2.1 contains BeFree version: befree-20140225. The BeFree dataset, gene-disease associations extracted from scientific article abstracts, was created on February 25, 2014 applying the BeFree system on a document set extracted by a defined query over MEDLINE/PubMed, a database of the U.S. National Library of Medicine. The BeFree system is a text mining tool composed of a module for entity recognition based on dictionaries, and a module for relation extraction based on Support Vector Machine (Bravo et al., submitted). The dataset contains 330,880 gene-disease associations between 13,402 genes and 10,557 diseases, which were reported in 355,976 publications." ;
+      dcterms:identifier "disgenet:befree-20140225"^^xsd:string ;
+      dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+      dcterms:title "BeFree, DisGeNET primary data source" ;
+      dcat:downloadURL <http://www.disgenet.org/ds/DisGeNET/results/befree_gene_disease_associations.tar.gz> ;
+      pav:importedOn "2014-02-25"^^xsd:date ;
+      pav:createdWith :befree ;
+      prov:wasDerivedFrom :befree-20140225_documentSet, :euadr_corpus, :gad_corpus ;
+      prov:wasGeneratedBy eco:ECO_0000203 ;
+      wi:evidence :source_evidence_literature ;
+      dcat:landingPage <http://ibi.imim.es/befree/> .
+
+# DisGeNET types of evidence
+<http://rdf.disgenet.org/v2.1.0/void.ttl#source_evidence_curated>
+      a eco:ECO_0000205 ;
+      rdfs:label "DisGeNET evidence - CURATED" ;
+      rdfs:comment "Gene-disease associations manually curated."@en .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#source_evidence_predicted>
+      a eco:ECO_0000266 ;
+      rdfs:label "DisGeNET evidence - PREDICTED" ;
+      rdfs:comment "Gene-disease associations inferred from animal model manually asserted gene-disease associations."@en .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#source_evidence_literature>
+      a eco:ECO_0000212 ;
+      rdfs:label "DisGeNET evidence - LITERATURE" ;
+      rdfs:comment "Gene-disease associations inferred from text-mining the literature."@en .
+
+# Linksets
+# GeneID-->HGNC Symbol
+:GeneID-HGNC a void:Linkset ;
+	dcterms:title "NCBIGeneID-HGNC Linkset"@en ;
+	dcterms:description "Linkset relating NCBIGeneID entries to HGNC gene names, generated by querying DisGeNET (v2.1)" ;
+	dcterms:publisher <http://www.disgenet.org/> ;
+	dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+	dcterms:issued "2014-05-30T00:00:00Z"^^xsd:dateTime ;
+	void:dataDump <http://rdf.disgenet.org/download/v2.1.0/entrez-hgnc-ls.ttl.gz> ;
+	void:subjectsTarget <http://rdf.disgenet.org/v2.1.0/void.ttl#gene> ;
+	bdb:subjectsDatatype sio:SIO_010035 ;
+        void:objectsTarget :hgnc ;
+        bdb:objectsDatatype sio:SIO_010035 ;
+	void:linkPredicate skos:exactMatch ;
+        bdb:linksetJustification sio:SIO_010035 ;
+        dul:expresses sio:SIO_010035 ; # Gene
+        bdb:assertionMethod <http://purl.obolibrary.org/obo/ECO_0000218> ;
+	pav:createdBy <https://orcid.org/0000-0003-0169-8159> ;
+	pav:createdOn "2014-05-23T00:00:00Z"^^xsd:dateTime ;
+	pav:createdWith :geneid-hgnc-query .
+
+:hgnc a dctypes:Dataset ;
+	dcterms:title "HGNC" ; 
+	dcterms:description "References to the HGNC dataset from NCBIGeneID" ;
+	void:uriSpace "http://identifiers.org/hgnc.symbol/" .
+
+:geneid-hgnc-query dcterms:title "NCBIGeneID-HGNC linkset generation SPARQL query" ;
+	dcterms:description """CONSTRUCT { ?gene skos:exactMatch ?hgnc } WHERE {
+GRAPH<http://rdf.disgenet.org/v2.1.0-beta-20140528>
+{
+?gene a ncit:C16612 .
+?gene <http://semanticscience.org/resource/SIO_000205> ?hgnc .
+} }""" .
+
+# GeneID-->UniProtID
+:GeneID-Uniprot a void:Linkset ;
+	dcterms:title "NCBIGeneID-UniProt Linkset"@en ;
+	dcterms:description "Linkset relating NCBIGeneID entries to UniProt, generated by querying DisGeNET (v2.1)" ;
+	dcterms:publisher <http://www.disgenet.org/> ;
+	dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+	dcterms:issued "2014-05-30T00:00:00Z"^^xsd:dateTime ;
+	void:dataDump <http://rdf.disgenet.org/download/v2.1.0/entrez-uniprot-ls.ttl.gz> ;
+	void:subjectsTarget <http://rdf.disgenet.org/v2.1.0/void.ttl#gene> ;
+	bdb:subjectsDatatype sio:SIO_010035 ;
+        void:objectsTarget :Uniprot ;
+        bdb:objectsDatatype sio:SIO_010043 ;
+	void:linkPredicate skos:closeMatch ;
+        bdb:linksetJustification sio:SIO_000985 ;
+        dul:expresses sio:SIO_000985 ; # Protein coding gene
+        bdb:assertionMethod <http://purl.obolibrary.org/obo/ECO_0000218> ;
+	pav:createdBy <https://orcid.org/0000-0003-0169-8159> ;
+	pav:createdOn "2014-05-23T00:00:00Z"^^xsd:dateTime ;
+	pav:createdWith :geneid-uniprot-query .
+
+:Uniprot a dctypes:Dataset ;
+	dcterms:title "UniProt" ; 
+	dcterms:description "References to the UniProt dataset from NCBIGeneID" ;
+	void:uriSpace "http://identifiers.org/uniprot/" .
+
+:geneid-uniprot-query dcterms:title "NCBIGeneID UniProt linkset generation SPARQL query" ;
+	dcterms:description """CONSTRUCT { ?gene skos:closeMatch ?uniprot } WHERE {
+GRAPH<http://rdf.disgenet.org/v2.1.0-beta-20140528>
+{
+?gene a ncit:C16612 .
+?gene <http://semanticscience.org/resource/SIO_010078> ?uniprot .
+} }""" .
+
+
+# UMLS-->MESH
+:UMLS-MeSH a void:Linkset ;
+	dcterms:title "UMLS-MeSH Linkset"@en ;
+	dcterms:description "Linkset relating UMLS entries to MeSH, generated by querying DisGeNET (v2.1)" ;
+	dcterms:publisher <http://www.disgenet.org/> ;
+	dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+	dcterms:issued "2014-05-30T00:00:00Z"^^xsd:dateTime ;
+	void:dataDump <http://rdf.disgenet.org/download/v2.1.0/umls-mesh-ls.ttl.gz> ;
+	void:subjectsTarget <http://rdf.disgenet.org/v2.1.0/void.ttl#disease> ;
+	bdb:subjectsDatatype sio:SIO_010299 ;
+        void:objectsTarget :mesh ;
+        bdb:objectsDatatype sio:SIO_010299 ;
+	void:linkPredicate skos:exactMatch ;
+        bdb:linksetJustification sio:SIO_010299 ;
+        dul:expresses sio:SIO_010299 ; # Disease
+        bdb:assertionMethod <http://purl.obolibrary.org/obo/ECO_0000218> ;
+	pav:createdBy <https://orcid.org/0000-0003-0169-8159> ;
+	pav:createdOn "2014-05-23T00:00:00Z"^^xsd:dateTime ;
+	pav:createdWith :umls-mesh-query .
+
+:mesh a dctypes:Dataset ;
+	dcterms:title "MeSH" ; 
+	dcterms:description "References to the MeSH dataset from UMLS diseases" ;
+	void:uriSpace "http://identifiers.org/mesh.2013/" .
+
+:umls-mesh-query dcterms:title "UMLS MeSH linkset generation SPARQL query" ;
+	dcterms:description """CONSTRUCT {?umls skos:exactMatch ?mesh}
+WHERE{
+GRAPH<http://rdf.disgenet.org/v2.1.0-beta-20140528>
+{
+    ?umls a ncit:C7057 .
+    FILTER regex(?mesh, "mesh.2013") .
+    ?umls skos:exactMatch ?mesh .
+} }""".
+
+# UMLS-->DOID
+:UMLS-HDO a void:Linkset ;
+	dcterms:title "UMLS-HDO Linkset"@en ;
+	dcterms:description "Linkset relating UMLS entries to HDO, generated by querying DisGeNET (v2.1)" ;
+	dcterms:publisher <http://www.disgenet.org/> ;
+	dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+	dcterms:issued "2014-05-30T00:00:00Z"^^xsd:dateTime ;
+	void:dataDump <http://rdf.disgenet.org/download/v2.1.0/umls-hdo-ls.ttl.gz> ;
+	void:subjectsTarget <http://rdf.disgenet.org/v2.1.0/void.ttl#disease> ;
+	bdb:subjectsDatatype sio:SIO_010299 ;
+        void:objectsTarget :doid ;
+        bdb:objectsDatatype sio:SIO_010299 ;
+	void:linkPredicate skos:exactMatch ;
+        bdb:linksetJustification sio:SIO_010299 ;
+        dul:expresses sio:SIO_010299 ; # Disease
+        bdb:assertionMethod <http://purl.obolibrary.org/obo/ECO_0000218> ;
+	pav:createdBy <https://orcid.org/0000-0003-0169-8159> ;
+	pav:createdOn "2014-05-23T00:00:00Z"^^xsd:dateTime ;
+	pav:createdWith :umls-do-query .
+	
+:doid a dctypes:Dataset ;
+	dcterms:title "HDO, Human Disease Ontology" ; 
+	dcterms:description "References to the MIRIAM obo.do dataset from UMLS diseases" ;
+	void:uriSpace "http://identifiers.org/doid/" .
+
+:umls-do-query dcterms:title "UMLS HDO linkset generation SPARQL query" ;
+	dcterms:description """CONSTRUCT {?umls skos:exactMatch ?miriamdo}
+WHERE{
+GRAPH<http://rdf.disgenet.org/v2.1.0-beta-20140528>
+{
+    ?umls a ncit:C7057 .
+    FILTER regex(?miriamdo, "doid/DOID") .
+    ?umls skos:exactMatch ?miriamdo .
+} }""".
+
+# UMLS-->OMIM
+:UMLS-OMIM a void:Linkset ;
+	dcterms:title "UMLS-OMIM Linkset"@en ;
+	dcterms:description "Linkset relating UMLS entries to OMIM, generated by querying DisGeNET (v2.1)" ;
+	dcterms:publisher <http://www.disgenet.org/> ;
+	dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+	dcterms:issued "2014-05-30T00:00:00Z"^^xsd:dateTime ;
+	void:dataDump <http://rdf.disgenet.org/download/v2.1.0/umls-omim-ls.ttl.gz> ;
+	void:subjectsTarget <http://rdf.disgenet.org/v2.1.0/void.ttl#disease> ;
+	bdb:subjectsDatatype sio:SIO_010299 ;
+        void:objectsTarget :omim ;
+        bdb:objectsDatatype sio:SIO_010299 ;
+	void:linkPredicate skos:exactMatch ;
+        bdb:linksetJustification sio:SIO_010299 ;
+        dul:expresses sio:SIO_010299 ; # Disease
+        bdb:assertionMethod <http://purl.obolibrary.org/obo/ECO_0000218> ;
+	pav:createdBy <https://orcid.org/0000-0003-0169-8159> ;
+	pav:createdOn "2014-05-23T00:00:00Z"^^xsd:dateTime ;
+	pav:createdWith :umls-omim-query .
+
+:omim a dctypes:Dataset ;
+	dcterms:title "OMIM" ; 
+	dcterms:description "References to the OMIM dataset from UMLS diseases" ;
+	void:uriSpace "http://identifiers.org/omim/" .
+
+:umls-omim-query dcterms:title "UMLS OMIM linkset generation SPARQL query" ;
+	dcterms:description """CONSTRUCT {?umls skos:exactMatch ?omim}
+WHERE{
+GRAPH<http://rdf.disgenet.org/v2.1.0-beta-20140528>
+{
+    ?umls a ncit:C7057 .
+    FILTER regex(?omim, "identifiers.org/omim/") .
+    ?umls skos:exactMatch ?omim .
+} }""".
+
+# UMLS-->HPO
+:UMLS-HPO a void:Linkset ;
+	dcterms:title "UMLS-HPO Linkset"@en ;
+	dcterms:description "Linkset relating UMLS entries to HPO, generated by querying DisGeNET (v2.1)" ;
+	dcterms:publisher <http://www.disgenet.org/> ;
+	dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+	dcterms:issued "2014-05-30T00:00:00Z"^^xsd:dateTime ;
+	void:dataDump <http://rdf.disgenet.org/download/v2.1.0/umls-hpo-ls.ttl.gz> ;
+	void:subjectsTarget <http://rdf.disgenet.org/v2.1.0/void.ttl#disease> ;
+	bdb:subjectsDatatype sio:SIO_010299 ;
+        void:objectsTarget :hpo ;
+        bdb:objectsDatatype sio:SIO_010299 ;
+	void:linkPredicate skos:exactMatch ;
+        bdb:linksetJustification sio:SIO_010299 ;
+        dul:expresses sio:SIO_010299 ; # Disease
+        bdb:assertionMethod <http://purl.obolibrary.org/obo/ECO_0000218> ;
+	pav:createdBy <https://orcid.org/0000-0003-0169-8159> ;
+	pav:createdOn "2014-05-23T00:00:00Z"^^xsd:dateTime ;
+	pav:createdWith :umls-hpo-query .
+
+:hpo a dctypes:Dataset ;
+	dcterms:title "HPO" ; 
+	dcterms:description "References to the HPO dataset from UMLS diseases" ;
+	void:uriSpace "http://purl.obolibrary.org/obo/" .
+
+:umls-hpo-query dcterms:title "UMLS HPO linkset generation SPARQL query" ;
+	dcterms:description """CONSTRUCT {?umls skos:exactMatch ?hpo}
+WHERE{
+GRAPH<http://rdf.disgenet.org/v2.1.0-beta-20140528>
+{
+    ?umls a ncit:C7057 .
+    FILTER regex(?hpo, "obo/HP_") .
+    ?umls skos:exactMatch ?hpo .
+} }""".
+
+# UMLS-->ICD9CM
+:UMLS-ICD9CM a void:Linkset ;
+	dcterms:title "UMLS-ICD9CM Linkset"@en ;
+	dcterms:description "Linkset relating UMLS entries to ICD9CM, generated by querying DisGeNET (v2.1)" ;
+	dcterms:publisher <http://www.disgenet.org/> ;
+	dcterms:license <http://opendatacommons.org/licenses/odbl/1.0/> ;
+	dcterms:issued "2014-05-30T00:00:00Z"^^xsd:dateTime ;
+	void:dataDump <http://rdf.disgenet.org/download/v2.1.0/umls-icd9-ls.ttl.gz> ;
+	void:subjectsTarget <http://rdf.disgenet.org/v2.1.0/void.ttl#disease> ;
+	bdb:subjectsDatatype sio:SIO_010299 ;
+        void:objectsTarget :icd9cm ;
+        bdb:objectsDatatype sio:SIO_010299 ;
+	void:linkPredicate skos:exactMatch ;
+        bdb:linksetJustification sio:SIO_010299 ;
+        dul:expresses sio:SIO_010299 ; # Disease
+        bdb:assertionMethod <http://purl.obolibrary.org/obo/ECO_0000218> ;
+	pav:createdBy <https://orcid.org/0000-0003-0169-8159> ;
+	pav:createdOn "2014-05-23T00:00:00Z"^^xsd:dateTime ;
+	pav:createdWith :umls-icd9-query .
+
+:icd9cm a dctypes:Dataset ;
+	dcterms:title "ICD9CM" ; 
+	dcterms:description "References to the ICD9CM dataset from UMLS diseases" ;
+	void:uriSpace "http://purl.bioontology.org/ontology/ICD9CM/" .
+
+:umls-icd9-query dcterms:title "UMLS ICD9CM linkset generation SPARQL query" ;
+	dcterms:description """CONSTRUCT {?umls skos:exactMatch ?icd9}
+WHERE{
+GRAPH<http://rdf.disgenet.org/v2.1.0-beta-20140528>
+{
+    ?umls a ncit:C7057 .
+    FILTER regex(?icd9, "/ICD9CM/") .
+    ?umls skos:exactMatch ?icd9 .
+} }""".
+
+# Other triples
+<http://orcid.org/0000-0002-9383-528X>
+      a       foaf:Person ;
+      foaf:mbox <mailto:lfurlong@imim.es> ;
+      foaf:name "Laura I. Furlong"^^xsd:string .
+
+<http://orcid.org/0000-0002-7534-7661>
+      a       foaf:Person ;
+      foaf:mbox <mailto:fsanz@imim.es> ;
+      foaf:name "Ferran Sanz"^^xsd:string .
+
+<http://orcid.org/0000-0003-1244-7654>
+      a       foaf:Person ;
+      foaf:mbox <mailto:jpinero@imim.es> ;
+      foaf:name "Janet Pinero"^^xsd:string .
+
+<http://orcid.org/0000-0001-5999-6269>
+      a       foaf:Person ;
+      foaf:mbox <mailto:abravo@imim.es> ;
+      foaf:name "Alex Bravo"^^xsd:string .
+
+<http://orcid.org/0000-0003-0169-8159>
+      a       foaf:Person ;
+      foaf:mbox <mailto:nqueralt@imim.es> ;
+      foaf:name "Nuria Queralt Rosinach"^^xsd:string .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#IBIGroup>
+      a       prov:Organization ;
+      rdfs:label "Integrative Biomedical Informatics (IBI) Group,[disgenet:IBIGroup]"^^xsd:string ;
+      dcterms:identifier "disgenet:IBIGroup"^^xsd:string ;
+      dcterms:title "Integrative Biomedical Informatics (IBI) Group"^^xsd:string ;
+      foaf:homepage <http://ibi.imim.es/> .
+      
+<http://rdf.disgenet.org/v2.1.0/void.ttl#d2rq>
+      a       prov:SoftwareAgent ;
+      rdfs:label "D2RQ Platform [disgenet:d2rq]"^^xsd:string ;
+      dcterms:identifier "disgenet:d2rq"^^xsd:string ;
+      dcterms:title "D2RQ Platform"@en ;
+      foaf:homepage <http://d2rq.org/> .
+
+prov:hadPrimarySource
+      a       rdf:Property .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#befree>
+      a       prov:SoftwareAgent ;
+      rdfs:label "BeFree system [disgenet:befree]"^^xsd:string ;
+      dcterms:identifier "disgenet:befree"^^xsd:string ;
+      dcterms:title "BeFree system"@en ;
+      dcterms:description "BeFree is a text minning tool to unlock the information contained in biomedical documents. BeFree is composed of a module for Biomedical Named Entity Recognition (BioNER) based on dictionaries using fuzzy- and pattern matching methods to find and uniquely identify entity mentions in the literature, and a module for Relation Extraction based on Support Vector Machine."@en ;
+      dcterms:rights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+      dcterms:rightsHolder <http://rdf.disgenet.org/v2.1.0/void.ttl#IBIGroup> ;
+      pav:authoredBy <http://orcid.org/0000-0001-5999-6269>, <http://orcid.org/0000-0002-9383-528X> ;
+      pav:createdBy <http://orcid.org/0000-0001-5999-6269> ;
+      foaf:homepage <http://ibi.imim.es/befree/> .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#befree-20140225_documentSet>
+      a dctypes:Dataset ;
+      rdfs:label "befree-20140225 document set corpus [disgenet:befree-20140225_documentSet]"^^xsd:string ;
+      dcterms:identifier "disgenet:befree-20140225_documentSet]"^^xsd:string ;
+      dcterms:title "befree-20140225 document set corpus"@en ;
+      dcterms:description "Set of 355,976 scientific articles retrieved from the MEDLINE database. This document set was used as a corpus from which the befree-20140225 gene-disease associations dataset (disgenet:befree-20140225) was extracted by text-mining."@en ;
+      pav:retrievedFrom <http://www.ncbi.nlm.nih.gov/pubmed> .
+ 
+<http://rdf.disgenet.org/v2.1.0/void.ttl#euadr_corpus>
+      a dctypes:Dataset ;           
+      rdfs:label "EU-ADR Corpus [disgenet:euadr_corpus]"^^xsd:string ;
+      dcterms:identifier "disgenet:euadr_corpus"^^xsd:string ;
+      dcterms:title "EU-ADR Corpus"@en ;
+      dcterms:description "Corpus annotated for drugs, disorders, genes and their inter-relationships. For each of the drug-disorder, drug-target, and target-disorder relations three experts have annotated a set of 100 abstracts."@en ;
+      sio:SIO_000278 <http://identifiers.org/pubmed/22554700> ; 
+      prov:wasGeneratedBy eco:ECO_0000218 ;
+      pav:retrievedFrom <http://euadr.erasmusmc.nl/sda/euadr_corpus.tgz> ;
+      dcat:downloadURL <http://ibi.imim.es/befree/EUADR_Corpus_IBIgroup.tar.gz> .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#gad_corpus>
+      a dctypes:Dataset ;           
+      rdfs:label "GAD corpus [disgenet:gad_corpus]"^^xsd:string ;
+      dcterms:identifier "disgenet:gad_corpus"^^xsd:string ;
+      dcterms:title "GAD corpus"@en ;
+      dcterms:description "The Genetic Association Database (GAD) was used for the development of a corpus on associations between genes and diseases (downloaded on January 21st, 2013). BeFree was applied to identify the gene and disease entities in the text and normalize them to NCBI Gene and UMLS identifiers, respectively. Then, the sentences in which a given gene was found together with a specific disease, and this gene-disease association was annotated by GAD curators as positive or negative were labelled as TRUE. In order to create a dataset containing false associations (FALSE) between a gene and a disease, that is, a gene and a disease that co-occur in a sentence but are semantically not associated, we selected the sentences with co-occurrences between a disease and a gene found by the BioNER module of BeFree that were not annotated by GAD curators as gene-disease associations."@en ;
+      pav:createdWith :befree ;
+      prov:wasDerivedFrom :gad-20130121 ;
+      prov:wasGeneratedBy eco:ECO_0000203 ;
+      dcterms:rights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+      dcterms:rightsHolder <http://rdf.disgenet.org/v2.1.0/void.ttl#IBIGroup> ;
+      pav:authoredBy <http://orcid.org/0000-0001-5999-6269>, <http://orcid.org/0000-0002-9383-528X> ;
+      pav:createdBy <http://orcid.org/0000-0001-5999-6269> ;
+      dcat:downloadURL <http://ibi.imim.es/befree/GAD_Corpus_IBIgroup.tar.gz> .
+
+<http://rdf.disgenet.org/v2.1.0/void.ttl#gad-20130121>
+      a dctypes:Dataset ; 
+      rdfs:label "GAD 20130121 [disgenet:gad-20130121]"^^xsd:string ;
+      dcterms:identifier "disgenet:gad-20130121"^^xsd:string ;
+      dcterms:title "GAD 20130121"@en ;
+      dcterms:description "The Genetic Association Database (GAD) downloaded on January 21st, 2013. GAD 20130121 contains over 130,000 records."@en ;
+      pav:retrievedFrom <http://geneticassociamiondb.nih.gov/all.zip> ;
+      pav:retrievedOn "2013-01-21"^^xsd:date ;
+      dcat:landingPage <http://geneticassociationdb.nih.gov/> .
+
+dcterms:identifier
+      a       rdf:Property .
+      
+foaf:homepage
+      a       rdf:Property .
+
+rdfs:label
+      a       rdf:Property .
+
+foaf:mbox
+      a       rdf:Property .
+
+foaf:name
+      a       rdf:Property .
+
+rdfs:comment
+      a       rdf:Property .
+
+pav:previousVersion
+      a       rdf:Property .
+
+void:rootResource
+      a       rdf:Property .
+
+foaf:primaryTopic
+      a       rdf:Property .
+
+dcterms:license
+      a       rdf:Property .
+
+pav:lastUpdateOn
+      a       rdf:Property .
+
+voag:frequencyOfChange
+      a       rdf:Property .
+
+void:DatasetDescription
+      a       rdfs:Class .
+
+dcterms:created
+      a       rdf:Property .
+
+void:dataDump
+      a       rdf:Property .
+
+pav:version
+      a       rdf:Property .
+
+void:vocabulary
+      a       rdf:Property .
+
+dcterms:description
+      a       rdf:Property .
+
+void:subset
+      a       rdf:Property .
+
+pav:createdOn
+      a       rdf:Property .
+
+prov:Organization
+      a       rdfs:Class .
+
+foaf:Person
+      a       rdfs:Class .
+
+dcterms:title
+      a       rdf:Property .
+
+pav:createdBy
+      a       rdf:Property .
+
+dcterms:modified
+      a       rdf:Property .
+
+dcterms:publisher
+      a       rdf:Property .
+
+pav:importedOn
+      a       rdf:Property .
+
+dcterms:subject
+      a       rdf:Property .
+
+void:uriSpace
+      a       rdf:Property .
+
+void:sparqlEndpoint
+      a       rdf:Property .
+
+dcterms:Dataset
+      a       rdfs:Class ;
+      rdfs:comment "Dataset description."@en , "Relational Dataset."@en ;
+      rdfs:label "Database"@en , "Dataset"@en .
+
+pav:createdWith
+      a       rdf:Property .
+
+pav:importedFrom
+      a       rdf:Property .
+
+void:triples
+      a       rdf:Property .
+
+pav:importedBy
+      a       rdf:Property .
+
+void:Dataset
+      a       rdfs:Class ;
+      rdfs:comment "RDF Dataset description."@en ;
+      rdfs:label "RDF Dataset"@en .
+
+void:feature
+      a       rdf:Property .
+
+prov:SoftwareAgent
+      a       rdfs:Class .
+
+

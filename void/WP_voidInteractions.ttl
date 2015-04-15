@@ -1,0 +1,53 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix cas:     <http://identifiers.org/cas/> .
+@prefix wprdf:   <http://rdf.wikipathways.org/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix hmdb:    <http://identifiers.org/hmdb/> .
+@prefix freq:    <http://purl.org/cld/freq/> .
+@prefix pubmed:  <http://www.ncbi.nlm.nih.gov/pubmed/> .
+@prefix wp:      <http://vocabularies.wikipathways.org/wp#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix biopax:  <http://www.biopax.org/release/biopax-level3.owl#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pav:     <http://purl.org/pav/> .
+@prefix ncbigene:  <http://identifiers.org/ncbigene/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gpml:    <http://vocabularies.wikipathways.org/gpml#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+<http://rdf.wikipathways.org/curated/interactions>
+      a       void:Dataset ;
+      dcterms:accuralPeriodicity
+              freq:irregular ;
+      dcterms:description "This is the VoID description for the curated WikiPathways Interactions VoID Description."@en ;
+      dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+      dcterms:subject <http://vocabularies.wikipathways.org/wp/DirectedInteraction> , <http://vocabularies.wikipathways.org/wp/Binding> , <http://vocabularies.wikipathways.org/wp/Inhibition>, <http://vocabularies.wikipathways.org/wp/TranscriptionTranslation>, <http://vocabularies.wikipathways.org/wp/Inhibition>, biopax:Pathway ;
+      dcterms:title "WikiPathways loading VoID Description"@en ;
+      pav:createdAt <http://www.wikidata.org/entity/Q1137652> ;
+      pav:createdBy <https://jenkins.bigcat.unimaas.nl/job/WikiPathways%20loading/> ;
+      pav:createdOn "2015-03-0T10:47:28.683Z"^^xsd:dateTime ;
+      # pav:importedBy <https://jenkins.bigcat.unimaas.nl/job/WikiPathways%20loading/> ;
+      # pav:importedFrom <http://www.wikipathways.org/wpi/webservice/webservice.php> ;
+      # pav:importedOn "2015-03-03T18:57:47.683Z"^^xsd:dateTime ;
+      pav:derivedFrom <http://rdf.wikipathways.org/curated/> ;
+      void:exampleResource
+              <http://vocabularies.wikipathways.org/wp#Binding>, <http://rdf.wikipathways.org/Pathway/WP2036_r78525/Line/e319a>, <http://rdf.wikipathways.org/Pathway/WP2895_r78904/Line/id4ac970d9> ;
+      void:uriSpace "http://rdf.wikipathways.org/curated/" ;
+      void:vocabulary foaf: , gpml: , pav: ;
+      <http://www.w3.org/ns/dcat#distribution>
+              <http://rdf.wikipathways.org/curated/interactions/distribution> ;
+      <http://www.w3.org/ns/dcat#landingPage>
+              <http://www.wikipathways.org/> ;
+      <http://www.w3.org/ns/dcat#theme>
+              <http://semanticscience.org/resource/SIO_001107> ;
+      foaf:homepage <http://www.wikipathways.org/> .
+
+<http://rdf.wikipathways.org/curated/interactions/distribution>
+      a       <http://www.w3.org/ns/dcat#Distribution> ;
+      <http://www.w3.org/ns/dcat#downloadURL>
+              <http://rdf.wikipathways.org/wpNativeContent.zip> ;
+      <http://www.w3.org/ns/dcat#mediaType>
+              "application/zip"^^xsd:string .
