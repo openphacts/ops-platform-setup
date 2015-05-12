@@ -190,8 +190,8 @@ The above introduces some duplicate labels. To remove, use the following:
          qudt-ops:MilligramPerMilliliter rdfs:label "mg ml-1" .
          qudt-ops:NanogramPerMilliliter rdfs:label "ng/ml" .
          qudt-ops:PicogramPerMilliliter rdfs:label "pg/ml" .
-  }
-}
+       }
+     }
 
 ChEMBL 20 Protein Classification
 
