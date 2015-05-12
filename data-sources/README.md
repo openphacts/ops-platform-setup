@@ -172,7 +172,26 @@ Created activity types and unit URIs:
      			a ?act_type .
      		BIND( IRI (CONCAT("http://www.openphacts.org/terms/chembl#", ENCODE_FOR_URI(?standard_type))) AS ?type_uri)
      	}
-     }  
+     }
+     
+The above introduces some duplicate labels. To remove, use the following: 
+     
+     PREFIX qudt: <http://qudt.org/vocab/unit#>
+     PREFIX qudt-ops: <http://www.openphacts.org/units/>
+     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+     DELETE DATA {
+       GRAPH <http://www.ebi.ac.uk/chembl> {
+         qudt:Day rdfs:label "days" .
+         qudt:Kilogram rdfs:label "Kg" .
+         qudt:Liter rdfs:label "l" .
+         qudt-ops:GramPerLiter rdfs:label "g/L" .
+         qudt-ops:MicrogramPerMilliliter rdfs:label "ug ml-1" .
+         qudt-ops:MilligramPerDeciliter rdfs:label "mg/dl" .
+         qudt-ops:MilligramPerMilliliter rdfs:label "mg ml-1" .
+         qudt-ops:NanogramPerMilliliter rdfs:label "ng/ml" .
+         qudt-ops:PicogramPerMilliliter rdfs:label "pg/ml" .
+  }
+}
 
 ChEMBL 20 Protein Classification
 
