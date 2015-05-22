@@ -4,35 +4,26 @@ ld_dir('/media/SSD/current_data/CW', 'inverted_CW_OCRS_via_CS.ttl' , 'http://www
 ld_dir('/media/SSD/current_data/CW', 'inverted_CW_ChEMBL_TC_via_Uniprot.ttl', 'http://www.conceptwiki.org');
 
 -- Enzyme
-ld_dir('/media/SSD/current_data/enzyme' , 'inference.ttl' , 'http://purl.uniprot.org/enzyme/inference' );
-ld_dir('/media/SSD/current_data/enzyme' , 'direct.ttl' , 'http://purl.uniprot.org/enzyme/direct' );
 ld_dir('/media/SSD/current_data/enzyme' , 'enzyme.rdf' , 'http://purl.uniprot.org/enzyme' );
 
--- Drugbank
-ld_dir('/media/SSD/current_data/drugbank' , 'drugbank_dump.nt' , 'http://linkedlifedata.com/resource/drugbank' );
-ld_dir('/media/SSD/current_data/drugbank' , 'drug_type_labels.ttl' , 'http://linkedlifedata.com/resource/drugbank' );
-ld_dir('/media/SSD/current_data/drugbank' , 'drug_category_labels.ttl' , 'http://linkedlifedata.com/resource/drugbank' );
+-- DrugBank v4.1
+ld_dir('/media/SSD/current_data/drugbank' , 'drugbank.nt' , 'http://www.openphacts.org/bio2rdf/drugbank');
 
--- Uniprot
-ld_dir('/media/SSD/current_data/uniprot' , 'swissprot_24052013.rdf.xml' , 'http://purl.uniprot.org' );
-ld_dir('/media/SSD/current_data/uniprot' , 'uniparc_24052013.rdf.xml' , 'http://purl.uniprot.org' );
-ld_dir('/media/SSD/current_data/uniprot' , 'uniref_24052013.rdf.xml' , 'http://purl.uniprot.org' );
+-- Uniprot 2015_1
+ld_dir('/media/SSD/current_data/uniprot' , 'swissprot_28012015.rdf.xml' , 'http://purl.uniprot.org' );
+ld_dir('/media/SSD/current_data/uniprot' , 'uniparc_28012015.rdf.xml' , 'http://purl.uniprot.org' );
+ld_dir('/media/SSD/current_data/uniprot' , 'uniref_28012015.rdf.xml' , 'http://purl.uniprot.org' );
 
--- ChEBI
-ld_dir('/media/SSD/current_data/chebi' , 'chebi_direct.nt' , 'http://www.ebi.ac.uk/chebi/direct' );
-ld_dir('/media/SSD/current_data/chebi' , 'chebi_inference.nt' , 'http://www.ebi.ac.uk/chebi/inference' );
+-- ChEBI v125
 ld_dir('/media/SSD/current_data/chebi' , 'chebi.owl' , 'http://www.ebi.ac.uk/chebi' );
 
 -- WikiPathways
-ld_dir('/media/SSD/current_data/WP' , 'wpContent_v0.0.69675_20130710.ttl' , 'http://www.wikipathways.org' );
-
--- Config files
-ld_dir('/media/SSD/current_data/api-config-files' , '*.ttl' , 'http://www.openphacts.org/api' );
+ld_dir('/media/SSD/current_data/WP' , '*.ttl' , 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/WPREACTRDF' , '*.ttl' , 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/OPSWPRDF' , '*.ttl' , 'http://www.wikipathways.org' );
 
 -- Gene Ontology
-ld_dir('/media/SSD/current_data/GO' , 'go_daily-termdb.owl' , 'http://www.geneontology.org' );
-ld_dir('/media/SSD/current_data/GO' , 'goTreeInference.ttl', 'http://www.geneontology.org/inference');
-ld_dir('/media/SSD/current_data/GO' , 'go_daily-termdb.nt' , 'http://www.geneontology.org/terms' );
+ld_dir('/media/SSD/current_data/GO' , 'go.owl' , 'http://www.geneontology.org' );
 
 -- GOA
 ld_dir('/media/SSD/current_data/GOA' , '*.rdf' , 'http://www.openphacts.org/goa' );
@@ -41,18 +32,10 @@ ld_dir('/media/SSD/current_data/GOA' , '*.rdf' , 'http://www.openphacts.org/goa'
 ld_dir('/media/SSD/current_data/void' , '*.ttl' , 'http://www.openphacts.org/api/datasetDescriptors' );
 
 -- FDA Adverse Events
--- ld_dir('/media/SSD/current_data/aers' , 'faers-of-2012-generated-on-2012-07-09.nt', 'http://aers.data2semantics.org/');
+ld_dir('/media/SSD/current_data/aers' , 'faers-of-2012-generated-on-2012-07-09.nt', 'http://aers.data2semantics.org/');
 
--- ChEMBL v16
-ld_dir('/media/SSD/current_data/chembl16', '*.ttl', 'http://www.ebi.ac.uk/chembl');
-
--- Normalised Units and their labels
-ld_dir('/media/SSD/current_data/units' , 'ops_units.nt', 'http://www.openphacts.org/units');
-ld_dir('/media/SSD/current_data/units' , 'unit_labels.nt', 'http://www.openphacts.org/units');
-
--- ChEMBL Target Tree
-ld_dir('/media/SSD/current_data/target_tree' , 'targetTreeDirect.ttl', 'http://www.ebi.ac.uk/chembl/target/direct');
-ld_dir('/media/SSD/current_data/target_tree' , 'targetTreeInference.ttl', 'http://www.ebi.ac.uk/chembl/target/inference');
+-- ChEMBL v20
+ld_dir('/media/SSD/current_data/chembl20', '*.ttl', 'http://www.ebi.ac.uk/chembl');
 
 -- Open PHACTS Chemical Registry
 ld_dir('/media/SSD/current_data/OCRS/20131111/CHEMBL' , 'PROPERTIES_CHEMBL20131111.ttl' , 'http://ops.rsc.org' );
@@ -70,15 +53,21 @@ ld_dir('/media/SSD/current_data/OCRS/20131111/MESH' , 'SYNONYMS_MESH20131111.ttl
 
 -- DisGeneT
 ld_dir('/media/SSD/current_data/disgenet', '*.ttl', 'http://rdf.imim.es');
-ld_dir('/media/SSD/current_data/disgenet', 'sio.owl', 'http://rdf.imim.es');
-
--- linkedct.org
-
--- ld_dir('/media/SSD/current_data/linkedct', 'linkedct-dump-2013-10-01.nt', 'http://linkedct.org');
 
 -- Nextprot
 ld_dir('/media/SSD/current_data/nx_np', '*.rdf', 'http://www.nextprot.org');
 ld_dir('/media/SSD/current_data/nx_np', '*.nquads', 'http://www.nextprot.org');
 
 -- Caloha
-ld_dir('/media/SSD/current_data/caloha', 'caloha.ttl', 'http://www.nexprot.org/caloha');
+ld_dir('/media/SSD/current_data/caloha', 'caloha.ttl', 'http://www.nextprot.org/caloha');
+
+-- BioAssayOntology 
+ld_dir('/media/SSD/current_data/BAO', 'bao_complete.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_biology.ttl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_result.ttl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_format.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_method.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_screenedentity.owl', 'http://www.bioassayontology.org');
+
+-- Disease Ontology
+ld_dir('/media/SSD/current_data/DOID','doid.owl',  'http://purl.obolibrary.org/obo/doid');
