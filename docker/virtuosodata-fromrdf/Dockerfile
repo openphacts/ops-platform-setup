@@ -1,6 +1,6 @@
 FROM stain/virtuoso
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget axel
 
 COPY download.sh staging.sql /tmp/
 
@@ -17,7 +17,8 @@ RUN /tmp/download.sh && \
 	/usr/local/bin/staging.sh && \
 	sleep 5 && \
 	echo "Archiving /virtuoso" && \
-	tar cfv /virtuoso.tar /virtuoso
+	tar cfv /virtuoso.tar /virtuoso && \
+	echo "Done"
 # Move it back at runtime to the fresh /virtuoso volume
 # WARNING: This requires ***loads of extra disk space
 WORKDIR /
