@@ -1,15 +1,10 @@
 
 ## Architecture
 
-![Open PHACTS architecture](architecture.svg) 
-
-![Open PHACTS architecture](architecture.png) 
-
+![Open PHACTS architecture](https://rawgit.com/openphacts/ops-platform-setup/master/doc/architecture.svg) 
 
 
 ## Data loading
 
-![Open PHACTS data loading](dataloading.svg) 
-
-![Open PHACTS data loading](dataloading.png) 
+![Open PHACTS data loading](https://rawgit.com/openphacts/ops-platform-setup/master/doc/dataloading.svg) 
 
