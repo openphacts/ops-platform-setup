@@ -1,0 +1,17 @@
+digraph {
+	splines="true";
+	rdf[label="RDF/SPARQL\n(Virtuoso)"];
+	ims[label="Identity Mapping Service" fillcolor="#aabbcc"];
+	mysql[label="mySQL"];
+	web[label="Explorer"];
+	api[label="Linked Data API"];
+	rsc[label="Chemical Structure Search"];
+        conceptwiki[label="Identity Resolution Service\n(ConceptWiki)"];
+
+	ims -> mysql
+	api -> ims
+	api -> rdf
+	api -> rsc
+	api -> conceptwiki
+	web -> api
+}

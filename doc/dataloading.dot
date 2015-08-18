@@ -1,0 +1,14 @@
+digraph {
+	rsc[label="Chemical Structure Search"];
+	rdf[label="RDF/SPARQL\n(Virtuoso)"];
+	ims[label="Identity Mapping Service" fillcolor="#aabbcc"];
+        conceptwiki[label="Identity Resolution Service\n(ConceptWiki)"];
+	external[label="Chembl, Uniprot, ..."];
+	
+	conceptwiki -> ims
+	rdf -> ims
+	rsc -> rdf	
+	external -> rdf
+	external -> rsc
+	external -> ims
+}
