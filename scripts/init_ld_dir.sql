@@ -60,3 +60,14 @@ ld_dir('/media/SSD/current_data/nx_np', '*.nquads', 'http://www.nextprot.org');
 
 -- Caloha
 ld_dir('/media/SSD/current_data/caloha', 'caloha.ttl', 'http://www.nextprot.org/caloha');
+
+-- BioAssayOntology 
+ld_dir('/media/SSD/current_data/BAO', 'bao_complete.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_biology.ttl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_result.ttl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_format.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_method.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_screenedentity.owl', 'http://www.bioassayontology.org');
+
+-- Disease Ontology
+ld_dir('/media/SSD/current_data/DOID','doid.owl',  'http://purl.obolibrary.org/obo/doid');
