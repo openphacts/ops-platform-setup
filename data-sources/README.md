@@ -103,6 +103,8 @@ Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/curren
 
 Obtained by converting http://www.drugbank.ca/system/downloads/current/drugbank.xml.zip (version 4.1) using https://github.com/bio2rdf/bio2rdf-scripts/blob/master/drugbank/drugbank.php on 19 Feb 2015
 
+Edits were made to drugbank.php to add some missing properties. The result is available at: https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/scripts/drugbank.php
+
 Graph URI: <http://www.openphacts.org/bio2rdf/drugbank>
 
 - drugbank.nt 
