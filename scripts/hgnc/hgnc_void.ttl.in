@@ -13,8 +13,9 @@
 
 <> a void:DatasetDescription ;
     dct:title "HGNC VoID Description" ;
-    pav:createdBy <http://orcid.org/0000-0002-5711-4872> ;
-    pav:createdOn "2013-07-22T15:28:59Z"^^xsd:dateTime;
+    pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
+    pav:contributedBy <http://orcid.org/0000-0002-5711-4872> ;
+    pav:createdOn "2015-08-24T15:57:00+01:00"^^xsd:dateTime;
     foaf:primaryTopic :hgncDataset .
 
 :hgncDataset a dctypes:Dataset ;
@@ -38,10 +39,12 @@
     dct:title "HGNC ID to Symbol Linkset" ;
     dct:description "Links from HGNC Identifier to the equivalent HGNC Symbol as extracted from HGNC."@en ;
     dct:publisher <http://www.openphacts.org/> ;
-    dct:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
-    dct:dataDump <https://raw.github.com/openphacts/ops-platform-setup/master/void/HGNC/hgncLinksets.ttl> ;
+    dct:license <http://creativecommons.org/licenses/by-sa/4.0/> ;
+    dct:dataDump <http://data.openphacts.org/dev/ims/linksets/hgnc/hgncLinksets.ttl> ;
     void:subjectsTarget :hgncDataset ;
     void:objectsTarget :hgncDataset ;
     void:linkPredicate skos:exactMatch ;
     dul:expresses <http://semanticscience.org/resource/SIO_001171> ;
     pav:createdWith <https://raw.github.com/openphacts/ops-platform-setup/master/scripts/hgnc/extractHgncLinkset.sh> .
+
+
