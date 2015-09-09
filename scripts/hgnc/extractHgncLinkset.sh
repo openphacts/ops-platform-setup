@@ -23,7 +23,7 @@ extract_links() {
     echo "@prefix void: <http://rdfs.org/ns/void#> ." >> $OUTPUT_LINKSET_FILE
     echo "@prefix hgnc: <$HGNC_VOID_FILE> ." >> $OUTPUT_LINKSET_FILE
     echo "$BASE_URI void:inDataset hgnc:hgncId-SymbolLinkset ." >> $OUTPUT_LINKSET_FILE
-    curl -L "http://www.genenames.org/cgi-bin/download?col=gd_hgnc_id&amp;col=gd_app_sym&amp;status=Approved&amp;status_opt=2&amp;where=&amp;order_by=gd_hgnc_id&amp;format=text&amp;limit=&amp;hgnc_dbtag=on&amp;submit=submit" | grep ^HGNC: | awk '{print "<http://identifiers.org/hgnc/"$1 "> skos:exactMatch <http://identifiers.org/hgnc.symbol/"$2"> ."
+    curl -L "http://www.genenames.org/cgi-bin/download?col=gd_hgnc_id&amp;col=gd_app_sym&amp;status=Approved&amp;status_opt=2&amp;where=&amp;order_by=gd_hgnc_id&amp;format=text&amp;limit=&amp;hgnc_dbtag=on&amp;submit=submit" | grep ^HGNC: |sed s/^HGNC:// | awk '{print "<http://identifiers.org/hgnc/"$1 "> skos:exactMatch <http://identifiers.org/hgnc.symbol/"$2"> ."
 '} >> $OUTPUT_LINKSET_FILE
 }
 
