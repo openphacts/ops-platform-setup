@@ -418,6 +418,16 @@ The following files were generated using WebProtege, to retrieve all 6 root clas
 * bao_vocabulary_biology.ttl
 * bao_vocabulary_result.ttl
 
+Run the following query to remove duplicate label for "assay endpoint component" : 
+```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+DELETE DATA {
+  GRAPH <http://www.bioassayontology.org> {
+    <http://www.bioassayontology.org/bao#BAO_0003115> rdfs:label "assay result component"
+  }
+}
+```
+
 The following files introduce (unwanted) external superclasses and are *not* loaded :
 * bao_complete_bfo_dev.owl
 * bao_complete.owl
