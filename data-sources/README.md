@@ -370,5 +370,35 @@ Graph URI : http://www.nextprot.org/caloha
 ## BAO 
 Downloaded with : 
 ```
-bla
+wget http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl
+wget http://www.bioassayontology.org/bao/bao_complete_examples.owl
+wget http://www.bioassayontology.org/bao/bao_complete.owl
+wget http://www.bioassayontology.org/bao/bao_core.owl
+wget http://www.bioassayontology.org/bao/bao_external.owl
+wget http://www.bioassayontology.org/bao/bao_metadata.owl
+wget http://www.bioassayontology.org/bao/bao_module_biology.owl
+wget http://www.bioassayontology.org/bao/bao_module_properties.owl
+wget http://www.bioassayontology.org/bao/bao_module_vocabularies.owl
+wget http://www.bioassayontology.org/bao/bao_ro_combinator.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_assay.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_assaykit.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_biology.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_computational.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_detection.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_format.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_function.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_instrument.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_materialentity.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_method.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_organization.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_people.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_phenotype.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_properties.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_quality.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_result.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_ro.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_role.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_screenedentity.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_software.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_unit.owl
 ```
