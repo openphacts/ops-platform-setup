@@ -451,8 +451,11 @@ Cloned git repo:
 https://spotlite.nih.gov/ncats/opdsr.git
 
 Graph URI http://rdf.ncats.nih.gov/opddr
+
 	* npcpd2_assay.ttl
 	* npcpd2_bao.ttl
 	* npcpd2_substance.ttl
+
 Graph URI http://rdf.ncats.nih.gov/opddr/pubchem
+
 	* pubchem_pd2_assay.tt
