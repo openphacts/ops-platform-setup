@@ -368,6 +368,9 @@ Reverted to 1.4 version (Jan 2014) to correspond to nextprot
 Graph URI : http://www.nextprot.org/caloha
 
 ## BAO 
+
+Version 2.0 build 2899 (20151013) 
+
 Downloaded with : 
 ```
 wget http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl
@@ -402,3 +405,11 @@ wget http://www.bioassayontology.org/bao/bao_vocabulary_screenedentity.owl
 wget http://www.bioassayontology.org/bao/bao_vocabulary_software.owl
 wget http://www.bioassayontology.org/bao/bao_vocabulary_unit.owl
 ```
+
+Graph URI : http://www.bioassayontology.org
+
+The following files are not valid RDF and not loaded :
+* bao_vocabulary_biology.owl
+* bao_vocabulary_phenotype.owl
+* bao_vocabulary_result.owl
+* bao_vocabulary_software.owl
