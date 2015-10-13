@@ -438,3 +438,9 @@ The following files seem (to @antonisloizou) to concern unrelated/auxilliary cla
 * bao_vocabulary_people.owl
 * bao_vocabulary_quality.owl
 * bao_vocabulary_role.owl
+
+## Disease Ontology
+
+Version 2015-05-21
+
+Downloaded from http://www.berkeleybop.org/ontologies/doid/doid.owl
