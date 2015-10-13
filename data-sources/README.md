@@ -408,8 +408,13 @@ wget http://www.bioassayontology.org/bao/bao_vocabulary_unit.owl
 
 Graph URI : http://www.bioassayontology.org
 
-The following files are not valid RDF and not loaded :
+The following files are not valid RDF and are *not* loaded :
 * bao_vocabulary_biology.owl
 * bao_vocabulary_phenotype.owl
 * bao_vocabulary_result.owl
 * bao_vocabulary_software.owl
+
+The following files introduce (unwanted) external superclasses and are *not* loaded :
+* bao_complete_bfo_dev.owl
+* bao_complete.owl
+* bao_external.owl
