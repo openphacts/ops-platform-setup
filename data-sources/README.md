@@ -428,6 +428,3 @@ The following files seem (to @antonisloizou) to concern unrelated/auxilliary cla
 * bao_vocabulary_people.owl
 * bao_vocabulary_quality.owl
 * bao_vocabulary_role.owl
-
-The following file was not loaded. It seems (to @antonisloizou) that this file only introduces ontological contstraints for classes with no labels. Since Open HACTS does not do reasoning, it is of little use. It does however introduce classes with no labels to the root of the BAO hierarchy if loaded. It is therefore *not* loaded
-* bao_core.owl
