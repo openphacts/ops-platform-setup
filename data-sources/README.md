@@ -444,3 +444,15 @@ The following files seem (to @antonisloizou) to concern unrelated/auxilliary cla
 Version 2015-05-21
 
 Downloaded from http://www.berkeleybop.org/ontologies/doid/doid.owl
+
+## NCATS/opdsr
+
+Cloned git repo:
+https://spotlite.nih.gov/ncats/opdsr.git
+
+Graph URI http://rdf.ncats.nih.gov/opddr
+	* npcpd2_assay.ttl
+	* npcpd2_bao.ttl
+	* npcpd2_substance.ttl
+Graph URI http://rdf.ncats.nih.gov/opddr/pubchem
+	* pubchem_pd2_assay.tt
