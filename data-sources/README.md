@@ -450,6 +450,9 @@ Downloaded from http://www.berkeleybop.org/ontologies/doid/doid.owl
 Cloned git repo:
 https://spotlite.nih.gov/ncats/opdsr.git
 
+Is it opdsr or opddr ? Data files have 
+```@prefix opddr: <http://rdf.ncats.nih.gov/opddr/>```
+
 Graph URI http://rdf.ncats.nih.gov/opddr
 
 * npcpd2_assay.ttl
