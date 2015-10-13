@@ -369,7 +369,7 @@ Graph URI : http://www.nextprot.org/caloha
 
 ## BAO 
 
-Version 2.0 build 2899 (20151013) 
+Version 2.0 build 2899 according to site. Version 2.1 according to metadata (Downloaded on 20151013) 
 
 Downloaded with : 
 ```
@@ -408,11 +408,15 @@ wget http://www.bioassayontology.org/bao/bao_vocabulary_unit.owl
 
 Graph URI : http://www.bioassayontology.org
 
-The following files are not valid RDF and are *not* loaded :
+The following files are not valid RDF (OWL/XML) and are *not* loaded :
 * bao_vocabulary_biology.owl
 * bao_vocabulary_phenotype.owl
 * bao_vocabulary_result.owl
 * bao_vocabulary_software.owl
+
+The following files were generated using WebProtege, to retrieve all 6 root classes from Figure 1 of http://www.jbiomedsem.com/content/pdf/2041-1480-5-S1-S5.pdf . They *are* loaded : 
+* bao_vocabulary_biology.ttl
+* bao_vocabulary_result.ttl
 
 The following files introduce (unwanted) external superclasses and are *not* loaded :
 * bao_complete_bfo_dev.owl
