@@ -418,3 +418,12 @@ The following files introduce (unwanted) external superclasses and are *not* loa
 * bao_complete_bfo_dev.owl
 * bao_complete.owl
 * bao_external.owl
+
+The following files seem (to @antonisloizou) to concern unrelated/auxilliary classes, as they do not appear in Figure 1 of http://www.jbiomedsem.com/content/pdf/2041-1480-5-S1-S5.pdf. They are *not* loaded :
+* bao_vocabulary_organization.owl
+* bao_vocabulary_people.owl
+* bao_vocabulary_quality.owl
+* bao_vocabulary_role.owl
+
+The following file was not loaded. It seems (to @antonisloizou) that this file only introduces ontological contstraints for classes with no labels. Since Open HACTS does not do reasoning, it is of little use. It does however introduce classes with no labels to the root of the BAO hierarchy if loaded. It is therefore *not* loaded
+* bao_core.owl
