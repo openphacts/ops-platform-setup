@@ -317,6 +317,11 @@ Graph URI : http://www.wikipathways.org
 ** '<'  missing from the catalysis uri
 ** no comma before biopax:Pathway
 
+* Updated and loaded overall VoID descriptor:
+```
+https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/void/wp_void_2015_10_19.ttl
+```
+
 
 ## DisGeNet
 
