@@ -26,6 +26,6 @@
     dcterms:description "The WikiPathways RDF to be used by Open PHACTS"@en;
     dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
     dcterms:publisher <http://www.wikipathways.org/> ;
-    void:subset <http://rdf.wikipathways.org/curated/interactions>, <http://rdf.wikipathways.org/curated/>, <http://rdf.wikipathways.org/reactome/> .
+    void:subset <http://rdf.wikipathways.org/curated/interactions>, <http://rdf.wikipathways.org/curated/>, <http://rdf.wikipathways.org/reactome/> ;
     pav:importedBy <http://orcid.org/0000-0002-1303-2189> ;
     pav:importedOn "2015-10-19T10:23:56Z"^^xsd:dateTime .
