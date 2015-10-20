@@ -309,11 +309,14 @@ Graph URI : http://www.openphacts.org/goa
 
 ## Wikipathways
 
-Downloaded from : http://rdf.wikipathways.org/ on March 20 2015 (v20150312)
-
-Outstanding issue : https://github.com/openphacts/GLOBAL/issues/210
+Downloaded from : http://rdf.wikipathways.org/ on Oct 20 2015 (v20151019)
 
 Graph URI : http://www.wikipathways.org
+
+* Fixed typos in voidInteractions.ttl, line 27 :
+** '<'  missing from the catalysis uri
+** no comma before biopax:Pathway
+
 
 ## DisGeNet
 
