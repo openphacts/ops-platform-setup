@@ -19,9 +19,24 @@ ld_dir('/media/SSD/current_data/chebi' , 'chebi.owl' , 'http://www.ebi.ac.uk/che
 
 -- WikiPathways
 ld_dir('/media/SSD/current_data/WP' , '*.ttl' , 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/WPREACTRDF' , '*.ttl' , 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/OPSWPRDF' , '*.ttl' , 'http://www.wikipathways.org' );
-
+ld_dir('/media/SSD/current_data/WP/wp/Cow', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Bacillus subtilis', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Arabidopsis thaliana', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Rice', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Fruit fly', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Worm', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Dog', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Chicken', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Escherichia coli', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Mosquito', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Yeast', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Fusarium graminearum', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Maize', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Zebra fish', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Chimpanzee', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Rat', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Human', '*.ttl', 'http://www.wikipathways.org' );
+ld_dir('/media/SSD/current_data/WP/wp/Mouse', '*.ttl', 'http://www.wikipathways.org' );
 -- Gene Ontology
 ld_dir('/media/SSD/current_data/GO' , 'go.owl' , 'http://www.geneontology.org' );
 
@@ -62,12 +77,44 @@ ld_dir('/media/SSD/current_data/nx_np', '*.nquads', 'http://www.nextprot.org');
 ld_dir('/media/SSD/current_data/caloha', 'caloha.ttl', 'http://www.nextprot.org/caloha');
 
 -- BioAssayOntology 
-ld_dir('/media/SSD/current_data/BAO', 'bao_complete.owl', 'http://www.bioassayontology.org');
+--ld_dir('/media/SSD/current_data/BAO', 'bao_complete_bfo_dev.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_complete_examples.owl', 'http://www.bioassayontology.org');
+--ld_dir('/media/SSD/current_data/BAO', 'bao_complete.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_core.owl', 'http://www.bioassayontology.org');
+--ld_dir('/media/SSD/current_data/BAO', 'bao_external.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_metadata.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_module_biology.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_module_properties.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_module_vocabularies.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_ro_combinator.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_assaykit.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_assay.owl', 'http://www.bioassayontology.org');
 ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_biology.ttl', 'http://www.bioassayontology.org');
-ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_result.ttl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_computational.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_detection.owl', 'http://www.bioassayontology.org');
 ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_format.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_function.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_instrument.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_materialentity.owl', 'http://www.bioassayontology.org');
 ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_method.owl', 'http://www.bioassayontology.org');
+--ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_organization.owl', 'http://www.bioassayontology.org');
+--ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_people.owl', 'http://www.bioassayontology.org');
+--ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_phenotype.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_properties.owl', 'http://www.bioassayontology.org');
+--ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_quality.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_result.ttl', 'http://www.bioassayontology.org');
+--ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_role.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_ro.owl', 'http://www.bioassayontology.org');
 ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_screenedentity.owl', 'http://www.bioassayontology.org');
+--ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_software.owl', 'http://www.bioassayontology.org');
+ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_unit.owl', 'http://www.bioassayontology.org');
 
 -- Disease Ontology
 ld_dir('/media/SSD/current_data/DOID','doid.owl',  'http://purl.obolibrary.org/obo/doid');
+
+-- SureCheMBL
+ld_dir('/media/SSD/current_data/SureChEMBL', '*.ttl', 'http://www.ebi.ac.uk/surechembl');
+
+-- NCATS
+ld_dir('/media/SSD/current_data/NCATS/opdsr/rdf/data', 'npcpd2_*.ttl', 'http://rdf.ncats.nih.gov/opddr');
+ld_dir('/media/SSD/current_data/NCATS/opdsr/rdf/data', 'pubchem_pd2_assay.ttl', 'http://rdf.ncats.nih.gov/opddr/pubchem');

@@ -309,11 +309,19 @@ Graph URI : http://www.openphacts.org/goa
 
 ## Wikipathways
 
-Downloaded from : http://rdf.wikipathways.org/ on March 20 2015 (v20150312)
-
-Outstanding issue : https://github.com/openphacts/GLOBAL/issues/210
+Downloaded from : http://rdf.wikipathways.org/ on Oct 20 2015 (v20151019)
 
 Graph URI : http://www.wikipathways.org
+
+- Fixed typos in voidInteractions.ttl, line 27 :
+	* '<'  missing from the catalysis uri
+	* no comma before biopax:Pathway
+
+- Updated and loaded overall VoID descriptor:
+```
+https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/void/wp_void_2015_10_19.ttl
+```
+
 
 ## DisGeNet
 
@@ -366,3 +374,99 @@ Converted to RDF using WebProtege.
 Reverted to 1.4 version (Jan 2014) to correspond to nextprot
 
 Graph URI : http://www.nextprot.org/caloha
+
+## BAO 
+
+Version 2.0 build 2899 according to site. Version 2.1 according to metadata (Downloaded on 20151013) 
+
+Downloaded with : 
+```
+wget http://www.bioassayontology.org/bao/bao_complete_bfo_dev.owl
+wget http://www.bioassayontology.org/bao/bao_complete_examples.owl
+wget http://www.bioassayontology.org/bao/bao_complete.owl
+wget http://www.bioassayontology.org/bao/bao_core.owl
+wget http://www.bioassayontology.org/bao/bao_external.owl
+wget http://www.bioassayontology.org/bao/bao_metadata.owl
+wget http://www.bioassayontology.org/bao/bao_module_biology.owl
+wget http://www.bioassayontology.org/bao/bao_module_properties.owl
+wget http://www.bioassayontology.org/bao/bao_module_vocabularies.owl
+wget http://www.bioassayontology.org/bao/bao_ro_combinator.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_assay.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_assaykit.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_biology.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_computational.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_detection.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_format.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_function.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_instrument.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_materialentity.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_method.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_organization.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_people.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_phenotype.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_properties.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_quality.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_result.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_ro.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_role.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_screenedentity.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_software.owl
+wget http://www.bioassayontology.org/bao/bao_vocabulary_unit.owl
+```
+
+Graph URI : http://www.bioassayontology.org
+
+The following files are not valid RDF (OWL/XML) and are *not* loaded :
+* bao_vocabulary_biology.owl
+* bao_vocabulary_phenotype.owl
+* bao_vocabulary_result.owl
+* bao_vocabulary_software.owl
+
+The following files were generated using WebProtege, to retrieve all 6 root classes from Figure 1 of http://www.jbiomedsem.com/content/pdf/2041-1480-5-S1-S5.pdf . They *are* loaded : 
+* bao_vocabulary_biology.ttl
+* bao_vocabulary_result.ttl
+
+Run the following query to remove duplicate label for "assay endpoint component" : 
+```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+DELETE DATA {
+  GRAPH <http://www.bioassayontology.org> {
+    <http://www.bioassayontology.org/bao#BAO_0003115> rdfs:label "assay result component"
+  }
+}
+```
+
+The following files introduce (unwanted) external superclasses and are *not* loaded :
+* bao_complete_bfo_dev.owl
+* bao_complete.owl
+* bao_external.owl
+
+The following files seem (to @antonisloizou) to concern unrelated/auxilliary classes, as they do not appear in Figure 1 of http://www.jbiomedsem.com/content/pdf/2041-1480-5-S1-S5.pdf. They are *not* loaded :
+* bao_vocabulary_organization.owl
+* bao_vocabulary_people.owl
+* bao_vocabulary_quality.owl
+* bao_vocabulary_role.owl
+
+## Disease Ontology
+
+Version 2015-05-21
+
+Downloaded from http://www.berkeleybop.org/ontologies/doid/doid.owl
+
+## NCATS/opdsr
+
+Cloned git repo:
+https://spotlite.nih.gov/ncats/opdsr.git
+
+Is it opdsr or opddr ? Data files have 
+```@prefix opddr: <http://rdf.ncats.nih.gov/opddr/>```
+
+Graph URI http://rdf.ncats.nih.gov/opddr
+
+* npcpd2_assay.ttl
+* npcpd2_bao.ttl
+* npcpd2_substance.ttl
+
+Graph URI http://rdf.ncats.nih.gov/opddr/pubchem
+
+* pubchem_pd2_assay.tt
