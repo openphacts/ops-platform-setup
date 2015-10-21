@@ -24,6 +24,8 @@
 	foaf:primaryTopic :uniprotDataset .
 
 :uniprotDataset a void:Dataset ;
+	dcterms:title "UniProt Datasets" ;
+	dcterms:license <http://creativecommons.org/licenses/by-nd/3.0/> ;
 	void:subset :uniprotkb_rdf, :uniprot_enzyme .
 
 :uniprot_enzyme a void:Dataset ;
