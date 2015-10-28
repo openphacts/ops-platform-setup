@@ -322,6 +322,16 @@ Usage of the public Open PHACTS API is covered by the
 [Terms of Use](https://www.openphacts.org/terms-and-conditions/terms-of-use) and
 [Privacy Policy](https://www.openphacts.org/terms-and-conditions/privacy-policy).
 
+### Customizing the base URI
+
+The exposed [Swagger definition](https://github.com/openphacts/OPS_LinkedDataApi/blob/docker/README.md#swagger)
+will include a calculated `basePath` URI - to override this you need to modify
+the `BASE_PATH` within `docker-compose.yml`.
+
+Note that the other services, e.g. the explorer, do [not yet](https://github.com/openphacts/explorer2/issues/25) support similar
+customization.
+
+
 ## Running the Open PHACTS platform
 
 Assuming the previous loading has completed, you can now start

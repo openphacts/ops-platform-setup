@@ -47,6 +47,7 @@ api:
   #environment:
   #  - CRS=https://ops.rsc.org/api/v1/
   #  - CONCEPTWIKI=http://www.conceptwiki.org/web-ws/concept
+  #  - BASE_PATH=http://api.example.com/
   #restart: always
 
 # SPARQL server
