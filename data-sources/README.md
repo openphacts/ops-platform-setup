@@ -41,18 +41,18 @@ Graph URI: <http://www.conceptwiki.org>
 
 * 11179 triples
  
-## Uniprot on 28012015, release 2015_1
+## Uniprot on 20151116, release 2015_11
 
-    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_24052013.rdf.xml
-    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_24052013.rdf.xml
-    curl -d 'sort=&desc=&query=reviewed%3ayes&fil=&format=rdf&force=yes' http://www.uniprot.org/uniref/ > uniref_24052013.rdf.xml
+    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_20151116.rdf.xml
+    curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_20151116.rdf.xml
+    curl -d 'sort=&desc=&query=reviewed%3ayes&fil=&format=rdf&force=yes' http://www.uniprot.org/uniref/ > uniref_20151116.rdf.xml
 
 Graph URI: <http://purl.uniprot.org>
 
-- swissprot_28012015.rdf.xml (261071139 triples)
-- uniparc_28012015.rdf.xml (518254270 triples)
-- uniref_28012015.rdf.xml (477586860 triples)
-- TOTAL: 979928936 triples
+- swissprot_20151116.rdf.xml ( triples)
+- uniparc_20151116.rdf.xml ( triples)
+- uniref_20151116.rdf.xml ( triples)
+- TOTAL:  triples
 
 ##Enzyme
 
