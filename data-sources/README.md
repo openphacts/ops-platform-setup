@@ -363,6 +363,8 @@ Reverted to 1.4 version (Feb 2014)
 
 Graph URI : http://www.nextprot.org
 
+*Issue:* Latest Virtuoso does not parse .nquads files properly. Renamed to .nq
+
 ## Caloha
 
 Downloaded from :
