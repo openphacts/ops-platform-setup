@@ -1,4 +1,4 @@
-@base <https://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/uniprot_2015_01_void.ttl> .
+@base <https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/void/uniprot_2015_11_void.ttl> .
 @prefix cito: <http://purl.org/spar/cito/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -19,8 +19,8 @@
 	dcterms:title "UniProt Knowledgebase VoID Description"@en ;
 	dcterms:description "The VoID description for the RDF representation of the UniProt dataset."@en ;
 	pav:createdBy <https://orcid.org/0000-0002-1303-2189> ;
-	pav:createdOn "2015-01-28T12:31:00Z"^^xsd:dateTime ;
-	pav:lastUpdateOn "2015-01-28T14:47:00Z"^^xsd:dateTime ;
+	pav:createdOn "2015-11-16T12:31:00Z"^^xsd:dateTime ;
+	pav:lastUpdateOn "2015-11-16T14:47:00Z"^^xsd:dateTime ;
 	foaf:primaryTopic :uniprotDataset .
 
 :uniprotDataset a void:Dataset ;
@@ -41,12 +41,12 @@
 	     dcat:landingPage <http://www.uniprot.org/> ;
 	     dcterms:license <http://creativecommons.org/licenses/by-nd/3.0/> ;
 	     cito:citeAsAuthority <http://nar.oxfordjournals.org/content/40/D1/D71> ; #required by license
-	     dcterms:issued "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+	     dcterms:issued "2015-11-01T00:00:00Z"^^xsd:dateTime ;
 #These file reference need to be updated when the next release is made :(
 	     void:dataDump <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniparc.rdf.gz>;
 	     dcat:distribution :uniprotkb_distribution ;
 	     pav:createdWith :uniprot-download-script;
-	     pav:version "2015_01";
+	     pav:version "2015_11";
 	     void:sparqlEndpoint <http://beta.sparql.uniprot.org/> ;
 	     dcterms:accrualPeriodicity freq:monthly.
 	     
@@ -55,8 +55,8 @@
 	dcat:mediaType "application/x-gzip" .
 
 :uniprot-download-script dcterms:title "UniProt Download Script";
-	dcterms:description """curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_28012015.rdf.xml
-curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_28012015.rdf.xml
-curl -d 'sort=&desc=&query=reviewed%3ayes&fil=&format=rdf&force=yes' http://www.uniprot.org/uniref/ > uniref_28012015.rdf.xml""" ;
+	dcterms:description """curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniprot/ > swissprot_20151116.rdf.xml
+curl -d 'query=reviewed%3ayes&force=yes&format=rdf' http://www.uniprot.org/uniparc/ > uniparc_20151116.rdf.xml
+curl -d 'sort=&desc=&query=reviewed%3ayes&fil=&format=rdf&force=yes' http://www.uniprot.org/uniref/ > uniref_20151116.rdf.xml""" ;
 	dcterms:license <http://www.apache.org/licenses/LICENSE-2.0> .
 
