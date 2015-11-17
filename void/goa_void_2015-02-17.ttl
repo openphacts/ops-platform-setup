@@ -1,4 +1,4 @@
-@base <https://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/goa_void_2015-02-17.ttl>
+@base <https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/void/goa_void_2015-02-17.ttl>
 @prefix : <#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dctypes: <http://purl.org/dc/dcmitype/> .
@@ -10,7 +10,7 @@
 @prefix pav: <http://purl.org/pav/2.0/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 
-<https://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/goa_void_2015-02-17.ttl> a void:DatasetDescription; 
+<https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/void/goa_void_2015-02-17.ttl> a void:DatasetDescription; 
     dcterms:publisher <http://geneontology.org/>;
     dcat:Distribution <http://geneontology.org/gene-associations/> ;
     pav:createdBy <http://orcid.org/0000-0002-1303-2189> ;
@@ -31,7 +31,7 @@
     pav:importedFrom :GOA_dataset;
     pav:importedBy <http://orcid.org/0000-0002-1303-2189> ;
     pav:importedOn "2015-02-17T10:23:56Z"^^xsd:dateTime;
-    pav:createdWith <https://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/scripts/goa/goatordf.py> .
+    pav:createdWith <https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/scripts/goa/goatordf.py> .
 
 :GOA_dataset
     dcterms:title "GOA"@en;

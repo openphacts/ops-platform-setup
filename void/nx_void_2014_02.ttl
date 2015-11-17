@@ -1,4 +1,4 @@
-@base <https://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/nx_void_2014_02.ttl> .
+@base <https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/void/nx_void_2014_02.ttl> .
 @prefix : <#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dctypes: <http://purl.org/dc/dcmitype/> .
@@ -10,7 +10,7 @@
 @prefix pav: <http://purl.org/pav/2.0/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 
-<https://raw.githubusercontent.com/openphacts/ops-platform-setup/1.5.0/void/nx_void_2014_02.ttl> a void:DatasetDescription; 
+<https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/void/nx_void_2014_02.ttl> a void:DatasetDescription; 
     dcterms:publisher <http://www.nextprot.org/>;
     dcat:Distribution <http://nanopub-server.ops.labs.vu.nl> ;
     pav:createdBy <http://orcid.org/0000-0002-1303-2189> ;
