@@ -253,21 +253,23 @@ Obtained from <ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl> on 04
 
 ## Openphacts Chemistry Registration Service data
 
-Downloaded from: ftp://ftp.rsc-us.org/OPS/20131111/ 
+Downloaded from: http://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/ops-rsc-dataset/20151104-SNAPSHOT/ops-rsc-dataset-20151104-20151119.131110-2.data.zip 
+
+Made from: http://build.mygrid.org.uk/ci/view/OpenPHACTS/job/ops-rsc-dataset/7/console
 
 Graph URI: <http://ops.rsc-us.org>
-- PROPERTIES_CHEMBL20131111ttl
-- SYNONYMS_CHEMBL20131111.ttl
-- LINKSET_EXACT_CHEMBL20131111.ttl
-- PROPERTIES_CHEBI20131111.ttl
-- SYNONYMS_CHEBI20131111.ttl
-- LINKSET_EXACT_CHEBI20131111.ttl
-- PROPERTIES_DRUGBANK20131111.ttl
-- LINKSET_EXACT_DRUGBANK20131111.ttl
-- PROPERTIES_PDB20131111.ttl
-- SYNONYMS_PDB20131111.ttl
-- PROPERTIES_MESH20131111.ttl
-- SYNONYMS_MESH20131111.ttl
+- PROPERTIES_CHEMBL20151104.ttl
+- SYNONYMS_CHEMBL20151104.ttl
+- LINKSET_EXACT_CHEMBL20151104.ttl
+- PROPERTIES_CHEBI20151104.ttl
+- SYNONYMS_CHEBI20151104.ttl
+- LINKSET_EXACT_CHEBI20151104.ttl
+- PROPERTIES_DRUGBANK20151104.ttl
+- LINKSET_EXACT_DRUGBANK20151104.ttl
+- PROPERTIES_PDB20151104.ttl
+- SYNONYMS_PDB20151104.ttl
+- PROPERTIES_MESH20151104.ttl
+- SYNONYMS_MESH20151104.ttl
 
 ## FDA Adverse Events
 
