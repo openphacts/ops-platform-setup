@@ -1,0 +1,163 @@
+-- Graph URI: http://purl.uniprot.org/enzyme/direct
+
+sparql INSERT {
+    GRAPH <http://purl.uniprot.org/enzyme/direct> {
+        ?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass
+    }   
+}
+WHERE {
+    GRAPH <http://purl.uniprot.org/enzyme> {
+        ?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass 
+    }
+};
+
+-- Graph URI: http://purl.uniprot.org/enzyme/inference
+
+sparql INSERT {
+    GRAPH <http://purl.uniprot.org/enzyme/inference> {
+        ?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?superclass .
+        ?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?subclass .
+    }
+}
+WHERE {
+    GRAPH <http://purl.uniprot.org/enzyme/direct> {
+    ?subclass <http://www.w3.org/2000/01/rdf-schema#subClassOf>+ ?superclass ;
+        [] []
+    }
+};
+
+-- Replaced Enzyme prefixes
+
+sparql  PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+ INSERT {
+    GRAPH <http://www.ebi.ac.uk/chembl> {
+        ?chembl_uri cco:targetCmptXref ?enzyme_uri . 
+        ?enzyme_uri a cco:EnzymeClassRef .
+    }
+ }
+ WHERE {
+    GRAPH <http://www.ebi.ac.uk/chembl> {
+        ?chembl_uri cco:targetCmptXref ?ec_uri . 
+        ?ec_uri a cco:EnzymeClassRef ;
+            rdfs:label ?label .
+        BIND(IRI(CONCAT('http://purl.uniprot.org/enzyme/', STRAFTER(STR(?ec_uri), 'http://identifiers.org/ec-code/'))) AS ?enzyme_uri )
+    }
+ };
+
+-- Created activity types and unit URIs:
+
+sparql  INSERT {
+    GRAPH <http://www.ebi.ac.uk/chembl>  {
+        ?type_uri rdfs:subClassOf ?act_type ;
+            rdfs:label ?standard_type ;
+        <http://rdf.ebi.ac.uk/terms/chembl#hasQUDT>  ?qudt_uri .
+            ?qudt_uri rdfs:label ?standard_unit .
+    }
+ }
+ WHERE {
+    GRAPH <http://www.ebi.ac.uk/chembl>  {
+        ?act <http://rdf.ebi.ac.uk/terms/chembl#standardType> ?standard_type  ;
+            <http://rdf.ebi.ac.uk/terms/chembl#standardUnits> ?standard_unit ;
+            <http://rdf.ebi.ac.uk/terms/chembl#hasQUDT> ?qudt_uri ;
+            a ?act_type .
+        BIND( IRI (CONCAT("http://www.openphacts.org/terms/chembl#", ENCODE_FOR_URI(?standard_type))) AS ?type_uri)
+    }
+ };
+
+-- Graph URI http://www.ebi.ac.uk/chembl/target/direct
+
+sparql PREFIX chembl_protclass: <http://rdf.ebi.ac.uk/resource/chembl/protclass/>
+ INSERT {
+    GRAPH <http://www.ebi.ac.uk/chembl/target/direct> {
+        ?subclass rdfs:subClassOf ?superclass .
+    }
+ }
+ WHERE {
+    GRAPH <http://www.ebi.ac.uk/chembl>  {
+        ?subclass rdfs:subClassOf ?superclass ;
+            rdfs:subClassOf* chembl_protclass:CHEMBL_PC_0 .
+    }
+ };
+
+-- Graph URI http://www.ebi.ac.uk/chembl/target/inference
+
+sparql INSERT { 
+    GRAPH <http://www.ebi.ac.uk/chembl/target/inference> {
+        ?subclass rdfs:subClassOf ?superclass 
+    }
+ }
+ WHERE {
+     GRAPH <http://www.ebi.ac.uk/chembl/target/direct> {
+         ?subclass rdfs:subClassOf* ?superclass ;
+            rdfs:subClassOf [] 
+     }
+ };
+
+-- Graph URI: http://www.ebi.ac.uk/chebi/direct
+
+sparql INSERT { 
+    GRAPH <http://www.ebi.ac.uk/chebi/direct> {
+        ?subclass rdfs:subClassOf ?superclass 
+    }
+}
+WHERE {
+    GRAPH <http://www.ebi.ac.uk/chebi> {
+        ?subclass rdfs:subClassOf ?superclass 
+        FILTER (!isBlank(?superclass) && ?superclass != owl:Thing)
+    }
+};
+
+-- Graph URI: http://www.ebi.ac.uk/chebi/inference
+
+sparql INSERT { 
+    GRAPH <http://www.ebi.ac.uk/chebi/inference> {
+        ?subclass rdfs:subClassOf ?superclass 
+    }
+}
+WHERE {
+    GRAPH <http://www.ebi.ac.uk/chebi/direct> {
+        ?subclass rdfs:subClassOf* ?superclass ;
+            [] [] 
+    }
+};
+
+-- Graph URI: http://www.geneontology.org/inference
+
+sparql PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+INSERT {
+  GRAPH <http://www.geneontology.org/inference> {
+    ?s rdfs:subClassOf ?o
+  }
+}
+WHERE {
+  GRAPH <http://www.geneontology.org> {
+        ?s rdfs:subClassOf* ?o ;
+        [] [] .
+      FILTER (!isBlank(?o))
+  }
+};
+
+-- Generated Association type labels by :
+
+sparql PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+INSERT {
+GRAPH <http://rdf.imim.es> {
+    sio:SIO_001119 rdfs:label "gene-disease association linked with causal mutation" .
+    sio:SIO_001120 rdfs:label "therapeutic gene-disease association" .
+    sio:SIO_001121 rdfs:label "gene-disease biomarker association" .
+    sio:SIO_001122 rdfs:label "gene-disease association linked with genetic variation" .
+    sio:SIO_001123 rdfs:label "gene-disease association linked with altered gene expression" .
+    sio:SIO_001124 rdfs:label "gene-disease association linked with post-translational modification" .
+}
+}
+WHERE { };
+
+-- remove duplicate label for "assay endpoint component"
+
+sparql PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+DELETE DATA {
+  GRAPH <http://www.bioassayontology.org> {
+    <http://www.bioassayontology.org/bao#BAO_0003115> rdfs:label "assay result component"
+  }
+};

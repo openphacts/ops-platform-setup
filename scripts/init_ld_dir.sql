@@ -9,10 +9,10 @@ ld_dir('/media/SSD/current_data/enzyme' , 'enzyme.rdf' , 'http://purl.uniprot.or
 -- DrugBank v4.1
 ld_dir('/media/SSD/current_data/drugbank' , 'drugbank.nt' , 'http://www.openphacts.org/bio2rdf/drugbank');
 
--- Uniprot 2015_1
-ld_dir('/media/SSD/current_data/uniprot' , 'swissprot_28012015.rdf.xml' , 'http://purl.uniprot.org' );
-ld_dir('/media/SSD/current_data/uniprot' , 'uniparc_28012015.rdf.xml' , 'http://purl.uniprot.org' );
-ld_dir('/media/SSD/current_data/uniprot' , 'uniref_28012015.rdf.xml' , 'http://purl.uniprot.org' );
+-- Uniprot 2015_11
+ld_dir('/media/SSD/current_data/uniprot' , 'swissprot_20151117.rdf.xml' , 'http://purl.uniprot.org' );
+ld_dir('/media/SSD/current_data/uniprot' , 'uniparc_20151116.rdf.xml' , 'http://purl.uniprot.org' );
+ld_dir('/media/SSD/current_data/uniprot' , 'uniref_20151116.rdf.xml' , 'http://purl.uniprot.org' );
 
 -- ChEBI v125
 ld_dir('/media/SSD/current_data/chebi' , 'chebi.owl' , 'http://www.ebi.ac.uk/chebi' );
@@ -53,25 +53,25 @@ ld_dir('/media/SSD/current_data/aers' , 'faers-of-2012-generated-on-2012-07-09.n
 ld_dir('/media/SSD/current_data/chembl20', '*.ttl', 'http://www.ebi.ac.uk/chembl');
 
 -- Open PHACTS Chemical Registry
-ld_dir('/media/SSD/current_data/OCRS/20131111/CHEMBL' , 'PROPERTIES_CHEMBL20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/CHEMBL' , 'SYNONYMS_CHEMBL20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/CHEMBL' , 'LINKSET_EXACT_CHEMBL20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/CHEBI' , 'PROPERTIES_CHEBI20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/CHEBI' , 'SYNONYMS_CHEBI20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/CHEBI' , 'LINKSET_EXACT_CHEBI20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/DRUGBANK' , 'PROPERTIES_DRUGBANK20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/DRUGBANK' , 'LINKSET_EXACT_DRUGBANK20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/PDB' , 'PROPERTIES_PDB20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/PDB' , 'SYNONYMS_PDB20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/MESH' , 'PROPERTIES_MESH20131111.ttl' , 'http://ops.rsc.org' );
-ld_dir('/media/SSD/current_data/OCRS/20131111/MESH' , 'SYNONYMS_MESH20131111.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/CHEMBL' , 'PROPERTIES_CHEMBL20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/CHEMBL' , 'SYNONYMS_CHEMBL20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/CHEMBL' , 'LINKSET_EXACT_CHEMBL20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/CHEBI' , 'PROPERTIES_CHEBI20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/CHEBI' , 'SYNONYMS_CHEBI20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/CHEBI' , 'LINKSET_EXACT_CHEBI20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/DRUGBANK' , 'PROPERTIES_DRUGBANK20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/DRUGBANK' , 'LINKSET_EXACT_DRUGBANK20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/PDB' , 'PROPERTIES_PDB20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/PDB' , 'SYNONYMS_PDB20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/MESH' , 'PROPERTIES_MESH20151104.ttl' , 'http://ops.rsc.org' );
+ld_dir('/media/SSD/current_data/OCRS/data/ops-rsc-dataset/MESH' , 'SYNONYMS_MESH20151104.ttl' , 'http://ops.rsc.org' );
 
 -- DisGeneT
 ld_dir('/media/SSD/current_data/disgenet', '*.ttl', 'http://rdf.imim.es');
 
 -- Nextprot
-ld_dir('/media/SSD/current_data/nx_np', '*.rdf', 'http://www.nextprot.org');
-ld_dir('/media/SSD/current_data/nx_np', '*.nquads', 'http://www.nextprot.org');
+ld_dir('/media/SSD/current_data/nx_np', '*.xml', 'http://www.nextprot.org');
+ld_dir('/media/SSD/current_data/nx_np', '*.nq', 'http://www.nextprot.org');
 
 -- Caloha
 ld_dir('/media/SSD/current_data/caloha', 'caloha.ttl', 'http://www.nextprot.org/caloha');
