@@ -10,7 +10,7 @@ ld_dir('/media/SSD/current_data/enzyme' , 'enzyme.rdf' , 'http://purl.uniprot.or
 ld_dir('/media/SSD/current_data/drugbank' , 'drugbank.nt' , 'http://www.openphacts.org/bio2rdf/drugbank');
 
 -- Uniprot 2015_11
-ld_dir('/media/SSD/current_data/uniprot' , 'swissprot_20151117.rdf.xml' , 'http://purl.uniprot.org' );
+ld_dir('/media/SSD/current_data/uniprot' , 'swissprot_20151116.rdf.xml' , 'http://purl.uniprot.org' );
 ld_dir('/media/SSD/current_data/uniprot' , 'uniparc_20151116.rdf.xml' , 'http://purl.uniprot.org' );
 ld_dir('/media/SSD/current_data/uniprot' , 'uniref_20151116.rdf.xml' , 'http://purl.uniprot.org' );
 
