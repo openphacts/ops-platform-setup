@@ -335,6 +335,8 @@ Graph URI : http://www.wikipathways.org
 https://raw.githubusercontent.com/openphacts/ops-platform-setup/2.0.0/void/wp_void_2015_10_19.ttl
 ```
 
+- Issue: no ```void:Dataset``` declared. Replaced ```void:DatasetDecriptor``` with ```void:Dataset```. 
+- Issue: Top dataset needs to be declared as ```foaf:primaryTopic``` , with the WP and GPML datasets as ```void:subset```
 
 ## DisGeNet
 
