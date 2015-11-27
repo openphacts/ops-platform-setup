@@ -311,13 +311,11 @@ Graph URI : http://www.openphacts.org/goa
 
 ## Wikipathways
 
-Downloaded from : http://rdf.wikipathways.org/ on Oct 20 2015 (v20151019)
+Downloaded from : http://rdf.wikipathways.org/ on Nov 27 2015 (v20151118)
 
 Graph URI : http://www.wikipathways.org
 
-- Fixed typos in voidInteractions.ttl, line 27 :
-	* '<'  missing from the catalysis uri
-	* no comma before biopax:Pathway
+- Loaded allWp.ttl and allGpml.ttl
 
 - Updated and loaded overall VoID descriptor:
 ```
