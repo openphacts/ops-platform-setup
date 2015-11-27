@@ -271,6 +271,19 @@ Graph URI: <http://ops.rsc-us.org>
 - PROPERTIES_MESH20151104.ttl
 - SYNONYMS_MESH20151104.ttl
 
+Issue: some molecules have duplicate 'OPS' in their IDs.
+- PROPERTIES_CHEBI20151104.ttl
+- PROPERTIES_DRUGBANK20151104.ttl:
+- PROPERTIES_PDB20151104.ttl
+- CHEMBL/PROPERTIES_CHEMBL20151104.ttl
+- PROPERTIES_MESH20151104.ttl
+
+Fixed with sed
+```
+sed -i 's,ops:OPSOPS,ops:OPS,g' $file
+```
+RSC has fixed it in their pipeline, the next release will not have this issue.
+
 ## FDA Adverse Events
 
 - http://aers.data2semantics.org/data/dump-of-2012-generated-on-2012-07-09.nt.gz
