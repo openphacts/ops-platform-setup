@@ -112,9 +112,6 @@ ld_dir('/media/SSD/current_data/BAO', 'bao_vocabulary_unit.owl', 'http://www.bio
 -- Disease Ontology
 ld_dir('/media/SSD/current_data/DOID','doid.owl',  'http://purl.obolibrary.org/obo/doid');
 
--- SureCheMBL
-ld_dir('/media/SSD/current_data/SureChEMBL', '*.ttl', 'http://www.ebi.ac.uk/surechembl');
-
 -- NCATS
 ld_dir('/media/SSD/current_data/NCATS/opdsr/rdf/data', 'npcpd2_*.ttl', 'http://rdf.ncats.nih.gov/opddr');
 ld_dir('/media/SSD/current_data/NCATS/opdsr/rdf/data', 'pubchem_pd2_assay.ttl', 'http://rdf.ncats.nih.gov/opddr/pubchem');
