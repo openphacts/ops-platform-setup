@@ -19,24 +19,7 @@ ld_dir('/media/SSD/current_data/chebi' , 'chebi.owl' , 'http://www.ebi.ac.uk/che
 
 -- WikiPathways
 ld_dir('/media/SSD/current_data/WP' , '*.ttl' , 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Cow', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Bacillus subtilis', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Arabidopsis thaliana', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Rice', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Fruit fly', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Worm', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Dog', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Chicken', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Escherichia coli', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Mosquito', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Yeast', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Fusarium graminearum', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Maize', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Zebra fish', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Chimpanzee', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Rat', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Human', '*.ttl', 'http://www.wikipathways.org' );
-ld_dir('/media/SSD/current_data/WP/wp/Mouse', '*.ttl', 'http://www.wikipathways.org' );
+
 -- Gene Ontology
 ld_dir('/media/SSD/current_data/GO' , 'go.owl' , 'http://www.geneontology.org' );
 
