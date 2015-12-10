@@ -20,7 +20,7 @@
 <https://raw.github.com/openphacts/ops-platform-setup/master/void/uniprot/uniprot_2015_11_void.ttl#uniprotkb_rdf> void:subset :Uniprot-Ensembl .
 
 :Nextprot-Ensembl a void:Linkset ;
-	void:linkPredicate rdfs:seeAlso ;
+	void:linkPredicate skos:exactMatch ;
 	dcterms:title "NeXtProt-Uniprot Linkset"@en ;
 	dcterms:license <http://creativecommons.org/licenses/by-nd/3.0/> ;
 	pav:createdBy <http://orcid.org/0000-0002-1303-2189> ;
