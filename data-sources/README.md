@@ -494,7 +494,7 @@ Graph URI http://rdf.ncats.nih.gov/opddr/pubchem
 * About 42 GB as gzip-compressed nquads (400 GB uncompressed)
 
 
-In the Virtuoso 2.0 SPARQL endpoint we have loaded the [2.0 RDF data](http://data.openphacts.org/2.0/):
+In the Open PHACT 2.0's Virtuoso SPARQL endpoint we have loaded the [2.0 RDF data](http://data.openphacts.org/2.0/):
 
 | source | triples | graph |
 | ------ |    ---: | ----- |
