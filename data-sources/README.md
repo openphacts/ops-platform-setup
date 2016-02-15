@@ -486,4 +486,30 @@ Graph URI http://rdf.ncats.nih.gov/opddr
 
 Graph URI http://rdf.ncats.nih.gov/opddr/pubchem
 
-* pubchem_pd2_assay.tt
+* pubchem_pd2_assay.ttl
+
+# How many triples?
+
+In the Virtuoso 2.0 SPARQL endpoint we have loaded:
+
+| source | triples | graph |
+| ------ | ------- | ----- |
+| aers	| 13557070	| http://aers.data2semantics.org/
+| bioassay	| 10360	| http://www.bioassayontology.org
+| caloha	| 14552	| http://www.nextprot.org/caloha
+| chebi	| 1012056	| http://www.ebi.ac.uk/chebi
+| chembl	| 445732880	| http://www.ebi.ac.uk/chembl
+| conceptwiki	| 4331760	| http://www.conceptwiki.org
+| disgenet	| 15011136	| http://rdf.imim.es
+| doid	| 188062 | http://purl.obolibrary.org/obo/doid
+| drugbank	| 4028767	| http://www.openphacts.org/bio2rdf/drugbank
+| enzyme	| 61467	| http://purl.uniprot.org/enzyme
+| goa	| 879448347	| http://www.openphacts.org/goa
+| go	| 1366494	| http://www.geneontology.org
+| ncats	| 2643	| http://rdf.ncats.nih.gov/opddr
+| nextprot	| 215006108	| http://www.nextprot.org
+| ocrs	| 241986722	| http://ops.rsc.org
+| uniprot	| 1131186434	| http://purl.uniprot.org
+| void	| 2053	| http://www.openphacts.org/api/datasetDescriptors
+| wikipathways	| 11781627	| http://www.wikipathways.org |
+| | 2964728538	|
