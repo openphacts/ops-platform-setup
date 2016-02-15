@@ -490,8 +490,8 @@ Graph URI http://rdf.ncats.nih.gov/opddr/pubchem
 
 # How many triples?
 
-* Almost 3 billion.
-* About 42 GB as gzip-compressed nquads (400 GB uncompressed)
+* Almost 3 billion
+* About 26 GiB as gzip-compressed nquads (530 GiB uncompressed)
 
 
 In the Open PHACT 2.0's Virtuoso SPARQL endpoint we have loaded the [2.0 RDF data](http://data.openphacts.org/2.0/):
