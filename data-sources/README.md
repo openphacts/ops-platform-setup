@@ -490,7 +490,11 @@ Graph URI http://rdf.ncats.nih.gov/opddr/pubchem
 
 # How many triples?
 
-In the Virtuoso 2.0 SPARQL endpoint we have loaded:
+* Almost 3 billion.
+* About 42 GB as gzip-compressed nquads (400 GB uncompressed)
+
+
+In the Virtuoso 2.0 SPARQL endpoint we have loaded the [2.0 RDF data](http://data.openphacts.org/2.0/):
 
 | source | triples | graph |
 | ------ | ------- | ----- |
@@ -513,3 +517,8 @@ In the Virtuoso 2.0 SPARQL endpoint we have loaded:
 | void	| 2053	| http://www.openphacts.org/api/datasetDescriptors
 | wikipathways	| 11781627	| http://www.wikipathways.org |
 | | 2964728538	|
+
+Note: Nextprot includes ~ 185M quads in nanopublications, which are in other graphs.
+
+The Identifier Mapping Service has its own [linkset sources](http://data.openphacts.org/2.0/ims/linksets/) which partially overlap the above, totalling 25,087,328 Mappings. See http://ops2.few.vu.nl/QueryExpander/ for details.
+
