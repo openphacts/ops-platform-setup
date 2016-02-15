@@ -497,7 +497,7 @@ Graph URI http://rdf.ncats.nih.gov/opddr/pubchem
 In the Virtuoso 2.0 SPARQL endpoint we have loaded the [2.0 RDF data](http://data.openphacts.org/2.0/):
 
 | source | triples | graph |
-| ------ | ------- | ----- |
+| ------ |    ---: | ----- |
 | aers	| 13557070	| http://aers.data2semantics.org/
 | bioassay	| 10360	| http://www.bioassayontology.org
 | caloha	| 14552	| http://www.nextprot.org/caloha
