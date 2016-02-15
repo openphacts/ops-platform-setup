@@ -520,5 +520,6 @@ In the Open PHACT 2.0's Virtuoso SPARQL endpoint we have loaded the [2.0 RDF dat
 
 Note: Nextprot includes ~ 185M quads in nanopublications, which are in other graphs.
 
-The Identifier Mapping Service has its own [linkset sources](http://data.openphacts.org/2.0/ims/linksets/) which partially overlap the above, totalling 25,087,328 Mappings. See http://ops2.few.vu.nl/QueryExpander/ for details.
+The Identifier Mapping Service (IMS) has its own [linkset sources](http://data.openphacts.org/2.0/ims/linksets/) which partially overlap the above, totalling 25087328 direct mappings, loaded from 13704765 triples (230 MiB .nq.gz, 2.0 GiB uncompressed). As the IMS also supports alternative URI bases, the total number of URIs that can be mapped are probably about 500 million.
+
 
