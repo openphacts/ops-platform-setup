@@ -10,7 +10,7 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix void:    <http://rdfs.org/ns/void#> .
 @prefix wprdf:   <http://rdf.wikipathways.org/> .
-
+@prefix prov: <http://www.w3.org/ns/prov#> .
 
 <> a void:DatasetDescription ;
     dct:title "Wikipathways Pathway Ontology Linkset VoID Description" ;
@@ -31,3 +31,15 @@ wprdf: void:subset :wp-poLinkset .
     void:linkPredicate skos:relatedMatch ;
     dul:expresses <http://edamontology.org/data_2342> ;
     pav:createdWith <https://raw.github.com/openphacts/ops-platform-setup/master/scripts/wikipathways/extractWPLinkset.sh> .
+
+<https://raw.github.com/openphacts/ops-platform-setup/master/scripts/wikipathways/extractWPLinkset.sh> prov:wasDerivedFrom :wp-query .
+
+:wp-query dct:title "WikiPathways to Pathway Ontology SPARQL query" ;
+  dct:description """
+CONSTRUCT {?wpIdentifier skos:relatedMatch ?pathwayOntology .} 
+WHERE {
+  ?pathway wp:pathwayOntologyTag ?pathwayOntology .
+  ?pathway dc:identifier ?wpIdentifier .
+  FILTER regex(?pathwayOntology, "PW_", "i") 
+}
+""" .
