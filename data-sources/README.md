@@ -3,7 +3,7 @@ Data Loaded by the platform
 
 This directory should eventually contain void descriptions of each data source used by the platform, which can then be automatically obtained by the platform. In the mean-time, we hope to keep this file up-to-date. Sections are data source.
 
-##ConceptWiki
+## ConceptWiki
 
 Graph URI: <http://www.conceptwiki.org>
 
@@ -54,7 +54,7 @@ Graph URI: <http://purl.uniprot.org>
 - uniref_20151116.rdf.xml ( 268930657 triples)
 - TOTAL: 1131186434 triples
 
-##Enzyme
+## Enzyme
 
 Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/enzyme.rdf.gz> on 02022015, release 2015_1)
 
@@ -99,7 +99,7 @@ Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/curren
      		}
      	}
 
-##Drugbank
+## Drugbank
 
 Obtained by converting http://www.drugbank.ca/system/downloads/current/drugbank.xml.zip (version 4.1) using https://github.com/bio2rdf/bio2rdf-scripts/blob/master/drugbank/drugbank.php on 19 Feb 2015
 
@@ -109,7 +109,7 @@ Graph URI: <http://www.openphacts.org/bio2rdf/drugbank>
 
 - drugbank.nt 
 
-##Chembl 20
+## Chembl 20
 
 Obtained by downloading all the files from <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/20.0/> on 18 Feb 2015 
 
