@@ -3,7 +3,7 @@ Data Loaded by the platform
 
 This directory should eventually contain void descriptions of each data source used by the platform, which can then be automatically obtained by the platform. In the mean-time, we hope to keep this file up-to-date. Sections are data source.
 
-##ConceptWiki
+## ConceptWiki
 
 Graph URI: <http://www.conceptwiki.org>
 
