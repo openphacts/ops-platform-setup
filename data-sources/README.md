@@ -54,7 +54,7 @@ Graph URI: <http://purl.uniprot.org>
 - uniref_28012015.rdf.xml (477586860 triples)
 - TOTAL: 979928936 triples
 
-##Enzyme
+## Enzyme
 
 Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/enzyme.rdf.gz> on 02022015, release 2015_1)
 
@@ -99,7 +99,7 @@ Obtained by downloading from <ftp://ftp.uniprot.org/pub/databases/uniprot/curren
      		}
      	}
 
-##Drugbank
+## Drugbank
 
 Obtained by converting http://www.drugbank.ca/system/downloads/current/drugbank.xml.zip (version 4.1) using https://github.com/bio2rdf/bio2rdf-scripts/blob/master/drugbank/drugbank.php on 19 Feb 2015
 
@@ -107,7 +107,7 @@ Graph URI: <http://www.openphacts.org/bio2rdf/drugbank>
 
 - drugbank.nt 
 
-##Chembl 20
+## Chembl 20
 
 Obtained by downloading all the files from <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/20.0/> on 18 Feb 2015 
 
